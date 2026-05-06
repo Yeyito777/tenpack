@@ -172,6 +172,20 @@
       "version": "1.21.1+neoforge+4.2.7",
       "filename": "weaponmaster_ydm-1.21.1-neoforge-4.2.7.jar",
       "source": "https://cdn.modrinth.com/data/qi1sj2da/versions/j4CtkXVs/weaponmaster_ydm-1.21.1-neoforge-4.2.7.jar"
+    },
+    {
+      "name": "Cloth Config API",
+      "version": "15.0.140+neoforge",
+      "filename": "cloth-config-15.0.140-neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/9s6osm5g/versions/izKINKFg/cloth-config-15.0.140-neoforge.jar",
+      "note": "Required by Camera Overhaul."
+    },
+    {
+      "name": "Camera Overhaul",
+      "version": "2.0.6-neoforge+mc.1.21.0-1.21.1",
+      "filename": "CameraOverhaul-v2.0.6-neoforge+mc[1.21.0-1.21.1].jar",
+      "source": "https://cdn.modrinth.com/data/m0oRwcZx/versions/zTY9SqFy/CameraOverhaul-v2.0.6-neoforge%2Bmc%5B1.21.0-1.21.1%5D.jar",
+      "note": "Client-side camera motion/tilt mod; server-side unsupported."
     }
   ],
   "note": "Trimmed to the requested mods plus required libraries. Voxy restored; Distant Horizons removed; Voxy WorldGen V2 added for background player-radius generation and Voxy ingestion."
