@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Build static HTTP assets for Tenpack file sync.
 
-This scans shared/common plus shared/<side>, writes client/server manifests,
-and copies file payloads to a content-addressed public/files tree.
+This scans the repo's client/ and server/ directories directly, writes
+client/server manifests, and copies file payloads to a content-addressed
+public/files tree.
 """
 
 from __future__ import annotations
@@ -11,6 +12,7 @@ import argparse
 import hashlib
 import json
 import shutil
+import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -21,6 +23,10 @@ LOADER = "neoforge"
 SIDES = ("client", "server")
 
 
+class BuildError(RuntimeError):
+    pass
+
+
 def sha256_file(path: Path) -> str:
     h = hashlib.sha256()
     with path.open("rb") as f:
@@ -29,18 +35,62 @@ def sha256_file(path: Path) -> str:
     return h.hexdigest()
 
 
-def collect_files(root: Path, side: str) -> dict[str, Path]:
+def git_ignored(repo: Path, path: Path) -> bool:
+    rel = path.relative_to(repo).as_posix()
+    result = subprocess.run(
+        ["git", "check-ignore", "-q", rel],
+        cwd=repo,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+        check=False,
+    )
+    return result.returncode == 0
+
+
+def collect_files(repo: Path, side: str) -> dict[str, Path]:
+    base = repo / side
+    if not base.exists():
+        raise BuildError(f"missing required directory: {side}/")
+
     files: dict[str, Path] = {}
-    for layer in ("common", side):
-        base = root / "shared" / layer
-        if not base.exists():
+    for path in sorted(base.rglob("*")):
+        if not path.is_file():
             continue
-        for path in sorted(base.rglob("*")):
-            if not path.is_file():
-                continue
-            rel = path.relative_to(base).as_posix()
-            files[rel] = path
+        if git_ignored(repo, path):
+            continue
+        rel = path.relative_to(base).as_posix()
+        files[rel] = path
     return files
+
+
+def validate_server_mods_are_in_client(repo: Path) -> None:
+    """Tenpack rule: every server mod jar must exist identically on client."""
+    client_mods = repo / "client" / "mods"
+    server_mods = repo / "server" / "mods"
+    if not server_mods.exists():
+        return
+
+    missing: list[str] = []
+    mismatched: list[str] = []
+    for server_mod in sorted(server_mods.glob("*.jar")):
+        if git_ignored(repo, server_mod):
+            continue
+        client_mod = client_mods / server_mod.name
+        if not client_mod.exists():
+            missing.append(server_mod.name)
+            continue
+        if sha256_file(server_mod) != sha256_file(client_mod):
+            mismatched.append(server_mod.name)
+
+    if missing or mismatched:
+        lines = ["server mods must be mirrored into client/mods before publishing"]
+        if missing:
+            lines.append("missing from client/mods:")
+            lines.extend(f"  - {name}" for name in missing)
+        if mismatched:
+            lines.append("different contents in client/mods:")
+            lines.extend(f"  - {name}" for name in mismatched)
+        raise BuildError("\n".join(lines))
 
 
 def copy_payload(path: Path, out: Path, digest: str) -> str:
@@ -73,6 +123,7 @@ def build_side(repo: Path, out: Path, side: str) -> dict:
         "minecraft": MINECRAFT,
         "loader": LOADER,
         "generatedAt": datetime.now(timezone.utc).isoformat(),
+        "sourceDirectory": side,
         "managedDirectories": ["mods", "resourcepacks", "shaderpacks"],
         "files": entries,
     }
@@ -102,13 +153,22 @@ def main() -> int:
         action="store_true",
         help="do not delete the output directory before generating",
     )
+    parser.add_argument(
+        "--skip-server-mod-validation",
+        action="store_true",
+        help="do not enforce that every server mod jar exists identically in client/mods",
+    )
     args = parser.parse_args()
 
     repo = args.repo.resolve()
     out = args.out if args.out.is_absolute() else repo / args.out
 
-    if not (repo / "shared").exists():
-        raise SystemExit(f"shared/ not found under {repo}")
+    for side in SIDES:
+        if not (repo / side).exists():
+            raise SystemExit(f"{side}/ not found under {repo}")
+
+    if not args.skip_server_mod_validation:
+        validate_server_mods_are_in_client(repo)
 
     if out.exists() and not args.no_clean:
         shutil.rmtree(out)
@@ -128,4 +188,7 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    try:
+        raise SystemExit(main())
+    except BuildError as exc:
+        raise SystemExit(f"error: {exc}")
