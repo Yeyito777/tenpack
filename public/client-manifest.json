@@ -1,0 +1,406 @@
+{
+  "files": [
+    {
+      "path": "config/connector.json",
+      "sha256": "d36dea45a03ab40153a4be9fdce4a8d21229c081eeb666d724bcdbf4a9719769",
+      "size": 140,
+      "url": "files/d3/d36dea45a03ab40153a4be9fdce4a8d21229c081eeb666d724bcdbf4a9719769"
+    },
+    {
+      "path": "config/do_a_barrel_roll-client.json",
+      "sha256": "ee32faf303d3beaff76ee54091bc95788048046b6e948ea7795d1eb34f365607",
+      "size": 1762,
+      "url": "files/ee/ee32faf303d3beaff76ee54091bc95788048046b6e948ea7795d1eb34f365607"
+    },
+    {
+      "path": "config/improvedmobs/common.toml",
+      "sha256": "89162a7f276100406909e0879812eb2827fc9a02e0a7f733d13a52f62f08b208",
+      "size": 12929,
+      "url": "files/89/89162a7f276100406909e0879812eb2827fc9a02e0a7f733d13a52f62f08b208"
+    },
+    {
+      "path": "config/improvedmobs/equipment.json",
+      "sha256": "9619c44b9584ca9715a93b280d9cfbcd20e7889b58125ed2b0ba1a2e490936b4",
+      "size": 2466,
+      "url": "files/96/9619c44b9584ca9715a93b280d9cfbcd20e7889b58125ed2b0ba1a2e490936b4"
+    },
+    {
+      "path": "config/legendarysurvivaloverhaul-client.toml",
+      "sha256": "c75192c66d9a113cc4381603186285559e5ceb7ea465cb445574d938f94a85af",
+      "size": 5285,
+      "url": "files/c7/c75192c66d9a113cc4381603186285559e5ceb7ea465cb445574d938f94a85af"
+    },
+    {
+      "path": "config/legendarysurvivaloverhaul-common.toml",
+      "sha256": "eb327bdf6a4b4d2ae5cb61054863ebf45d3c334785a356c151cc4d94125f5b85",
+      "size": 35823,
+      "url": "files/eb/eb327bdf6a4b4d2ae5cb61054863ebf45d3c334785a356c151cc4d94125f5b85"
+    },
+    {
+      "path": "config/sound_physics_remastered/occlusion.properties",
+      "sha256": "ebbac45fbb3ca01487b85ffee9601b213b71896e6606fb297bcb0f3ac9c30ffb",
+      "size": 4831,
+      "url": "files/eb/ebbac45fbb3ca01487b85ffee9601b213b71896e6606fb297bcb0f3ac9c30ffb"
+    },
+    {
+      "path": "config/sound_physics_remastered/reflectivity.properties",
+      "sha256": "e26b00784bb6239988759ed1a64551b9f301dc33c5a855d91e976ee4bf40ac8a",
+      "size": 4713,
+      "url": "files/e2/e26b00784bb6239988759ed1a64551b9f301dc33c5a855d91e976ee4bf40ac8a"
+    },
+    {
+      "path": "config/sound_physics_remastered/sound_rates.properties",
+      "sha256": "04fa1114bea944844250be64f3ced4d5fbcdf56838478e2a28143704670494ab",
+      "size": 70315,
+      "url": "files/04/04fa1114bea944844250be64f3ced4d5fbcdf56838478e2a28143704670494ab"
+    },
+    {
+      "path": "config/sound_physics_remastered/soundphysics.properties",
+      "sha256": "d29dede3f214ee4b1aa03314f92c3f973c21ee6e26d173eba3d01a2083237b6d",
+      "size": 5104,
+      "url": "files/d2/d29dede3f214ee4b1aa03314f92c3f973c21ee6e26d173eba3d01a2083237b6d"
+    },
+    {
+      "path": "config/voxyworldgenv2.json",
+      "sha256": "556e4ea8da03dc0d4ef596d1a12852a86d6c18a89a9c7eff95891a8f781409b9",
+      "size": 177,
+      "url": "files/55/556e4ea8da03dc0d4ef596d1a12852a86d6c18a89a9c7eff95891a8f781409b9"
+    },
+    {
+      "path": "config/windy-config.json",
+      "sha256": "8bcad332ab96ca33166dfc861f27b4893a30e544274b640aec53816cd98205bf",
+      "size": 102,
+      "url": "files/8b/8bcad332ab96ca33166dfc861f27b4893a30e544274b640aec53816cd98205bf"
+    },
+    {
+      "path": "mods/AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar",
+      "sha256": "07ee6fd24d8427ee079e2e376095b0ac92450b0153331f1575f8195e2c9cf90b",
+      "size": 84811632,
+      "url": "files/07/07ee6fd24d8427ee079e2e376095b0ac92450b0153331f1575f8195e2c9cf90b"
+    },
+    {
+      "path": "mods/CameraOverhaul-v2.0.6-neoforge+mc[1.21.0-1.21.1].jar",
+      "sha256": "3319718d2bad9c24542fde7e84029cfcf9f1187f84b376831444f7b1cb03c223",
+      "size": 143829,
+      "url": "files/33/3319718d2bad9c24542fde7e84029cfcf9f1187f84b376831444f7b1cb03c223"
+    },
+    {
+      "path": "mods/Chunky-NeoForge-1.4.23.jar",
+      "sha256": "d72f235cf1f56f2c374f52c00bdda5034524b28142305a84cfc123a3f92ad274",
+      "size": 340572,
+      "url": "files/d7/d72f235cf1f56f2c374f52c00bdda5034524b28142305a84cfc123a3f92ad274"
+    },
+    {
+      "path": "mods/CreativeCore_NEOFORGE_v2.13.38_mc1.21.1.jar",
+      "sha256": "62c88048902c23cde0d8b5b0da2eb7b463c5249380b1f8c86cafd817b0daf4a9",
+      "size": 1216443,
+      "url": "files/62/62c88048902c23cde0d8b5b0da2eb7b463c5249380b1f8c86cafd817b0daf4a9"
+    },
+    {
+      "path": "mods/GlitchCore-neoforge-1.21.1-2.1.0.0.jar",
+      "sha256": "31589ffc136ac031319db88fa7ce2599ba789ae5d18bd5125e1857e20a834993",
+      "size": 90918,
+      "url": "files/31/31589ffc136ac031319db88fa7ce2599ba789ae5d18bd5125e1857e20a834993"
+    },
+    {
+      "path": "mods/Kiwi-1.21.1-NeoForge-15.8.3.jar",
+      "sha256": "16a7f5cf0015ac86ad977b397d6dfef14884412e14c14d428a3598436a2c9561",
+      "size": 1538356,
+      "url": "files/16/16a7f5cf0015ac86ad977b397d6dfef14884412e14c14d428a3598436a2c9561"
+    },
+    {
+      "path": "mods/NeoForge-Version-Serene Seasons Plus-1.21.1-4.2.3.jar",
+      "sha256": "1e1deb81afe206ef676e3856cc19a5450b488a9e55c6515dc4eed2e061be455d",
+      "size": 373902,
+      "url": "files/1e/1e1deb81afe206ef676e3856cc19a5450b488a9e55c6515dc4eed2e061be455d"
+    },
+    {
+      "path": "mods/NeoForge-projectatmosphere-0.8.1.0.jar",
+      "sha256": "904e4fc881b6685cb844c6bc3b9f9ecef393e919c9e418f2bfb634b3b0a8d935",
+      "size": 13004001,
+      "url": "files/90/904e4fc881b6685cb844c6bc3b9f9ecef393e919c9e418f2bfb634b3b0a8d935"
+    },
+    {
+      "path": "mods/PassableFoliage-1.21.1-NeoForge-9.1.3.jar",
+      "sha256": "c04855fb17ca71d2a698b680952f9ea9e9bb2e4dc7e1eac6c9172daf59fc47ac",
+      "size": 31305,
+      "url": "files/c0/c04855fb17ca71d2a698b680952f9ea9e9bb2e4dc7e1eac6c9172daf59fc47ac"
+    },
+    {
+      "path": "mods/PresenceFootsteps-1.21.1-1.12.0-beta.1-1.21NeoForge.jar",
+      "sha256": "ded9ea8677f407cbf280b0ee33866ae70859a7c476ef0f60fd35a9be2ee9b91a",
+      "size": 7096988,
+      "url": "files/de/ded9ea8677f407cbf280b0ee33866ae70859a7c476ef0f60fd35a9be2ee9b91a"
+    },
+    {
+      "path": "mods/SereneSeasons-neoforge-1.21.1-10.1.0.3.jar",
+      "sha256": "db5182afe9197044916d364b69cd70139457f92859b0bf4f4bb76c3f42360a65",
+      "size": 159206,
+      "url": "files/db/db5182afe9197044916d364b69cd70139457f92859b0bf4f4bb76c3f42360a65"
+    },
+    {
+      "path": "mods/TerraBlender-neoforge-1.21.1-4.1.0.8.jar",
+      "sha256": "0c49b5ef447a7f09100e9a210888a7347fbda0aa75322063991f6063b25fe3f9",
+      "size": 120365,
+      "url": "files/0c/0c49b5ef447a7f09100e9a210888a7347fbda0aa75322063991f6063b25fe3f9"
+    },
+    {
+      "path": "mods/YungsApi-1.21.1-NeoForge-5.1.6.jar",
+      "sha256": "08e1d21690d3213a4c62de6b6cf79f3527afb2e72e0cad0e1848d46eb8f682ca",
+      "size": 388678,
+      "url": "files/08/08e1d21690d3213a4c62de6b6cf79f3527afb2e72e0cad0e1848d46eb8f682ca"
+    },
+    {
+      "path": "mods/YungsCaveBiomes-1.21.1-NeoForge-3.1.1.jar",
+      "sha256": "7585587e5cb7859e26189c6ec0a5b829c5c228f095e4e843fa3add61f817dd20",
+      "size": 13006621,
+      "url": "files/75/7585587e5cb7859e26189c6ec0a5b829c5c228f095e4e843fa3add61f817dd20"
+    },
+    {
+      "path": "mods/alexsmobs-1.22.17.jar",
+      "sha256": "6e502855f79e4c9f2a11d560a9b88a3ab295aa378c44b0f0a0dd95f95d0301a6",
+      "size": 26620546,
+      "url": "files/6e/6e502855f79e4c9f2a11d560a9b88a3ab295aa378c44b0f0a0dd95f95d0301a6"
+    },
+    {
+      "path": "mods/architectury-13.0.8-neoforge.jar",
+      "sha256": "5ec578f814e8cca87aeffa6e424032e78d9ea5ea6b603dd834c2dc13c31141ee",
+      "size": 584004,
+      "url": "files/5e/5ec578f814e8cca87aeffa6e424032e78d9ea5ea6b603dd834c2dc13c31141ee"
+    },
+    {
+      "path": "mods/autohud-8.11+1.21.1-neoforge.jar",
+      "sha256": "a18b7b3eba737a1b39030412f4726ad74e07c8c006dc51deb64ef5be8aba0e2f",
+      "size": 395787,
+      "url": "files/a1/a18b7b3eba737a1b39030412f4726ad74e07c8c006dc51deb64ef5be8aba0e2f"
+    },
+    {
+      "path": "mods/betterdays-1.21.1-3.3.6.3-NEOFORGE.jar",
+      "sha256": "03acad0637dd5d86361178eb3e87ad8f2ed965e9c84514df4dc4228bb24aa2aa",
+      "size": 585998,
+      "url": "files/03/03acad0637dd5d86361178eb3e87ad8f2ed965e9c84514df4dc4228bb24aa2aa"
+    },
+    {
+      "path": "mods/citadel-1.21.1-2.7.6.jar",
+      "sha256": "9e12468c49e5a95b7adbf22b3b4d05bc55565989b89c40b985cd73bdfe63c3c2",
+      "size": 3028943,
+      "url": "files/9e/9e12468c49e5a95b7adbf22b3b4d05bc55565989b89c40b985cd73bdfe63c3c2"
+    },
+    {
+      "path": "mods/cloth-config-15.0.140-fabric.jar",
+      "sha256": "33894e95da3af59014b39d126586d5241e07ea39f8618763e30dab637405f95f",
+      "size": 1157166,
+      "url": "files/33/33894e95da3af59014b39d126586d5241e07ea39f8618763e30dab637405f95f"
+    },
+    {
+      "path": "mods/connector-2.0.0-beta.14+1.21.1-full.jar",
+      "sha256": "a79817f1076e2e6499b0ab09c4e8c032d04b071341b66d036c3d96112804e51b",
+      "size": 4526785,
+      "url": "files/a7/a79817f1076e2e6499b0ab09c4e8c032d04b071341b66d036c3d96112804e51b"
+    },
+    {
+      "path": "mods/do_a_barrel_roll-neoforge-3.7.3+1.21.jar",
+      "sha256": "e56395ebb26318c11f3a9474bba14518f17f4f2028683eb0aa9cdc7dacf124e2",
+      "size": 465787,
+      "url": "files/e5/e56395ebb26318c11f3a9474bba14518f17f4f2028683eb0aa9cdc7dacf124e2"
+    },
+    {
+      "path": "mods/eg_particle_interactions-0.4.1-neoforge-mc1.21.1.jar",
+      "sha256": "caba3b03c2f3d3dc30fbe2979246e14385c6db977f1da44673bbf95dcd0e3652",
+      "size": 322743,
+      "url": "files/ca/caba3b03c2f3d3dc30fbe2979246e14385c6db977f1da44673bbf95dcd0e3652"
+    },
+    {
+      "path": "mods/fallingleaves-1.17.1+1.21.1.jar",
+      "sha256": "67e2071d6c25e2638573e6ee91a146b77e38d77edddbb26f45006ab878ebca77",
+      "size": 170056,
+      "url": "files/67/67e2071d6c25e2638573e6ee91a146b77e38d77edddbb26f45006ab878ebca77"
+    },
+    {
+      "path": "mods/forgified-fabric-api-0.116.7+2.2.4+1.21.1.jar",
+      "sha256": "68abf2864e957df26ac0cc3bd5352ee67880e052b47a80f22f28556c1179f18d",
+      "size": 5569793,
+      "url": "files/68/68abf2864e957df26ac0cc3bd5352ee67880e052b47a80f22f28556c1179f18d"
+    },
+    {
+      "path": "mods/gaboulibs-neoforge-1.4.jar",
+      "sha256": "26b9d52f72f4e2da41950409b18481b46282fce18a6238baf392b9a584cbebd4",
+      "size": 23578,
+      "url": "files/26/26b9d52f72f4e2da41950409b18481b46282fce18a6238baf392b9a584cbebd4"
+    },
+    {
+      "path": "mods/geckolib-neoforge-1.21.1-4.8.4.jar",
+      "sha256": "a1b6ce25e8627aa7e748672eedb6b71af68e0993462313649c259f38e42bcac9",
+      "size": 622582,
+      "url": "files/a1/a1b6ce25e8627aa7e748672eedb6b71af68e0993462313649c259f38e42bcac9"
+    },
+    {
+      "path": "mods/iris-neoforge-1.8.12+mc1.21.1.jar",
+      "sha256": "3e3f94d2d5cdcb8145c4385d521974aa2d8669b2cc212351f70cf06488182e83",
+      "size": 2438548,
+      "url": "files/3e/3e3f94d2d5cdcb8145c4385d521974aa2d8669b2cc212351f70cf06488182e83"
+    },
+    {
+      "path": "mods/legendarysurvivaloverhaul-1.21.1-2.4.2.jar",
+      "sha256": "da9c38f05df4dfe09e5226f17d43a0c1725c16ede3ea6dd2d945c111b1d413e4",
+      "size": 3742368,
+      "url": "files/da/da9c38f05df4dfe09e5226f17d43a0c1725c16ede3ea6dd2d945c111b1d413e4"
+    },
+    {
+      "path": "mods/lily_pads_expansion-1.0.0-neoforge-1.21-1.21.1.jar",
+      "sha256": "71d98d7d9fdfccf2737310d2368697f688fa25c60bb9ac11a71a34f367787c8b",
+      "size": 138594,
+      "url": "files/71/71d98d7d9fdfccf2737310d2368697f688fa25c60bb9ac11a71a34f367787c8b"
+    },
+    {
+      "path": "mods/lithosphere-1.7.jar",
+      "sha256": "2c2cc9c3de98d79feac7ea9bd0bfe367fe1d59dfefe647ca1afdd3d547d682f9",
+      "size": 527182,
+      "url": "files/2c/2c2cc9c3de98d79feac7ea9bd0bfe367fe1d59dfefe647ca1afdd3d547d682f9"
+    },
+    {
+      "path": "mods/mru-1.0.19+LTS+1.21.1+neoforge.jar",
+      "sha256": "ed025100de31f5635d48a5a0cc4bc9c701d885bf3777e0c2ad8af5f2cad4601a",
+      "size": 243953,
+      "url": "files/ed/ed025100de31f5635d48a5a0cc4bc9c701d885bf3777e0c2ad8af5f2cad4601a"
+    },
+    {
+      "path": "mods/particlerain-4.0.0-beta.9+1.21.1-neoforge.jar",
+      "sha256": "dd886cfd14c6cf1d23aec5d40871fd4b8794e65bc4153a74619e418a1b3165ba",
+      "size": 602187,
+      "url": "files/dd/dd886cfd14c6cf1d23aec5d40871fd4b8794e65bc4153a74619e418a1b3165ba"
+    },
+    {
+      "path": "mods/simpleclouds-0.8.0f-b5-all.jar",
+      "sha256": "50a10cb5db89bd1c02debb37f25b88efc3043f28cf7a5bc009ccec314d8a209c",
+      "size": 2265660,
+      "url": "files/50/50a10cb5db89bd1c02debb37f25b88efc3043f28cf7a5bc009ccec314d8a209c"
+    },
+    {
+      "path": "mods/sodium-neoforge-0.6.13+mc1.21.1.jar",
+      "sha256": "7acd7af2ef75ec883a6872c17494ead65e38025151eb08a1d60e36d34377f403",
+      "size": 1162994,
+      "url": "files/7a/7acd7af2ef75ec883a6872c17494ead65e38025151eb08a1d60e36d34377f403"
+    },
+    {
+      "path": "mods/sound-physics-remastered-neoforge-1.21.1-1.5.1.jar",
+      "sha256": "bddc71ecd4f074a101eb3785599d13c69e64025e1029aa0fd0a28fcf9bccf2ea",
+      "size": 202454,
+      "url": "files/bd/bddc71ecd4f074a101eb3785599d13c69e64025e1029aa0fd0a28fcf9bccf2ea"
+    },
+    {
+      "path": "mods/sounds-2.4.22+lts+1.21.1-neoforge.jar",
+      "sha256": "d3bda0a7a5b1f267747da182e788139da380f625eaf96a5c2a8fa5bcb8d908b7",
+      "size": 8732437,
+      "url": "files/d3/d3bda0a7a5b1f267747da182e788139da380f625eaf96a5c2a8fa5bcb8d908b7"
+    },
+    {
+      "path": "mods/still-life-0.1.1.jar",
+      "sha256": "0838e42c151cd4118b2baadc9fe933cc5015c611d00a54846601eb1e8b66deab",
+      "size": 4714182,
+      "url": "files/08/0838e42c151cd4118b2baadc9fe933cc5015c611d00a54846601eb1e8b66deab"
+    },
+    {
+      "path": "mods/tenpack-client-mods.json",
+      "sha256": "c4bc2b98b1b26870e455f51259b60bb19a1803539791bcfc0758d4fa7d743b36",
+      "size": 15024,
+      "url": "files/c4/c4bc2b98b1b26870e455f51259b60bb19a1803539791bcfc0758d4fa7d743b36"
+    },
+    {
+      "path": "mods/terrain_slabs-neoforge-3.0.3.jar",
+      "sha256": "99c55705a80e7edfa9ad8e3dff932ab3df3b4824849d334fa7fb0cdc5554c8e5",
+      "size": 370160,
+      "url": "files/99/99c55705a80e7edfa9ad8e3dff932ab3df3b4824849d334fa7fb0cdc5554c8e5"
+    },
+    {
+      "path": "mods/voxy-0.2.14-alpha-mc_1211-f308c254.jar",
+      "sha256": "1389d04f9fa4217e31abdd3243bfaf8b054668171a2b7f7cd4d34069f8effe1e",
+      "size": 12598320,
+      "url": "files/13/1389d04f9fa4217e31abdd3243bfaf8b054668171a2b7f7cd4d34069f8effe1e"
+    },
+    {
+      "path": "mods/voxy-worldgen-v2-1.21.1-2.2.1.jar",
+      "sha256": "9f2eab1c30f02b12133fce4d567e5a854a9b7c81e65a8dd9afaa05dd8e3c39f3",
+      "size": 216470,
+      "url": "files/9f/9f2eab1c30f02b12133fce4d567e5a854a9b7c81e65a8dd9afaa05dd8e3c39f3"
+    },
+    {
+      "path": "mods/weaponmaster_ydm-1.21.1-neoforge-4.2.7.jar",
+      "sha256": "af0de505aef99fa9feca6b969932b28b834f4663dcb95c12bf65dccbe304a605",
+      "size": 344392,
+      "url": "files/af/af0de505aef99fa9feca6b969932b28b834f4663dcb95c12bf65dccbe304a605"
+    },
+    {
+      "path": "mods/windy-1.1.1+1.21-neoforge.jar",
+      "sha256": "5be5d5b6359dbec76f25a446210aab7bdb31a771e9c4bfb150d2001b3e005620",
+      "size": 33416,
+      "url": "files/5b/5be5d5b6359dbec76f25a446210aab7bdb31a771e9c4bfb150d2001b3e005620"
+    },
+    {
+      "path": "mods/yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar",
+      "sha256": "b5c30321b46cfaa521645a04aff89d2804d8167a25bb23ad4b1ae8da73093a2f",
+      "size": 1118651,
+      "url": "files/b5/b5c30321b46cfaa521645a04aff89d2804d8167a25bb23ad4b1ae8da73093a2f"
+    },
+    {
+      "path": "resourcepacks/VanillaEvolved Extra 3D (Optional).zip",
+      "sha256": "18f70474a159f50aeb65399635c1b1d16833578b91b18876b72aad64633d623f",
+      "size": 257237,
+      "url": "files/18/18f70474a159f50aeb65399635c1b1d16833578b91b18876b72aad64633d623f"
+    },
+    {
+      "path": "resourcepacks/VanillaEvolved_1.17.0.zip",
+      "sha256": "d1ddc6f2a5b83dbbd0d12a390bdd8209e22c452fa37968998412561b3b294030",
+      "size": 1405588,
+      "url": "files/d1/d1ddc6f2a5b83dbbd0d12a390bdd8209e22c452fa37968998412561b3b294030"
+    },
+    {
+      "path": "resourcepacks/tenpack-resourcepacks.json",
+      "sha256": "aa3b3d3c6f2e2b2bd5095178724e0b65a8a70885868dd5d9adae36386a499ca8",
+      "size": 3036,
+      "url": "files/aa/aa3b3d3c6f2e2b2bd5095178724e0b65a8a70885868dd5d9adae36386a499ca8"
+    },
+    {
+      "path": "resourcepacks/xali's Bushy Leaves v3.5.0.zip",
+      "sha256": "3e787ade31f08d66728e7dd7726a5e63a97ea28b078dc811245143379d090a0c",
+      "size": 368186,
+      "url": "files/3e/3e787ade31f08d66728e7dd7726a5e63a97ea28b078dc811245143379d090a0c"
+    },
+    {
+      "path": "resourcepacks/xali's Enhanced Vanilla -1.11.2b-rev.54d51d4.zip",
+      "sha256": "ae69dcb419174a645a42eb3655da96cc51da9db19d3c5edbcd332071ed8561df",
+      "size": 807859,
+      "url": "files/ae/ae69dcb419174a645a42eb3655da96cc51da9db19d3c5edbcd332071ed8561df"
+    },
+    {
+      "path": "resourcepacks/xali's enchanted books v0.13.0.zip",
+      "sha256": "bf43f5ee7cb30b866e1417014c43c4a28684e64d7703caa254895e5f3a3fca82",
+      "size": 203494,
+      "url": "files/bf/bf43f5ee7cb30b866e1417014c43c4a28684e64d7703caa254895e5f3a3fca82"
+    },
+    {
+      "path": "resourcepacks/\u00a76Immersive\u00a78_\u00a76Interfaces\u00a78.zip",
+      "sha256": "91e8303b22d921074619252b9b66b9fc2127c97aa7a6d487f39056900c091547",
+      "size": 1197001,
+      "url": "files/91/91e8303b22d921074619252b9b66b9fc2127c97aa7a6d487f39056900c091547"
+    },
+    {
+      "path": "shaderpacks/Eclipse-Shader-Unstable-0e70ca33.zip",
+      "sha256": "6fb3838875a781ea3184a74d82da4a174340d0435793028cbbf93a87324a6e8e",
+      "size": 47081686,
+      "url": "files/6f/6fb3838875a781ea3184a74d82da4a174340d0435793028cbbf93a87324a6e8e"
+    }
+  ],
+  "generatedAt": "2026-05-06T16:56:26.782267+00:00",
+  "loader": "neoforge",
+  "managedDirectories": [
+    "mods",
+    "resourcepacks",
+    "shaderpacks"
+  ],
+  "minecraft": "1.21.1",
+  "pack": "tenpack",
+  "schema": 1,
+  "side": "client",
+  "sourceDirectory": "client"
+}

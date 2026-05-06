@@ -18,7 +18,19 @@ Build publishable sync manifests directly from `client/` and `server/` with:
 ./tools/tenpack-build-public.py --out public
 ```
 
-Then host `public/` over HTTP/HTTPS. Clients can sync before launch with `tools/tenpack-sync.py` and the hosted `client-manifest.json`. The build script validates that every `server/mods/*.jar` exists identically in `client/mods/` before publishing.
+`public/` is tracked in git because kitsune deploys directly from GitHub. Clients can sync before launch with `tools/tenpack-sync.py` and the hosted `client-manifest.json`. The build script validates that every `server/mods/*.jar` exists identically in `client/mods/` before publishing.
+
+Canonical update flow:
+
+```bash
+# edit client/ and server/
+./tools/tenpack-build-public.py --out public
+git add -A
+git commit -m "Describe the pack change"
+git push
+```
+
+kitsune polls GitHub for `main`; when it sees a new commit, it pulls, deploys `public/` to `https://yeyito.dev/tenpack/`, and restarts the Tenpack server.
 
 ## License
 
