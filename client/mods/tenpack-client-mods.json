@@ -87,6 +87,34 @@
       "source": "local archive: archived/sound-physics-remastered/"
     },
     {
+      "name": "CreativeCore",
+      "version": "2.13.38",
+      "filename": "CreativeCore_NEOFORGE_v2.13.38_mc1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/OsZiaDHq/versions/ObUu8hxJ/CreativeCore_NEOFORGE_v2.13.38_mc1.21.1.jar",
+      "note": "Required by AmbientSounds."
+    },
+    {
+      "name": "AmbientSounds",
+      "version": "6.3.8",
+      "filename": "AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/fM515JnW/versions/RZyxhsqY/AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar",
+      "note": "Client-side ambient soundscape mod; server-side unsupported."
+    },
+    {
+      "name": "YetAnotherConfigLib (YACL)",
+      "version": "3.8.2+1.21.1-neoforge",
+      "filename": "yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/1eAoo2KR/versions/7TVdVtxF/yet_another_config_lib_v3-3.8.2%2B1.21.1-neoforge.jar",
+      "note": "Required by Windy."
+    },
+    {
+      "name": "Windy",
+      "version": "1.1.1+1.21-neoforge",
+      "filename": "windy-1.1.1+1.21-neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/EwYg6C78/versions/xcBfBf8H/windy-1.1.1%2B1.21-neoforge.jar",
+      "note": "Client-side ambient wind particles; configured in config/windy-config.json with minimumWindHeight=130."
+    },
+    {
       "name": "YUNG's API",
       "version": "1.21.1-NeoForge-5.1.6",
       "filename": "YungsApi-1.21.1-NeoForge-5.1.6.jar",

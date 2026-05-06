@@ -6,20 +6,33 @@ debug/
 hs_err_pid*.log
 replay_pid*.log
 
-# Minecraft/server runtime state that should not be committed if created here
+# Minecraft / server runtime state that should not be committed if created here
 world/
 worlds/
 saves/
 backups/
 cache/
 run/
+screenshots/
 server.properties
+options.txt
+optionsof.txt
+servers.dat
+servers.dat_old
 ops.json
 whitelist.json
 banned-ips.json
 banned-players.json
 usercache.json
 *.lock
+*.tmp
+
+# Launcher / local machine state
+.minecraft/
+.prism/
+.prismlauncher/
+launcher_profiles.json
+realms_persistence.json
 
 # OS/editor noise
 .DS_Store
@@ -27,9 +40,12 @@ Thumbs.db
 *~
 *.swp
 *.swo
+.idea/
+.vscode/
 
 # Build/temp output
 build/
 out/
 tmp/
 .temp/
+.gradle/
