@@ -27,7 +27,7 @@ deploy_current() {
 
   log "restarting Tenpack services"
   sudo -n systemctl restart tenpack-minecraft.service
-  sudo -n systemctl start tenpack-upnp.service || true
+  sudo -n systemctl restart tenpack-upnp.service || true
 }
 
 if [[ ! -d "$REPO/.git" ]]; then
