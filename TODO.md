@@ -2,11 +2,9 @@
 - [ ] Limited chunks and structures tied to progression issues
 - [ ] Grab other people mod add that
 - [ ] Be able to sit on chair
-- [ ] Check if we can have something better than biomes o plenty
 - [ ] Add true dark mod + shaderpacks
 - [ ] Fucked up weather
 - [ ] Lower the chances of relics so that they're unique
-- [ ] Check distance horizons
 - [ ] 1 min protection of loot on death
 - [ ] Pets would be really nice like it would make sense to have a vulture with you
 - [ ] Origins tied to factions
@@ -17,9 +15,7 @@
 - [ ] FTB mining shapeless—make it taxing on tools and hunger
 - [ ] Center progression and shit around hunger
 - [ ] spear hits should take away hunger
-- [ ] Add echo and reverb to sounds
 - [ ] The AI will check all optimization mods
-- [ ] We need mobs
 - [ ] World events
 - [ ] Set weekly events (humans choose these)
 - [ ] Random daily events (AI decides this)
@@ -35,3 +31,18 @@
 - [ ] Corpse decomposition
 - [ ] Nemesis resident evil dread nether
 - [ ] Immersive portals
+- [ ] Setup instance such that it insta downloads mods and it auto joins server
+- [ ] The little things: torches blow out in the wind, if u pull out your glider in the middle of a thunderstorm you're fucked, iron armor etc makes it so that u get struck down by lighting, campfire smoke mod, furnaces release smoke too
+- [ ] Min 3 ppl to sleep need 100%
+- [ ] The leading faction which is through quantifyable like mining resources killing people etc... is the one that chooses the mods that get added every 3 days. Faction glory scales with rep of player kill / dies
+- [ ] Sending screenshots to paramount for glory
+- [ ] Rare entities that are fucked up
+- [ ] Locks and lockpicking for chests
+- [ ] Glory gets reset weekly
+- [ ] Faction points shouldn't display 24/7 they should be checked at the faction base and factions can only craft it ~1-2 times
+- [ ] Faction can choose to revive someone instead of adding mod glory
+- [ ] In game days/night last 2 hours each
+- [ ] Calendar system tied to the seasons
+- [ ] Loose quest system
+- [ ] Get to the moon is the long term goal, adding mods is the short term one, surviving the first night is the spark that lights the fire
+- [ ] Pvp enables after 5 minutes
