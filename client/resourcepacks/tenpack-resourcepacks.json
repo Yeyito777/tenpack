@@ -8,9 +8,18 @@
       "source": "https://cdn.modrinth.com/data/3sV1gvyJ/versions/rhXvPOmr/%C2%A76Immersive%C2%A78_%C2%A76Interfaces%C2%A78.zip",
       "project": "https://modrinth.com/resourcepack/shrimps-immersive-interfaces",
       "loadOrderNote": "GUI overhaul; enable as a high-priority resource pack"
+    },
+    {
+      "name": "rainbow's foliage: polytone",
+      "version": "1.7",
+      "filename": "rainbows-foliage-polytone-edition-v1.7.zip",
+      "source": "https://cdn.modrinth.com/data/bY2CaVIh/versions/yi1axqHV/rainbows-foliage-polytone-edition-v1.7.zip",
+      "project": "https://modrinth.com/resourcepack/rainbows-foliage",
+      "loadOrderNote": "Requires the Polytone client mod; enable below packs that intentionally override leaf/plant models/textures."
     }
   ],
   "recommendedEnabledOrderLowToHighPriority": [
+    "rainbows-foliage-polytone-edition-v1.7.zip",
     "§6Immersive§8_§6Interfaces§8.zip"
   ]
 }

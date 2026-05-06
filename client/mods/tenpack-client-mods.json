@@ -115,6 +115,13 @@
       "note": "Client-side ambient wind particles; configured in config/windy-config.json with minimumWindHeight=130."
     },
     {
+      "name": "Polytone",
+      "version": "1.21-3.6.6-neoforge",
+      "filename": "polytone-1.21-3.6.6-neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/3qAYkBMB/versions/KxrIyizz/polytone-1.21-3.6.6-neoforge.jar",
+      "note": "Client-side resource-pack engine required by rainbow's foliage: polytone. Server-side unsupported."
+    },
+    {
       "name": "YUNG's API",
       "version": "1.21.1-NeoForge-5.1.6",
       "filename": "YungsApi-1.21.1-NeoForge-5.1.6.jar",
