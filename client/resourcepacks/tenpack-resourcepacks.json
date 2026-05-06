@@ -2,35 +2,6 @@
   "minecraft": "1.21.1",
   "resourcepacks": [
     {
-      "name": "Fresh Animations",
-      "version": "1.10.4",
-      "filename": "FreshAnimations_v1.10.4.zip",
-      "source": "https://cdn.modrinth.com/data/50dA9Sha/versions/xN57JJts/FreshAnimations_v1.10.4.zip",
-      "loadOrderNote": "Base pack; keep below FA extension packs"
-    },
-    {
-      "name": "Fresh Animations: Extensions",
-      "version": "1.8.1",
-      "filename": "FA+All_Extensions-v1.8.1.zip",
-      "source": "https://cdn.modrinth.com/data/YAVTU8mK/versions/RfJ3uz2J/FA%2BAll_Extensions-v1.8.1.zip",
-      "loadOrderNote": "Enable above Fresh Animations"
-    },
-    {
-      "name": "Fresh Animations: Creepers",
-      "version": "2.1.0",
-      "filename": "FA+Creepers-v2.1.zip",
-      "source": "https://cdn.modrinth.com/data/AhPf2E1u/versions/GrfbfoJB/FA%2BCreepers-v2.1.zip",
-      "loadOrderNote": "Enable above Fresh Animations"
-    },
-    {
-      "name": "Torturable Healthbars, but with FA",
-      "version": "2.4.1",
-      "filename": "§bTH + Fresh's Animations 2.4.1.zip",
-      "source": "https://cdn.modrinth.com/data/mQpUi57Q/versions/P8aSIaoP/%C2%A7bTH%20%2B%20Fresh%27s%20Animations%202.4.1.zip",
-      "project": "https://modrinth.com/resourcepack/thfa",
-      "loadOrderNote": "Fresh Animations-compatible Torturable Healthbars; enable above Fresh Animations/FA add-ons. Requires ETF+EMF (already in the client mods)."
-    },
-    {
       "name": "Immersive Interfaces",
       "version": "0.8.2",
       "filename": "§6Immersive§8_§6Interfaces§8.zip",
@@ -40,10 +11,6 @@
     }
   ],
   "recommendedEnabledOrderLowToHighPriority": [
-    "FreshAnimations_v1.10.4.zip",
-    "FA+All_Extensions-v1.8.1.zip",
-    "FA+Creepers-v2.1.zip",
-    "§bTH + Fresh's Animations 2.4.1.zip",
     "§6Immersive§8_§6Interfaces§8.zip"
   ]
 }
