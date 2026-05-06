@@ -1,0 +1,189 @@
+#!/usr/bin/env python3
+"""Regenerate shared/ from client/ + server/, commit, and push.
+
+Usage:
+  ./scripts/publish-shared "commit message"
+
+By default the commit stages only the pack source trees:
+  client/ server/ shared/
+
+Use --all if you intentionally want to include every changed file in the repo.
+"""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+
+
+SIDES = ("client", "server")
+LAYERS = ("common", "client", "server")
+DEFAULT_STAGE_PATHS = ("client", "server", "shared")
+
+
+def run(args: list[str], *, cwd: Path, capture: bool = False, check: bool = True) -> subprocess.CompletedProcess[str]:
+    return subprocess.run(
+        args,
+        cwd=cwd,
+        text=True,
+        stdout=subprocess.PIPE if capture else None,
+        stderr=subprocess.PIPE if capture else None,
+        check=check,
+    )
+
+
+def repo_root() -> Path:
+    result = run(["git", "rev-parse", "--show-toplevel"], cwd=Path.cwd(), capture=True)
+    return Path(result.stdout.strip())
+
+
+def sha256_file(path: Path) -> str:
+    h = hashlib.sha256()
+    with path.open("rb") as f:
+        for chunk in iter(lambda: f.read(1024 * 1024), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def git_ignored(repo: Path, path: Path) -> bool:
+    rel = path.relative_to(repo).as_posix()
+    result = run(["git", "check-ignore", "-q", rel], cwd=repo, check=False)
+    return result.returncode == 0
+
+
+def collect_side(repo: Path, side: str) -> dict[str, tuple[Path, str]]:
+    base = repo / side
+    if not base.exists():
+        raise SystemExit(f"missing required directory: {side}/")
+
+    files: dict[str, tuple[Path, str]] = {}
+    for path in sorted(base.rglob("*")):
+        if not path.is_file():
+            continue
+        if git_ignored(repo, path):
+            continue
+        rel = path.relative_to(base).as_posix()
+        files[rel] = (path, sha256_file(path))
+    return files
+
+
+def copy_file(src: Path, dest: Path) -> None:
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(src, dest)
+
+
+def ensure_shared_readme(repo: Path) -> None:
+    readme = repo / "shared" / "README.md"
+    if readme.exists():
+        return
+    readme.parent.mkdir(parents=True, exist_ok=True)
+    readme.write_text(
+        "# Tenpack shared source-of-truth\n\n"
+        "- `common/` installs on both client and server.\n"
+        "- `client/` installs only on clients.\n"
+        "- `server/` installs only on the dedicated server.\n",
+        encoding="utf-8",
+    )
+
+
+def regenerate_shared(repo: Path) -> tuple[int, int, int, list[str]]:
+    shared = repo / "shared"
+    shared.mkdir(exist_ok=True)
+    ensure_shared_readme(repo)
+
+    for layer in LAYERS:
+        target = shared / layer
+        if target.exists():
+            shutil.rmtree(target)
+
+    client = collect_side(repo, "client")
+    server = collect_side(repo, "server")
+
+    common_count = client_count = server_count = 0
+    conflicts: list[str] = []
+
+    all_paths = sorted(set(client) | set(server))
+    for rel in all_paths:
+        c = client.get(rel)
+        s = server.get(rel)
+
+        if c and s and c[1] == s[1]:
+            copy_file(c[0], shared / "common" / rel)
+            common_count += 1
+            continue
+
+        if c:
+            copy_file(c[0], shared / "client" / rel)
+            client_count += 1
+        if s:
+            copy_file(s[0], shared / "server" / rel)
+            server_count += 1
+        if c and s and c[1] != s[1]:
+            conflicts.append(rel)
+
+    return common_count, client_count, server_count, conflicts
+
+
+def has_staged_changes(repo: Path) -> bool:
+    result = run(["git", "diff", "--cached", "--quiet"], cwd=repo, check=False)
+    return result.returncode != 0
+
+
+def git_status(repo: Path) -> str:
+    return run(["git", "status", "--short", "--branch"], cwd=repo, capture=True).stdout.rstrip()
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("message", help="commit message")
+    parser.add_argument("--no-push", action="store_true", help="commit but do not push")
+    parser.add_argument("--all", action="store_true", help="stage all repo changes instead of only client/server/shared")
+    parser.add_argument("--dry-run", action="store_true", help="regenerate shared and show status, but do not commit/push")
+    args = parser.parse_args()
+
+    if not args.message.strip():
+        raise SystemExit("commit message cannot be empty")
+
+    repo = repo_root()
+    common_count, client_count, server_count, conflicts = regenerate_shared(repo)
+
+    print(
+        "regenerated shared/: "
+        f"{common_count} common, {client_count} client-only, {server_count} server-only"
+    )
+    if conflicts:
+        print("side-specific path conflicts copied to shared/client and shared/server:")
+        for rel in conflicts:
+            print(f"  {rel}")
+
+    if args.dry_run:
+        print("\nDRY RUN: not committing or pushing")
+        print(git_status(repo))
+        return 0
+
+    if args.all:
+        run(["git", "add", "-A"], cwd=repo)
+    else:
+        run(["git", "add", *DEFAULT_STAGE_PATHS], cwd=repo)
+
+    if not has_staged_changes(repo):
+        print("nothing to commit after regenerating shared/")
+        print(git_status(repo))
+        return 0
+
+    run(["git", "commit", "-m", args.message], cwd=repo)
+
+    if args.no_push:
+        print("created commit; --no-push set, skipping push")
+        return 0
+
+    run(["git", "push"], cwd=repo)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

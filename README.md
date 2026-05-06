@@ -24,6 +24,12 @@ Going forward, prefer maintaining pack files in `shared/` and publishing generat
 
 Then host `public/` over HTTP/HTTPS. Clients can sync before launch with `tools/tenpack-sync.py` and the hosted `client-manifest.json`.
 
+If you edit `client/` and/or `server/` directly and want to regenerate `shared/`, commit, and push in one step:
+
+```bash
+./scripts/publish-shared "Your commit message"
+```
+
 ## License
 
 This repository is MIT licensed for the original pack metadata, scripts, notes, and configuration authored here. Third-party Minecraft mods, resource packs, shader packs, and other bundled assets remain under their respective upstream licenses.
