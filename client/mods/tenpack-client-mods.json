@@ -1,0 +1,143 @@
+{
+  "minecraft": "1.21.1",
+  "loader": "NeoForge 21.1.228",
+  "installed": [
+    {
+      "name": "Sodium",
+      "version": "0.6.13+mc1.21.1 (NeoForge)",
+      "filename": "sodium-neoforge-0.6.13+mc1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/AANobbMI/versions/Pb3OXVqC/sodium-neoforge-0.6.13%2Bmc1.21.1.jar"
+    },
+    {
+      "name": "Iris",
+      "version": "1.8.12+mc1.21.1 (NeoForge)",
+      "filename": "iris-neoforge-1.8.12+mc1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/YL57xq9U/versions/t3ruzodq/iris-neoforge-1.8.12%2Bmc1.21.1.jar"
+    },
+    {
+      "name": "Sinytra Connector",
+      "version": "2.0.0-beta.14+1.21.1",
+      "filename": "connector-2.0.0-beta.14+1.21.1-full.jar",
+      "source": "local archive: archived/voxy/client/mods/",
+      "note": "Required to run Fabric Voxy and Voxy WorldGen V2 on NeoForge."
+    },
+    {
+      "name": "Forgified Fabric API",
+      "version": "0.116.7+2.2.4+1.21.1",
+      "filename": "forgified-fabric-api-0.116.7+2.2.4+1.21.1.jar",
+      "source": "local archive: archived/voxy/client/mods/",
+      "note": "Required by Sinytra Connector / Fabric mods."
+    },
+    {
+      "name": "Voxy",
+      "version": "0.2.14-alpha mc_1211 built from m3t4f1v3/voxy@f308c254",
+      "filename": "voxy-0.2.14-alpha-mc_1211-f308c254.jar",
+      "source": "local archive: archived/voxy/client/mods/"
+    },
+    {
+      "name": "Voxy WorldGen V2",
+      "version": "1.21.1-2.2.1 (built from realBritakee/voxy_worldgen_v2 mc_1211)",
+      "filename": "voxy-worldgen-v2-1.21.1-2.2.1.jar",
+      "source": "https://github.com/realBritakee/voxy_worldgen_v2/tree/mc_1211",
+      "note": "Auto-starts background generation around players via config/voxyworldgenv2.json; generationRadius=128 chunks."
+    },
+    {
+      "name": "Chunky",
+      "version": "1.4.23",
+      "filename": "Chunky-NeoForge-1.4.23.jar",
+      "source": "https://cdn.modrinth.com/data/fALzjamp/versions/LuFhm4eU/Chunky-NeoForge-1.4.23.jar"
+    },
+    {
+      "name": "Simple Clouds Forked - beta",
+      "version": "0.8.0f-b5 custom build",
+      "filename": "simpleclouds-0.8.0f-b5-all.jar",
+      "source": "local archive: archived/simpleclouds-0.8.0f-b5/",
+      "note": "Custom all-jar restored from archived/; includes required CrackerLib 1.21.1-0.4.6 and SimpleCloudsAPI as JarJar dependencies."
+    },
+    {
+      "name": "Lithosphere",
+      "version": "1.7",
+      "filename": "lithosphere-1.7.jar",
+      "source": "https://cdn.modrinth.com/data/iv9jp2k9/versions/wqHGyD4G/lithosphere-1.7.jar"
+    },
+    {
+      "name": "Still Life",
+      "version": "0.1.1",
+      "filename": "still-life-0.1.1.jar",
+      "source": "https://cdn.modrinth.com/data/fK6aflho/versions/Jerfht2T/still-life-0.1.1.jar",
+      "note": "This appears to be the existing pack mod corresponding to the requested \u201cSimple Life\u201d."
+    },
+    {
+      "name": "Citadel (Unofficial Port)",
+      "version": "2.7.6",
+      "filename": "citadel-1.21.1-2.7.6.jar",
+      "source": "https://cdn.modrinth.com/data/XjY0RcQj/versions/mIylVpkN/citadel-1.21.1-2.7.6.jar",
+      "note": "Required by Alex's Mobs."
+    },
+    {
+      "name": "Alex's Mobs (Unofficial Port)",
+      "version": "1.22.17",
+      "filename": "alexsmobs-1.22.17.jar",
+      "source": "https://cdn.modrinth.com/data/EmNhnNnt/versions/KSgki4uc/alexsmobs-1.22.17.jar"
+    },
+    {
+      "name": "Sound Physics Remastered",
+      "version": "neoforge-1.21.1-1.5.1",
+      "filename": "sound-physics-remastered-neoforge-1.21.1-1.5.1.jar",
+      "source": "local archive: archived/sound-physics-remastered/"
+    },
+    {
+      "name": "YUNG's API",
+      "version": "1.21.1-NeoForge-5.1.6",
+      "filename": "YungsApi-1.21.1-NeoForge-5.1.6.jar",
+      "source": "https://cdn.modrinth.com/data/Ua7DFN59/versions/ZB22DE9q/YungsApi-1.21.1-NeoForge-5.1.6.jar",
+      "note": "Required by YUNG's Cave Biomes."
+    },
+    {
+      "name": "TerraBlender",
+      "version": "4.1.0.8",
+      "filename": "TerraBlender-neoforge-1.21.1-4.1.0.8.jar",
+      "source": "https://cdn.modrinth.com/data/kkmrDlKT/versions/6e8GCrLb/TerraBlender-neoforge-1.21.1-4.1.0.8.jar",
+      "note": "Required by YUNG's Cave Biomes."
+    },
+    {
+      "name": "GeckoLib",
+      "version": "4.8.4",
+      "filename": "geckolib-neoforge-1.21.1-4.8.4.jar",
+      "source": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/gFmrC8Ru/geckolib-neoforge-1.21.1-4.8.4.jar",
+      "note": "Required by YUNG's Cave Biomes."
+    },
+    {
+      "name": "YUNG's Cave Biomes",
+      "version": "1.21.1-NeoForge-3.1.1",
+      "filename": "YungsCaveBiomes-1.21.1-NeoForge-3.1.1.jar",
+      "source": "https://cdn.modrinth.com/data/cs7iGVq1/versions/HYGqXWqQ/YungsCaveBiomes-1.21.1-NeoForge-3.1.1.jar"
+    },
+    {
+      "name": "Kiwi Library",
+      "version": "15.8.3",
+      "filename": "Kiwi-1.21.1-NeoForge-15.8.3.jar",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/kiwi",
+      "note": "Required by Passable Foliage."
+    },
+    {
+      "name": "Passable Foliage",
+      "version": "9.1.3",
+      "filename": "PassableFoliage-1.21.1-NeoForge-9.1.3.jar",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/passable-foliage"
+    },
+    {
+      "name": "Lily Pads Expansion",
+      "version": "1.0.0",
+      "filename": "lily_pads_expansion-1.0.0-neoforge-1.21-1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/PExtBiIY/versions/Bz10wtbM/lily_pads_expansion-1.0.0-neoforge-1.21-1.21.1.jar"
+    },
+    {
+      "name": "YDM's Weapon Master",
+      "version": "1.21.1+neoforge+4.2.7",
+      "filename": "weaponmaster_ydm-1.21.1-neoforge-4.2.7.jar",
+      "source": "https://cdn.modrinth.com/data/qi1sj2da/versions/j4CtkXVs/weaponmaster_ydm-1.21.1-neoforge-4.2.7.jar"
+    }
+  ],
+  "note": "Trimmed to the requested mods plus required libraries. Voxy restored; Distant Horizons removed; Voxy WorldGen V2 added for background player-radius generation and Voxy ingestion."
+}

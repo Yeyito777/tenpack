@@ -1,0 +1,58 @@
+#Specifies the allowed dimensions that Simple Clouds is active in
+#Requires restart of WORLD
+dimensionWhitelist = ["minecraft:overworld"]
+#Specifies if the dimension whitelist should instead be use as a blacklist
+#Requires restart of WORLD
+#Default: false
+whitelistAsBlacklist = false
+#Specifies how the clouds should behave. DEFAULT uses all cloud types with the default weather in Simple Clouds. SINGLE uses only a single cloud type and its associated weather. AMBIENT disables localized weather and carves clouds around the player, keeping them at a distance.
+#Default: DEFAULT
+#Allowed Values: DEFAULT, SINGLE, AMBIENT
+cloudMode = "DEFAULT"
+#Specifies the movement speed of clouds for this world/server. Lower values make weather transitions and cloud drift slower.
+#Default: 0.675
+# Default: 0.675
+# Range: 0.0 ~ 1.0
+cloudSpeed = 0.675
+
+#Single Mode
+[single_mode]
+	#Specifies the cloud type that should be used when the SINGLE cloud mode is active.
+	#Default: simpleclouds:itty_bitty
+	singleModeCloudType = "simpleclouds:itty_bitty"
+
+#Weather
+[weather]
+	#Specifies the lowest Y level any cloud may spawn at.
+	#Default: 128
+	# Default: 128
+	# Range: 0 ~ 2048
+	cloudHeight = 128
+
+	#Biome Precipitation
+	[weather.biome_precipitation]
+		#Allows rain to occur in biomes that would normally be too dry for precipitation. Snow biomes still snow as usual.
+		#Default: true
+		allowRainInDryBiomes = true
+		#Specifies the minimum storminess required before dry-biome rain overrides can produce precipitation.
+		#Default: 0.55
+		# Default: 0.55
+		# Range: 0.0 ~ 1.0
+		dryBiomeRainMinStorminess = 0.55
+		#List of biome tags that should be treated as rain-capable dry biomes when dry-biome rain is enabled.
+		dryBiomeRainTags = ["c:is_dry/overworld", "minecraft:is_savanna"]
+		#List of biome tags that should behave like normal rain biomes, bypassing dry-biome rain restrictions. These tags are automatically appended to Dry Biome Rain Tags for compatibility.
+		normalRainBiomeTags = ["terralith:reference/plains"]
+
+	#Lightning And Thunder
+	[weather.lightning_and_thunder]
+		#Specifies the shortest interval until the next lightning strike will spawn, in ticks.
+		#Default: 10
+		# Default: 10
+		# Range: 1 ~ 72000
+		lightningSpawnIntervalMinimum = 10
+		#Specifies the longest interval until the next lightning strike will spawn, in ticks.
+		#Default: 160
+		# Default: 160
+		# Range: 1 ~ 72000
+		lightningSpawnIntervalMaximum = 160

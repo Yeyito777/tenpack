@@ -1,0 +1,37 @@
+- [ ] Look into create space and make sure it's balanced
+- [ ] Limited chunks and structures tied to progression issues
+- [ ] Grab other people mod add that
+- [ ] Be able to sit on chair
+- [ ] Check if we can have something better than biomes o plenty
+- [ ] Add true dark mod + shaderpacks
+- [ ] Fucked up weather
+- [ ] Lower the chances of relics so that they're unique
+- [ ] Check distance horizons
+- [ ] 1 min protection of loot on death
+- [ ] Pets would be really nice like it would make sense to have a vulture with you
+- [ ] Origins tied to factions
+- [ ] No F3, no map, natural means of navigation (astralago) — maps be cooler compasses be better
+- [ ] One hour days and one hour nights // Improve the mob AI — can we get almost as good as ROTN
+- [ ] Realistic spiders and tarantulas
+- [ ] MAKE MOBS GREAT AGAIN!!!!
+- [ ] FTB mining shapeless—make it taxing on tools and hunger
+- [ ] Center progression and shit around hunger
+- [ ] spear hits should take away hunger
+- [ ] Add echo and reverb to sounds
+- [ ] The AI will check all optimization mods
+- [ ] We need mobs
+- [ ] World events
+- [ ] Set weekly events (humans choose these)
+- [ ] Random daily events (AI decides this)
+- [ ] Consider outside / inside faction friction
+- [ ] Consider knockdown and world border damage when unlimited world border
+- [ ] General area in chat when someone dies (naming system for places)
+- [ ] Tooltip appears at the top when you get to an area
+- [ ] How can we make it so that the path of least resistance is not just nuking everything when everyone's offline
+- [ ] Horse carriages
+- [ ] Horses need to be a central part of the game
+- [ ] The counter to bs undeground bases is you're going to have to deal with zombies mining into your shit
+- [ ] No ender chests
+- [ ] Corpse decomposition
+- [ ] Nemesis resident evil dread nether
+- [ ] Immersive portals

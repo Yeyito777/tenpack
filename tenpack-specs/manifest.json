@@ -1,0 +1,19 @@
+{
+  "minecraft": {
+    "version": "1.21.1",
+    "modLoaders": [
+      {
+        "id": "neoforge-21.1.228",
+        "primary": true
+      }
+    ],
+    "recommendedRam": 8000
+  },
+  "manifestType": "minecraftModpack",
+  "manifestVersion": 1,
+  "name": "tenpack",
+  "version": "1.0.0-trimmed",
+  "author": "",
+  "files": [],
+  "overrides": "overrides"
+}

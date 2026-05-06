@@ -1,0 +1,35 @@
+# Runtime output / crash artifacts
+logs/
+crash-reports/
+debug/
+*.log
+hs_err_pid*.log
+replay_pid*.log
+
+# Minecraft/server runtime state that should not be committed if created here
+world/
+worlds/
+saves/
+backups/
+cache/
+run/
+server.properties
+ops.json
+whitelist.json
+banned-ips.json
+banned-players.json
+usercache.json
+*.lock
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+
+# Build/temp output
+build/
+out/
+tmp/
+.temp/

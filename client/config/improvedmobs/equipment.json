@@ -1,0 +1,123 @@
+{
+  "version": 2,
+  "__comment": [
+    "Tenpack curated equipment for Improved Mobs.",
+    "Only skeleton-family mobs are allowed to roll mainhand equipment in common.toml, so the mainhand crossbow entry makes skeletons occasionally spawn with crossbows.",
+    "Armor slots are used by the zombie and skeleton family allow-list."
+  ],
+  "MAINHAND": [
+    {
+      "value": "minecraft:crossbow",
+      "weight": 100,
+      "quality": 0.0
+    }
+  ],
+  "HEAD": [
+    {
+      "value": "minecraft:leather_helmet",
+      "weight": 40,
+      "quality": 0.0
+    },
+    {
+      "value": "minecraft:chainmail_helmet",
+      "weight": 35,
+      "quality": 0.0
+    },
+    {
+      "value": "minecraft:golden_helmet",
+      "weight": 25,
+      "quality": 0.0
+    },
+    {
+      "value": "minecraft:iron_helmet",
+      "weight": 20,
+      "quality": 0.0
+    },
+    {
+      "value": "minecraft:diamond_helmet",
+      "weight": 3,
+      "quality": 0.0
+    }
+  ],
+  "CHEST": [
+    {
+      "value": "minecraft:leather_chestplate",
+      "weight": 40,
+      "quality": 0.0
+    },
+    {
+      "value": "minecraft:chainmail_chestplate",
+      "weight": 35,
+      "quality": 0.0
+    },
+    {
+      "value": "minecraft:golden_chestplate",
+      "weight": 25,
+      "quality": 0.0
+    },
+    {
+      "value": "minecraft:iron_chestplate",
+      "weight": 20,
+      "quality": 0.0
+    },
+    {
+      "value": "minecraft:diamond_chestplate",
+      "weight": 3,
+      "quality": 0.0
+    }
+  ],
+  "LEGS": [
+    {
+      "value": "minecraft:leather_leggings",
+      "weight": 40,
+      "quality": 0.0
+    },
+    {
+      "value": "minecraft:chainmail_leggings",
+      "weight": 35,
+      "quality": 0.0
+    },
+    {
+      "value": "minecraft:golden_leggings",
+      "weight": 25,
+      "quality": 0.0
+    },
+    {
+      "value": "minecraft:iron_leggings",
+      "weight": 20,
+      "quality": 0.0
+    },
+    {
+      "value": "minecraft:diamond_leggings",
+      "weight": 3,
+      "quality": 0.0
+    }
+  ],
+  "FEET": [
+    {
+      "value": "minecraft:leather_boots",
+      "weight": 40,
+      "quality": 0.0
+    },
+    {
+      "value": "minecraft:chainmail_boots",
+      "weight": 35,
+      "quality": 0.0
+    },
+    {
+      "value": "minecraft:golden_boots",
+      "weight": 25,
+      "quality": 0.0
+    },
+    {
+      "value": "minecraft:iron_boots",
+      "weight": 20,
+      "quality": 0.0
+    },
+    {
+      "value": "minecraft:diamond_boots",
+      "weight": 3,
+      "quality": 0.0
+    }
+  ]
+}

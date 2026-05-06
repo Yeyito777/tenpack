@@ -1,0 +1,18 @@
+# Treat packaged mods/assets as binary in git diffs
+*.jar binary
+*.zip binary
+*.mrpack binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ogg binary
+
+# Keep text configs normalized
+*.json text eol=lf
+*.toml text eol=lf
+*.properties text eol=lf
+*.md text eol=lf
+*.html text eol=lf
+*.txt text eol=lf
+*.sh text eol=lf
