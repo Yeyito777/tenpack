@@ -48,4 +48,8 @@ build/
 out/
 tmp/
 .temp/
+
+# Generated tenpack sync/static-host output
+public/
+dist/
 .gradle/
