@@ -61,6 +61,20 @@
       "source": "https://cdn.modrinth.com/data/iv9jp2k9/versions/wqHGyD4G/lithosphere-1.7.jar"
     },
     {
+      "name": "Architectury API",
+      "version": "13.0.8+neoforge",
+      "filename": "architectury-13.0.8-neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/ZxYGwlk0/architectury-13.0.8-neoforge.jar",
+      "note": "Required by Countered's Terrain Slabs."
+    },
+    {
+      "name": "Countered's Terrain Slabs",
+      "version": "3.0.3 (NeoForge)",
+      "filename": "terrain_slabs-neoforge-3.0.3.jar",
+      "source": "https://cdn.modrinth.com/data/SJu6sklj/versions/57sRUFyJ/terrain_slabs-neoforge-3.0.3.jar",
+      "note": "Worldgen/content mod that adds terrain slab variants during generation; installed on both client and server. Requires Architectury API."
+    },
+    {
       "name": "Still Life",
       "version": "0.1.1",
       "filename": "still-life-0.1.1.jar",
@@ -105,7 +119,7 @@
       "version": "3.8.2+1.21.1-neoforge",
       "filename": "yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar",
       "source": "https://cdn.modrinth.com/data/1eAoo2KR/versions/7TVdVtxF/yet_another_config_lib_v3-3.8.2%2B1.21.1-neoforge.jar",
-      "note": "Required by Windy."
+      "note": "Required by Windy and Sounds."
     },
     {
       "name": "Windy",
@@ -113,13 +127,6 @@
       "filename": "windy-1.1.1+1.21-neoforge.jar",
       "source": "https://cdn.modrinth.com/data/EwYg6C78/versions/xcBfBf8H/windy-1.1.1%2B1.21-neoforge.jar",
       "note": "Client-side ambient wind particles; configured in config/windy-config.json with minimumWindHeight=130."
-    },
-    {
-      "name": "Polytone",
-      "version": "1.21-3.6.6-neoforge",
-      "filename": "polytone-1.21-3.6.6-neoforge.jar",
-      "source": "https://cdn.modrinth.com/data/3qAYkBMB/versions/KxrIyizz/polytone-1.21-3.6.6-neoforge.jar",
-      "note": "Client-side resource-pack engine required by rainbow's foliage: polytone. Server-side unsupported."
     },
     {
       "name": "YUNG's API",
@@ -175,18 +182,74 @@
     },
     {
       "name": "Cloth Config API",
-      "version": "15.0.140+neoforge",
-      "filename": "cloth-config-15.0.140-neoforge.jar",
-      "source": "https://cdn.modrinth.com/data/9s6osm5g/versions/izKINKFg/cloth-config-15.0.140-neoforge.jar",
-      "note": "Required by Camera Overhaul."
+      "version": "15.0.140+fabric via Sinytra Connector",
+      "filename": "cloth-config-15.0.140-fabric.jar",
+      "source": "https://cdn.modrinth.com/data/9s6osm5g/versions/HpMb5wGb/cloth-config-15.0.140-fabric.jar",
+      "note": "Fabric build installed through Sinytra Connector. NeoForge 1.21.1 has no Cloth Config v16; Fabric Cloth Config satisfies Falling Leaves directly and is tested as a possible provider for Camera Overhaul after Connector remapping."
     },
     {
       "name": "Camera Overhaul",
       "version": "2.0.6-neoforge+mc.1.21.0-1.21.1",
       "filename": "CameraOverhaul-v2.0.6-neoforge+mc[1.21.0-1.21.1].jar",
       "source": "https://cdn.modrinth.com/data/m0oRwcZx/versions/zTY9SqFy/CameraOverhaul-v2.0.6-neoforge%2Bmc%5B1.21.0-1.21.1%5D.jar",
-      "note": "Client-side camera motion/tilt mod; server-side unsupported."
+      "note": "Client-side camera motion/tilt mod. Local jar patch lowers declared cloth_config dependency from >=16.0.0 to >=15.0.0 because MC 1.21.1 NeoForge only has Cloth Config v15."
+    },
+    {
+      "name": "Falling Leaves",
+      "version": "1.17.1+1.21.1 (Fabric via Sinytra Connector)",
+      "filename": "fallingleaves-1.17.1+1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/WhbRG4iK/versions/Y0zS16Bk/fallingleaves-1.17.1%2B1.21.1.jar",
+      "note": "Client-side leaf particle mod. Uses Fabric build through Sinytra Connector; connector.json aliases cloth_config to cloth-config for its dependency."
+    },
+    {
+      "name": "Do a Barrel Roll",
+      "version": "3.7.3+1.21-neoforge",
+      "filename": "do_a_barrel_roll-neoforge-3.7.3+1.21.jar",
+      "source": "https://cdn.modrinth.com/data/6FtRfnLg/versions/Zj604q5O/do_a_barrel_roll-neoforge-3.7.3%2B1.21.jar",
+      "note": "Elytra flight/camera control overhaul; installed on both client and server. Requires Forgified Fabric API; YACL is optional and installed."
+    },
+    {
+      "name": "M.R.U",
+      "version": "1.0.19+LTS+1.21.1-neoforge",
+      "filename": "mru-1.0.19+LTS+1.21.1+neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/SNVQ2c0g/versions/qYqVf5jP/mru-1.0.19%2BLTS%2B1.21.1%2Bneoforge.jar",
+      "note": "Required by Sounds."
+    },
+    {
+      "name": "Presence Footsteps",
+      "version": "1.21.1-1.12.0-beta.1",
+      "filename": "PresenceFootsteps-1.21.1-1.12.0-beta.1-1.21NeoForge.jar",
+      "source": "https://cdn.modrinth.com/data/JIEwmDVI/versions/f3SxKzof/PresenceFootsteps-1.21.1-1.12.0-beta.1-1.21NeoForge.jar",
+      "note": "Client-side surface-aware footstep sound overhaul."
+    },
+    {
+      "name": "Sounds",
+      "version": "2.4.22+lts+1.21.1-neoforge",
+      "filename": "sounds-2.4.22+lts+1.21.1-neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/ZouiUX7t/versions/kti7i9SG/sounds-2.4.22%2Blts%2B1.21.1-neoforge.jar",
+      "note": "Client-side SFX overhaul; requires M.R.U and YetAnotherConfigLib."
+    },
+    {
+      "name": "Particle Interactions",
+      "version": "0.4.1 (NeoForge)",
+      "filename": "eg_particle_interactions-0.4.1-neoforge-mc1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/xFCYuAs8/versions/Js4y2r4d/eg_particle_interactions-0.4.1-neoforge-mc1.21.1.jar",
+      "note": "Client-side interaction particle effects; requires YetAnotherConfigLib. Server-side unsupported."
+    },
+    {
+      "name": "Particle Rain",
+      "version": "v4-beta.9+1.21.1-neoforge",
+      "filename": "particlerain-4.0.0-beta.9+1.21.1-neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/nrikgvxm/versions/AqUoRBvS/particlerain-4.0.0-beta.9%2B1.21.1-neoforge.jar",
+      "note": "Client-side particle-based weather effects. Latest 1.21.1 NeoForge build is beta; incompatible with AsyncParticles (not installed). Server-side unsupported."
+    },
+    {
+      "name": "Auto HUD",
+      "version": "8.11+1.21.1-neoforge",
+      "filename": "autohud-8.11+1.21.1-neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/temczoTQ/versions/JlBOYx2k/autohud-8.11%2B1.21.1-neoforge.jar",
+      "note": "Client-side dynamic HUD hiding mod; server-side unsupported. Includes libbamboo via JarJar."
     }
   ],
-  "note": "Trimmed to the requested mods plus required libraries. Voxy restored; Distant Horizons removed; Voxy WorldGen V2 added for background player-radius generation and Voxy ingestion."
+  "note": "Trimmed to requested mods plus required libraries. Experiment 2026-05-06: restored Camera Overhaul/Falling Leaves; CameraOverhaul jar patched to accept cloth_config >=15; using Fabric Cloth Config v15 through Sinytra Connector because NeoForge Cloth Config v16 requires NeoForge 21.2.x / MC 1.21.2+."
 }
