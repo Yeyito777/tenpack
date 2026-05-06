@@ -13,7 +13,6 @@ import hashlib
 import json
 import shutil
 import subprocess
-from datetime import datetime, timezone
 from pathlib import Path
 
 
@@ -122,7 +121,6 @@ def build_side(repo: Path, out: Path, side: str) -> dict:
         "side": side,
         "minecraft": MINECRAFT,
         "loader": LOADER,
-        "generatedAt": datetime.now(timezone.utc).isoformat(),
         "sourceDirectory": side,
         "managedDirectories": ["mods", "resourcepacks", "shaderpacks"],
         "files": entries,
