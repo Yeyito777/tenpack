@@ -52,7 +52,49 @@
       "version": "0.8.0f-b5 custom build",
       "filename": "simpleclouds-0.8.0f-b5-all.jar",
       "source": "local archive: archived/simpleclouds-0.8.0f-b5/",
-      "note": "Custom all-jar restored from archived/; includes required CrackerLib 1.21.1-0.4.6 and SimpleCloudsAPI as JarJar dependencies."
+      "note": "Custom all-jar restored from archived/; includes required CrackerLib 1.21.1-0.4.6 and SimpleCloudsAPI as JarJar dependencies. Project Atmosphere uses Simple Clouds for cloud rendering/drift."
+    },
+    {
+      "name": "Project Atmosphere",
+      "version": "0.8.1.0 (NeoForge)",
+      "filename": "NeoForge-projectatmosphere-0.8.1.0.jar",
+      "source": "https://cdn.modrinth.com/data/qIWoLcKJ/versions/3OXsfueJ/NeoForge-projectatmosphere-0.8.1.0.jar",
+      "note": "Dynamic climate/weather simulation with wind influence; installed on both client and server. Requires Serene Seasons, Serene Seasons Plus, and Simple Clouds."
+    },
+    {
+      "name": "Serene Seasons",
+      "version": "10.1.0.3 (NeoForge)",
+      "filename": "SereneSeasons-neoforge-1.21.1-10.1.0.3.jar",
+      "source": "https://cdn.modrinth.com/data/e0bNACJD/versions/SPj5bJoM/SereneSeasons-neoforge-1.21.1-10.1.0.3.jar",
+      "note": "Season system required by Project Atmosphere / Serene Seasons Plus. Requires GlitchCore."
+    },
+    {
+      "name": "GlitchCore",
+      "version": "2.1.0.0 (NeoForge)",
+      "filename": "GlitchCore-neoforge-1.21.1-2.1.0.0.jar",
+      "source": "https://cdn.modrinth.com/data/s3dmwKy5/versions/8wmCpbQ2/GlitchCore-neoforge-1.21.1-2.1.0.0.jar",
+      "note": "Required by Serene Seasons."
+    },
+    {
+      "name": "Serene Seasons Plus",
+      "version": "4.2.3 (NeoForge)",
+      "filename": "NeoForge-Version-Serene Seasons Plus-1.21.1-4.2.3.jar",
+      "source": "https://cdn.modrinth.com/data/4Al4H3t9/versions/QiOlBGcz/NeoForge-Version-Serene%20Seasons%20Plus-1.21.1-4.2.3.jar",
+      "note": "Required by Project Atmosphere; adds seasonal integrations. Requires Serene Seasons and Gabou's Libs; Modrinth also lists Better Days."
+    },
+    {
+      "name": "Gabou's Libs",
+      "version": "1.4 (NeoForge)",
+      "filename": "gaboulibs-neoforge-1.4.jar",
+      "source": "https://cdn.modrinth.com/data/N8aGZtvj/versions/LsfPosIY/gaboulibs-neoforge-1.4.jar",
+      "note": "Required by Serene Seasons Plus. Requires Architectury API."
+    },
+    {
+      "name": "Better Days",
+      "version": "3.3.6.3 (NeoForge)",
+      "filename": "betterdays-1.21.1-3.3.6.3-NEOFORGE.jar",
+      "source": "https://cdn.modrinth.com/data/tPLE214j/versions/Ho93yCC3/betterdays-1.21.1-3.3.6.3-NEOFORGE.jar",
+      "note": "Listed by Modrinth as required by Serene Seasons Plus for seasonal day/night length; includes WhiteNoise 2.2.0 as JarJar dependency."
     },
     {
       "name": "Lithosphere",
@@ -65,7 +107,7 @@
       "version": "13.0.8+neoforge",
       "filename": "architectury-13.0.8-neoforge.jar",
       "source": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/ZxYGwlk0/architectury-13.0.8-neoforge.jar",
-      "note": "Required by Countered's Terrain Slabs."
+      "note": "Required by Countered's Terrain Slabs and Gabou's Libs."
     },
     {
       "name": "Countered's Terrain Slabs",
