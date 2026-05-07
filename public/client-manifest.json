@@ -37,6 +37,12 @@
       "url": "files/eb/eb327bdf6a4b4d2ae5cb61054863ebf45d3c334785a356c151cc4d94125f5b85"
     },
     {
+      "path": "config/more_darkness.json",
+      "sha256": "13760006bfa4e26987b25d454ea2a01ea22e3742fe6ccb204700ca63151ca91d",
+      "size": 205,
+      "url": "files/13/13760006bfa4e26987b25d454ea2a01ea22e3742fe6ccb204700ca63151ca91d"
+    },
+    {
       "path": "config/sound_physics_remastered/occlusion.properties",
       "sha256": "ebbac45fbb3ca01487b85ffee9601b213b71896e6606fb297bcb0f3ac9c30ffb",
       "size": 4831,
@@ -295,6 +301,12 @@
       "url": "files/2c/2c2cc9c3de98d79feac7ea9bd0bfe367fe1d59dfefe647ca1afdd3d547d682f9"
     },
     {
+      "path": "mods/more_darkness-neoforge-1.21.1-1.0.0.jar",
+      "sha256": "dabaa9b16d688e577620e7cab6a3b7a1c27bd4505da078fd5c83eb1aa9381a8d",
+      "size": 21583,
+      "url": "files/da/dabaa9b16d688e577620e7cab6a3b7a1c27bd4505da078fd5c83eb1aa9381a8d"
+    },
+    {
       "path": "mods/mru-1.0.19+LTS+1.21.1+neoforge.jar",
       "sha256": "ed025100de31f5635d48a5a0cc4bc9c701d885bf3777e0c2ad8af5f2cad4601a",
       "size": 243953,
@@ -338,9 +350,9 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "bc554d5e0fc960db3dcf83fc713fbc04d94a187faf05aef97a714b14738c6d6a",
-      "size": 17438,
-      "url": "files/bc/bc554d5e0fc960db3dcf83fc713fbc04d94a187faf05aef97a714b14738c6d6a"
+      "sha256": "7b8373a975b99d72a2eba79fe8af6f5666ccab042e5fbdce742fbb01a7c8657c",
+      "size": 17956,
+      "url": "files/7b/7b8373a975b99d72a2eba79fe8af6f5666ccab042e5fbdce742fbb01a7c8657c"
     },
     {
       "path": "mods/terrain_slabs-neoforge-3.0.3.jar",

@@ -185,6 +185,13 @@
       "note": "Required by Windy and Sounds."
     },
     {
+      "name": "More Darkness",
+      "version": "1.0.0 (NeoForge)",
+      "filename": "more_darkness-neoforge-1.21.1-1.0.0.jar",
+      "source": "https://cdn.modrinth.com/data/ghnOnAJe/versions/U1XuGeJB/more_darkness-neoforge-1.21.1-1.0.0.jar",
+      "note": "Client-side darkness/lightmap mod. Configured in config/more_darkness.json: moon-phase outdoor darkness with minimumMoonBrightness=0.0 and caveDarkness=0.0 for pitch-black unlit caves. Requires YACL, already installed. Server-side unsupported."
+    },
+    {
       "name": "Windy",
       "version": "1.1.1+1.21-neoforge",
       "filename": "windy-1.1.1+1.21-neoforge.jar",
