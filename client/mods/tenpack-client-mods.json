@@ -128,7 +128,7 @@
       "version": "0.1.1",
       "filename": "still-life-0.1.1.jar",
       "source": "https://cdn.modrinth.com/data/fK6aflho/versions/Jerfht2T/still-life-0.1.1.jar",
-      "note": "This appears to be the existing pack mod corresponding to the requested “Simple Life”."
+      "note": "Locally patched for MC 1.21.1: removed stale references to missing still_life:arctic_tundra and post-1.21.1 minecraft:pale_moss_block."
     },
     {
       "name": "Citadel (Unofficial Port)",

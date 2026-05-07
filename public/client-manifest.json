@@ -356,15 +356,15 @@
     },
     {
       "path": "mods/still-life-0.1.1.jar",
-      "sha256": "0838e42c151cd4118b2baadc9fe933cc5015c611d00a54846601eb1e8b66deab",
-      "size": 4714182,
-      "url": "files/08/0838e42c151cd4118b2baadc9fe933cc5015c611d00a54846601eb1e8b66deab"
+      "sha256": "38355fb7834c1df7574735065032bed66cad32335093c8f8cc63b8e8063ba2d3",
+      "size": 4750103,
+      "url": "files/38/38355fb7834c1df7574735065032bed66cad32335093c8f8cc63b8e8063ba2d3"
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "38304c5e6b91aa0396840d5450bb4262b30532fab1725472f0ff8ee7c01bfbf4",
-      "size": 19874,
-      "url": "files/38/38304c5e6b91aa0396840d5450bb4262b30532fab1725472f0ff8ee7c01bfbf4"
+      "sha256": "91c2d4ec86c525f4b7f79a6beb1b3be802aeef97f9e3a45d90e81d5739e2123d",
+      "size": 19918,
+      "url": "files/91/91c2d4ec86c525f4b7f79a6beb1b3be802aeef97f9e3a45d90e81d5739e2123d"
     },
     {
       "path": "mods/terrain_slabs-neoforge-3.0.3.jar",
