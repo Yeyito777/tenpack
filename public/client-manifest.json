@@ -253,6 +253,12 @@
       "url": "files/3e/3e3f94d2d5cdcb8145c4385d521974aa2d8669b2cc212351f70cf06488182e83"
     },
     {
+      "path": "mods/lambdynamiclights-4.8.8+1.21.1.jar",
+      "sha256": "5c41d55ad9306f8d0a8c1b0174d71a3e333026b08adb6883653cd91ab6c5bea0",
+      "size": 2017417,
+      "url": "files/5c/5c41d55ad9306f8d0a8c1b0174d71a3e333026b08adb6883653cd91ab6c5bea0"
+    },
+    {
       "path": "mods/legendarysurvivaloverhaul-1.21.1-2.4.2.jar",
       "sha256": "da9c38f05df4dfe09e5226f17d43a0c1725c16ede3ea6dd2d945c111b1d413e4",
       "size": 3742368,
@@ -314,9 +320,9 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "7a164073a27d12256e88216621ccbd7d803b04ed6cf70ec2eac04e88d77e2063",
-      "size": 15825,
-      "url": "files/7a/7a164073a27d12256e88216621ccbd7d803b04ed6cf70ec2eac04e88d77e2063"
+      "sha256": "3171ef5ae12cd74ad679dc5f3ebf7b90bd7e6f808dacf59902cbfa47b3eb52ee",
+      "size": 16295,
+      "url": "files/31/3171ef5ae12cd74ad679dc5f3ebf7b90bd7e6f808dacf59902cbfa47b3eb52ee"
     },
     {
       "path": "mods/terrain_slabs-neoforge-3.0.3.jar",

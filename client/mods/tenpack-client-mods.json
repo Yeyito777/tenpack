@@ -15,6 +15,13 @@
       "source": "https://cdn.modrinth.com/data/YL57xq9U/versions/t3ruzodq/iris-neoforge-1.8.12%2Bmc1.21.1.jar"
     },
     {
+      "name": "LambDynamicLights",
+      "version": "4.8.8+1.21.1",
+      "filename": "lambdynamiclights-4.8.8+1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/yBW8D80W/versions/IQcvNDtF/lambdynamiclights-4.8.8%2B1.21.1.jar",
+      "note": "Client-side dynamic lighting for held/dropped light-emitting items and luminous entities; installed only on the client. Incompatible with Sodium Dynamic Lights and RyoamicLights, which are not installed."
+    },
+    {
       "name": "Sinytra Connector",
       "version": "2.0.0-beta.14+1.21.1",
       "filename": "connector-2.0.0-beta.14+1.21.1-full.jar",
