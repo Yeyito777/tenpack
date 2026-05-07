@@ -25,9 +25,8 @@ deploy_current() {
   sudo -n find "$PUBLIC_TARGET" -type d -exec chmod 755 {} +
   sudo -n find "$PUBLIC_TARGET" -type f -exec chmod 644 {} +
 
-  log "restarting Tenpack services"
+  log "restarting Tenpack service"
   sudo -n systemctl restart tenpack-minecraft.service
-  sudo -n systemctl restart tenpack-upnp.service || true
 }
 
 if [[ ! -d "$REPO/.git" ]]; then

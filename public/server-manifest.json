@@ -239,6 +239,12 @@
       "sha256": "b5c30321b46cfaa521645a04aff89d2804d8167a25bb23ad4b1ae8da73093a2f",
       "size": 1118651,
       "url": "files/b5/b5c30321b46cfaa521645a04aff89d2804d8167a25bb23ad4b1ae8da73093a2f"
+    },
+    {
+      "path": "server.properties",
+      "sha256": "9a295ce2d7000ea77cc95be0912813bf18965b4545f37d099644dfbf94f8f85b",
+      "size": 1360,
+      "url": "files/9a/9a295ce2d7000ea77cc95be0912813bf18965b4545f37d099644dfbf94f8f85b"
     }
   ],
   "loader": "neoforge",

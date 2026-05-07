@@ -15,6 +15,7 @@ cache/
 run/
 screenshots/
 server.properties
+!server/server.properties
 options.txt
 optionsof.txt
 servers.dat
