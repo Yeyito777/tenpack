@@ -43,6 +43,12 @@
       "url": "files/13/13760006bfa4e26987b25d454ea2a01ea22e3742fe6ccb204700ca63151ca91d"
     },
     {
+      "path": "config/projectatmosphere/biome_temps.json",
+      "sha256": "f0825b1bcdb617cb69b9b3dbbce9fab61f93629ad4f004f40f49be392a2571f9",
+      "size": 34257,
+      "url": "files/f0/f0825b1bcdb617cb69b9b3dbbce9fab61f93629ad4f004f40f49be392a2571f9"
+    },
+    {
       "path": "config/sound_physics_remastered/occlusion.properties",
       "sha256": "ebbac45fbb3ca01487b85ffee9601b213b71896e6606fb297bcb0f3ac9c30ffb",
       "size": 4831,
