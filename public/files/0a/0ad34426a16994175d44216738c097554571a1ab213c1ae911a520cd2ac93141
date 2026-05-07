@@ -1,0 +1,6 @@
+{
+  "pack": {
+    "pack_format": 48,
+    "description": "Tenpack worldgen hotfixes: disables Still Life red sand patch feature that writes into far chunks."
+  }
+}
