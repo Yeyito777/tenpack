@@ -1,0 +1,381 @@
+{
+  "minecraft": "1.21.1",
+  "loader": "NeoForge 21.1.228",
+  "installed": [
+    {
+      "name": "Sodium",
+      "version": "0.6.13+mc1.21.1 (NeoForge)",
+      "filename": "sodium-neoforge-0.6.13+mc1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/AANobbMI/versions/Pb3OXVqC/sodium-neoforge-0.6.13%2Bmc1.21.1.jar"
+    },
+    {
+      "name": "Iris",
+      "version": "1.8.12+mc1.21.1 (NeoForge)",
+      "filename": "iris-neoforge-1.8.12+mc1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/YL57xq9U/versions/t3ruzodq/iris-neoforge-1.8.12%2Bmc1.21.1.jar"
+    },
+    {
+      "name": "LambDynamicLights",
+      "version": "4.8.8+1.21.1",
+      "filename": "lambdynamiclights-4.8.8+1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/yBW8D80W/versions/IQcvNDtF/lambdynamiclights-4.8.8%2B1.21.1.jar",
+      "note": "Client-side dynamic lighting for held/dropped light-emitting items and luminous entities; installed only on the client. Incompatible with Sodium Dynamic Lights and RyoamicLights, which are not installed."
+    },
+    {
+      "name": "Sinytra Connector",
+      "version": "2.0.0-beta.14+1.21.1",
+      "filename": "connector-2.0.0-beta.14+1.21.1-full.jar",
+      "source": "local archive: archived/voxy/client/mods/",
+      "note": "Required to run Fabric Voxy and Voxy WorldGen V2 on NeoForge."
+    },
+    {
+      "name": "Forgified Fabric API",
+      "version": "0.116.7+2.2.4+1.21.1",
+      "filename": "forgified-fabric-api-0.116.7+2.2.4+1.21.1.jar",
+      "source": "local archive: archived/voxy/client/mods/",
+      "note": "Required by Sinytra Connector / Fabric mods."
+    },
+    {
+      "name": "Voxy",
+      "version": "0.2.14-alpha mc_1211 built from m3t4f1v3/voxy@f308c254",
+      "filename": "voxy-0.2.14-alpha-mc_1211-f308c254.jar",
+      "source": "local archive: archived/voxy/client/mods/"
+    },
+    {
+      "name": "Voxy WorldGen V2",
+      "version": "1.21.1-2.2.1 (built from realBritakee/voxy_worldgen_v2 mc_1211)",
+      "filename": "voxy-worldgen-v2-1.21.1-2.2.1.jar",
+      "source": "https://github.com/realBritakee/voxy_worldgen_v2/tree/mc_1211",
+      "note": "Auto-starts background generation around players via config/voxyworldgenv2.json; generationRadius=128 chunks."
+    },
+    {
+      "name": "Chunky",
+      "version": "1.4.23",
+      "filename": "Chunky-NeoForge-1.4.23.jar",
+      "source": "https://cdn.modrinth.com/data/fALzjamp/versions/LuFhm4eU/Chunky-NeoForge-1.4.23.jar"
+    },
+    {
+      "name": "Simple Clouds Forked - beta",
+      "version": "0.8.0f-b5 custom build",
+      "filename": "simpleclouds-0.8.0f-b5-all.jar",
+      "source": "local archive: archived/simpleclouds-0.8.0f-b5/",
+      "note": "Custom all-jar restored from archived/; includes required CrackerLib 1.21.1-0.4.6 and SimpleCloudsAPI as JarJar dependencies. Project Atmosphere uses Simple Clouds for cloud rendering/drift."
+    },
+    {
+      "name": "Project Atmosphere",
+      "version": "0.8.1.0 (NeoForge)",
+      "filename": "NeoForge-projectatmosphere-0.8.1.0.jar",
+      "source": "https://cdn.modrinth.com/data/qIWoLcKJ/versions/3OXsfueJ/NeoForge-projectatmosphere-0.8.1.0.jar",
+      "note": "Dynamic climate/weather simulation with wind influence; installed on both client and server. Requires Serene Seasons, Serene Seasons Plus, and Simple Clouds."
+    },
+    {
+      "name": "Serene Seasons",
+      "version": "10.1.0.3 (NeoForge)",
+      "filename": "SereneSeasons-neoforge-1.21.1-10.1.0.3.jar",
+      "source": "https://cdn.modrinth.com/data/e0bNACJD/versions/SPj5bJoM/SereneSeasons-neoforge-1.21.1-10.1.0.3.jar",
+      "note": "Season system required by Project Atmosphere / Serene Seasons Plus. Requires GlitchCore."
+    },
+    {
+      "name": "GlitchCore",
+      "version": "2.1.0.0 (NeoForge)",
+      "filename": "GlitchCore-neoforge-1.21.1-2.1.0.0.jar",
+      "source": "https://cdn.modrinth.com/data/s3dmwKy5/versions/8wmCpbQ2/GlitchCore-neoforge-1.21.1-2.1.0.0.jar",
+      "note": "Required by Serene Seasons."
+    },
+    {
+      "name": "Serene Seasons Plus",
+      "version": "4.2.3 (NeoForge)",
+      "filename": "NeoForge-Version-Serene Seasons Plus-1.21.1-4.2.3.jar",
+      "source": "https://cdn.modrinth.com/data/4Al4H3t9/versions/QiOlBGcz/NeoForge-Version-Serene%20Seasons%20Plus-1.21.1-4.2.3.jar",
+      "note": "Required by Project Atmosphere; adds seasonal integrations. Requires Serene Seasons and Gabou's Libs; Modrinth also lists Better Days."
+    },
+    {
+      "name": "Gabou's Libs",
+      "version": "1.4 (NeoForge)",
+      "filename": "gaboulibs-neoforge-1.4.jar",
+      "source": "https://cdn.modrinth.com/data/N8aGZtvj/versions/LsfPosIY/gaboulibs-neoforge-1.4.jar",
+      "note": "Required by Serene Seasons Plus. Requires Architectury API."
+    },
+    {
+      "name": "Better Days",
+      "version": "3.3.6.3 (NeoForge)",
+      "filename": "betterdays-1.21.1-3.3.6.3-NEOFORGE.jar",
+      "source": "https://cdn.modrinth.com/data/tPLE214j/versions/Ho93yCC3/betterdays-1.21.1-3.3.6.3-NEOFORGE.jar",
+      "note": "Listed by Modrinth as required by Serene Seasons Plus for seasonal day/night length; includes WhiteNoise 2.2.0 as JarJar dependency."
+    },
+    {
+      "name": "Lithosphere",
+      "version": "1.7",
+      "filename": "lithosphere-1.7.jar",
+      "source": "https://cdn.modrinth.com/data/iv9jp2k9/versions/wqHGyD4G/lithosphere-1.7.jar"
+    },
+    {
+      "name": "Architectury API",
+      "version": "13.0.8+neoforge",
+      "filename": "architectury-13.0.8-neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/ZxYGwlk0/architectury-13.0.8-neoforge.jar",
+      "note": "Required by Countered's Terrain Slabs and Gabou's Libs."
+    },
+    {
+      "name": "Countered's Terrain Slabs",
+      "version": "3.0.3 (NeoForge)",
+      "filename": "terrain_slabs-neoforge-3.0.3.jar",
+      "source": "https://cdn.modrinth.com/data/SJu6sklj/versions/57sRUFyJ/terrain_slabs-neoforge-3.0.3.jar",
+      "note": "Worldgen/content mod that adds terrain slab variants during generation; installed on both client and server. Requires Architectury API."
+    },
+    {
+      "name": "Still Life",
+      "version": "0.1.1",
+      "filename": "still-life-0.1.1.jar",
+      "source": "https://cdn.modrinth.com/data/fK6aflho/versions/Jerfht2T/still-life-0.1.1.jar",
+      "note": "This appears to be the existing pack mod corresponding to the requested “Simple Life”."
+    },
+    {
+      "name": "Citadel (Unofficial Port)",
+      "version": "2.7.6",
+      "filename": "citadel-1.21.1-2.7.6.jar",
+      "source": "https://cdn.modrinth.com/data/XjY0RcQj/versions/mIylVpkN/citadel-1.21.1-2.7.6.jar",
+      "note": "Required by Alex's Mobs."
+    },
+    {
+      "name": "Alex's Mobs (Unofficial Port)",
+      "version": "1.22.17",
+      "filename": "alexsmobs-1.22.17.jar",
+      "source": "https://cdn.modrinth.com/data/EmNhnNnt/versions/KSgki4uc/alexsmobs-1.22.17.jar"
+    },
+    {
+      "name": "Puzzles Lib",
+      "version": "21.1.39 (NeoForge)",
+      "filename": "PuzzlesLib-v21.1.39-1.21.1-NeoForge.jar",
+      "source": "https://cdn.modrinth.com/data/QAGBst4M/versions/EgWWSAhJ/PuzzlesLib-v21.1.39-1.21.1-NeoForge.jar",
+      "note": "Required by Respawning Animals; installed on both client and server."
+    },
+    {
+      "name": "Respawning Animals",
+      "version": "21.1.2 (NeoForge)",
+      "filename": "RespawningAnimals-v21.1.2-1.21.1-NeoForge.jar",
+      "source": "https://cdn.modrinth.com/data/WnwcSeWc/versions/a7lvPWaQ/RespawningAnimals-v21.1.2-1.21.1-NeoForge.jar",
+      "note": "Server-side gameplay mod that lets passive animals despawn and naturally respawn instead of only spawning during world generation; mirrored to client per pack rules."
+    },
+    {
+      "name": "Sound Physics Remastered",
+      "version": "neoforge-1.21.1-1.5.1",
+      "filename": "sound-physics-remastered-neoforge-1.21.1-1.5.1.jar",
+      "source": "local archive: archived/sound-physics-remastered/"
+    },
+    {
+      "name": "Simple Voice Chat",
+      "version": "1.21.1-2.6.17 (NeoForge)",
+      "filename": "voicechat-neoforge-1.21.1-2.6.17.jar",
+      "source": "https://cdn.modrinth.com/data/9eGKb6K1/versions/6rT2RWh6/voicechat-neoforge-1.21.1-2.6.17.jar",
+      "note": "Proximity voice chat; installed on both client and server. Server requires UDP 24454 forwarded to kitsune (192.168.0.100)."
+    },
+    {
+      "name": "Voice Chat Interaction",
+      "version": "1.21.1-1.0.8 (Fabric via Sinytra Connector)",
+      "filename": "vcinteraction-fabric-1.21.1-1.0.8.jar",
+      "source": "https://cdn.modrinth.com/data/qsSP2ZZ0/versions/4m0Fd6Fa/vcinteraction-fabric-1.21.1-1.0.8.jar",
+      "note": "Simple Voice Chat addon for skulk sensor activation and warden detection. No NeoForge build exists for 1.21.1, so the Fabric build is installed through Sinytra Connector/Forgified Fabric API and mirrored to the client per pack rules."
+    },
+    {
+      "name": "Simple Voice Distance",
+      "version": "1.6.1 (NeoForge)",
+      "filename": "simplevoicedistanceneoforge-1.6.1-neoforge1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/cabRLxLT/versions/GQt0jDUi/simplevoicedistanceneoforge-1.6.1-neoforge1.21.1.jar",
+      "note": "Simple Voice Chat addon that lets players cycle between whisper, normal, and shout voice ranges; installed on both client and server."
+    },
+    {
+      "name": "Voiceless Survival",
+      "version": "2.0.1 (NeoForge)",
+      "filename": "Voiceless Survival-1.21.1-neoforge-2.0.1.jar",
+      "source": "https://cdn.modrinth.com/data/JJ3q7W2X/versions/4jrtfbBA/Voiceless%20Survival-1.21.1-neoforge-2.0.1.jar",
+      "note": "Voice-reactive survival gameplay addon for Simple Voice Chat; installed on both client and server."
+    },
+    {
+      "name": "CreativeCore",
+      "version": "2.13.38",
+      "filename": "CreativeCore_NEOFORGE_v2.13.38_mc1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/OsZiaDHq/versions/ObUu8hxJ/CreativeCore_NEOFORGE_v2.13.38_mc1.21.1.jar",
+      "note": "Required by AmbientSounds."
+    },
+    {
+      "name": "AmbientSounds",
+      "version": "6.3.8",
+      "filename": "AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/fM515JnW/versions/RZyxhsqY/AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar",
+      "note": "Client-side ambient soundscape mod; server-side unsupported."
+    },
+    {
+      "name": "YetAnotherConfigLib (YACL)",
+      "version": "3.8.2+1.21.1-neoforge",
+      "filename": "yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/1eAoo2KR/versions/7TVdVtxF/yet_another_config_lib_v3-3.8.2%2B1.21.1-neoforge.jar",
+      "note": "Required by Windy and Sounds."
+    },
+    {
+      "name": "More Darkness",
+      "version": "1.0.0 (NeoForge)",
+      "filename": "more_darkness-neoforge-1.21.1-1.0.0.jar",
+      "source": "https://cdn.modrinth.com/data/ghnOnAJe/versions/U1XuGeJB/more_darkness-neoforge-1.21.1-1.0.0.jar",
+      "note": "Client-side darkness/lightmap mod. Configured in config/more_darkness.json: moon-phase outdoor darkness with minimumMoonBrightness=0.0 and caveDarkness=0.0 for pitch-black unlit caves. Requires YACL, already installed. Server-side unsupported."
+    },
+    {
+      "name": "Windy",
+      "version": "1.1.1+1.21-neoforge",
+      "filename": "windy-1.1.1+1.21-neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/EwYg6C78/versions/xcBfBf8H/windy-1.1.1%2B1.21-neoforge.jar",
+      "note": "Client-side ambient wind particles; configured in config/windy-config.json with minimumWindHeight=130."
+    },
+    {
+      "name": "YUNG's API",
+      "version": "1.21.1-NeoForge-5.1.6",
+      "filename": "YungsApi-1.21.1-NeoForge-5.1.6.jar",
+      "source": "https://cdn.modrinth.com/data/Ua7DFN59/versions/ZB22DE9q/YungsApi-1.21.1-NeoForge-5.1.6.jar",
+      "note": "Required by YUNG's Cave Biomes."
+    },
+    {
+      "name": "TerraBlender",
+      "version": "4.1.0.8",
+      "filename": "TerraBlender-neoforge-1.21.1-4.1.0.8.jar",
+      "source": "https://cdn.modrinth.com/data/kkmrDlKT/versions/6e8GCrLb/TerraBlender-neoforge-1.21.1-4.1.0.8.jar",
+      "note": "Required by YUNG's Cave Biomes."
+    },
+    {
+      "name": "GeckoLib",
+      "version": "4.8.4",
+      "filename": "geckolib-neoforge-1.21.1-4.8.4.jar",
+      "source": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/gFmrC8Ru/geckolib-neoforge-1.21.1-4.8.4.jar",
+      "note": "Required by YUNG's Cave Biomes."
+    },
+    {
+      "name": "YUNG's Cave Biomes",
+      "version": "1.21.1-NeoForge-3.1.1",
+      "filename": "YungsCaveBiomes-1.21.1-NeoForge-3.1.1.jar",
+      "source": "https://cdn.modrinth.com/data/cs7iGVq1/versions/HYGqXWqQ/YungsCaveBiomes-1.21.1-NeoForge-3.1.1.jar"
+    },
+    {
+      "name": "Kiwi Library",
+      "version": "15.8.3",
+      "filename": "Kiwi-1.21.1-NeoForge-15.8.3.jar",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/kiwi",
+      "note": "Required by Passable Foliage."
+    },
+    {
+      "name": "Passable Foliage",
+      "version": "9.1.3",
+      "filename": "PassableFoliage-1.21.1-NeoForge-9.1.3.jar",
+      "source": "https://www.curseforge.com/minecraft/mc-mods/passable-foliage"
+    },
+    {
+      "name": "Lily Pads Expansion",
+      "version": "1.0.0",
+      "filename": "lily_pads_expansion-1.0.0-neoforge-1.21-1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/PExtBiIY/versions/Bz10wtbM/lily_pads_expansion-1.0.0-neoforge-1.21-1.21.1.jar"
+    },
+    {
+      "name": "YDM's Weapon Master",
+      "version": "1.21.1+neoforge+4.2.7",
+      "filename": "weaponmaster_ydm-1.21.1-neoforge-4.2.7.jar",
+      "source": "https://cdn.modrinth.com/data/qi1sj2da/versions/j4CtkXVs/weaponmaster_ydm-1.21.1-neoforge-4.2.7.jar"
+    },
+    {
+      "name": "Cloth Config API",
+      "version": "15.0.140+fabric via Sinytra Connector",
+      "filename": "cloth-config-15.0.140-fabric.jar",
+      "source": "https://cdn.modrinth.com/data/9s6osm5g/versions/HpMb5wGb/cloth-config-15.0.140-fabric.jar",
+      "note": "Fabric build installed through Sinytra Connector. NeoForge 1.21.1 has no Cloth Config v16; Fabric Cloth Config satisfies Falling Leaves directly and is tested as a possible provider for Camera Overhaul after Connector remapping."
+    },
+    {
+      "name": "Camera Overhaul",
+      "version": "2.0.6-neoforge+mc.1.21.0-1.21.1",
+      "filename": "CameraOverhaul-v2.0.6-neoforge+mc[1.21.0-1.21.1].jar",
+      "source": "https://cdn.modrinth.com/data/m0oRwcZx/versions/zTY9SqFy/CameraOverhaul-v2.0.6-neoforge%2Bmc%5B1.21.0-1.21.1%5D.jar",
+      "note": "Client-side camera motion/tilt mod. Local jar patch lowers declared cloth_config dependency from >=16.0.0 to >=15.0.0 because MC 1.21.1 NeoForge only has Cloth Config v15."
+    },
+    {
+      "name": "Falling Leaves",
+      "version": "1.17.1+1.21.1 (Fabric via Sinytra Connector)",
+      "filename": "fallingleaves-1.17.1+1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/WhbRG4iK/versions/Y0zS16Bk/fallingleaves-1.17.1%2B1.21.1.jar",
+      "note": "Client-side leaf particle mod. Uses Fabric build through Sinytra Connector; connector.json aliases cloth_config to cloth-config for its dependency."
+    },
+    {
+      "name": "Do a Barrel Roll",
+      "version": "3.7.3+1.21-neoforge",
+      "filename": "do_a_barrel_roll-neoforge-3.7.3+1.21.jar",
+      "source": "https://cdn.modrinth.com/data/6FtRfnLg/versions/Zj604q5O/do_a_barrel_roll-neoforge-3.7.3%2B1.21.jar",
+      "note": "Elytra flight/camera control overhaul; installed on both client and server. Requires Forgified Fabric API; YACL is optional and installed."
+    },
+    {
+      "name": "M.R.U",
+      "version": "1.0.19+LTS+1.21.1-neoforge",
+      "filename": "mru-1.0.19+LTS+1.21.1+neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/SNVQ2c0g/versions/qYqVf5jP/mru-1.0.19%2BLTS%2B1.21.1%2Bneoforge.jar",
+      "note": "Required by Sounds."
+    },
+    {
+      "name": "Presence Footsteps",
+      "version": "1.21.1-1.12.0-beta.1",
+      "filename": "PresenceFootsteps-1.21.1-1.12.0-beta.1-1.21NeoForge.jar",
+      "source": "https://cdn.modrinth.com/data/JIEwmDVI/versions/f3SxKzof/PresenceFootsteps-1.21.1-1.12.0-beta.1-1.21NeoForge.jar",
+      "note": "Client-side surface-aware footstep sound overhaul."
+    },
+    {
+      "name": "Sounds",
+      "version": "2.4.22+lts+1.21.1-neoforge",
+      "filename": "sounds-2.4.22+lts+1.21.1-neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/ZouiUX7t/versions/kti7i9SG/sounds-2.4.22%2Blts%2B1.21.1-neoforge.jar",
+      "note": "Client-side SFX overhaul; requires M.R.U and YetAnotherConfigLib."
+    },
+    {
+      "name": "Particle Interactions",
+      "version": "0.4.1 (NeoForge)",
+      "filename": "eg_particle_interactions-0.4.1-neoforge-mc1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/xFCYuAs8/versions/Js4y2r4d/eg_particle_interactions-0.4.1-neoforge-mc1.21.1.jar",
+      "note": "Client-side interaction particle effects; requires YetAnotherConfigLib. Server-side unsupported."
+    },
+    {
+      "name": "Particle Rain",
+      "version": "v4-beta.9+1.21.1-neoforge",
+      "filename": "particlerain-4.0.0-beta.9+1.21.1-neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/nrikgvxm/versions/AqUoRBvS/particlerain-4.0.0-beta.9%2B1.21.1-neoforge.jar",
+      "note": "Client-side particle-based weather effects. Latest 1.21.1 NeoForge build is beta; incompatible with AsyncParticles (not installed). Server-side unsupported."
+    },
+    {
+      "name": "Auto HUD",
+      "version": "8.11+1.21.1-neoforge",
+      "filename": "autohud-8.11+1.21.1-neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/temczoTQ/versions/JlBOYx2k/autohud-8.11%2B1.21.1-neoforge.jar",
+      "note": "Client-side dynamic HUD hiding mod; server-side unsupported. Includes libbamboo via JarJar."
+    },
+    {
+      "name": "Iceberg",
+      "version": "1.3.2 (NeoForge)",
+      "filename": "Iceberg-1.21.1-neoforge-1.3.2.jar",
+      "source": "https://cdn.modrinth.com/data/5faXoLqX/versions/IMssx9du/Iceberg-1.21.1-neoforge-1.3.2.jar",
+      "note": "Client-side library required by Legendary Tooltips. Server-side unsupported."
+    },
+    {
+      "name": "Prism",
+      "version": "1.0.11 (NeoForge)",
+      "filename": "Prism-1.21.1-neoforge-1.0.11.jar",
+      "source": "https://cdn.modrinth.com/data/1OE8wbN0/versions/kMcz2lDj/Prism-1.21.1-neoforge-1.0.11.jar",
+      "note": "Client-side color/tooltip rendering library required by Legendary Tooltips. Server-side unsupported."
+    },
+    {
+      "name": "Legendary Tooltips",
+      "version": "1.5.5 (NeoForge)",
+      "filename": "LegendaryTooltips-1.21.1-neoforge-1.5.5.jar",
+      "source": "https://cdn.modrinth.com/data/atHH8NyV/versions/BabRJO04/LegendaryTooltips-1.21.1-neoforge-1.5.5.jar",
+      "note": "Client-side tooltip frame/customization mod requested from CurseForge; installed from the same project on Modrinth. Requires Iceberg and Prism. Server-side unsupported."
+    },
+    {
+      "name": "Legendary Survival Overhaul",
+      "version": "1.21.1-2.4.2 (NeoForge)",
+      "filename": "legendarysurvivaloverhaul-1.21.1-2.4.2.jar",
+      "source": "https://cdn.modrinth.com/data/TQr3t8Sb/versions/AgUpT99l/legendarysurvivaloverhaul-1.21.1-2.4.2.jar",
+      "note": "Installed on both client and server. Configured with temperature enabled and thirst, health overhaul, localized body damage, and other non-temperature HUD/gameplay features disabled."
+    }
+  ],
+  "note": "Trimmed to requested mods plus required libraries. Experiment 2026-05-06: restored Camera Overhaul/Falling Leaves; CameraOverhaul jar patched to accept cloth_config >=15; using Fabric Cloth Config v15 through Sinytra Connector because NeoForge Cloth Config v16 requires NeoForge 21.2.x / MC 1.21.2+. Added Simple Voice Chat stack on 2026-05-07: Simple Voice Chat, Voice Chat Interaction via Connector, Simple Voice Distance, and Voiceless Survival."
+}

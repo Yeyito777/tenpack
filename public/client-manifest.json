@@ -181,6 +181,12 @@
       "url": "files/0c/0c49b5ef447a7f09100e9a210888a7347fbda0aa75322063991f6063b25fe3f9"
     },
     {
+      "path": "mods/Voiceless Survival-1.21.1-neoforge-2.0.1.jar",
+      "sha256": "1ec50b2a7e23ea1aab43df516835e99c85f3e579b6ecc6a2cf319d85e0ff60b0",
+      "size": 136021,
+      "url": "files/1e/1ec50b2a7e23ea1aab43df516835e99c85f3e579b6ecc6a2cf319d85e0ff60b0"
+    },
+    {
       "path": "mods/YungsApi-1.21.1-NeoForge-5.1.6.jar",
       "sha256": "08e1d21690d3213a4c62de6b6cf79f3527afb2e72e0cad0e1848d46eb8f682ca",
       "size": 388678,
@@ -325,6 +331,12 @@
       "url": "files/50/50a10cb5db89bd1c02debb37f25b88efc3043f28cf7a5bc009ccec314d8a209c"
     },
     {
+      "path": "mods/simplevoicedistanceneoforge-1.6.1-neoforge1.21.1.jar",
+      "sha256": "6c4644d4b28f23ebb7e1f2e7eb9475ece5680e836c057d0b693c2008ce3f1c63",
+      "size": 65018,
+      "url": "files/6c/6c4644d4b28f23ebb7e1f2e7eb9475ece5680e836c057d0b693c2008ce3f1c63"
+    },
+    {
       "path": "mods/sodium-neoforge-0.6.13+mc1.21.1.jar",
       "sha256": "7acd7af2ef75ec883a6872c17494ead65e38025151eb08a1d60e36d34377f403",
       "size": 1162994,
@@ -350,15 +362,27 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "7b8373a975b99d72a2eba79fe8af6f5666ccab042e5fbdce742fbb01a7c8657c",
-      "size": 17956,
-      "url": "files/7b/7b8373a975b99d72a2eba79fe8af6f5666ccab042e5fbdce742fbb01a7c8657c"
+      "sha256": "38304c5e6b91aa0396840d5450bb4262b30532fab1725472f0ff8ee7c01bfbf4",
+      "size": 19874,
+      "url": "files/38/38304c5e6b91aa0396840d5450bb4262b30532fab1725472f0ff8ee7c01bfbf4"
     },
     {
       "path": "mods/terrain_slabs-neoforge-3.0.3.jar",
       "sha256": "99c55705a80e7edfa9ad8e3dff932ab3df3b4824849d334fa7fb0cdc5554c8e5",
       "size": 370160,
       "url": "files/99/99c55705a80e7edfa9ad8e3dff932ab3df3b4824849d334fa7fb0cdc5554c8e5"
+    },
+    {
+      "path": "mods/vcinteraction-fabric-1.21.1-1.0.8.jar",
+      "sha256": "692ff228cdd397e5690f09881704b6c11e655b609dd0b17fc0a99846dc232a24",
+      "size": 449735,
+      "url": "files/69/692ff228cdd397e5690f09881704b6c11e655b609dd0b17fc0a99846dc232a24"
+    },
+    {
+      "path": "mods/voicechat-neoforge-1.21.1-2.6.17.jar",
+      "sha256": "0981cdb58e540722d68ba444dc4396e2467a8f0b2f346de55c68282c5671d70a",
+      "size": 4902096,
+      "url": "files/09/0981cdb58e540722d68ba444dc4396e2467a8f0b2f346de55c68282c5671d70a"
     },
     {
       "path": "mods/voxy-0.2.14-alpha-mc_1211-f308c254.jar",
