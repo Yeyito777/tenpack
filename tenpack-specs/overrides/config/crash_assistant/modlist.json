@@ -612,14 +612,6 @@
     "curseForgeHash": 1651996841,
     "modrinthHash": "f1ec2969541495ffad13c7725d5bf92e1f261c4b"
   },
-  "holdmyitemsnf-1.21.1v2.1.jar": {
-    "jarName": "holdmyitemsnf-1.21.1v2.1.jar",
-    "modId": "holdmyitemsnf",
-    "name": "HoldMyItems",
-    "version": "2.0",
-    "curseForgeHash": 3300671849,
-    "modrinthHash": "c4a8d9c03c659c696d63580e9b71e7a7c64dae33"
-  },
   "ImmediatelyFast-NeoForge-1.6.10+1.21.1.jar": {
     "jarName": "ImmediatelyFast-NeoForge-1.6.10+1.21.1.jar",
     "modId": "immediatelyfast",

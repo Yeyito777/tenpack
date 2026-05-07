@@ -13,12 +13,6 @@
       "url": "files/ee/ee32faf303d3beaff76ee54091bc95788048046b6e948ea7795d1eb34f365607"
     },
     {
-      "path": "config/holdmyitemsnf-client.toml",
-      "sha256": "d7dccd1f57016174d7e3ceaeb78a7bb98cbb587c0dc4096c7f41db289627fb68",
-      "size": 3023,
-      "url": "files/d7/d7dccd1f57016174d7e3ceaeb78a7bb98cbb587c0dc4096c7f41db289627fb68"
-    },
-    {
       "path": "config/improvedmobs/common.toml",
       "sha256": "89162a7f276100406909e0879812eb2827fc9a02e0a7f733d13a52f62f08b208",
       "size": 12929,
@@ -239,12 +233,6 @@
       "sha256": "a1b6ce25e8627aa7e748672eedb6b71af68e0993462313649c259f38e42bcac9",
       "size": 622582,
       "url": "files/a1/a1b6ce25e8627aa7e748672eedb6b71af68e0993462313649c259f38e42bcac9"
-    },
-    {
-      "path": "mods/holdmyitemsnf-1.21.1v2.1.jar",
-      "sha256": "ba638b37b49ff4efbc4eed9408b53abd16c2f2ce6825feea6c24f486c729a2e1",
-      "size": 107291,
-      "url": "files/ba/ba638b37b49ff4efbc4eed9408b53abd16c2f2ce6825feea6c24f486c729a2e1"
     },
     {
       "path": "mods/iris-neoforge-1.8.12+mc1.21.1.jar",
