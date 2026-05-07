@@ -337,12 +337,6 @@
       "url": "files/50/50a10cb5db89bd1c02debb37f25b88efc3043f28cf7a5bc009ccec314d8a209c"
     },
     {
-      "path": "mods/simplevoicedistanceneoforge-1.6.1-neoforge1.21.1.jar",
-      "sha256": "6c4644d4b28f23ebb7e1f2e7eb9475ece5680e836c057d0b693c2008ce3f1c63",
-      "size": 65018,
-      "url": "files/6c/6c4644d4b28f23ebb7e1f2e7eb9475ece5680e836c057d0b693c2008ce3f1c63"
-    },
-    {
       "path": "mods/sodium-neoforge-0.6.13+mc1.21.1.jar",
       "sha256": "7acd7af2ef75ec883a6872c17494ead65e38025151eb08a1d60e36d34377f403",
       "size": 1162994,
@@ -368,9 +362,9 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "91c2d4ec86c525f4b7f79a6beb1b3be802aeef97f9e3a45d90e81d5739e2123d",
-      "size": 19918,
-      "url": "files/91/91c2d4ec86c525f4b7f79a6beb1b3be802aeef97f9e3a45d90e81d5739e2123d"
+      "sha256": "68061c68a9e659452659839a932059fb6fb1b5394d78e5f7017096a7eebb6c11",
+      "size": 19453,
+      "url": "files/68/68061c68a9e659452659839a932059fb6fb1b5394d78e5f7017096a7eebb6c11"
     },
     {
       "path": "mods/terrain_slabs-neoforge-3.0.3.jar",

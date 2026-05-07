@@ -178,13 +178,6 @@
       "note": "Simple Voice Chat addon for skulk sensor activation and warden detection. No NeoForge build exists for 1.21.1, so the Fabric build is installed through Sinytra Connector/Forgified Fabric API and mirrored to the client per pack rules."
     },
     {
-      "name": "Simple Voice Distance",
-      "version": "1.6.1 (NeoForge)",
-      "filename": "simplevoicedistanceneoforge-1.6.1-neoforge1.21.1.jar",
-      "source": "https://cdn.modrinth.com/data/cabRLxLT/versions/GQt0jDUi/simplevoicedistanceneoforge-1.6.1-neoforge1.21.1.jar",
-      "note": "Simple Voice Chat addon that lets players cycle between whisper, normal, and shout voice ranges; installed on both client and server."
-    },
-    {
       "name": "Voiceless Survival",
       "version": "2.0.1 (NeoForge)",
       "filename": "Voiceless Survival-1.21.1-neoforge-2.0.1.jar",
@@ -377,5 +370,5 @@
       "note": "Installed on both client and server. Configured with temperature enabled and thirst, health overhaul, localized body damage, and other non-temperature HUD/gameplay features disabled."
     }
   ],
-  "note": "Trimmed to requested mods plus required libraries. Experiment 2026-05-06: restored Camera Overhaul/Falling Leaves; CameraOverhaul jar patched to accept cloth_config >=15; using Fabric Cloth Config v15 through Sinytra Connector because NeoForge Cloth Config v16 requires NeoForge 21.2.x / MC 1.21.2+. Added Simple Voice Chat stack on 2026-05-07: Simple Voice Chat, Voice Chat Interaction via Connector, Simple Voice Distance, and Voiceless Survival."
+  "note": "Trimmed to requested mods plus required libraries. Experiment 2026-05-06: restored Camera Overhaul/Falling Leaves; CameraOverhaul jar patched to accept cloth_config >=15; using Fabric Cloth Config v15 through Sinytra Connector because NeoForge Cloth Config v16 requires NeoForge 21.2.x / MC 1.21.2+. Added Simple Voice Chat stack on 2026-05-07: Simple Voice Chat, Voice Chat Interaction via Connector, and Voiceless Survival."
 }

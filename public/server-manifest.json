@@ -223,12 +223,6 @@
       "url": "files/50/50a10cb5db89bd1c02debb37f25b88efc3043f28cf7a5bc009ccec314d8a209c"
     },
     {
-      "path": "mods/simplevoicedistanceneoforge-1.6.1-neoforge1.21.1.jar",
-      "sha256": "6c4644d4b28f23ebb7e1f2e7eb9475ece5680e836c057d0b693c2008ce3f1c63",
-      "size": 65018,
-      "url": "files/6c/6c4644d4b28f23ebb7e1f2e7eb9475ece5680e836c057d0b693c2008ce3f1c63"
-    },
-    {
       "path": "mods/sound-physics-remastered-neoforge-1.21.1-1.5.1.jar",
       "sha256": "bddc71ecd4f074a101eb3785599d13c69e64025e1029aa0fd0a28fcf9bccf2ea",
       "size": 202454,
