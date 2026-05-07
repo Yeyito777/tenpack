@@ -131,6 +131,14 @@ def mirror_dirs(root: Path, dirs: list[str], desired_paths: set[str], dry_run: b
             if not path.is_file():
                 continue
             rel = path.relative_to(root).as_posix()
+            rel_parts = path.relative_to(base).parts
+            if any(part.startswith(".") for part in rel_parts):
+                # Some loaders/mods maintain their own hidden cache dirs under
+                # managed folders. For example Connector writes generated jars
+                # under mods/.connector; deleting that every launch is noisy and
+                # can make startup slower. Tenpack never publishes hidden files,
+                # so leave hidden local/cache paths alone while mirroring.
+                continue
             if rel in desired_paths:
                 continue
             print(f"delete unlisted file from mirrored dir: {rel}")
