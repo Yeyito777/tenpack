@@ -103,10 +103,22 @@
       "url": "files/31/31589ffc136ac031319db88fa7ce2599ba789ae5d18bd5125e1857e20a834993"
     },
     {
+      "path": "mods/Iceberg-1.21.1-neoforge-1.3.2.jar",
+      "sha256": "0d620c975619b04110b94a73d5b42d252563ff59c1eae9d21ab2ee7e38460a3c",
+      "size": 213853,
+      "url": "files/0d/0d620c975619b04110b94a73d5b42d252563ff59c1eae9d21ab2ee7e38460a3c"
+    },
+    {
       "path": "mods/Kiwi-1.21.1-NeoForge-15.8.3.jar",
       "sha256": "16a7f5cf0015ac86ad977b397d6dfef14884412e14c14d428a3598436a2c9561",
       "size": 1538356,
       "url": "files/16/16a7f5cf0015ac86ad977b397d6dfef14884412e14c14d428a3598436a2c9561"
+    },
+    {
+      "path": "mods/LegendaryTooltips-1.21.1-neoforge-1.5.5.jar",
+      "sha256": "8ba2bc2cb894e48d8e7520d41c72ef7f429659c3ee58b029f4899c760b958493",
+      "size": 81808,
+      "url": "files/8b/8ba2bc2cb894e48d8e7520d41c72ef7f429659c3ee58b029f4899c760b958493"
     },
     {
       "path": "mods/NeoForge-Version-Serene Seasons Plus-1.21.1-4.2.3.jar",
@@ -131,6 +143,12 @@
       "sha256": "ded9ea8677f407cbf280b0ee33866ae70859a7c476ef0f60fd35a9be2ee9b91a",
       "size": 7096988,
       "url": "files/de/ded9ea8677f407cbf280b0ee33866ae70859a7c476ef0f60fd35a9be2ee9b91a"
+    },
+    {
+      "path": "mods/Prism-1.21.1-neoforge-1.0.11.jar",
+      "sha256": "b6a1e585416c48d7d9fa53fc12c67122ad1f3a6965202b51d4e2c643ffca61c2",
+      "size": 62031,
+      "url": "files/b6/b6a1e585416c48d7d9fa53fc12c67122ad1f3a6965202b51d4e2c643ffca61c2"
     },
     {
       "path": "mods/PuzzlesLib-v21.1.39-1.21.1-NeoForge.jar",
@@ -320,9 +338,9 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "3171ef5ae12cd74ad679dc5f3ebf7b90bd7e6f808dacf59902cbfa47b3eb52ee",
-      "size": 16295,
-      "url": "files/31/3171ef5ae12cd74ad679dc5f3ebf7b90bd7e6f808dacf59902cbfa47b3eb52ee"
+      "sha256": "bc554d5e0fc960db3dcf83fc713fbc04d94a187faf05aef97a714b14738c6d6a",
+      "size": 17438,
+      "url": "files/bc/bc554d5e0fc960db3dcf83fc713fbc04d94a187faf05aef97a714b14738c6d6a"
     },
     {
       "path": "mods/terrain_slabs-neoforge-3.0.3.jar",

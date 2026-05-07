@@ -314,6 +314,27 @@
       "note": "Client-side dynamic HUD hiding mod; server-side unsupported. Includes libbamboo via JarJar."
     },
     {
+      "name": "Iceberg",
+      "version": "1.3.2 (NeoForge)",
+      "filename": "Iceberg-1.21.1-neoforge-1.3.2.jar",
+      "source": "https://cdn.modrinth.com/data/5faXoLqX/versions/IMssx9du/Iceberg-1.21.1-neoforge-1.3.2.jar",
+      "note": "Client-side library required by Legendary Tooltips. Server-side unsupported."
+    },
+    {
+      "name": "Prism",
+      "version": "1.0.11 (NeoForge)",
+      "filename": "Prism-1.21.1-neoforge-1.0.11.jar",
+      "source": "https://cdn.modrinth.com/data/1OE8wbN0/versions/kMcz2lDj/Prism-1.21.1-neoforge-1.0.11.jar",
+      "note": "Client-side color/tooltip rendering library required by Legendary Tooltips. Server-side unsupported."
+    },
+    {
+      "name": "Legendary Tooltips",
+      "version": "1.5.5 (NeoForge)",
+      "filename": "LegendaryTooltips-1.21.1-neoforge-1.5.5.jar",
+      "source": "https://cdn.modrinth.com/data/atHH8NyV/versions/BabRJO04/LegendaryTooltips-1.21.1-neoforge-1.5.5.jar",
+      "note": "Client-side tooltip frame/customization mod requested from CurseForge; installed from the same project on Modrinth. Requires Iceberg and Prism. Server-side unsupported."
+    },
+    {
       "name": "Legendary Survival Overhaul",
       "version": "1.21.1-2.4.2 (NeoForge)",
       "filename": "legendarysurvivaloverhaul-1.21.1-2.4.2.jar",
