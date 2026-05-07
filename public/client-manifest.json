@@ -133,6 +133,18 @@
       "url": "files/de/ded9ea8677f407cbf280b0ee33866ae70859a7c476ef0f60fd35a9be2ee9b91a"
     },
     {
+      "path": "mods/PuzzlesLib-v21.1.39-1.21.1-NeoForge.jar",
+      "sha256": "305c828c171a5b52867b56686665b525bcf286018496ece81f376806794ba914",
+      "size": 1080389,
+      "url": "files/30/305c828c171a5b52867b56686665b525bcf286018496ece81f376806794ba914"
+    },
+    {
+      "path": "mods/RespawningAnimals-v21.1.2-1.21.1-NeoForge.jar",
+      "sha256": "c20691f699a7f425885b1a275525b0efaa3eff30ae34a5c142b1c8744a2caef2",
+      "size": 65278,
+      "url": "files/c2/c20691f699a7f425885b1a275525b0efaa3eff30ae34a5c142b1c8744a2caef2"
+    },
+    {
       "path": "mods/SereneSeasons-neoforge-1.21.1-10.1.0.3.jar",
       "sha256": "db5182afe9197044916d364b69cd70139457f92859b0bf4f4bb76c3f42360a65",
       "size": 159206,
@@ -302,9 +314,9 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "c4bc2b98b1b26870e455f51259b60bb19a1803539791bcfc0758d4fa7d743b36",
-      "size": 15024,
-      "url": "files/c4/c4bc2b98b1b26870e455f51259b60bb19a1803539791bcfc0758d4fa7d743b36"
+      "sha256": "7a164073a27d12256e88216621ccbd7d803b04ed6cf70ec2eac04e88d77e2063",
+      "size": 15825,
+      "url": "files/7a/7a164073a27d12256e88216621ccbd7d803b04ed6cf70ec2eac04e88d77e2063"
     },
     {
       "path": "mods/terrain_slabs-neoforge-3.0.3.jar",

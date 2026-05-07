@@ -137,6 +137,20 @@
       "source": "https://cdn.modrinth.com/data/EmNhnNnt/versions/KSgki4uc/alexsmobs-1.22.17.jar"
     },
     {
+      "name": "Puzzles Lib",
+      "version": "21.1.39 (NeoForge)",
+      "filename": "PuzzlesLib-v21.1.39-1.21.1-NeoForge.jar",
+      "source": "https://cdn.modrinth.com/data/QAGBst4M/versions/EgWWSAhJ/PuzzlesLib-v21.1.39-1.21.1-NeoForge.jar",
+      "note": "Required by Respawning Animals; installed on both client and server."
+    },
+    {
+      "name": "Respawning Animals",
+      "version": "21.1.2 (NeoForge)",
+      "filename": "RespawningAnimals-v21.1.2-1.21.1-NeoForge.jar",
+      "source": "https://cdn.modrinth.com/data/WnwcSeWc/versions/a7lvPWaQ/RespawningAnimals-v21.1.2-1.21.1-NeoForge.jar",
+      "note": "Server-side gameplay mod that lets passive animals despawn and naturally respawn instead of only spawning during world generation; mirrored to client per pack rules."
+    },
+    {
       "name": "Sound Physics Remastered",
       "version": "neoforge-1.21.1-1.5.1",
       "filename": "sound-physics-remastered-neoforge-1.21.1-1.5.1.jar",
