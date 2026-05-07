@@ -8,10 +8,6 @@ replay_pid*.log
 
 # Minecraft / server runtime state that should not be committed if created here
 world/
-!server/world/
-!server/world/datapacks/
-!server/world/datapacks/tenpack-worldgen-hotfix/
-!server/world/datapacks/tenpack-worldgen-hotfix/**
 worlds/
 saves/
 backups/
@@ -49,8 +45,6 @@ Thumbs.db
 .vscode/
 
 # Build/temp output
-__pycache__/
-*.pyc
 build/
 out/
 tmp/

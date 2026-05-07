@@ -26,7 +26,7 @@
       "version": "2.0.0-beta.14+1.21.1",
       "filename": "connector-2.0.0-beta.14+1.21.1-full.jar",
       "source": "local archive: archived/voxy/client/mods/",
-      "note": "Required to run remaining Fabric mods on NeoForge."
+      "note": "Required to run Fabric Voxy and Voxy WorldGen V2 on NeoForge."
     },
     {
       "name": "Forgified Fabric API",
@@ -34,6 +34,19 @@
       "filename": "forgified-fabric-api-0.116.7+2.2.4+1.21.1.jar",
       "source": "local archive: archived/voxy/client/mods/",
       "note": "Required by Sinytra Connector / Fabric mods."
+    },
+    {
+      "name": "Voxy",
+      "version": "0.2.14-alpha mc_1211 built from m3t4f1v3/voxy@f308c254",
+      "filename": "voxy-0.2.14-alpha-mc_1211-f308c254.jar",
+      "source": "local archive: archived/voxy/client/mods/"
+    },
+    {
+      "name": "Voxy WorldGen V2",
+      "version": "1.21.1-2.2.1 (built from realBritakee/voxy_worldgen_v2 mc_1211)",
+      "filename": "voxy-worldgen-v2-1.21.1-2.2.1.jar",
+      "source": "https://github.com/realBritakee/voxy_worldgen_v2/tree/mc_1211",
+      "note": "Auto-starts background generation around players via config/voxyworldgenv2.json; generationRadius=128 chunks."
     },
     {
       "name": "Chunky",
@@ -46,14 +59,21 @@
       "version": "0.8.0f-b5 custom build",
       "filename": "simpleclouds-0.8.0f-b5-all.jar",
       "source": "local archive: archived/simpleclouds-0.8.0f-b5/",
-      "note": "Custom all-jar restored from archived/; includes required CrackerLib 1.21.1-0.4.6 and SimpleCloudsAPI as JarJar dependencies."
+      "note": "Custom all-jar restored from archived/; includes required CrackerLib 1.21.1-0.4.6 and SimpleCloudsAPI as JarJar dependencies. Project Atmosphere uses Simple Clouds for cloud rendering/drift."
+    },
+    {
+      "name": "Project Atmosphere",
+      "version": "0.8.1.0 (NeoForge)",
+      "filename": "NeoForge-projectatmosphere-0.8.1.0.jar",
+      "source": "https://cdn.modrinth.com/data/qIWoLcKJ/versions/3OXsfueJ/NeoForge-projectatmosphere-0.8.1.0.jar",
+      "note": "Dynamic climate/weather simulation with wind influence; installed on both client and server. Requires Serene Seasons, Serene Seasons Plus, and Simple Clouds."
     },
     {
       "name": "Serene Seasons",
       "version": "10.1.0.3 (NeoForge)",
       "filename": "SereneSeasons-neoforge-1.21.1-10.1.0.3.jar",
       "source": "https://cdn.modrinth.com/data/e0bNACJD/versions/SPj5bJoM/SereneSeasons-neoforge-1.21.1-10.1.0.3.jar",
-      "note": "Season system used by the pack. Requires GlitchCore."
+      "note": "Season system required by Project Atmosphere / Serene Seasons Plus. Requires GlitchCore."
     },
     {
       "name": "GlitchCore",
@@ -67,7 +87,7 @@
       "version": "4.2.3 (NeoForge)",
       "filename": "NeoForge-Version-Serene Seasons Plus-1.21.1-4.2.3.jar",
       "source": "https://cdn.modrinth.com/data/4Al4H3t9/versions/QiOlBGcz/NeoForge-Version-Serene%20Seasons%20Plus-1.21.1-4.2.3.jar",
-      "note": "Adds seasonal integrations. Requires Serene Seasons and Gabou's Libs; Modrinth also lists Better Days."
+      "note": "Required by Project Atmosphere; adds seasonal integrations. Requires Serene Seasons and Gabou's Libs; Modrinth also lists Better Days."
     },
     {
       "name": "Gabou's Libs",

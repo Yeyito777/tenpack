@@ -149,51 +149,6 @@ def mirror_dirs(root: Path, dirs: list[str], desired_paths: set[str], dry_run: b
     return removed
 
 
-def connector_source_path(cache_name: str) -> str | None:
-    """Return the source mods/<jar> path for a Sinytra Connector cache file.
-
-    Connector writes generated artifacts under mods/.connector and names them
-    after the original Fabric jar, for example:
-
-      example-1.0.0_mapped_moj_1.21.1.jar
-      example-1.0.0$nested-lib_mapped_moj_1.21.1.jar
-
-    The sync intentionally leaves hidden folders alone when mirroring mods/, but
-    stale Connector artifacts can otherwise keep removed Fabric mods loadable.
-    This helper maps a cache artifact back to its original mods/<jar> entry so
-    stale caches can be removed safely.
-    """
-    marker = "_mapped_moj_"
-    if marker not in cache_name:
-        return None
-    source_stem = cache_name.split(marker, 1)[0].split("$", 1)[0]
-    if not source_stem:
-        return None
-    return f"mods/{source_stem}.jar"
-
-
-def clean_connector_cache(root: Path, desired_paths: set[str], dry_run: bool) -> int:
-    cache_dir = root / "mods" / ".connector"
-    if not cache_dir.exists():
-        return 0
-
-    removed = 0
-    for path in sorted(cache_dir.iterdir()):
-        if not path.is_file():
-            continue
-        source = connector_source_path(path.name)
-        if source is None or source in desired_paths:
-            continue
-        print(f"delete stale Connector cache: {path.relative_to(root).as_posix()} (source {source} is not in manifest)")
-        if not dry_run:
-            path.unlink()
-        removed += 1
-
-    if not dry_run:
-        prune_empty_dirs(root, cache_dir)
-    return removed
-
-
 def sync_file(root: Path, manifest_url: str, entry: dict, dry_run: bool) -> bool:
     path = entry["path"]
     expected = entry["sha256"]
@@ -265,15 +220,13 @@ def main() -> int:
 
     deleted, skipped = delete_stale_managed(root, previous, desired_paths, args.dry_run)
     mirrored = mirror_dirs(root, args.mirror_dir, desired_paths, args.dry_run)
-    connector_cleaned = clean_connector_cache(root, desired_paths, args.dry_run)
 
     if not args.dry_run:
         write_state(state_path, args.manifest_url, manifest)
 
     print(
         f"tenpack sync complete: {changed} changed/downloaded, "
-        f"{deleted} stale deleted, {mirrored} mirrored-dir deleted, "
-        f"{connector_cleaned} Connector cache deleted, {skipped} stale modified skipped"
+        f"{deleted} stale deleted, {mirrored} mirrored-dir deleted, {skipped} stale modified skipped"
     )
     return 0
 
