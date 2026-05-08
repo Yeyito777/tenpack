@@ -145,6 +145,13 @@
       "note": "Adds key-based locking for containers such as chests and barrels; installed on both client and server."
     },
     {
+      "name": "Burnt Fabric",
+      "version": "0.1.3 (Fabric via Sinytra Connector)",
+      "filename": "burnt-fabric-0.1.3.jar",
+      "source": "https://www.cursemaven.com/curse/maven/burnt-fabric-1511449/7995786/burnt-fabric-1511449-7995786.jar",
+      "note": "Fire behavior overhaul with smoldering/spread, smoke/embers/ash, wind and biome effects, fire extinguishers, and /burnt killFire. Fabric build installed through Sinytra Connector/Forgified Fabric API; requires Cloth Config."
+    },
+    {
       "name": "Still Life",
       "version": "0.1.1",
       "filename": "still-life-0.1.1.jar",

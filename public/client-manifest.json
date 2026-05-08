@@ -247,6 +247,12 @@
       "url": "files/03/03acad0637dd5d86361178eb3e87ad8f2ed965e9c84514df4dc4228bb24aa2aa"
     },
     {
+      "path": "mods/burnt-fabric-0.1.3.jar",
+      "sha256": "010bca44649c7d6783a62d97e30f800b6653201c3899aeb4dc09fd15addb2cd7",
+      "size": 22063770,
+      "url": "files/01/010bca44649c7d6783a62d97e30f800b6653201c3899aeb4dc09fd15addb2cd7"
+    },
+    {
       "path": "mods/citadel-1.21.1-2.7.6.jar",
       "sha256": "9e12468c49e5a95b7adbf22b3b4d05bc55565989b89c40b985cd73bdfe63c3c2",
       "size": 3028943,
@@ -404,9 +410,9 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "18e461e1e7ce2fad74dccfd8fd7585afe0a361ae8dbb2541a9d3782429446b2d",
-      "size": 22613,
-      "url": "files/18/18e461e1e7ce2fad74dccfd8fd7585afe0a361ae8dbb2541a9d3782429446b2d"
+      "sha256": "1739578093d79aba4413bbee41005b9f259f76f9f1bfa27f81155627281e7e79",
+      "size": 23117,
+      "url": "files/17/1739578093d79aba4413bbee41005b9f259f76f9f1bfa27f81155627281e7e79"
     },
     {
       "path": "mods/tenpackdeath-0.1.0.jar",
