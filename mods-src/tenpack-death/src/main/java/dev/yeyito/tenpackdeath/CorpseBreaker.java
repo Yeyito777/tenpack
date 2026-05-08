@@ -16,7 +16,7 @@ final class CorpseBreaker {
         if (!(corpse.level() instanceof ServerLevel level)) {
             return false;
         }
-        if (!CorpseRules.canBreakCorpse(corpse, config)) {
+        if (!CorpseRules.canBreakCorpse(player, corpse, config)) {
             return false;
         }
         breakCorpse(level, corpse, config, logger);
@@ -27,7 +27,7 @@ final class CorpseBreaker {
         if (!config.breakCorpseDropsAfterDecay) {
             return false;
         }
-        if (!CorpseRules.canBreakCorpse(corpse, config)) {
+        if (!CorpseRules.canBreakCorpse(player, corpse, config)) {
             if (config.notifyDeniedAccess) {
                 player.sendSystemMessage(net.minecraft.network.chat.Component.literal(
                         "[Tenpack Death] This corpse is not decomposed enough to break open."));

@@ -4,6 +4,7 @@ import de.maxhenkel.corpse.corelib.death.Death;
 import de.maxhenkel.corpse.entities.CorpseEntity;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Player;
 
 import java.util.ArrayDeque;
 import java.util.HashMap;
@@ -20,7 +21,7 @@ final class CorpseExperience {
     static void rememberDeathExperience(ServerPlayer player) {
         RECENT_DEATH_XP_POINTS
                 .computeIfAbsent(player.getUUID(), id -> new ArrayDeque<>())
-                .addLast(Math.max(0, player.totalExperience));
+                .addLast(Math.max(0, currentSpendableXpPoints(player)));
     }
 
     static void attachStoredExperience(CorpseEntity corpse) {
@@ -50,6 +51,14 @@ final class CorpseExperience {
         }
         // Fallback for old corpses created before TenpackDeath started recording total XP.
         return config.dropExperienceAsLevels ? xpPointsForLevels(death.getExperience()) : Math.max(0, death.getExperience());
+    }
+
+    private static int currentSpendableXpPoints(Player player) {
+        // Do not use Player#totalExperience here. In vanilla it is not a reliable
+        // "current spendable XP" balance after enchanting/level manipulation. The
+        // level + progress fields are the source used by the XP bar/enchanting UI.
+        return xpPointsForLevels(player.experienceLevel)
+                + Math.round(player.experienceProgress * player.getXpNeededForNextLevel());
     }
 
     private static int xpPointsForLevels(int levels) {

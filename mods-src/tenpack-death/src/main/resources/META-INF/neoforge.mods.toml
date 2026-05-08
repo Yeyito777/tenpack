@@ -29,3 +29,10 @@ type = "required"
 versionRange = "[1.21.1-1.1.13,)"
 ordering = "AFTER"
 side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "lifesteal"
+type = "required"
+versionRange = "[9.3.3,)"
+ordering = "AFTER"
+side = "BOTH"

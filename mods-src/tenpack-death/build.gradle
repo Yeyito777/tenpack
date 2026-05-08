@@ -36,8 +36,10 @@ configurations {
 dependencies {
     compileOnly files('../../client/mods/corpse-neoforge-1.21.1-1.1.13.jar')
     compileOnly files('../../client/mods/voicechat-neoforge-1.21.1-2.6.17.jar')
+    compileOnly files('../../client/mods/lifesteal-9.3.3+1.21.1.jar')
     localRuntime files('../../client/mods/corpse-neoforge-1.21.1-1.1.13.jar')
     localRuntime files('../../client/mods/voicechat-neoforge-1.21.1-2.6.17.jar')
+    localRuntime files('../../client/mods/lifesteal-9.3.3+1.21.1.jar')
 }
 
 def replaceProperties = [

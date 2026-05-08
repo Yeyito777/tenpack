@@ -25,7 +25,10 @@ final class CorpseRules {
         return CorpseState.ageTicks(corpse) >= protectedTicks;
     }
 
-    static boolean canBreakCorpse(CorpseEntity corpse, TenpackDeathConfig config) {
+    static boolean canBreakCorpse(ServerPlayer player, CorpseEntity corpse, TenpackDeathConfig config) {
+        if (isOwner(player, corpse)) {
+            return true;
+        }
         if (!config.requireDecayStartedToBreakCorpse) {
             return true;
         }

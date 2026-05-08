@@ -63,8 +63,9 @@ Current zero-heart behavior:
 So when a player loses all hearts:
 
 1. They are eliminated into spectator mode rather than banned.
-2. Lifesteal creates a revive head tied to that player.
-3. Another player/faction can use Lifesteal's revive mechanics to bring them back.
+2. TenpackDeath re-enforces spectator on respawn/login while Lifesteal's `TIME_KILLED` marker is still set.
+3. Lifesteal creates a revive head tied to that player.
+4. Another player/faction can use Lifesteal's revive mechanics to bring them back.
 
 Revive heads are intentionally movable:
 
@@ -165,6 +166,7 @@ Important details:
 - Corpse's built-in owner-only access is disabled to avoid Corpse's own chat messages.
 - TenpackDeath enforces the protection silently.
 - The dead player can open their own corpse immediately.
+- The dead player can attack or shift-right-click their own corpse to spill/destroy it at any time.
 - Non-owners cannot open it until the corpse is skeletonized.
 - OPs do not bypass corpse protection by default, so OP testing should reflect normal player behavior.
 - No access-denied chat is shown by default.
@@ -198,7 +200,7 @@ Behavior:
 
 - attacking a skeletonized corpse spills remaining items and XP;
 - shift-right-clicking a skeletonized corpse also spills remaining items and XP;
-- XP is stored as the dead player's full `totalExperience` at death;
+- XP is stored as the dead player's current spendable XP at death, calculated from level + XP-bar progress;
 - vanilla's partial/capped player-death XP drop is suppressed;
 - the full stored XP is awarded from the corpse as XP orbs.
 
@@ -272,7 +274,7 @@ Assuming default current config:
 1. **Death happens**
    - victim loses 1 heart;
    - killer gains 1 heart if it was a PvP kill;
-   - full XP is captured for the corpse;
+   - current spendable XP is captured for the corpse;
    - custom death sound plays;
    - inventory goes into corpse.
 
@@ -291,6 +293,7 @@ Assuming default current config:
 
 5. **At zero hearts**
    - player goes spectator;
+   - respawn/login keeps them in spectator until revived;
    - revive head exists as the faction/social objective for bringing them back.
 
 ## Things to test after changes
@@ -304,7 +307,7 @@ Assuming default current config:
 - Corpse becomes public around 60 seconds.
 - Skeletonized corpse can be attacked/shift-right-clicked to spill remaining items.
 - Empty-inventory corpse can still be broken after skeleton stage for stored XP.
-- Full XP, not vanilla partial XP, comes from the corpse.
+- Current spendable XP, not vanilla partial XP, comes from the corpse.
 - Lava deaths leave recoverable corpses.
 - Player at zero hearts becomes spectator and can be revived through revive head flow.
 - Revive heads can be picked up and still preserve the player they revive.
