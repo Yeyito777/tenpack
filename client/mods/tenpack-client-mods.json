@@ -131,6 +131,13 @@
       "note": "Worldgen/content mod that adds terrain slab variants during generation; installed on both client and server. Requires Architectury API."
     },
     {
+      "name": "The Roads More Travelled [TRMT]",
+      "version": "0.4-1.21+1.21.1 (Fabric via Sinytra Connector)",
+      "filename": "trmt-0.4-1.21+1.21.1.jar",
+      "source": "https://www.cursemaven.com/curse/maven/the-roads-more-travelled-1512955/8002076/the-roads-more-travelled-1512955-8002076.jar",
+      "note": "Dynamic step-based terrain erosion/desire-path mod for grass, dirt, sand, leaves, and vegetation. Fabric build installed through Sinytra Connector/Forgified Fabric API and mirrored to the client per pack rules."
+    },
+    {
       "name": "Still Life",
       "version": "0.1.1",
       "filename": "still-life-0.1.1.jar",

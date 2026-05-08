@@ -398,9 +398,9 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "4cb25e82201f2b5bf7f85f03b0b0699aa37b1897dd6ca40eb4e15f3321aaed13",
-      "size": 21726,
-      "url": "files/4c/4cb25e82201f2b5bf7f85f03b0b0699aa37b1897dd6ca40eb4e15f3321aaed13"
+      "sha256": "5d0d66bb5228b142c6dc4c88a86425dce53b8f27de4e9d8a0bc748135bd5e076",
+      "size": 22272,
+      "url": "files/5d/5d0d66bb5228b142c6dc4c88a86425dce53b8f27de4e9d8a0bc748135bd5e076"
     },
     {
       "path": "mods/tenpackdeath-0.1.0.jar",
@@ -413,6 +413,12 @@
       "sha256": "99c55705a80e7edfa9ad8e3dff932ab3df3b4824849d334fa7fb0cdc5554c8e5",
       "size": 370160,
       "url": "files/99/99c55705a80e7edfa9ad8e3dff932ab3df3b4824849d334fa7fb0cdc5554c8e5"
+    },
+    {
+      "path": "mods/trmt-0.4-1.21+1.21.1.jar",
+      "sha256": "281ae0bfd065d663d5b83e67f7bece9f5e83ceaab24c090f06390219ba677846",
+      "size": 109710,
+      "url": "files/28/281ae0bfd065d663d5b83e67f7bece9f5e83ceaab24c090f06390219ba677846"
     },
     {
       "path": "mods/vcinteraction-fabric-1.21.1-1.0.8.jar",
