@@ -375,6 +375,20 @@
       "filename": "legendarysurvivaloverhaul-1.21.1-2.4.2.jar",
       "source": "https://cdn.modrinth.com/data/TQr3t8Sb/versions/AgUpT99l/legendarysurvivaloverhaul-1.21.1-2.4.2.jar",
       "note": "Installed on both client and server. Configured with temperature enabled and thirst, health overhaul, localized body damage, and other non-temperature HUD/gameplay features disabled."
+    },
+    {
+      "name": "Corpse",
+      "version": "1.21.1-1.1.13 (NeoForge)",
+      "filename": "corpse-neoforge-1.21.1-1.1.13.jar",
+      "source": "https://cdn.modrinth.com/data/WrpuIfhw/versions/Zwf8nv8y/corpse-neoforge-1.21.1-1.1.13.jar",
+      "note": "Death-loot mod installed on both client and server. Configured owner-only for the first 60 seconds; once the corpse reaches skeleton stage, anyone can loot it. Lava damage and void falling are disabled. Corpse stores item drops; vanilla XP drops are not intercepted by Corpse's drop-removal hook."
+    },
+    {
+      "name": "Lifesteal",
+      "version": "9.3.3 (NeoForge 1.21.1)",
+      "filename": "lifesteal-9.3.3+1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/YX0eip4b/versions/f5mnj6lv/lifesteal-9.3.3%2B1.21.1.jar",
+      "note": "Installed on both client and server. Configured so every death removes 2 hitpoints / 1 heart; player kills keep lifesteal enabled so the killer gains that heart, while mob and environmental deaths still cost the victim a heart."
     }
   ],
   "note": "Trimmed to requested mods plus required libraries. Experiment 2026-05-06: restored Camera Overhaul/Falling Leaves; CameraOverhaul jar patched to accept cloth_config >=15; using Fabric Cloth Config v15 through Sinytra Connector because NeoForge Cloth Config v16 requires NeoForge 21.2.x / MC 1.21.2+. Added Simple Voice Chat stack on 2026-05-07: Simple Voice Chat, Voice Chat Interaction via Connector, and Voiceless Survival."

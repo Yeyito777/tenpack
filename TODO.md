@@ -5,7 +5,7 @@
 - [ ] Add true dark mod + shaderpacks
 - [ ] Fucked up weather
 - [ ] Lower the chances of relics so that they're unique
-- [ ] 1 min protection of loot on death
+- [x] 1 min protection of loot on death — Corpse owner-only until 60s skeleton stage, then public loot
 - [ ] Pets would be really nice like it would make sense to have a vulture with you
 - [ ] Origins tied to factions
 - [ ] No F3, no map, natural means of navigation (astralago) — maps be cooler compasses be better
