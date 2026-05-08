@@ -62,27 +62,27 @@
     },
     {
       "path": "config/sound_physics_remastered/occlusion.properties",
-      "sha256": "cb08fad009eefaaf888bb4324c351ac426a49fb0db7cb75c4fddbcdcf8d8f414",
-      "size": 4612,
-      "url": "files/cb/cb08fad009eefaaf888bb4324c351ac426a49fb0db7cb75c4fddbcdcf8d8f414"
+      "sha256": "ebbac45fbb3ca01487b85ffee9601b213b71896e6606fb297bcb0f3ac9c30ffb",
+      "size": 4831,
+      "url": "files/eb/ebbac45fbb3ca01487b85ffee9601b213b71896e6606fb297bcb0f3ac9c30ffb"
     },
     {
       "path": "config/sound_physics_remastered/reflectivity.properties",
-      "sha256": "bc029afc200ba2fba522a27245d65c8e5db0f20cd0eddd5873a316054d962923",
-      "size": 4500,
-      "url": "files/bc/bc029afc200ba2fba522a27245d65c8e5db0f20cd0eddd5873a316054d962923"
+      "sha256": "e26b00784bb6239988759ed1a64551b9f301dc33c5a855d91e976ee4bf40ac8a",
+      "size": 4713,
+      "url": "files/e2/e26b00784bb6239988759ed1a64551b9f301dc33c5a855d91e976ee4bf40ac8a"
     },
     {
       "path": "config/sound_physics_remastered/sound_rates.properties",
-      "sha256": "41486a807ce3a30ea5933963f516aa9bf2c1cb0838acf5cd889268d6028e6cd7",
-      "size": 68493,
-      "url": "files/41/41486a807ce3a30ea5933963f516aa9bf2c1cb0838acf5cd889268d6028e6cd7"
+      "sha256": "04fa1114bea944844250be64f3ced4d5fbcdf56838478e2a28143704670494ab",
+      "size": 70315,
+      "url": "files/04/04fa1114bea944844250be64f3ced4d5fbcdf56838478e2a28143704670494ab"
     },
     {
       "path": "config/sound_physics_remastered/soundphysics.properties",
-      "sha256": "9573c64dd047712ef1c7ec7f8e2a2b442906f7272eb0c0c73986fc876a3e6235",
-      "size": 5005,
-      "url": "files/95/9573c64dd047712ef1c7ec7f8e2a2b442906f7272eb0c0c73986fc876a3e6235"
+      "sha256": "d29dede3f214ee4b1aa03314f92c3f973c21ee6e26d173eba3d01a2083237b6d",
+      "size": 5104,
+      "url": "files/d2/d29dede3f214ee4b1aa03314f92c3f973c21ee6e26d173eba3d01a2083237b6d"
     },
     {
       "path": "config/voxyworldgenv2.json",
@@ -152,9 +152,9 @@
     },
     {
       "path": "mods/NeoForge-projectatmosphere-0.8.1.0.jar",
-      "sha256": "368f7aa515c1026679a5b952c4c7ce94cf8a2348f439c8bb69f6144356a863da",
-      "size": 13004758,
-      "url": "files/36/368f7aa515c1026679a5b952c4c7ce94cf8a2348f439c8bb69f6144356a863da"
+      "sha256": "0f8c29d7c0145850a3d3cf86902292212a77c0a1fe9d8705e94aa49b90cdd974",
+      "size": 13003726,
+      "url": "files/0f/0f8c29d7c0145850a3d3cf86902292212a77c0a1fe9d8705e94aa49b90cdd974"
     },
     {
       "path": "mods/PassableFoliage-1.21.1-NeoForge-9.1.3.jar",
@@ -392,15 +392,15 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "b03e6f1b5ffda4b00fbb6b148dfdeb811b142accd054e5b2bf37834874de5cf9",
-      "size": 21566,
-      "url": "files/b0/b03e6f1b5ffda4b00fbb6b148dfdeb811b142accd054e5b2bf37834874de5cf9"
+      "sha256": "25a92732d8c4de3dc1b614503c9e19412308da997dd6031b830a0ee9b2c8aec4",
+      "size": 21612,
+      "url": "files/25/25a92732d8c4de3dc1b614503c9e19412308da997dd6031b830a0ee9b2c8aec4"
     },
     {
       "path": "mods/tenpackdeath-0.1.0.jar",
-      "sha256": "59af4755890cc986f90b50035e86faad3a8209e6281d1fbe725f715b2d175bab",
-      "size": 6026,
-      "url": "files/59/59af4755890cc986f90b50035e86faad3a8209e6281d1fbe725f715b2d175bab"
+      "sha256": "2b4fac0af6b40387cc53a608963854db5ebe29e69d2e970c85d6a7c33f4ed8d2",
+      "size": 6686,
+      "url": "files/2b/2b4fac0af6b40387cc53a608963854db5ebe29e69d2e970c85d6a7c33f4ed8d2"
     },
     {
       "path": "mods/terrain_slabs-neoforge-3.0.3.jar",

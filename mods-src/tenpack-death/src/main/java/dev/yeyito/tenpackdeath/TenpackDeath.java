@@ -1,5 +1,6 @@
 package dev.yeyito.tenpackdeath;
 
+import com.mojang.logging.LogUtils;
 import de.maxhenkel.corpse.corelib.death.Death;
 import de.maxhenkel.corpse.entities.CorpseEntity;
 import net.minecraft.core.NonNullList;
@@ -14,6 +15,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
+import org.slf4j.Logger;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -24,6 +26,7 @@ import java.util.UUID;
 @Mod(TenpackDeath.MODID)
 public class TenpackDeath {
     public static final String MODID = "tenpackdeath";
+    private static final Logger LOGGER = LogUtils.getLogger();
 
     // Tenpack design numbers. Corpse's skeleton/public-loot timer remains in corpse-server.toml.
     private static final int DECAY_START_TICKS = 5 * 60 * 20;
@@ -31,6 +34,7 @@ public class TenpackDeath {
     private static final String DATA_KEY = "tenpackdeath";
     private static final String REMOVED_STACKS_KEY = "removed_stacks";
     private static final String WARNED_KEY = "decay_warned";
+    private static final String ERROR_KEY = "decay_error";
 
     private static final Field CORPSE_AGE_FIELD = findCorpseAgeField();
 
@@ -51,7 +55,11 @@ public class TenpackDeath {
         if (corpse.tickCount % 20 != 0) {
             return;
         }
-        processCorpse(level, corpse);
+        try {
+            processCorpse(level, corpse);
+        } catch (RuntimeException | LinkageError e) {
+            disableDecayAfterError(level, corpse, e);
+        }
     }
 
     private static void processCorpse(ServerLevel level, CorpseEntity corpse) {
@@ -65,6 +73,9 @@ public class TenpackDeath {
         }
 
         CompoundTag state = getTenpackState(corpse);
+        if (state.getBoolean(ERROR_KEY)) {
+            return;
+        }
         if (!state.getBoolean(WARNED_KEY)) {
             state.putBoolean(WARNED_KEY, true);
             notifyOwner(level.getServer(), corpse,
@@ -113,9 +124,28 @@ public class TenpackDeath {
         ItemStack removed = slot.list.get(slot.index).copy();
         slot.list.set(slot.index, ItemStack.EMPTY);
 
-        // Re-set Death so future Corpse serialization/GUIs see the mutated inventory.
-        corpse.setDeath(death);
+        // Death is a mutable object. Mutating its inventory lists is enough for
+        // Corpse's saving and GUI code, which read from corpse.getDeath(). Do
+        // not call CorpseEntity#setDeath here: Corpse marks that method as
+        // client-only in 1.21.1, so NeoForge can strip it on dedicated servers,
+        // causing NoSuchMethodError when this server-side tick code runs.
         return removed;
+    }
+
+    private static void disableDecayAfterError(ServerLevel level, CorpseEntity corpse, Throwable error) {
+        try {
+            CompoundTag state = getTenpackState(corpse);
+            if (state.getBoolean(ERROR_KEY)) {
+                return;
+            }
+            state.putBoolean(ERROR_KEY, true);
+            notifyOwner(level.getServer(), corpse,
+                    "Corpse decomposition hit an internal error and has been paused for this corpse. Please loot it manually.");
+            LOGGER.error("Paused Tenpack corpse decomposition for corpse {} at {}", corpse.getUUID(), corpse.blockPosition(), error);
+        } catch (RuntimeException loggingError) {
+            LOGGER.error("Failed while handling Tenpack corpse decomposition error for corpse {}", corpse.getUUID(), error);
+            LOGGER.error("Secondary error while marking corpse decomposition failed", loggingError);
+        }
     }
 
     private static void collectOccupied(List<SlotRef> occupied, NonNullList<ItemStack> list) {
