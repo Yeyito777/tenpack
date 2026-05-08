@@ -44,27 +44,27 @@
     },
     {
       "path": "config/sound_physics_remastered/occlusion.properties",
-      "sha256": "ebbac45fbb3ca01487b85ffee9601b213b71896e6606fb297bcb0f3ac9c30ffb",
-      "size": 4831,
-      "url": "files/eb/ebbac45fbb3ca01487b85ffee9601b213b71896e6606fb297bcb0f3ac9c30ffb"
+      "sha256": "cb08fad009eefaaf888bb4324c351ac426a49fb0db7cb75c4fddbcdcf8d8f414",
+      "size": 4612,
+      "url": "files/cb/cb08fad009eefaaf888bb4324c351ac426a49fb0db7cb75c4fddbcdcf8d8f414"
     },
     {
       "path": "config/sound_physics_remastered/reflectivity.properties",
-      "sha256": "e26b00784bb6239988759ed1a64551b9f301dc33c5a855d91e976ee4bf40ac8a",
-      "size": 4713,
-      "url": "files/e2/e26b00784bb6239988759ed1a64551b9f301dc33c5a855d91e976ee4bf40ac8a"
+      "sha256": "bc029afc200ba2fba522a27245d65c8e5db0f20cd0eddd5873a316054d962923",
+      "size": 4500,
+      "url": "files/bc/bc029afc200ba2fba522a27245d65c8e5db0f20cd0eddd5873a316054d962923"
     },
     {
       "path": "config/sound_physics_remastered/sound_rates.properties",
-      "sha256": "04fa1114bea944844250be64f3ced4d5fbcdf56838478e2a28143704670494ab",
-      "size": 70315,
-      "url": "files/04/04fa1114bea944844250be64f3ced4d5fbcdf56838478e2a28143704670494ab"
+      "sha256": "41486a807ce3a30ea5933963f516aa9bf2c1cb0838acf5cd889268d6028e6cd7",
+      "size": 68493,
+      "url": "files/41/41486a807ce3a30ea5933963f516aa9bf2c1cb0838acf5cd889268d6028e6cd7"
     },
     {
       "path": "config/sound_physics_remastered/soundphysics.properties",
-      "sha256": "d29dede3f214ee4b1aa03314f92c3f973c21ee6e26d173eba3d01a2083237b6d",
-      "size": 5104,
-      "url": "files/d2/d29dede3f214ee4b1aa03314f92c3f973c21ee6e26d173eba3d01a2083237b6d"
+      "sha256": "9573c64dd047712ef1c7ec7f8e2a2b442906f7272eb0c0c73986fc876a3e6235",
+      "size": 5005,
+      "url": "files/95/9573c64dd047712ef1c7ec7f8e2a2b442906f7272eb0c0c73986fc876a3e6235"
     },
     {
       "path": "config/tenpackdeath.properties",
@@ -308,9 +308,9 @@
     },
     {
       "path": "mods/tenpackdeath-0.1.0.jar",
-      "sha256": "dd3ed1c49e1d573c696fa5fe783c2e21670cdfa078dd10fe3f0d597f68921c10",
-      "size": 18463,
-      "url": "files/dd/dd3ed1c49e1d573c696fa5fe783c2e21670cdfa078dd10fe3f0d597f68921c10"
+      "sha256": "33046463421e3ecd532209f0451c3619d7a665b2487dc69a92c78a8f60b37d86",
+      "size": 78973,
+      "url": "files/33/33046463421e3ecd532209f0451c3619d7a665b2487dc69a92c78a8f60b37d86"
     },
     {
       "path": "mods/terrain_slabs-neoforge-3.0.3.jar",

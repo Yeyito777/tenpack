@@ -5,7 +5,9 @@ import de.maxhenkel.corpse.corelib.death.Death;
 import de.maxhenkel.corpse.entities.CorpseEntity;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -16,9 +18,12 @@ import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.EventPriority;
+import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.neoforge.event.entity.living.LivingExperienceDropEvent;
 import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
@@ -39,10 +44,15 @@ public class TenpackDeath {
     public static final String MODID = "tenpackdeath";
     private static final Logger LOGGER = LogUtils.getLogger();
 
+    private static final DeferredRegister<SoundEvent> SOUND_EVENTS = DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, MODID);
+    static final DeferredHolder<SoundEvent, SoundEvent> RETURN_BY_DEATH_SOUND = SOUND_EVENTS.register(
+            "return_by_death", SoundEvent::createVariableRangeEvent);
+
     private static final Map<UUID, ArrayDeque<Integer>> RECENT_DEATH_XP_POINTS = new HashMap<>();
     private static final TenpackDeathConfig CONFIG = new TenpackDeathConfig();
 
-    public TenpackDeath() {
+    public TenpackDeath(IEventBus modEventBus) {
+        SOUND_EVENTS.register(modEventBus);
         CONFIG.loadIfNeeded();
         NeoForge.EVENT_BUS.register(this);
     }
