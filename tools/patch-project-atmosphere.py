@@ -11,6 +11,8 @@ Current replacements:
   empty SimpleClouds spawn-region loop by doing real player-region recovery,
   preventing the useless every-tick booster path while SimpleClouds has no spawn
   regions, and keeping async cloud-spawn callbacks safe if the region list empties.
+- TornadoRenderHandler: keep Project Atmosphere's tornado renderer from leaking
+  a shared level-render PoseStack frame when tornado mesh/shader rendering throws.
 
 Pass a compiled class directory containing these package paths as the third
 argument. For backwards compatibility, passing a single class file still patches
@@ -29,9 +31,10 @@ TARGETS = (
     "net/Gabou/projectatmosphere/event/EventHandler.class",
     "net/Gabou/projectatmosphere/manager/SimpleCloudSpawner.class",
     "net/Gabou/projectatmosphere/manager/SimpleCloudSpawner$CloudSpawnRequest.class",
+    "net/Gabou/projectatmosphere/client/TornadoRenderHandler.class",
 )
 INSTRUMENT_TARGET = "net/Gabou/projectatmosphere/items/InstrumentBlockItem.class"
-PATCH_NOTE = """Tenpack Project Atmosphere patch tenpack.2
+PATCH_NOTE = """Tenpack Project Atmosphere patch tenpack.3
 
 Patched net.Gabou.projectatmosphere.items.InstrumentBlockItem.
 Reason: Project Atmosphere 0.8.1.0 crashed the dedicated server with
@@ -50,6 +53,14 @@ The patch seeds weather around real overworld players to recover from the empty
 spawn-region cache, skips only the useless empty-region retry loop while
 SimpleClouds has no usable regions, and avoids an async spawn callback crash if
 the SimpleClouds region list empties between weather sampling and cloud add.
+
+Patched net.Gabou.projectatmosphere.client.TornadoRenderHandler.
+Reason: Project Atmosphere's tornado renderer pushed the shared level-render
+PoseStack without a try/finally guard. If shader/mesh rendering threw, the caller
+would catch and log the original exception but leave a pose frame on the stack,
+causing Minecraft to crash later with "Pose stack not empty". The patched class
+always restores the pose stack and render cull/blend state after tornado render
+attempts.
 """
 
 
