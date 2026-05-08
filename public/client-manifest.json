@@ -283,6 +283,12 @@
       "url": "files/80/80d984f0a17d968220129cc58edd5c9f28a5f61a84ec67dcc41228a46dfa4bb1"
     },
     {
+      "path": "mods/curios-neoforge-9.5.1+1.21.1.jar",
+      "sha256": "a45df2125c26219974aba7507ffc9afe7b83acc941a386af3faacb1cc0056fde",
+      "size": 410690,
+      "url": "files/a4/a45df2125c26219974aba7507ffc9afe7b83acc941a386af3faacb1cc0056fde"
+    },
+    {
       "path": "mods/do_a_barrel_roll-neoforge-3.7.3+1.21.jar",
       "sha256": "e56395ebb26318c11f3a9474bba14518f17f4f2028683eb0aa9cdc7dacf124e2",
       "size": 465787,
@@ -416,9 +422,9 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "1739578093d79aba4413bbee41005b9f259f76f9f1bfa27f81155627281e7e79",
-      "size": 23117,
-      "url": "files/17/1739578093d79aba4413bbee41005b9f259f76f9f1bfa27f81155627281e7e79"
+      "sha256": "08ff58646543d726e098a12df382a5147daade6a68ac196362dbcad57b07516f",
+      "size": 23525,
+      "url": "files/08/08ff58646543d726e098a12df382a5147daade6a68ac196362dbcad57b07516f"
     },
     {
       "path": "mods/tenpackdeath-0.1.0.jar",

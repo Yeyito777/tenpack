@@ -138,6 +138,13 @@
       "note": "Dynamic step-based terrain erosion/desire-path mod for grass, dirt, sand, leaves, and vegetation. Fabric build installed through Sinytra Connector/Forgified Fabric API and mirrored to the client per pack rules."
     },
     {
+      "name": "Curios API",
+      "version": "9.5.1+1.21.1 (NeoForge)",
+      "filename": "curios-neoforge-9.5.1+1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/vvuO3ImH/versions/yohfFbgD/curios-neoforge-9.5.1%2B1.21.1.jar",
+      "note": "Required by Lucky's Locksmith, which hard-references the Curios item capability during mod construction; installed on both client and server."
+    },
+    {
       "name": "Lucky's Locksmith",
       "version": "1.0.3 (NeoForge)",
       "filename": "locksmith-1.0.3.jar",
