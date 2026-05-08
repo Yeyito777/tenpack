@@ -1,0 +1,6 @@
+[submodule "mods-src/corelib"]
+	path = mods-src/corelib
+	url = https://github.com/henkelmax/corelib.git
+[submodule "mods-src/corpse"]
+	path = mods-src/corpse
+	url = https://github.com/henkelmax/corpse.git

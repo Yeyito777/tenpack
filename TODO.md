@@ -46,3 +46,10 @@
 - [ ] Loose quest system
 - [ ] Get to the moon is the long term goal, adding mods is the short term one, surviving the first night is the spark that lights the fire
 - [ ] Pvp enables after 5 minutes
+
+
+--- TEchnical
+Disable YDM weapon master keybinds
+Make resourcepacks auto-enable
+why does voice chat like die
+Invisible mobs and players on ill rendered chunks
