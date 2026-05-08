@@ -253,6 +253,12 @@
       "url": "files/01/010bca44649c7d6783a62d97e30f800b6653201c3899aeb4dc09fd15addb2cd7"
     },
     {
+      "path": "mods/carryon-neoforge-1.21.1-2.2.4.4.jar",
+      "sha256": "ad69537be8be8b433227792e43f8df7b4d3cef7e359255d471a44e776ad8dd57",
+      "size": 357489,
+      "url": "files/ad/ad69537be8be8b433227792e43f8df7b4d3cef7e359255d471a44e776ad8dd57"
+    },
+    {
       "path": "mods/citadel-1.21.1-2.7.6.jar",
       "sha256": "9e12468c49e5a95b7adbf22b3b4d05bc55565989b89c40b985cd73bdfe63c3c2",
       "size": 3028943,
