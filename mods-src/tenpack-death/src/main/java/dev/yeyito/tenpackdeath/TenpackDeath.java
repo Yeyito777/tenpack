@@ -22,6 +22,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
+import net.neoforged.neoforge.event.entity.living.LivingExperienceDropEvent;
 import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
@@ -74,6 +75,16 @@ public class TenpackDeath {
     }
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public void onExperienceDrop(LivingExperienceDropEvent event) {
+        if (event.getEntity() instanceof ServerPlayer) {
+            // Vanilla only drops a capped fraction of player XP on death. Tenpack
+            // stores the full value and releases it through the corpse instead.
+            event.setDroppedExperience(0);
+            event.setCanceled(true);
+        }
+    }
+
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
     public void onAttackEntity(AttackEntityEvent event) {
         if (!(event.getTarget() instanceof CorpseEntity corpse)) {
             return;
@@ -89,7 +100,7 @@ public class TenpackDeath {
         if (!CONFIG.breakCorpseDropsAfterDecay) {
             return;
         }
-        if (!hasDecayStarted(corpse)) {
+        if (!canBreakCorpse(corpse)) {
             if (CONFIG.notifyDeniedAccess) {
                 player.sendSystemMessage(Component.literal("[Tenpack Death] This corpse is not decomposed enough to break open."));
             }
@@ -228,18 +239,17 @@ public class TenpackDeath {
     }
 
     private static void processCorpse(ServerLevel level, CorpseEntity corpse) {
+        CompoundTag state = getTenpackState(corpse);
+        if (state.getBoolean(ERROR_KEY)) {
+            return;
+        }
+        attachStoredExperience(corpse, state);
         if (!CONFIG.decayEnabled) {
             return;
         }
         if (corpse.isEmpty()) {
             return;
         }
-
-        CompoundTag state = getTenpackState(corpse);
-        if (state.getBoolean(ERROR_KEY)) {
-            return;
-        }
-        attachStoredExperience(corpse, state);
 
         int age = getCorpseAge(corpse);
         int decayStartTicks = CONFIG.decayStartSeconds * 20;
@@ -309,7 +319,7 @@ public class TenpackDeath {
         if (!(corpse.level() instanceof ServerLevel level)) {
             return false;
         }
-        if (!hasDecayStarted(corpse)) {
+        if (!canBreakCorpse(corpse)) {
             return false;
         }
         try {
@@ -318,6 +328,16 @@ public class TenpackDeath {
             disableDecayAfterError(level, corpse, e);
         }
         return true;
+    }
+
+    private static boolean canBreakCorpse(CorpseEntity corpse) {
+        if (!CONFIG.requireDecayStartedToBreakCorpse) {
+            return true;
+        }
+        if (CONFIG.breakCorpseAtSkeleton && corpse.isSkeleton()) {
+            return true;
+        }
+        return hasDecayStarted(corpse);
     }
 
     private static boolean hasDecayStarted(CorpseEntity corpse) {
@@ -511,6 +531,7 @@ public class TenpackDeath {
 
         boolean breakCorpseDropsAfterDecay = true;
         boolean requireDecayStartedToBreakCorpse = true;
+        boolean breakCorpseAtSkeleton = true;
         boolean breakCorpseDropsExperience = true;
         boolean dropExperienceAsLevels = true;
 
@@ -546,6 +567,7 @@ public class TenpackDeath {
 
                 breakCorpseDropsAfterDecay = bool(properties, "breakCorpseDropsAfterDecay", breakCorpseDropsAfterDecay);
                 requireDecayStartedToBreakCorpse = bool(properties, "requireDecayStartedToBreakCorpse", requireDecayStartedToBreakCorpse);
+                breakCorpseAtSkeleton = bool(properties, "breakCorpseAtSkeleton", breakCorpseAtSkeleton);
                 breakCorpseDropsExperience = bool(properties, "breakCorpseDropsExperience", breakCorpseDropsExperience);
                 dropExperienceAsLevels = bool(properties, "dropExperienceAsLevels", dropExperienceAsLevels);
 
@@ -584,6 +606,7 @@ public class TenpackDeath {
                     # XP is derived from Corpse's stored death experience level and dropped without vanilla XP-loss limits.
                     breakCorpseDropsAfterDecay=true
                     requireDecayStartedToBreakCorpse=true
+                    breakCorpseAtSkeleton=true
                     breakCorpseDropsExperience=true
                     dropExperienceAsLevels=true
                     """);

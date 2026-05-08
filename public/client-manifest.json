@@ -8,9 +8,9 @@
     },
     {
       "path": "config/corpse-server.toml",
-      "sha256": "957f52c86b9dbbba51ffa02f218d47a85aa425c7346e543dccac2698cac481c3",
-      "size": 1645,
-      "url": "files/95/957f52c86b9dbbba51ffa02f218d47a85aa425c7346e543dccac2698cac481c3"
+      "sha256": "b2e0fc5e849084256310526838c6da62356f51ec98cc740afcd6b1d13ada9644",
+      "size": 1646,
+      "url": "files/b2/b2e0fc5e849084256310526838c6da62356f51ec98cc740afcd6b1d13ada9644"
     },
     {
       "path": "config/do_a_barrel_roll-client.json",
@@ -86,9 +86,9 @@
     },
     {
       "path": "config/tenpackdeath.properties",
-      "sha256": "1c96d73ff509c24dd08c4b2ac02dc568bad2aa8ed87ec1f27776246789a37e44",
-      "size": 1119,
-      "url": "files/1c/1c96d73ff509c24dd08c4b2ac02dc568bad2aa8ed87ec1f27776246789a37e44"
+      "sha256": "480ff6ca6ef365f80314faa6ac254d264f27bf3e962abb341953f2d0dc350066",
+      "size": 1146,
+      "url": "files/48/480ff6ca6ef365f80314faa6ac254d264f27bf3e962abb341953f2d0dc350066"
     },
     {
       "path": "config/voxyworldgenv2.json",
@@ -404,9 +404,9 @@
     },
     {
       "path": "mods/tenpackdeath-0.1.0.jar",
-      "sha256": "0a2a1c73d56b7ca6ce3f5492c76b437267642b15366e136b9bc3fb66da3e85fa",
-      "size": 16232,
-      "url": "files/0a/0a2a1c73d56b7ca6ce3f5492c76b437267642b15366e136b9bc3fb66da3e85fa"
+      "sha256": "631dc2889d7aca94ffb22c110dbe093cf1e61094b9a0f2f33d11119c40f20557",
+      "size": 16458,
+      "url": "files/63/631dc2889d7aca94ffb22c110dbe093cf1e61094b9a0f2f33d11119c40f20557"
     },
     {
       "path": "mods/terrain_slabs-neoforge-3.0.3.jar",

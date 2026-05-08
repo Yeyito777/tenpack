@@ -18,6 +18,7 @@ Status: local implementation, not pushed. Needs in-game testing before deploymen
   - Corpses store player item drops instead of letting them scatter as normal item entities.
   - Corpse native owner-only messages are disabled; TenpackDeath enforces silent owner-only protection until skeleton stage.
   - `lava_damage = false` and `fall_into_void = false`, matching the desired lava/void safety baseline.
+  - Empty corpses are kept around for 120 seconds so empty-inventory deaths can still reach skeleton stage and be broken for XP.
 
 - Tenpack Death is installed on both client and server:
   - `tenpackdeath-0.1.0.jar`
@@ -29,7 +30,8 @@ Status: local implementation, not pushed. Needs in-game testing before deploymen
   - Ops do not bypass protection by default, so OP testing should still show the protection.
   - After a corpse has existed for 5 minutes, decay silently starts. Chat notifications are disabled by default.
   - From then on, the corpse loses one random stored item stack every 30 seconds until it is looted or empty. It does not notify each lost stack.
-  - Once decay has started, attacking the corpse or shift-right-clicking it spills all remaining items and drops all stored XP as orbs.
+  - Once the corpse is a skeleton, attacking it or shift-right-clicking it spills all remaining items and drops all stored XP as orbs.
+  - Vanilla partial death XP drops are suppressed for players; the full total XP is recorded into TenpackDeath and paid out through the corpse.
   - Player death plays a Re:Zero Return-by-Death-inspired cue made from vanilla ominous sounds. No copyrighted clip is bundled.
   - Simple Voice Chat speaking/name-tag icons are cancelled for Corpse entities, matching both corpse entity UUID and corpse owner UUID, so corpses do not look like talking players.
 
@@ -70,7 +72,7 @@ Practical expectation for testing: items go into the corpse; vanilla XP behavior
 - After skeleton stage, another player can open/loot.
 - At 5 minutes, decay starts silently by default.
 - After 5 minutes, one random corpse item stack disappears every 30 seconds with no per-stack notification.
-- After decay starts, attacking or shift-right-clicking the corpse drops all remaining items and all stored XP.
+- Once the corpse is a skeleton, attacking or shift-right-clicking the corpse drops all remaining items and all stored XP.
 - Death plays the Return-by-Death-inspired sound cue.
 - Die in lava: corpse survives and items are recoverable.
 - Check XP dropped/stored behavior and decide whether this fits the enchanting system.

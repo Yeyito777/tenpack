@@ -37,7 +37,7 @@ death_storage_duration = -1
 		#The time passed (in ticks) after a corpse despawns (only if empty)
 		# Default: 600
 		# Range: > 20
-		time = 600
+		time = 2400
 		#The time passed (in ticks) after a corpse despawns even if its not empty (-1 = never)
 		# Tenpack: leave full corpses persistent until we add proper staged decomposition.
 		# Default: -1
