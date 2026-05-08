@@ -9,18 +9,32 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.Containers;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.ExperienceOrb;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
+import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
 import org.slf4j.Logger;
 
+import java.io.IOException;
 import java.lang.reflect.Field;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Properties;
 import java.util.UUID;
 
 @Mod(TenpackDeath.MODID)
@@ -28,18 +42,72 @@ public class TenpackDeath {
     public static final String MODID = "tenpackdeath";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    // Tenpack design numbers. Corpse's skeleton/public-loot timer remains in corpse-server.toml.
-    private static final int DECAY_START_TICKS = 5 * 60 * 20;
-    private static final int DECAY_INTERVAL_TICKS = 30 * 20;
     private static final String DATA_KEY = "tenpackdeath";
     private static final String REMOVED_STACKS_KEY = "removed_stacks";
     private static final String WARNED_KEY = "decay_warned";
+    private static final String DECAY_STARTED_KEY = "decay_started";
     private static final String ERROR_KEY = "decay_error";
 
     private static final Field CORPSE_AGE_FIELD = findCorpseAgeField();
+    private static final Config CONFIG = new Config();
 
     public TenpackDeath() {
+        CONFIG.loadIfNeeded();
         NeoForge.EVENT_BUS.register(this);
+    }
+
+    @SubscribeEvent
+    public void onLivingDeath(LivingDeathEvent event) {
+        if (!(event.getEntity() instanceof ServerPlayer player)) {
+            return;
+        }
+        CONFIG.loadIfNeeded();
+        if (!CONFIG.deathSoundEnabled) {
+            return;
+        }
+        playReturnByDeathSound(player);
+    }
+
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public void onAttackEntity(AttackEntityEvent event) {
+        if (!(event.getTarget() instanceof CorpseEntity corpse)) {
+            return;
+        }
+        if (!(event.getEntity() instanceof ServerPlayer player)) {
+            return;
+        }
+        if (!(corpse.level() instanceof ServerLevel level)) {
+            return;
+        }
+
+        CONFIG.loadIfNeeded();
+        if (!CONFIG.breakCorpseDropsAfterDecay) {
+            return;
+        }
+        if (!hasDecayStarted(corpse)) {
+            if (CONFIG.notifyDeniedAccess) {
+                player.sendSystemMessage(Component.literal("[Tenpack Death] This corpse is not decomposed enough to break open."));
+            }
+            event.setCanceled(true);
+            return;
+        }
+
+        try {
+            dropCorpseContents(level, corpse);
+        } catch (RuntimeException | LinkageError e) {
+            disableDecayAfterError(level, corpse, e);
+        }
+        event.setCanceled(true);
+    }
+
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public void onEntityInteract(PlayerInteractEvent.EntityInteract event) {
+        protectCorpse(event.getEntity(), event.getTarget(), event);
+    }
+
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public void onEntityInteractSpecific(PlayerInteractEvent.EntityInteractSpecific event) {
+        protectCorpse(event.getEntity(), event.getTarget(), event);
     }
 
     @SubscribeEvent
@@ -55,6 +123,7 @@ public class TenpackDeath {
         if (corpse.tickCount % 20 != 0) {
             return;
         }
+        CONFIG.loadIfNeeded();
         try {
             processCorpse(level, corpse);
         } catch (RuntimeException | LinkageError e) {
@@ -62,13 +131,92 @@ public class TenpackDeath {
         }
     }
 
-    private static void processCorpse(ServerLevel level, CorpseEntity corpse) {
-        if (corpse.isEmpty()) {
+    private static void protectCorpse(Player player, Entity target, PlayerInteractEvent.EntityInteract event) {
+        if (!(target instanceof CorpseEntity corpse)) {
+            return;
+        }
+        if (!(player instanceof ServerPlayer serverPlayer)) {
+            return;
+        }
+        if (!(corpse.level() instanceof ServerLevel)) {
             return;
         }
 
-        int age = getCorpseAge(corpse);
-        if (age < DECAY_START_TICKS) {
+        CONFIG.loadIfNeeded();
+        if (!CONFIG.ownerProtectionEnabled) {
+            return;
+        }
+        if (isOwner(serverPlayer, corpse)) {
+            return;
+        }
+        if (CONFIG.opsBypassProtection && isOp(serverPlayer)) {
+            return;
+        }
+        if (isPubliclyLootable(corpse)) {
+            return;
+        }
+
+        event.setCancellationResult(InteractionResult.FAIL);
+        event.setCanceled(true);
+
+        if (CONFIG.notifyDeniedAccess) {
+            serverPlayer.sendSystemMessage(Component.literal("[Tenpack Death] This corpse is protected until it becomes a skeleton."));
+        }
+    }
+
+    private static void protectCorpse(Player player, Entity target, PlayerInteractEvent.EntityInteractSpecific event) {
+        if (!(target instanceof CorpseEntity corpse)) {
+            return;
+        }
+        if (!(player instanceof ServerPlayer serverPlayer)) {
+            return;
+        }
+        if (!(corpse.level() instanceof ServerLevel)) {
+            return;
+        }
+
+        CONFIG.loadIfNeeded();
+        if (!CONFIG.ownerProtectionEnabled) {
+            return;
+        }
+        if (isOwner(serverPlayer, corpse)) {
+            return;
+        }
+        if (CONFIG.opsBypassProtection && isOp(serverPlayer)) {
+            return;
+        }
+        if (isPubliclyLootable(corpse)) {
+            return;
+        }
+
+        event.setCancellationResult(InteractionResult.FAIL);
+        event.setCanceled(true);
+
+        if (CONFIG.notifyDeniedAccess) {
+            serverPlayer.sendSystemMessage(Component.literal("[Tenpack Death] This corpse is protected until it becomes a skeleton."));
+        }
+    }
+
+    private static boolean isPubliclyLootable(CorpseEntity corpse) {
+        if (CONFIG.publicLootRequiresSkeleton) {
+            return corpse.isSkeleton();
+        }
+        int protectedTicks = CONFIG.publicLootAfterSeconds * 20;
+        return getCorpseAge(corpse) >= protectedTicks;
+    }
+
+    private static void playReturnByDeathSound(ServerPlayer player) {
+        float volume = CONFIG.deathSoundVolume;
+        player.playNotifySound(SoundEvents.WARDEN_HEARTBEAT, SoundSource.PLAYERS, volume, 0.55F);
+        player.playNotifySound(SoundEvents.WARDEN_SONIC_CHARGE, SoundSource.PLAYERS, volume * 0.65F, 0.55F);
+        player.playNotifySound(SoundEvents.WITHER_SPAWN, SoundSource.PLAYERS, volume * 0.35F, 0.45F);
+    }
+
+    private static void processCorpse(ServerLevel level, CorpseEntity corpse) {
+        if (!CONFIG.decayEnabled) {
+            return;
+        }
+        if (corpse.isEmpty()) {
             return;
         }
 
@@ -76,13 +224,22 @@ public class TenpackDeath {
         if (state.getBoolean(ERROR_KEY)) {
             return;
         }
-        if (!state.getBoolean(WARNED_KEY)) {
-            state.putBoolean(WARNED_KEY, true);
-            notifyOwner(level.getServer(), corpse,
-                    "Your corpse has started decomposing. It will lose one item stack every 30 seconds until looted.");
+
+        int age = getCorpseAge(corpse);
+        int decayStartTicks = CONFIG.decayStartSeconds * 20;
+        int decayIntervalTicks = Math.max(1, CONFIG.decayIntervalSeconds * 20);
+        if (age < decayStartTicks) {
+            return;
         }
 
-        int dueRemovals = 1 + (age - DECAY_START_TICKS) / DECAY_INTERVAL_TICKS;
+        state.putBoolean(DECAY_STARTED_KEY, true);
+        if (CONFIG.notifyDecayStarted && !state.getBoolean(WARNED_KEY)) {
+            state.putBoolean(WARNED_KEY, true);
+            notifyOwner(level.getServer(), corpse,
+                    "Your corpse has started decomposing. It will lose one item stack every " + CONFIG.decayIntervalSeconds + " seconds until looted.");
+        }
+
+        int dueRemovals = 1 + (age - decayStartTicks) / decayIntervalTicks;
         int alreadyRemoved = state.getInt(REMOVED_STACKS_KEY);
 
         while (alreadyRemoved < dueRemovals && !corpse.isEmpty()) {
@@ -92,9 +249,61 @@ public class TenpackDeath {
             }
             alreadyRemoved++;
             state.putInt(REMOVED_STACKS_KEY, alreadyRemoved);
-            notifyOwner(level.getServer(), corpse,
-                    "Your decomposing corpse lost " + describe(removed) + ".");
         }
+    }
+
+    private static boolean hasDecayStarted(CorpseEntity corpse) {
+        if (!CONFIG.requireDecayStartedToBreakCorpse) {
+            return true;
+        }
+        if (getTenpackState(corpse).getBoolean(DECAY_STARTED_KEY)) {
+            return true;
+        }
+        return getCorpseAge(corpse) >= CONFIG.decayStartSeconds * 20;
+    }
+
+    private static void dropCorpseContents(ServerLevel level, CorpseEntity corpse) {
+        Death death = corpse.getDeath();
+        dropInventory(level, corpse, death.getMainInventory());
+        dropInventory(level, corpse, death.getArmorInventory());
+        dropInventory(level, corpse, death.getOffHandInventory());
+        dropInventory(level, corpse, death.getAdditionalItems());
+        if (CONFIG.breakCorpseDropsExperience) {
+            int points = CONFIG.dropExperienceAsLevels ? xpPointsForLevels(death.getExperience()) : death.getExperience();
+            if (points > 0) {
+                ExperienceOrb.award(level, corpse.position(), points);
+            }
+        }
+        // Death is a mutable object. Mutating its inventory lists is enough for
+        // Corpse's saving and GUI code, which read from corpse.getDeath(). Do
+        // not call CorpseEntity#setDeath here: Corpse marks that method as
+        // client-only in 1.21.1, so NeoForge can strip it on dedicated servers,
+        // causing NoSuchMethodError when server-side code runs.
+        corpse.discard();
+    }
+
+    private static void dropInventory(ServerLevel level, CorpseEntity corpse, NonNullList<ItemStack> list) {
+        for (int i = 0; i < list.size(); i++) {
+            ItemStack stack = list.get(i);
+            if (!stack.isEmpty()) {
+                Containers.dropItemStack(level, corpse.getX(), corpse.getY(), corpse.getZ(), stack.copy());
+                list.set(i, ItemStack.EMPTY);
+            }
+        }
+    }
+
+    private static int xpPointsForLevels(int levels) {
+        int total = 0;
+        for (int level = 0; level < levels; level++) {
+            if (level >= 30) {
+                total += 112 + (level - 30) * 9;
+            } else if (level >= 15) {
+                total += 37 + (level - 15) * 5;
+            } else {
+                total += 7 + level * 2;
+            }
+        }
+        return total;
     }
 
     private static CompoundTag getTenpackState(CorpseEntity corpse) {
@@ -118,8 +327,7 @@ public class TenpackDeath {
             return ItemStack.EMPTY;
         }
 
-        // Randomize decay target so players cannot trivially predict which slot is safest.
-        int index = corpse.getRandom().nextInt(occupied.size());
+        int index = CONFIG.randomDecay ? corpse.getRandom().nextInt(occupied.size()) : occupied.size() - 1;
         SlotRef slot = occupied.get(index);
         ItemStack removed = slot.list.get(slot.index).copy();
         slot.list.set(slot.index, ItemStack.EMPTY);
@@ -155,6 +363,15 @@ public class TenpackDeath {
                 occupied.add(new SlotRef(list, i));
             }
         }
+    }
+
+    private static boolean isOwner(ServerPlayer player, CorpseEntity corpse) {
+        Optional<UUID> ownerId = corpse.getCorpseUUID();
+        return ownerId.isPresent() && player.getUUID().equals(ownerId.get());
+    }
+
+    private static boolean isOp(ServerPlayer player) {
+        return player.hasPermissions(player.server.getOperatorUserPermissionLevel());
     }
 
     private static void notifyOwner(MinecraftServer server, CorpseEntity corpse, String message) {
@@ -199,5 +416,136 @@ public class TenpackDeath {
     }
 
     private record SlotRef(NonNullList<ItemStack> list, int index) {
+    }
+
+    private static class Config {
+        private static final Path PATH = Path.of("config", "tenpackdeath.properties");
+
+        private long lastModified = Long.MIN_VALUE;
+
+        boolean ownerProtectionEnabled = true;
+        boolean publicLootRequiresSkeleton = true;
+        int publicLootAfterSeconds = 60;
+        boolean opsBypassProtection = false;
+        boolean notifyDeniedAccess = true;
+
+        boolean deathSoundEnabled = true;
+        float deathSoundVolume = 1.0F;
+
+        boolean decayEnabled = true;
+        int decayStartSeconds = 300;
+        int decayIntervalSeconds = 30;
+        boolean randomDecay = true;
+        boolean notifyDecayStarted = true;
+
+        boolean breakCorpseDropsAfterDecay = true;
+        boolean requireDecayStartedToBreakCorpse = true;
+        boolean breakCorpseDropsExperience = true;
+        boolean dropExperienceAsLevels = true;
+
+        void loadIfNeeded() {
+            try {
+                if (!Files.exists(PATH)) {
+                    writeDefaultConfig();
+                }
+                long modified = Files.getLastModifiedTime(PATH).toMillis();
+                if (modified == lastModified) {
+                    return;
+                }
+                Properties properties = new Properties();
+                try (var reader = Files.newBufferedReader(PATH)) {
+                    properties.load(reader);
+                }
+
+                ownerProtectionEnabled = bool(properties, "ownerProtectionEnabled", ownerProtectionEnabled);
+                publicLootRequiresSkeleton = bool(properties, "publicLootRequiresSkeleton", publicLootRequiresSkeleton);
+                publicLootAfterSeconds = positiveInt(properties, "publicLootAfterSeconds", publicLootAfterSeconds);
+                opsBypassProtection = bool(properties, "opsBypassProtection", opsBypassProtection);
+                notifyDeniedAccess = bool(properties, "notifyDeniedAccess", notifyDeniedAccess);
+
+                deathSoundEnabled = bool(properties, "deathSoundEnabled", deathSoundEnabled);
+                deathSoundVolume = positiveFloat(properties, "deathSoundVolume", deathSoundVolume);
+
+                decayEnabled = bool(properties, "decayEnabled", decayEnabled);
+                decayStartSeconds = positiveInt(properties, "decayStartSeconds", decayStartSeconds);
+                decayIntervalSeconds = positiveInt(properties, "decayIntervalSeconds", decayIntervalSeconds);
+                randomDecay = bool(properties, "randomDecay", randomDecay);
+                notifyDecayStarted = bool(properties, "notifyDecayStarted", notifyDecayStarted);
+
+                breakCorpseDropsAfterDecay = bool(properties, "breakCorpseDropsAfterDecay", breakCorpseDropsAfterDecay);
+                requireDecayStartedToBreakCorpse = bool(properties, "requireDecayStartedToBreakCorpse", requireDecayStartedToBreakCorpse);
+                breakCorpseDropsExperience = bool(properties, "breakCorpseDropsExperience", breakCorpseDropsExperience);
+                dropExperienceAsLevels = bool(properties, "dropExperienceAsLevels", dropExperienceAsLevels);
+
+                lastModified = modified;
+            } catch (IOException ignored) {
+                // Keep current/default config if the file cannot be read.
+            }
+        }
+
+        private void writeDefaultConfig() throws IOException {
+            Files.createDirectories(PATH.getParent());
+            Files.writeString(PATH, """
+                    # Tenpack Death config. Times are in real seconds.
+                    # Owner protection means only the dead player can loot their corpse.
+                    # If publicLootRequiresSkeleton=true, non-owners cannot loot until Corpse marks it as a skeleton.
+                    # If false, publicLootAfterSeconds is used instead.
+                    ownerProtectionEnabled=true
+                    publicLootRequiresSkeleton=true
+                    publicLootAfterSeconds=60
+                    opsBypassProtection=false
+                    notifyDeniedAccess=true
+
+                    # Re:Zero-style Return by Death inspired sound cue. Uses vanilla ominous sounds, not a bundled copyrighted clip.
+                    deathSoundEnabled=true
+                    deathSoundVolume=1.0
+
+                    # Decay starts after decayStartSeconds and removes one stored item stack every decayIntervalSeconds.
+                    decayEnabled=true
+                    decayStartSeconds=300
+                    decayIntervalSeconds=30
+                    randomDecay=true
+                    notifyDecayStarted=true
+
+                    # After decay has started, attacking/breaking a corpse spills everything remaining.
+                    # XP is derived from Corpse's stored death experience level and dropped without vanilla XP-loss limits.
+                    breakCorpseDropsAfterDecay=true
+                    requireDecayStartedToBreakCorpse=true
+                    breakCorpseDropsExperience=true
+                    dropExperienceAsLevels=true
+                    """);
+        }
+
+        private static boolean bool(Properties properties, String key, boolean fallback) {
+            String value = properties.getProperty(key);
+            if (value == null) {
+                return fallback;
+            }
+            return Boolean.parseBoolean(value.trim());
+        }
+
+        private static int positiveInt(Properties properties, String key, int fallback) {
+            String value = properties.getProperty(key);
+            if (value == null) {
+                return fallback;
+            }
+            try {
+                return Math.max(1, Integer.parseInt(value.trim()));
+            } catch (NumberFormatException ignored) {
+                return fallback;
+            }
+        }
+
+        private static float positiveFloat(Properties properties, String key, float fallback) {
+            String value = properties.getProperty(key);
+            if (value == null) {
+                return fallback;
+            }
+            try {
+                return Math.max(0.0F, Float.parseFloat(value.trim()));
+            } catch (NumberFormatException ignored) {
+                return fallback;
+            }
+        }
     }
 }

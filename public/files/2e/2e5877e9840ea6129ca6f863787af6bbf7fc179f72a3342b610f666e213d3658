@@ -1,0 +1,27 @@
+# Tenpack Death config. Times are in real seconds.
+# Owner protection means only the dead player can loot their corpse.
+# If publicLootRequiresSkeleton=true, non-owners cannot loot until Corpse marks it as a skeleton.
+# If false, publicLootAfterSeconds is used instead.
+ownerProtectionEnabled=true
+publicLootRequiresSkeleton=true
+publicLootAfterSeconds=60
+opsBypassProtection=false
+notifyDeniedAccess=true
+
+# Re:Zero-style Return by Death inspired sound cue. Uses vanilla ominous sounds, not a bundled copyrighted clip.
+deathSoundEnabled=true
+deathSoundVolume=1.0
+
+# Decay starts after decayStartSeconds and removes one stored item stack every decayIntervalSeconds.
+decayEnabled=true
+decayStartSeconds=300
+decayIntervalSeconds=30
+randomDecay=true
+notifyDecayStarted=true
+
+# After decay has started, attacking/breaking a corpse spills everything remaining.
+# XP is derived from Corpse's stored death experience level and dropped without vanilla XP-loss limits.
+breakCorpseDropsAfterDecay=true
+requireDecayStartedToBreakCorpse=true
+breakCorpseDropsExperience=true
+dropExperienceAsLevels=true

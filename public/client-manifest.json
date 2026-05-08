@@ -8,9 +8,9 @@
     },
     {
       "path": "config/corpse-server.toml",
-      "sha256": "414acbb461d185b09f9d619c3a2970998a4f3106ed256c878776a6942aa12208",
-      "size": 1617,
-      "url": "files/41/414acbb461d185b09f9d619c3a2970998a4f3106ed256c878776a6942aa12208"
+      "sha256": "2403f7ff420c46c1dae49382e171fd1b59a9daee00dc1d8b2eb6e670a9ceb3a5",
+      "size": 1635,
+      "url": "files/24/2403f7ff420c46c1dae49382e171fd1b59a9daee00dc1d8b2eb6e670a9ceb3a5"
     },
     {
       "path": "config/do_a_barrel_roll-client.json",
@@ -44,9 +44,9 @@
     },
     {
       "path": "config/lifesteal-common.toml",
-      "sha256": "cb69107467cb0550893eb029a72d50f92004cea325dbb9b16a29658b014e8384",
-      "size": 6566,
-      "url": "files/cb/cb69107467cb0550893eb029a72d50f92004cea325dbb9b16a29658b014e8384"
+      "sha256": "22ded4ce4e78494efde4339ff78471650ac61dd8dbdda1b6498b314c3a7556fa",
+      "size": 6567,
+      "url": "files/22/22ded4ce4e78494efde4339ff78471650ac61dd8dbdda1b6498b314c3a7556fa"
     },
     {
       "path": "config/more_darkness.json",
@@ -62,27 +62,33 @@
     },
     {
       "path": "config/sound_physics_remastered/occlusion.properties",
-      "sha256": "ebbac45fbb3ca01487b85ffee9601b213b71896e6606fb297bcb0f3ac9c30ffb",
-      "size": 4831,
-      "url": "files/eb/ebbac45fbb3ca01487b85ffee9601b213b71896e6606fb297bcb0f3ac9c30ffb"
+      "sha256": "cb08fad009eefaaf888bb4324c351ac426a49fb0db7cb75c4fddbcdcf8d8f414",
+      "size": 4612,
+      "url": "files/cb/cb08fad009eefaaf888bb4324c351ac426a49fb0db7cb75c4fddbcdcf8d8f414"
     },
     {
       "path": "config/sound_physics_remastered/reflectivity.properties",
-      "sha256": "e26b00784bb6239988759ed1a64551b9f301dc33c5a855d91e976ee4bf40ac8a",
-      "size": 4713,
-      "url": "files/e2/e26b00784bb6239988759ed1a64551b9f301dc33c5a855d91e976ee4bf40ac8a"
+      "sha256": "bc029afc200ba2fba522a27245d65c8e5db0f20cd0eddd5873a316054d962923",
+      "size": 4500,
+      "url": "files/bc/bc029afc200ba2fba522a27245d65c8e5db0f20cd0eddd5873a316054d962923"
     },
     {
       "path": "config/sound_physics_remastered/sound_rates.properties",
-      "sha256": "04fa1114bea944844250be64f3ced4d5fbcdf56838478e2a28143704670494ab",
-      "size": 70315,
-      "url": "files/04/04fa1114bea944844250be64f3ced4d5fbcdf56838478e2a28143704670494ab"
+      "sha256": "41486a807ce3a30ea5933963f516aa9bf2c1cb0838acf5cd889268d6028e6cd7",
+      "size": 68493,
+      "url": "files/41/41486a807ce3a30ea5933963f516aa9bf2c1cb0838acf5cd889268d6028e6cd7"
     },
     {
       "path": "config/sound_physics_remastered/soundphysics.properties",
-      "sha256": "d29dede3f214ee4b1aa03314f92c3f973c21ee6e26d173eba3d01a2083237b6d",
-      "size": 5104,
-      "url": "files/d2/d29dede3f214ee4b1aa03314f92c3f973c21ee6e26d173eba3d01a2083237b6d"
+      "sha256": "9573c64dd047712ef1c7ec7f8e2a2b442906f7272eb0c0c73986fc876a3e6235",
+      "size": 5005,
+      "url": "files/95/9573c64dd047712ef1c7ec7f8e2a2b442906f7272eb0c0c73986fc876a3e6235"
+    },
+    {
+      "path": "config/tenpackdeath.properties",
+      "sha256": "2e5877e9840ea6129ca6f863787af6bbf7fc179f72a3342b610f666e213d3658",
+      "size": 1090,
+      "url": "files/2e/2e5877e9840ea6129ca6f863787af6bbf7fc179f72a3342b610f666e213d3658"
     },
     {
       "path": "config/voxyworldgenv2.json",
@@ -392,15 +398,15 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "25a92732d8c4de3dc1b614503c9e19412308da997dd6031b830a0ee9b2c8aec4",
-      "size": 21612,
-      "url": "files/25/25a92732d8c4de3dc1b614503c9e19412308da997dd6031b830a0ee9b2c8aec4"
+      "sha256": "4cb25e82201f2b5bf7f85f03b0b0699aa37b1897dd6ca40eb4e15f3321aaed13",
+      "size": 21726,
+      "url": "files/4c/4cb25e82201f2b5bf7f85f03b0b0699aa37b1897dd6ca40eb4e15f3321aaed13"
     },
     {
       "path": "mods/tenpackdeath-0.1.0.jar",
-      "sha256": "2b4fac0af6b40387cc53a608963854db5ebe29e69d2e970c85d6a7c33f4ed8d2",
-      "size": 6686,
-      "url": "files/2b/2b4fac0af6b40387cc53a608963854db5ebe29e69d2e970c85d6a7c33f4ed8d2"
+      "sha256": "7349d02d36951646a75321d2962c6065b3d5cbb6cddaa060ab24d5ea7b758693",
+      "size": 14275,
+      "url": "files/73/7349d02d36951646a75321d2962c6065b3d5cbb6cddaa060ab24d5ea7b758693"
     },
     {
       "path": "mods/terrain_slabs-neoforge-3.0.3.jar",

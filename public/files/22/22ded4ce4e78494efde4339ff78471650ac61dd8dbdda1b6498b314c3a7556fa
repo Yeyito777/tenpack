@@ -12,7 +12,7 @@
 	#Determines if Revive Heads should spawn upon a player being eliminated (no more hearts). NOTE: Always false in Singleplayer
 	"Spawn Revive Head upon player elimination:" = true
 	#Determines if players who have lost all hearts get banned, or simply go into Spectator mode. Singleplayer will always go into Spectator
-	"Ban players upon losing all hearts:" = true
+	"Ban players upon losing all hearts:" = false
 	#Determines if players should drop a heart crystal upon death.
 	"Players drop a Heart Crystal on death:" = false
 	#How long (seconds) until a player is automatically revived. Set to 0 to disable this feature.

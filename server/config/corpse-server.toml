@@ -1,6 +1,6 @@
 # Tenpack death-loot policy for Corpse.
 # Corpse stores player items in a corpse entity instead of dropping them as loose item entities.
-# Access is owner-only for the first minute, then opens to everyone when the corpse reaches skeleton stage.
+# TenpackDeath controls loot protection/public access; Corpse handles storage/visuals.
 # 20 ticks = 1 second.
 
 #The time (in real life days) deaths get stored
@@ -12,7 +12,7 @@ death_storage_duration = -1
 
 [corpse]
 	#The time passed (in ticks) after a corpse turns into a skeleton
-	# Tenpack: 1 minute; this also drives public looting through corpse.access.skeleton.
+	# Tenpack: 1 minute visual skeleton marker. Loot protection is enforced by TenpackDeath.
 	# Default: 72000
 	# Range: > 0
 	skeleton_time = 1200
@@ -27,10 +27,10 @@ death_storage_duration = -1
 
 	[corpse.access]
 		#If only the owner of the corpse can access the inventory
-		# Tenpack: protect the owner's loot until skeleton_time elapses.
+		# Defense in depth: Corpse also protects owner loot until skeleton stage.
+		# TenpackDeath adds configurable protection and blocks OP bypass during testing.
 		only_owner = true
 		#If everybody can access the corpse in the skeleton stage (Only if only_owner_access is set to true)
-		# Tenpack: after 1 minute, anyone can loot the corpse.
 		skeleton = true
 
 	[corpse.despawn]

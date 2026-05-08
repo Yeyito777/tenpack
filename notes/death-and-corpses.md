@@ -10,22 +10,47 @@ Status: local implementation, not pushed. Needs in-game testing before deploymen
   - `Number of HitPoints lost/given upon death/kill = 2` (1 heart)
   - Player deaths, mob deaths, and environmental deaths all remove hearts from the victim.
   - Lifesteal is enabled, so player kills transfer the heart to the killer.
+  - Losing all hearts currently sends the player to spectator instead of banning them.
 
 - Corpse is installed on both client and server:
   - `corpse-neoforge-1.21.1-1.1.13.jar`
   - Config: `client/config/corpse-server.toml`, `server/config/corpse-server.toml`
   - Corpses store player item drops instead of letting them scatter as normal item entities.
-  - Corpses are owner-only for 60 seconds.
-  - After 60 seconds, the corpse reaches skeleton stage and becomes lootable by anyone.
-  - Empty corpses despawn after 30 seconds.
+  - Corpse config is also owner-only until skeleton stage as defense-in-depth.
   - `lava_damage = false` and `fall_into_void = false`, matching the desired lava/void safety baseline.
 
 - Tenpack Death is installed on both client and server:
   - `tenpackdeath-0.1.0.jar`
   - Source: `mods-src/tenpack-death/`
+  - Config: `client/config/tenpackdeath.properties`, `server/config/tenpackdeath.properties`
   - Requires Corpse and layers Tenpack-specific behavior on top of it.
-  - After a corpse has existed for 5 minutes, it warns the corpse owner if online.
-  - From then on, the corpse loses one random stored item stack every 30 seconds until it is looted or empty.
+  - Non-owners are blocked from opening a corpse until Corpse marks it as a skeleton.
+  - Public looting is therefore tied to the visible skeleton state, not just a hidden timer.
+  - Ops do not bypass protection by default, so OP testing should still show the protection.
+  - After a corpse has existed for 5 minutes, it can warn the corpse owner if online.
+  - From then on, the corpse loses one random stored item stack every 30 seconds until it is looted or empty. It does not notify each lost stack.
+  - Once decay has started, attacking/breaking the corpse spills all remaining items and drops all stored XP as orbs.
+  - Player death plays a Re:Zero Return-by-Death-inspired cue made from vanilla ominous sounds. No copyrighted clip is bundled.
+  - Simple Voice Chat speaking/name-tag icons are cancelled for Corpse entities so corpses don't look like talking players.
+
+## Heart ore / crystal economy
+
+Added server datapack: `server/datapacks/tenpack-lifesteal-balance/`.
+
+This overrides Lifesteal's default heart crystal worldgen so heart ore is closer to old-school diamond hunting:
+
+- Overworld ore: from 6 attempts per chunk at Y -50..70 to 1 attempt every ~6 chunks at Y -58..-16.
+- Nether ore: from 6 attempts per chunk at Y 20..100 to 1 attempt every ~4 chunks at Y 8..40.
+- Overworld heart geodes: from chance 50 to chance 256.
+- Nether heart geodes: from chance 30 to chance 192.
+
+This keeps revive crystals possible, but makes heart crystal production a faction-level mining/project goal. It only affects newly generated chunks.
+
+## Revive heads
+
+Lifesteal's `Spawn Revive Head upon player elimination` option means that when a player loses all hearts, the mod can place/drop a special revive head tied to that eliminated player. Other players use the Lifesteal revive mechanics/items around that head to bring the eliminated player back. This is separate from the Corpse loot system.
+
+For now, zero-heart behavior is set to spectator, not ban, so we can test the revive flow without accidentally locking someone out of the server.
 
 ## Experience / enchanting interaction
 
@@ -38,10 +63,13 @@ Practical expectation for testing: items go into the corpse; vanilla XP behavior
 - Die to environment: lose 1 heart, no killer gains a heart, items are in corpse.
 - Die to mob: lose 1 heart, no player gains a heart, items are in corpse.
 - Die to player: victim loses 1 heart, killer gains 1 heart, items are in corpse.
-- During first 60 seconds, only corpse owner can open/loot.
-- After 60 seconds, another player can open/loot.
+- Owner can open their corpse before skeleton stage.
+- Non-owner cannot open/loot before skeleton stage, even if OP.
+- After skeleton stage, another player can open/loot.
 - At 5 minutes, owner receives decomposition warning if online.
-- After 5 minutes, one random corpse item stack disappears every 30 seconds.
+- After 5 minutes, one random corpse item stack disappears every 30 seconds with no per-stack notification.
+- After decay starts, attacking/breaking the corpse drops all remaining items and all stored XP.
+- Death plays the Return-by-Death-inspired sound cue.
 - Die in lava: corpse survives and items are recoverable.
 - Check XP dropped/stored behavior and decide whether this fits the enchanting system.
-- Check what Lifesteal does at zero hearts: ban vs spectator vs revive flow.
+- Check what Lifesteal does at zero hearts: currently spectator, revive head enabled, ban disabled.
