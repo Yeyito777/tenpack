@@ -91,6 +91,12 @@
       "url": "files/48/480ff6ca6ef365f80314faa6ac254d264f27bf3e962abb341953f2d0dc350066"
     },
     {
+      "path": "config/trmt.json",
+      "sha256": "07914490b9ff450fa793516e564f7020d138c7ab7af36721c1900170994a713c",
+      "size": 1021,
+      "url": "files/07/07914490b9ff450fa793516e564f7020d138c7ab7af36721c1900170994a713c"
+    },
+    {
       "path": "config/voxyworldgenv2.json",
       "sha256": "556e4ea8da03dc0d4ef596d1a12852a86d6c18a89a9c7eff95891a8f781409b9",
       "size": 177,
