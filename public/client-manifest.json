@@ -355,16 +355,22 @@
       "url": "files/d3/d3bda0a7a5b1f267747da182e788139da380f625eaf96a5c2a8fa5bcb8d908b7"
     },
     {
+      "path": "mods/spark-1.10.124-neoforge.jar",
+      "sha256": "647e8a81afbe414dba1df4ba15fd06c5d32d4cb544e68828405e8e074c2e16db",
+      "size": 3642581,
+      "url": "files/64/647e8a81afbe414dba1df4ba15fd06c5d32d4cb544e68828405e8e074c2e16db"
+    },
+    {
       "path": "mods/still-life-0.1.1.jar",
-      "sha256": "38355fb7834c1df7574735065032bed66cad32335093c8f8cc63b8e8063ba2d3",
-      "size": 4750103,
-      "url": "files/38/38355fb7834c1df7574735065032bed66cad32335093c8f8cc63b8e8063ba2d3"
+      "sha256": "8dc3c01ed548f2eecbc52b1a2f8301267e265d746fb09961776984a81e343e3b",
+      "size": 845442,
+      "url": "files/8d/8dc3c01ed548f2eecbc52b1a2f8301267e265d746fb09961776984a81e343e3b"
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "68061c68a9e659452659839a932059fb6fb1b5394d78e5f7017096a7eebb6c11",
-      "size": 19453,
-      "url": "files/68/68061c68a9e659452659839a932059fb6fb1b5394d78e5f7017096a7eebb6c11"
+      "sha256": "c800bd229c85ff8b62ac1d795d475820ed7b06343eea67c1c6a60543dfae161b",
+      "size": 19983,
+      "url": "files/c8/c800bd229c85ff8b62ac1d795d475820ed7b06343eea67c1c6a60543dfae161b"
     },
     {
       "path": "mods/terrain_slabs-neoforge-3.0.3.jar",

@@ -49,6 +49,13 @@
       "note": "Auto-starts background generation around players via config/voxyworldgenv2.json; generationRadius=128 chunks."
     },
     {
+      "name": "spark",
+      "version": "1.10.124 (NeoForge 1.21.1)",
+      "filename": "spark-1.10.124-neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/l6YH9Als/versions/v5qtqRQi/spark-1.10.124-neoforge.jar",
+      "note": "Profiling instrumentation for Tenpack retests: use /spark profiler to measure server tick/chunkgen costs without throttling Voxy."
+    },
+    {
       "name": "Chunky",
       "version": "1.4.23",
       "filename": "Chunky-NeoForge-1.4.23.jar",
@@ -128,7 +135,7 @@
       "version": "0.1.1",
       "filename": "still-life-0.1.1.jar",
       "source": "https://cdn.modrinth.com/data/fK6aflho/versions/Jerfht2T/still-life-0.1.1.jar",
-      "note": "Locally patched for MC 1.21.1: removed stale references to missing still_life:arctic_tundra and post-1.21.1 minecraft:pale_moss_block."
+      "note": "Locally patched for MC 1.21.1/Tenpack: removed stale references to missing still_life:arctic_tundra and post-1.21.1 minecraft:pale_moss_block; disabled still_life:pf_terrain/red_sand_patch because it repeatedly attempts far-chunk setBlock writes during Voxy-driven chunk generation."
     },
     {
       "name": "Citadel (Unofficial Port)",

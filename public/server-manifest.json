@@ -229,10 +229,16 @@
       "url": "files/bd/bddc71ecd4f074a101eb3785599d13c69e64025e1029aa0fd0a28fcf9bccf2ea"
     },
     {
+      "path": "mods/spark-1.10.124-neoforge.jar",
+      "sha256": "647e8a81afbe414dba1df4ba15fd06c5d32d4cb544e68828405e8e074c2e16db",
+      "size": 3642581,
+      "url": "files/64/647e8a81afbe414dba1df4ba15fd06c5d32d4cb544e68828405e8e074c2e16db"
+    },
+    {
       "path": "mods/still-life-0.1.1.jar",
-      "sha256": "38355fb7834c1df7574735065032bed66cad32335093c8f8cc63b8e8063ba2d3",
-      "size": 4750103,
-      "url": "files/38/38355fb7834c1df7574735065032bed66cad32335093c8f8cc63b8e8063ba2d3"
+      "sha256": "8dc3c01ed548f2eecbc52b1a2f8301267e265d746fb09961776984a81e343e3b",
+      "size": 845442,
+      "url": "files/8d/8dc3c01ed548f2eecbc52b1a2f8301267e265d746fb09961776984a81e343e3b"
     },
     {
       "path": "mods/terrain_slabs-neoforge-3.0.3.jar",
