@@ -138,6 +138,13 @@
       "note": "Dynamic step-based terrain erosion/desire-path mod for grass, dirt, sand, leaves, and vegetation. Fabric build installed through Sinytra Connector/Forgified Fabric API and mirrored to the client per pack rules."
     },
     {
+      "name": "Lucky's Locksmith",
+      "version": "1.0.3 (NeoForge)",
+      "filename": "locksmith-1.0.3.jar",
+      "source": "https://cdn.modrinth.com/data/pntvHkib/versions/bjDihfxu/locksmith-1.0.3.jar",
+      "note": "Adds key-based locking for containers such as chests and barrels; installed on both client and server."
+    },
+    {
       "name": "Still Life",
       "version": "0.1.1",
       "filename": "still-life-0.1.1.jar",

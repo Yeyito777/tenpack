@@ -283,6 +283,12 @@
       "url": "files/2c/2c2cc9c3de98d79feac7ea9bd0bfe367fe1d59dfefe647ca1afdd3d547d682f9"
     },
     {
+      "path": "mods/locksmith-1.0.3.jar",
+      "sha256": "eec4df0500ced908e7979299e4073fc86d88ebb9ac815be652136b2eb6ab7f1b",
+      "size": 201639,
+      "url": "files/ee/eec4df0500ced908e7979299e4073fc86d88ebb9ac815be652136b2eb6ab7f1b"
+    },
+    {
       "path": "mods/simpleclouds-0.8.0f-b5-all.jar",
       "sha256": "50a10cb5db89bd1c02debb37f25b88efc3043f28cf7a5bc009ccec314d8a209c",
       "size": 2265660,
