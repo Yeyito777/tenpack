@@ -1,6 +1,6 @@
 # Death, corpses, and lifesteal
 
-Status: local implementation, not pushed. Needs in-game testing before deployment.
+Status: implemented/pushed. For the current player-facing design, see `notes/death-mechanics.md`.
 
 ## Implemented
 
@@ -32,7 +32,7 @@ Status: local implementation, not pushed. Needs in-game testing before deploymen
   - From then on, the corpse loses one random stored item stack every 30 seconds until it is looted or empty. It does not notify each lost stack.
   - Once the corpse is a skeleton, attacking it or shift-right-clicking it spills all remaining items and drops all stored XP as orbs.
   - Vanilla partial death XP drops are suppressed for players; the full total XP is recorded into TenpackDeath and paid out through the corpse.
-  - Player death plays a Re:Zero Return-by-Death-inspired cue made from vanilla ominous sounds. No copyrighted clip is bundled.
+  - Player death plays the custom `tenpackdeath:return_by_death` sound.
   - Simple Voice Chat speaking/name-tag icons are cancelled for Corpse entities, matching both corpse entity UUID and corpse owner UUID, so corpses do not look like talking players.
 
 ## Heart ore / crystal economy
@@ -58,9 +58,7 @@ Revive heads are pick-up-able/movable because Lifesteal `Indestructible Revive H
 
 ## Experience / enchanting interaction
 
-Corpse/CoreLib records the player's experience level in the stored death snapshot (`Experience = player.experienceLevel`), but the normal Corpse item-drop hook only clears item drops. The public Corpse documentation and the inspected CoreLib death hook do not show XP-orb interception.
-
-Practical expectation for testing: items go into the corpse; vanilla XP behavior likely still applies unless another mod changes it. This needs an in-game death test against the final enchanting setup.
+TenpackDeath suppresses vanilla's partial player-death XP drop, records the dead player's full `totalExperience`, stores it on the corpse, and pays it out through the corpse when a skeletonized corpse is attacked or shift-right-clicked.
 
 ## Test checklist
 
