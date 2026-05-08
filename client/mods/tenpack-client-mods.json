@@ -73,7 +73,7 @@
       "version": "0.8.1.0 (NeoForge)",
       "filename": "NeoForge-projectatmosphere-0.8.1.0.jar",
       "source": "https://cdn.modrinth.com/data/qIWoLcKJ/versions/3OXsfueJ/NeoForge-projectatmosphere-0.8.1.0.jar",
-      "note": "Dynamic climate/weather simulation with wind influence; installed on both client and server. Requires Serene Seasons, Serene Seasons Plus, and Simple Clouds."
+      "note": "Dynamic climate/weather simulation with wind influence; installed on both client and server. Requires Serene Seasons, Serene Seasons Plus, and Simple Clouds. Tenpack-patched to prevent the 0.8.1.0 instrument item AbstractMethodError crash when using Barometre/other instruments."
     },
     {
       "name": "Serene Seasons",

@@ -140,9 +140,9 @@
     },
     {
       "path": "mods/NeoForge-projectatmosphere-0.8.1.0.jar",
-      "sha256": "904e4fc881b6685cb844c6bc3b9f9ecef393e919c9e418f2bfb634b3b0a8d935",
-      "size": 13004001,
-      "url": "files/90/904e4fc881b6685cb844c6bc3b9f9ecef393e919c9e418f2bfb634b3b0a8d935"
+      "sha256": "8a62cceeaf949a236e6c427bd06cd67310ce13e29265185aeb4cd0116c997aed",
+      "size": 13004758,
+      "url": "files/8a/8a62cceeaf949a236e6c427bd06cd67310ce13e29265185aeb4cd0116c997aed"
     },
     {
       "path": "mods/PassableFoliage-1.21.1-NeoForge-9.1.3.jar",
@@ -368,9 +368,9 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "c800bd229c85ff8b62ac1d795d475820ed7b06343eea67c1c6a60543dfae161b",
-      "size": 19983,
-      "url": "files/c8/c800bd229c85ff8b62ac1d795d475820ed7b06343eea67c1c6a60543dfae161b"
+      "sha256": "b75b2232fb73fe6ad958f912ab397beff2f64b986062a390b3815a7e8290f7cb",
+      "size": 20104,
+      "url": "files/b7/b75b2232fb73fe6ad958f912ab397beff2f64b986062a390b3815a7e8290f7cb"
     },
     {
       "path": "mods/terrain_slabs-neoforge-3.0.3.jar",
