@@ -102,9 +102,9 @@
 
 	[Commands.Withdrawing]
 		#Determines which achievement must be obtained before the player may use the withdraw command. Leave the quotations empty to have the feature unlocked by default. You can use /advancement to figure out advancement IDs.
-		"Advancement needed to unlock Withdrawing:" = "lifesteal:get_heart_crystal"
+		"Advancement needed to unlock Withdrawing:" = ""
 		#Determines the message sent to players who try using the withdraw command before they have unlocked it.
-		"Text to display if Withdrawing isn't unlocked:" = "You need to at least have gotten one heart crystal in this world to withdraw"
+		"Text to display if Withdrawing isn't unlocked:" = "Withdrawing is available by default on Tenpack"
 		#Range: 0 ~ 4
 		"Permission Level:" = 0
 

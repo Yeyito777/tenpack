@@ -32,9 +32,9 @@
     },
     {
       "path": "config/lifesteal-common.toml",
-      "sha256": "cde7ce8dd71a2348b7410d4657eb4f9665c6ae81569000e99c6b3c8ff8c2b85e",
-      "size": 6568,
-      "url": "files/cd/cde7ce8dd71a2348b7410d4657eb4f9665c6ae81569000e99c6b3c8ff8c2b85e"
+      "sha256": "8a4d381b1b4e3b8621c090a5782a8b830135439bcd857d77d11660802878357d",
+      "size": 6511,
+      "url": "files/8a/8a4d381b1b4e3b8621c090a5782a8b830135439bcd857d77d11660802878357d"
     },
     {
       "path": "config/projectatmosphere/biome_temps.json",
