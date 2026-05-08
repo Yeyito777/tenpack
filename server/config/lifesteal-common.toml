@@ -73,7 +73,7 @@
 
 	["Items and Blocks"."Revive Heads"]
 		#When this value is true, Revive Heads are indestructible to anything except creative users/using a revive crystal!
-		"Indestructible Revive Heads:" = true
+		"Indestructible Revive Heads:" = false
 
 #Lifesteal Settings
 ["Lifesteal Related"]

@@ -6,7 +6,7 @@ ownerProtectionEnabled=true
 publicLootRequiresSkeleton=true
 publicLootAfterSeconds=60
 opsBypassProtection=false
-notifyDeniedAccess=true
+notifyDeniedAccess=false
 
 # Re:Zero-style Return by Death inspired sound cue. Uses vanilla ominous sounds, not a bundled copyrighted clip.
 deathSoundEnabled=true
@@ -17,7 +17,8 @@ decayEnabled=true
 decayStartSeconds=300
 decayIntervalSeconds=30
 randomDecay=true
-notifyDecayStarted=true
+notifyDecayStarted=false
+notifyInternalErrors=false
 
 # After decay has started, attacking/breaking a corpse spills everything remaining.
 # XP is derived from Corpse's stored death experience level and dropped without vanilla XP-loss limits.

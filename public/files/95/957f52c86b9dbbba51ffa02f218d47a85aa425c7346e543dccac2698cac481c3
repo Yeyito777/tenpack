@@ -27,11 +27,11 @@ death_storage_duration = -1
 
 	[corpse.access]
 		#If only the owner of the corpse can access the inventory
-		# Defense in depth: Corpse also protects owner loot until skeleton stage.
-		# TenpackDeath adds configurable protection and blocks OP bypass during testing.
-		only_owner = true
+		# TenpackDeath enforces silent/configurable owner-only protection until skeleton stage.
+		# Keep Corpse native access protection off to avoid its own chat messages.
+		only_owner = false
 		#If everybody can access the corpse in the skeleton stage (Only if only_owner_access is set to true)
-		skeleton = true
+		skeleton = false
 
 	[corpse.despawn]
 		#The time passed (in ticks) after a corpse despawns (only if empty)

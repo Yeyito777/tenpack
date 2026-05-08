@@ -16,7 +16,7 @@ Status: local implementation, not pushed. Needs in-game testing before deploymen
   - `corpse-neoforge-1.21.1-1.1.13.jar`
   - Config: `client/config/corpse-server.toml`, `server/config/corpse-server.toml`
   - Corpses store player item drops instead of letting them scatter as normal item entities.
-  - Corpse config is also owner-only until skeleton stage as defense-in-depth.
+  - Corpse native owner-only messages are disabled; TenpackDeath enforces silent owner-only protection until skeleton stage.
   - `lava_damage = false` and `fall_into_void = false`, matching the desired lava/void safety baseline.
 
 - Tenpack Death is installed on both client and server:
@@ -24,14 +24,14 @@ Status: local implementation, not pushed. Needs in-game testing before deploymen
   - Source: `mods-src/tenpack-death/`
   - Config: `client/config/tenpackdeath.properties`, `server/config/tenpackdeath.properties`
   - Requires Corpse and layers Tenpack-specific behavior on top of it.
-  - Non-owners are blocked from opening a corpse until Corpse marks it as a skeleton.
+  - Non-owners are silently blocked from opening a corpse until Corpse marks it as a skeleton.
   - Public looting is therefore tied to the visible skeleton state, not just a hidden timer.
   - Ops do not bypass protection by default, so OP testing should still show the protection.
-  - After a corpse has existed for 5 minutes, it can warn the corpse owner if online.
+  - After a corpse has existed for 5 minutes, decay silently starts. Chat notifications are disabled by default.
   - From then on, the corpse loses one random stored item stack every 30 seconds until it is looted or empty. It does not notify each lost stack.
-  - Once decay has started, attacking/breaking the corpse spills all remaining items and drops all stored XP as orbs.
+  - Once decay has started, attacking the corpse or shift-right-clicking it spills all remaining items and drops all stored XP as orbs.
   - Player death plays a Re:Zero Return-by-Death-inspired cue made from vanilla ominous sounds. No copyrighted clip is bundled.
-  - Simple Voice Chat speaking/name-tag icons are cancelled for Corpse entities so corpses don't look like talking players.
+  - Simple Voice Chat speaking/name-tag icons are cancelled for Corpse entities, matching both corpse entity UUID and corpse owner UUID, so corpses do not look like talking players.
 
 ## Heart ore / crystal economy
 
@@ -52,6 +52,8 @@ Lifesteal's `Spawn Revive Head upon player elimination` option means that when a
 
 For now, zero-heart behavior is set to spectator, not ban, so we can test the revive flow without accidentally locking someone out of the server.
 
+Revive heads are pick-up-able/movable because Lifesteal `Indestructible Revive Heads` is disabled. Lifesteal loot tables copy the player profile component, so broken revive heads should preserve who they revive.
+
 ## Experience / enchanting interaction
 
 Corpse/CoreLib records the player's experience level in the stored death snapshot (`Experience = player.experienceLevel`), but the normal Corpse item-drop hook only clears item drops. The public Corpse documentation and the inspected CoreLib death hook do not show XP-orb interception.
@@ -66,9 +68,9 @@ Practical expectation for testing: items go into the corpse; vanilla XP behavior
 - Owner can open their corpse before skeleton stage.
 - Non-owner cannot open/loot before skeleton stage, even if OP.
 - After skeleton stage, another player can open/loot.
-- At 5 minutes, owner receives decomposition warning if online.
+- At 5 minutes, decay starts silently by default.
 - After 5 minutes, one random corpse item stack disappears every 30 seconds with no per-stack notification.
-- After decay starts, attacking/breaking the corpse drops all remaining items and all stored XP.
+- After decay starts, attacking or shift-right-clicking the corpse drops all remaining items and all stored XP.
 - Death plays the Return-by-Death-inspired sound cue.
 - Die in lava: corpse survives and items are recoverable.
 - Check XP dropped/stored behavior and decide whether this fits the enchanting system.

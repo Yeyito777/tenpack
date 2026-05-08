@@ -5,8 +5,6 @@ import de.maxhenkel.voicechat.api.ForgeVoicechatPlugin;
 import de.maxhenkel.voicechat.api.VoicechatPlugin;
 import de.maxhenkel.voicechat.api.events.EventRegistration;
 import de.maxhenkel.voicechat.api.events.NameTagIconRenderEvent;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.world.entity.Entity;
 
 @ForgeVoicechatPlugin
@@ -22,15 +20,44 @@ public class TenpackVoicechatPlugin implements VoicechatPlugin {
     }
 
     private void onNameTagIconRender(NameTagIconRenderEvent event) {
-        ClientLevel level = Minecraft.getInstance().level;
-        if (level == null) {
+        Iterable<?> renderEntities = getClientRenderEntities();
+        if (renderEntities == null) {
             return;
         }
-        for (Entity entity : level.entitiesForRendering()) {
-            if (entity instanceof CorpseEntity && entity.getUUID().equals(event.getEntityId())) {
+        for (Object object : renderEntities) {
+            if (!(object instanceof Entity entity)) {
+                continue;
+            }
+            if (!(entity instanceof CorpseEntity corpse)) {
+                continue;
+            }
+            if (corpse.getUUID().equals(event.getEntityId())
+                    || corpse.getCorpseUUID().map(event.getEntityId()::equals).orElse(false)) {
                 event.cancel();
                 return;
             }
         }
+    }
+
+    /**
+     * Simple Voice Chat loads plugins on the common/server side too. Use reflection
+     * here so this plugin class does not hard-link dedicated servers to client-only
+     * Minecraft classes just to fix a client render icon.
+     */
+    private static Iterable<?> getClientRenderEntities() {
+        try {
+            Class<?> minecraftClass = Class.forName("net.minecraft.client.Minecraft");
+            Object minecraft = minecraftClass.getMethod("getInstance").invoke(null);
+            Object level = minecraftClass.getField("level").get(minecraft);
+            if (level == null) {
+                return null;
+            }
+            Object entities = level.getClass().getMethod("entitiesForRendering").invoke(level);
+            if (entities instanceof Iterable<?> iterable) {
+                return iterable;
+            }
+        } catch (ReflectiveOperationException | LinkageError ignored) {
+        }
+        return null;
     }
 }

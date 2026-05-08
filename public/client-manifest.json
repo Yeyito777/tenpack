@@ -8,9 +8,9 @@
     },
     {
       "path": "config/corpse-server.toml",
-      "sha256": "2403f7ff420c46c1dae49382e171fd1b59a9daee00dc1d8b2eb6e670a9ceb3a5",
-      "size": 1635,
-      "url": "files/24/2403f7ff420c46c1dae49382e171fd1b59a9daee00dc1d8b2eb6e670a9ceb3a5"
+      "sha256": "957f52c86b9dbbba51ffa02f218d47a85aa425c7346e543dccac2698cac481c3",
+      "size": 1645,
+      "url": "files/95/957f52c86b9dbbba51ffa02f218d47a85aa425c7346e543dccac2698cac481c3"
     },
     {
       "path": "config/do_a_barrel_roll-client.json",
@@ -44,9 +44,9 @@
     },
     {
       "path": "config/lifesteal-common.toml",
-      "sha256": "22ded4ce4e78494efde4339ff78471650ac61dd8dbdda1b6498b314c3a7556fa",
-      "size": 6567,
-      "url": "files/22/22ded4ce4e78494efde4339ff78471650ac61dd8dbdda1b6498b314c3a7556fa"
+      "sha256": "cde7ce8dd71a2348b7410d4657eb4f9665c6ae81569000e99c6b3c8ff8c2b85e",
+      "size": 6568,
+      "url": "files/cd/cde7ce8dd71a2348b7410d4657eb4f9665c6ae81569000e99c6b3c8ff8c2b85e"
     },
     {
       "path": "config/more_darkness.json",
@@ -86,9 +86,9 @@
     },
     {
       "path": "config/tenpackdeath.properties",
-      "sha256": "2e5877e9840ea6129ca6f863787af6bbf7fc179f72a3342b610f666e213d3658",
-      "size": 1090,
-      "url": "files/2e/2e5877e9840ea6129ca6f863787af6bbf7fc179f72a3342b610f666e213d3658"
+      "sha256": "1c96d73ff509c24dd08c4b2ac02dc568bad2aa8ed87ec1f27776246789a37e44",
+      "size": 1119,
+      "url": "files/1c/1c96d73ff509c24dd08c4b2ac02dc568bad2aa8ed87ec1f27776246789a37e44"
     },
     {
       "path": "config/voxyworldgenv2.json",
@@ -404,9 +404,9 @@
     },
     {
       "path": "mods/tenpackdeath-0.1.0.jar",
-      "sha256": "7349d02d36951646a75321d2962c6065b3d5cbb6cddaa060ab24d5ea7b758693",
-      "size": 14275,
-      "url": "files/73/7349d02d36951646a75321d2962c6065b3d5cbb6cddaa060ab24d5ea7b758693"
+      "sha256": "0a2a1c73d56b7ca6ce3f5492c76b437267642b15366e136b9bc3fb66da3e85fa",
+      "size": 16232,
+      "url": "files/0a/0a2a1c73d56b7ca6ce3f5492c76b437267642b15366e136b9bc3fb66da3e85fa"
     },
     {
       "path": "mods/terrain_slabs-neoforge-3.0.3.jar",

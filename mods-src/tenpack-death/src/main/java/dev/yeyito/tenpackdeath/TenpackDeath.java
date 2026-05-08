@@ -31,8 +31,11 @@ import java.io.IOException;
 import java.lang.reflect.Field;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Properties;
 import java.util.UUID;
@@ -47,8 +50,10 @@ public class TenpackDeath {
     private static final String WARNED_KEY = "decay_warned";
     private static final String DECAY_STARTED_KEY = "decay_started";
     private static final String ERROR_KEY = "decay_error";
+    private static final String XP_POINTS_KEY = "stored_xp_points";
 
     private static final Field CORPSE_AGE_FIELD = findCorpseAgeField();
+    private static final Map<UUID, ArrayDeque<Integer>> RECENT_DEATH_XP_POINTS = new HashMap<>();
     private static final Config CONFIG = new Config();
 
     public TenpackDeath() {
@@ -62,10 +67,10 @@ public class TenpackDeath {
             return;
         }
         CONFIG.loadIfNeeded();
-        if (!CONFIG.deathSoundEnabled) {
-            return;
+        rememberDeathExperience(player);
+        if (CONFIG.deathSoundEnabled) {
+            playReturnByDeathSound(player);
         }
-        playReturnByDeathSound(player);
     }
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
@@ -143,6 +148,11 @@ public class TenpackDeath {
         }
 
         CONFIG.loadIfNeeded();
+        if (tryBreakDecayedCorpse(serverPlayer, corpse)) {
+            event.setCancellationResult(InteractionResult.SUCCESS);
+            event.setCanceled(true);
+            return;
+        }
         if (!CONFIG.ownerProtectionEnabled) {
             return;
         }
@@ -176,6 +186,11 @@ public class TenpackDeath {
         }
 
         CONFIG.loadIfNeeded();
+        if (tryBreakDecayedCorpse(serverPlayer, corpse)) {
+            event.setCancellationResult(InteractionResult.SUCCESS);
+            event.setCanceled(true);
+            return;
+        }
         if (!CONFIG.ownerProtectionEnabled) {
             return;
         }
@@ -224,6 +239,7 @@ public class TenpackDeath {
         if (state.getBoolean(ERROR_KEY)) {
             return;
         }
+        attachStoredExperience(corpse, state);
 
         int age = getCorpseAge(corpse);
         int decayStartTicks = CONFIG.decayStartSeconds * 20;
@@ -252,6 +268,58 @@ public class TenpackDeath {
         }
     }
 
+    private static void rememberDeathExperience(ServerPlayer player) {
+        RECENT_DEATH_XP_POINTS
+                .computeIfAbsent(player.getUUID(), id -> new ArrayDeque<>())
+                .addLast(Math.max(0, player.totalExperience));
+    }
+
+    private static void attachStoredExperience(CorpseEntity corpse, CompoundTag state) {
+        if (state.contains(XP_POINTS_KEY)) {
+            return;
+        }
+        Optional<UUID> ownerId = corpse.getCorpseUUID();
+        if (ownerId.isEmpty()) {
+            return;
+        }
+        ArrayDeque<Integer> queuedXp = RECENT_DEATH_XP_POINTS.get(ownerId.get());
+        if (queuedXp == null || queuedXp.isEmpty()) {
+            return;
+        }
+        state.putInt(XP_POINTS_KEY, queuedXp.removeFirst());
+        if (queuedXp.isEmpty()) {
+            RECENT_DEATH_XP_POINTS.remove(ownerId.get());
+        }
+    }
+
+    private static int getStoredExperiencePoints(CorpseEntity corpse, Death death) {
+        CompoundTag state = getTenpackState(corpse);
+        attachStoredExperience(corpse, state);
+        if (state.contains(XP_POINTS_KEY)) {
+            return Math.max(0, state.getInt(XP_POINTS_KEY));
+        }
+        // Fallback for old corpses created before TenpackDeath started recording total XP.
+        return CONFIG.dropExperienceAsLevels ? xpPointsForLevels(death.getExperience()) : Math.max(0, death.getExperience());
+    }
+
+    private static boolean tryBreakDecayedCorpse(ServerPlayer player, CorpseEntity corpse) {
+        if (!CONFIG.breakCorpseDropsAfterDecay || !player.isShiftKeyDown()) {
+            return false;
+        }
+        if (!(corpse.level() instanceof ServerLevel level)) {
+            return false;
+        }
+        if (!hasDecayStarted(corpse)) {
+            return false;
+        }
+        try {
+            dropCorpseContents(level, corpse);
+        } catch (RuntimeException | LinkageError e) {
+            disableDecayAfterError(level, corpse, e);
+        }
+        return true;
+    }
+
     private static boolean hasDecayStarted(CorpseEntity corpse) {
         if (!CONFIG.requireDecayStartedToBreakCorpse) {
             return true;
@@ -269,7 +337,7 @@ public class TenpackDeath {
         dropInventory(level, corpse, death.getOffHandInventory());
         dropInventory(level, corpse, death.getAdditionalItems());
         if (CONFIG.breakCorpseDropsExperience) {
-            int points = CONFIG.dropExperienceAsLevels ? xpPointsForLevels(death.getExperience()) : death.getExperience();
+            int points = getStoredExperiencePoints(corpse, death);
             if (points > 0) {
                 ExperienceOrb.award(level, corpse.position(), points);
             }
@@ -347,8 +415,10 @@ public class TenpackDeath {
                 return;
             }
             state.putBoolean(ERROR_KEY, true);
-            notifyOwner(level.getServer(), corpse,
-                    "Corpse decomposition hit an internal error and has been paused for this corpse. Please loot it manually.");
+            if (CONFIG.notifyInternalErrors) {
+                notifyOwner(level.getServer(), corpse,
+                        "Corpse decomposition hit an internal error and has been paused for this corpse. Please loot it manually.");
+            }
             LOGGER.error("Paused Tenpack corpse decomposition for corpse {} at {}", corpse.getUUID(), corpse.blockPosition(), error);
         } catch (RuntimeException loggingError) {
             LOGGER.error("Failed while handling Tenpack corpse decomposition error for corpse {}", corpse.getUUID(), error);
@@ -427,7 +497,7 @@ public class TenpackDeath {
         boolean publicLootRequiresSkeleton = true;
         int publicLootAfterSeconds = 60;
         boolean opsBypassProtection = false;
-        boolean notifyDeniedAccess = true;
+        boolean notifyDeniedAccess = false;
 
         boolean deathSoundEnabled = true;
         float deathSoundVolume = 1.0F;
@@ -436,7 +506,8 @@ public class TenpackDeath {
         int decayStartSeconds = 300;
         int decayIntervalSeconds = 30;
         boolean randomDecay = true;
-        boolean notifyDecayStarted = true;
+        boolean notifyDecayStarted = false;
+        boolean notifyInternalErrors = false;
 
         boolean breakCorpseDropsAfterDecay = true;
         boolean requireDecayStartedToBreakCorpse = true;
@@ -471,6 +542,7 @@ public class TenpackDeath {
                 decayIntervalSeconds = positiveInt(properties, "decayIntervalSeconds", decayIntervalSeconds);
                 randomDecay = bool(properties, "randomDecay", randomDecay);
                 notifyDecayStarted = bool(properties, "notifyDecayStarted", notifyDecayStarted);
+                notifyInternalErrors = bool(properties, "notifyInternalErrors", notifyInternalErrors);
 
                 breakCorpseDropsAfterDecay = bool(properties, "breakCorpseDropsAfterDecay", breakCorpseDropsAfterDecay);
                 requireDecayStartedToBreakCorpse = bool(properties, "requireDecayStartedToBreakCorpse", requireDecayStartedToBreakCorpse);
@@ -494,7 +566,7 @@ public class TenpackDeath {
                     publicLootRequiresSkeleton=true
                     publicLootAfterSeconds=60
                     opsBypassProtection=false
-                    notifyDeniedAccess=true
+                    notifyDeniedAccess=false
 
                     # Re:Zero-style Return by Death inspired sound cue. Uses vanilla ominous sounds, not a bundled copyrighted clip.
                     deathSoundEnabled=true
@@ -505,7 +577,8 @@ public class TenpackDeath {
                     decayStartSeconds=300
                     decayIntervalSeconds=30
                     randomDecay=true
-                    notifyDecayStarted=true
+                    notifyDecayStarted=false
+                    notifyInternalErrors=false
 
                     # After decay has started, attacking/breaking a corpse spills everything remaining.
                     # XP is derived from Corpse's stored death experience level and dropped without vanilla XP-loss limits.
