@@ -384,6 +384,13 @@
       "note": "Death-loot mod installed on both client and server. Configured owner-only for the first 60 seconds; once the corpse reaches skeleton stage, anyone can loot it. Lava damage and void falling are disabled. Corpse stores item drops; vanilla XP drops are not intercepted by Corpse's drop-removal hook."
     },
     {
+      "name": "Tenpack Death",
+      "version": "0.1.0",
+      "filename": "tenpackdeath-0.1.0.jar",
+      "source": "local source: mods-src/tenpack-death/",
+      "note": "Tenpack-specific Corpse behavior add-on. After a corpse has existed for 5 minutes, it warns the owner and removes one random stored item stack every 30 seconds until looted/empty. Installed on both client and server; requires Corpse."
+    },
+    {
       "name": "Lifesteal",
       "version": "9.3.3 (NeoForge 1.21.1)",
       "filename": "lifesteal-9.3.3+1.21.1.jar",

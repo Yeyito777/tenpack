@@ -1,6 +1,6 @@
 # Death, corpses, and lifesteal
 
-Status: initial implementation for Tenpack factions/Create SMP.
+Status: local implementation, not pushed. Needs in-game testing before deployment.
 
 ## Implemented
 
@@ -18,21 +18,20 @@ Status: initial implementation for Tenpack factions/Create SMP.
   - Corpses are owner-only for 60 seconds.
   - After 60 seconds, the corpse reaches skeleton stage and becomes lootable by anyone.
   - Empty corpses despawn after 30 seconds.
-  - Full corpses do not force-despawn yet.
   - `lava_damage = false` and `fall_into_void = false`, matching the desired lava/void safety baseline.
+
+- Tenpack Death is installed on both client and server:
+  - `tenpackdeath-0.1.0.jar`
+  - Source: `mods-src/tenpack-death/`
+  - Requires Corpse and layers Tenpack-specific behavior on top of it.
+  - After a corpse has existed for 5 minutes, it warns the corpse owner if online.
+  - From then on, the corpse loses one random stored item stack every 30 seconds until it is looted or empty.
 
 ## Experience / enchanting interaction
 
 Corpse/CoreLib records the player's experience level in the stored death snapshot (`Experience = player.experienceLevel`), but the normal Corpse item-drop hook only clears item drops. The public Corpse documentation and the inspected CoreLib death hook do not show XP-orb interception.
 
 Practical expectation for testing: items go into the corpse; vanilla XP behavior likely still applies unless another mod changes it. This needs an in-game death test against the final enchanting setup.
-
-## Not implemented yet
-
-- 5-minute staged corpse decomposition where stacks disappear one by one.
-- Player warning when staged decomposition starts.
-
-Corpse's built-in config only supports full-corpse force despawn, not item-by-item decay or a warning message. For the checklist version, this will likely need a small custom server mod or a scripting mod that can inspect Corpse inventories.
 
 ## Test checklist
 
@@ -41,5 +40,8 @@ Corpse's built-in config only supports full-corpse force despawn, not item-by-it
 - Die to player: victim loses 1 heart, killer gains 1 heart, items are in corpse.
 - During first 60 seconds, only corpse owner can open/loot.
 - After 60 seconds, another player can open/loot.
+- At 5 minutes, owner receives decomposition warning if online.
+- After 5 minutes, one random corpse item stack disappears every 30 seconds.
 - Die in lava: corpse survives and items are recoverable.
 - Check XP dropped/stored behavior and decide whether this fits the enchanting system.
+- Check what Lifesteal does at zero hearts: ban vs spectator vs revive flow.

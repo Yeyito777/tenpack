@@ -265,6 +265,12 @@
       "url": "files/8d/8dc3c01ed548f2eecbc52b1a2f8301267e265d746fb09961776984a81e343e3b"
     },
     {
+      "path": "mods/tenpackdeath-0.1.0.jar",
+      "sha256": "59af4755890cc986f90b50035e86faad3a8209e6281d1fbe725f715b2d175bab",
+      "size": 6026,
+      "url": "files/59/59af4755890cc986f90b50035e86faad3a8209e6281d1fbe725f715b2d175bab"
+    },
+    {
       "path": "mods/terrain_slabs-neoforge-3.0.3.jar",
       "sha256": "99c55705a80e7edfa9ad8e3dff932ab3df3b4824849d334fa7fb0cdc5554c8e5",
       "size": 370160,

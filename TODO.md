@@ -28,7 +28,7 @@
 - [ ] Horses need to be a central part of the game
 - [ ] The counter to bs undeground bases is you're going to have to deal with zombies mining into your shit
 - [ ] No ender chests
-- [ ] Corpse decomposition
+- [x] Corpse decomposition — Tenpack Death removes one random corpse stack every 30s after 5m and warns owner
 - [ ] Nemesis resident evil dread nether
 - [ ] Immersive portals
 - [ ] Setup instance such that it insta downloads mods and it auto joins server
