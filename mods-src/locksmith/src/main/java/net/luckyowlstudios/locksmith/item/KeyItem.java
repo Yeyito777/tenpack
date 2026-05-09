@@ -54,6 +54,10 @@ public class KeyItem extends Item implements ICurioItem {
    }
 
    public boolean canEquipFromUse(SlotContext slotContext, ItemStack stack) {
-      return true;
+      // Tenpack patch: right-clicking with a key is used to lock/open
+      // containers. Do not let Curios consume that same right-click and move
+      // the key into the hidden key slot, which makes the key look like it
+      // disappeared and bypasses the intended "carry it in inventory" rule.
+      return false;
    }
 }

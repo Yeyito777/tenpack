@@ -149,7 +149,7 @@
       "version": "1.0.3 (NeoForge, Tenpack patched)",
       "filename": "locksmith-1.0.3.jar",
       "source": "local source: mods-src/locksmith/ (upstream jar: https://cdn.modrinth.com/data/pntvHkib/versions/bjDihfxu/locksmith-1.0.3.jar)",
-      "note": "Adds key-based locking for containers such as chests and barrels; installed on both client and server. Tenpack patch: locked containers require a matching key to open, can be broken by anyone, and do not use owner UUID access-control behavior."
+      "note": "Adds key-based locking for containers such as chests and barrels; installed on both client and server. Tenpack patch: locked containers require a matching key in normal inventory/hand to open, keys no longer auto-equip into the Curios key slot, locked containers can be broken by anyone, and owner UUID access-control behavior is not used."
     },
     {
       "name": "Burnt Fabric",

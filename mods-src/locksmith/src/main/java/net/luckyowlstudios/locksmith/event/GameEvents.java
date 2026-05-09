@@ -1,7 +1,6 @@
 package net.luckyowlstudios.locksmith.event;
 
 import java.util.List;
-import java.util.Optional;
 import net.luckyowlstudios.locksmith.init.ModDataComponents;
 import net.luckyowlstudios.locksmith.init.ModItems;
 import net.luckyowlstudios.locksmith.item.KeyItem;
@@ -38,9 +37,6 @@ import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent.RightClickBlock;
 import net.neoforged.neoforge.event.level.BlockEvent.BreakEvent;
 import net.neoforged.neoforge.event.level.ExplosionEvent.Detonate;
-import net.neoforged.neoforge.items.IItemHandler;
-import top.theillusivec4.curios.api.CuriosApi;
-import top.theillusivec4.curios.api.type.capability.ICuriosItemHandler;
 
 @EventBusSubscriber(
    modid = "locksmith"
@@ -148,9 +144,8 @@ public class GameEvents {
       BaseContainerBlockEntity containerBlockEntity, ItemStack heldItem, Player player, Level level, BlockPos pos, InteractionHand hand, RightClickBlock event
    ) {
       boolean isHeldKey = heldItem.getItem() instanceof KeyItem;
-      Optional<ItemStack> curiosKey = getCuriosKey(player);
       if (containerBlockEntity.components().has(DataComponents.LOCK)) {
-         if (canUnlockWithKey(containerBlockEntity, heldItem, curiosKey, player)) {
+         if (canUnlockWithKey(containerBlockEntity, heldItem, player)) {
             level.playSound(null, pos, SoundEvents.VAULT_INSERT_ITEM, player.getSoundSource(), 1.0F, 1.5F);
             return;
          }
@@ -187,15 +182,8 @@ public class GameEvents {
       heldItem.shrink(1);
    }
 
-   private static boolean canUnlockWithKey(BaseContainerBlockEntity containerBlockEntity, ItemStack heldItem, Optional<ItemStack> curiosKey, Player player) {
+   private static boolean canUnlockWithKey(BaseContainerBlockEntity containerBlockEntity, ItemStack heldItem, Player player) {
       String containerKeyCode = ((LockCode)containerBlockEntity.components().get(DataComponents.LOCK)).key();
-      if (curiosKey.isPresent() && curiosKey.get().has(DataComponents.LOCK)) {
-         String curiosKeyCode = ((LockCode)curiosKey.get().get(DataComponents.LOCK)).key();
-         if (curiosKeyCode.equals(containerKeyCode)) {
-            return true;
-         }
-      }
-
       if (heldItem.getItem() instanceof KeyItem && heldItem.has(DataComponents.LOCK)) {
          String heldKeyCode = ((LockCode)heldItem.get(DataComponents.LOCK)).key();
          if (heldKeyCode.equals(containerKeyCode)) {
@@ -261,12 +249,7 @@ public class GameEvents {
             && ((LockCode)heldItem.get(DataComponents.LOCK)).key().equals(containerKeyCode)) {
             return true;
          } else {
-            Optional<ItemStack> curiosKey = getCuriosKey(player);
-            return curiosKey.isPresent()
-                  && curiosKey.get().has(DataComponents.LOCK)
-                  && ((LockCode)curiosKey.get().get(DataComponents.LOCK)).key().equals(containerKeyCode)
-               ? true
-               : hasMatchingKeyInInventory(player, containerKeyCode);
+            return hasMatchingKeyInInventory(player, containerKeyCode);
          }
       } else {
          return false;
@@ -278,32 +261,12 @@ public class GameEvents {
    }
 
    private static boolean hasMatchingKeyInInventory(Player player, String keyCode) {
-      for (ItemStack stack : player.getInventory().items) {
-         if (!stack.isEmpty()
+      return player.getInventory().hasAnyMatching(
+         stack -> !stack.isEmpty()
             && stack.getItem() instanceof KeyItem
             && stack.has(DataComponents.LOCK)
-            && ((LockCode)stack.get(DataComponents.LOCK)).key().equals(keyCode)) {
-            return true;
-         }
-      }
-
-      return false;
-   }
-
-   private static Optional<ItemStack> getCuriosKey(Player player) {
-      ICuriosItemHandler curiosInventory = (ICuriosItemHandler)CuriosApi.getCuriosInventory(player).orElse(null);
-      return curiosInventory == null ? Optional.empty() : curiosInventory.getStacksHandler("key").map(slotInventory -> {
-         IItemHandler handler = slotInventory.getStacks();
-
-         for (int i = 0; i < handler.getSlots(); i++) {
-            ItemStack itemStack = handler.getStackInSlot(i);
-            if (!itemStack.isEmpty() && itemStack.getItem() == ModItems.KEY.asItem()) {
-               return itemStack;
-            }
-         }
-
-         return ItemStack.EMPTY;
-      }).filter(stack -> !stack.isEmpty());
+            && ((LockCode)stack.get(DataComponents.LOCK)).key().equals(keyCode)
+      );
    }
 
    private static void applyChangesToBlock(BaseContainerBlockEntity containerBlockEntity, DataComponentMap newData) {
