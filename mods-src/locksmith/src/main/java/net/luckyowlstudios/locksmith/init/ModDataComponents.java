@@ -1,0 +1,35 @@
+package net.luckyowlstudios.locksmith.init;
+
+import java.util.UUID;
+import java.util.function.UnaryOperator;
+import net.luckyowlstudios.locksmith.util.LockType;
+import net.minecraft.core.Registry;
+import net.minecraft.core.UUIDUtil;
+import net.minecraft.core.component.DataComponentType;
+import net.minecraft.core.component.DataComponentType.Builder;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
+
+public class ModDataComponents {
+   public static final ResourceKey<Registry<DataComponentType<?>>> DATA_COMPONENT_REGISTRY_KEY = Registries.DATA_COMPONENT_TYPE;
+   public static final DeferredRegister<DataComponentType<?>> DATA_COMPONENT_TYPES = DeferredRegister.createDataComponents(
+      DATA_COMPONENT_REGISTRY_KEY, "locksmith"
+   );
+   public static final DeferredHolder<DataComponentType<?>, DataComponentType<LockType>> LOCK_TYPE = register(
+      "golden_lock", builder -> builder.persistent(LockType.CODEC).networkSynchronized(LockType.STREAM_CODEC)
+   );
+   public static final DeferredHolder<DataComponentType<?>, DataComponentType<UUID>> OWNER_UUID = DATA_COMPONENT_TYPES.register(
+      "owner_uuid", () -> DataComponentType.<UUID>builder().persistent(UUIDUtil.CODEC).networkSynchronized(UUIDUtil.STREAM_CODEC).build()
+   );
+
+   private static <T> DeferredHolder<DataComponentType<?>, DataComponentType<T>> register(String name, UnaryOperator<Builder<T>> builderOperator) {
+      return DATA_COMPONENT_TYPES.register(name, () -> builderOperator.apply(DataComponentType.builder()).build());
+   }
+
+   public static void register(IEventBus eventBus) {
+      DATA_COMPONENT_TYPES.register(eventBus);
+   }
+}

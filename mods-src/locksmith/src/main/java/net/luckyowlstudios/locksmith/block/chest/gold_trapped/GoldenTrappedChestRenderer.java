@@ -1,0 +1,32 @@
+package net.luckyowlstudios.locksmith.block.chest.gold_trapped;
+
+import net.luckyowlstudios.locksmith.block.chest.DyeableChestRenderer;
+import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider.Context;
+import net.minecraft.client.resources.model.Material;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.component.DyedItemColor;
+import net.minecraft.world.level.block.entity.ChestBlockEntity;
+import net.minecraft.world.level.block.state.properties.ChestType;
+
+public class GoldenTrappedChestRenderer extends DyeableChestRenderer {
+   public GoldenTrappedChestRenderer(Context context) {
+      super(context);
+   }
+
+   @Override
+   protected DyedItemColor defaultColor() {
+      return new DyedItemColor(DyeColor.RED.getTextureDiffuseColor(), true);
+   }
+
+   @Override
+   protected Material getMaterial(ChestBlockEntity blockEntity, ChestType chestType) {
+      return switch (chestType) {
+         case LEFT -> new Material(Sheets.CHEST_SHEET, ResourceLocation.fromNamespaceAndPath("locksmith", "entity/chest/golden_trapped_left"));
+         case RIGHT -> new Material(Sheets.CHEST_SHEET, ResourceLocation.fromNamespaceAndPath("locksmith", "entity/chest/golden_trapped_right"));
+         case SINGLE -> new Material(Sheets.CHEST_SHEET, ResourceLocation.fromNamespaceAndPath("locksmith", "entity/chest/golden_trapped"));
+         default -> throw new MatchException(null, null);
+      };
+   }
+}
