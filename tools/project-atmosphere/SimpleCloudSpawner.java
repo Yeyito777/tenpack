@@ -1,9 +1,11 @@
 package net.Gabou.projectatmosphere.manager;
 
 import dev.nonamecrackers2.simpleclouds.api.common.cloud.spawning.SpawnInfo;
+import dev.nonamecrackers2.simpleclouds.common.cloud.SimpleCloudsConstants;
 import dev.nonamecrackers2.simpleclouds.common.cloud.region.CloudRegion;
 import dev.nonamecrackers2.simpleclouds.common.cloud.spawning.CloudGenerator;
 import dev.nonamecrackers2.simpleclouds.common.cloud.spawning.CloudSpawningConfig;
+import dev.nonamecrackers2.simpleclouds.common.world.ServerCloudManager;
 import dev.nonamecrackers2.simpleclouds.common.world.SpawnRegion;
 import java.util.List;
 import java.util.Optional;
@@ -32,7 +34,7 @@ import sereneseasons.api.season.SeasonHelper;
 
 public class SimpleCloudSpawner {
     private static final int SPAWN_INTERVAL_TICKS = 24000;
-    private static final long EMPTY_REGION_RECOVERY_INTERVAL_TICKS = 200L;
+    private static final long EMPTY_REGION_RECOVERY_INTERVAL_TICKS = 1200L;
     private static long LAST_SPAWN_TICK = 0L;
     private static long LAST_EMPTY_REGION_RECOVERY_TICK = Long.MIN_VALUE;
     private static float PRESSION_MOYENNE = 1013.25f;
@@ -57,20 +59,18 @@ public class SimpleCloudSpawner {
     }
 
     public static void trySpawnClouds(ServerLevel level, CloudGenerator generator) {
+        generator = SimpleCloudsCompat.refresh(level);
         List<SpawnRegion> spawnRegions = generator.getSpawnRegions();
         if (spawnRegions.isEmpty()) {
             long now = level.getGameTime();
             if (LAST_EMPTY_REGION_RECOVERY_TICK == Long.MIN_VALUE || now - LAST_EMPTY_REGION_RECOVERY_TICK >= EMPTY_REGION_RECOVERY_INTERVAL_TICKS) {
                 LAST_EMPTY_REGION_RECOVERY_TICK = now;
-                int before = generator.getClouds().size();
-                boolean attempted = recoverPlayerWeatherSeeds(level, generator);
-                int added = Math.max(0, generator.getClouds().size() - before);
-                if (added > 0) {
-                    ProjectAtmosphere.LOGGER.info("[Atmosphere] Recovered empty SimpleClouds spawn regions by seeding {} player-weather cloud(s).", added);
-                } else if (!attempted) {
+                List<SpawnRegion> playerRegions = ServerCloudManager.regionsFromEntities(level.players(), SimpleCloudsConstants.SPAWN_RADIUS);
+                if (playerRegions.isEmpty()) {
                     ProjectAtmosphere.LOGGER.warn("[Atmosphere] No spawn regions available and no overworld players were available for recovery.");
                 } else {
-                    ProjectAtmosphere.LOGGER.warn("[Atmosphere] No spawn regions available; attempted player-region recovery but no cloud could be seeded yet.");
+                    ProjectAtmosphere.LOGGER.info("[Atmosphere] SimpleClouds spawn-region cache is empty; trying one player-region cloud seed.");
+                    spawnAtmosphereClouds(level, generator, playerRegions, 1);
                 }
             }
             return;
@@ -84,6 +84,15 @@ public class SimpleCloudSpawner {
             return;
         }
         int toSpawn = Mth.clamp(BiasedToBottomInt.of(1, 5).sample(random), 1, remaining);
+        spawnAtmosphereClouds(level, generator, spawnRegions, toSpawn);
+    }
+
+    private static void spawnAtmosphereClouds(ServerLevel level, CloudGenerator generator, List<SpawnRegion> spawnRegions, int toSpawn) {
+        if (spawnRegions.isEmpty() || toSpawn <= 0) {
+            return;
+        }
+        RandomSource random = RandomSource.create();
+        CloudSpawningConfig config = generator.getSpawnConfig().get();
         for (int i = 0; i < toSpawn; ++i) {
             SpawnRegion region = spawnRegions.get(random.nextInt(spawnRegions.size()));
             int radius = BiasedToBottomInt.of(SimpleCloudsCompat.MIN_RADIUS, SimpleCloudsCompat.MAX_RADIUS).sample(random);
@@ -138,18 +147,16 @@ public class SimpleCloudSpawner {
             return false;
         }
         try {
-            if (SimpleCloudsCompat.generator == null || SimpleCloudsCompat.spawnConfig == null) {
-                SimpleCloudsCompat.init(level);
-            }
+            SimpleCloudsCompat.refresh(level);
             for (ServerPlayer player : level.players()) {
                 if (player.isRemoved()) {
                     continue;
                 }
-                BlockPos pos = player.blockPosition();
-                SimpleCloudsCompat.doInitialGenWithWeather(pos.getX(), pos.getZ(), level);
+                SimpleCloudSpawner.spawnCloudForPlayer(player, level);
+                SimpleCloudsCompat.setIsInit(true);
+                return true;
             }
-            SimpleCloudsCompat.setIsInit(true);
-            return true;
+            return false;
         } catch (Throwable t) {
             ProjectAtmosphere.LOGGER.warn("[Atmosphere] Failed to recover SimpleClouds spawn regions around players", t);
             return true;

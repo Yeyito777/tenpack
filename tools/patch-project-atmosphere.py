@@ -34,7 +34,7 @@ TARGETS = (
     "net/Gabou/projectatmosphere/client/TornadoRenderHandler.class",
 )
 INSTRUMENT_TARGET = "net/Gabou/projectatmosphere/items/InstrumentBlockItem.class"
-PATCH_NOTE = """Tenpack Project Atmosphere patch tenpack.3
+PATCH_NOTE = """Tenpack Project Atmosphere patch tenpack.4
 
 Patched net.Gabou.projectatmosphere.items.InstrumentBlockItem.
 Reason: Project Atmosphere 0.8.1.0 crashed the dedicated server with
@@ -61,6 +61,14 @@ would catch and log the original exception but leave a pose frame on the stack,
 causing Minecraft to crash later with "Pose stack not empty". The patched class
 always restores the pose stack and render cull/blend state after tornado render
 attempts.
+
+Updated net.Gabou.projectatmosphere.compat.SimpleCloudsCompat and
+net.Gabou.projectatmosphere.manager.SimpleCloudSpawner.
+Reason: the previous empty SimpleClouds spawn-region recovery path could run
+full weather-aware initial cloud generation on the server thread every retry.
+The updated patch refreshes cached SimpleClouds manager/generator references,
+backs off empty-region retries, and uses one derived player spawn region for a
+normal async Atmosphere cloud seed instead of synchronous initial generation.
 """
 
 

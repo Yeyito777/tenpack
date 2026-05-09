@@ -42,6 +42,31 @@ public class SimpleCloudsCompat {
     private static boolean isInit;
 
     public static void init(ServerLevel level) {
+        SimpleCloudsCompat.refresh(level);
+    }
+
+    public static CloudGenerator refresh(ServerLevel level) {
+        ServerCloudManager liveCloudManager = (ServerCloudManager)CloudManager.get(level);
+        CloudGenerator liveGenerator = liveCloudManager.getCloudGenerator();
+        if (cloudManager != liveCloudManager || generator != liveGenerator || spawnConfig == null) {
+            cloudManager = liveCloudManager;
+            generator = liveGenerator;
+            spawnConfig = liveGenerator.getSpawnConfig().get();
+        }
+        return generator;
+    }
+
+    private static boolean refreshIfReady(ServerLevel level) {
+        try {
+            SimpleCloudsCompat.refresh(level);
+            return generator != null && spawnConfig != null;
+        } catch (Throwable t) {
+            ProjectAtmosphere.LOGGER.warn("[Atmosphere] SimpleClouds is not ready yet", t);
+            return false;
+        }
+    }
+
+    public static void initLegacy(ServerLevel level) {
         cloudManager = (ServerCloudManager)CloudManager.get(level);
         generator = cloudManager.getCloudGenerator();
         spawnConfig = generator.getSpawnConfig().get();
@@ -56,6 +81,10 @@ public class SimpleCloudsCompat {
     }
 
     public static CloudRegion spawnCloudInBiome(String cloudId, BiomeInstanceKey key, ServerLevel level, CloudRegion dummy, WindVector windVector) {
+        if (!SimpleCloudsCompat.refreshIfReady(level)) {
+            ProjectAtmosphere.LOGGER.warn("[Atmosphere] SimpleClouds is not ready yet, cannot spawn cloud: {}", cloudId);
+            return null;
+        }
         if (!isInit) {
             ProjectAtmosphere.LOGGER.warn("[Atmosphere] SimpleClouds is not ready yet, cannot spawn cloud: {}", cloudId);
             return null;
@@ -128,6 +157,9 @@ public class SimpleCloudsCompat {
     }
 
     public static void doInitialGenWithWeather(int x, int z, ServerLevel level) {
+        if (!SimpleCloudsCompat.refreshIfReady(level)) {
+            return;
+        }
         List<SpawnRegion> regions = generator.getSpawnRegions();
         SpawnRegion region = regions.stream().filter(r -> r.includesPoint(x, z)).findFirst().orElseGet(() -> new SpawnRegion(x, z, SimpleCloudsConstants.SPAWN_RADIUS));
         CloudSpawningConfig config = spawnConfig;
