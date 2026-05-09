@@ -1223,6 +1223,12 @@
       "sha256": "75eb229f77737bacaa06ccfa87c5068caea7d39b2edad0d93a3d473986c380df",
       "size": 1361,
       "url": "files/75/75eb229f77737bacaa06ccfa87c5068caea7d39b2edad0d93a3d473986c380df"
+    },
+    {
+      "path": "user_jvm_args.txt",
+      "sha256": "3f605a8b45397eb90d22e286acdf76a7edfd5f5efab15d9f21450c9d57bf7ceb",
+      "size": 525,
+      "url": "files/3f/3f605a8b45397eb90d22e286acdf76a7edfd5f5efab15d9f21450c9d57bf7ceb"
     }
   ],
   "loader": "neoforge",
