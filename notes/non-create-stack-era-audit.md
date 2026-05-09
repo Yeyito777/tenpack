@@ -35,6 +35,7 @@ For normal pre-push/deploy validation, run:
 
 ```bash
 ./tools/check-mod-integrity.py
+./tools/check-mod-catalog.py
 ./tools/check-pack-configs.py
 ./tools/check-create-progression.py
 ./tools/check-create-addon-recipes.py
