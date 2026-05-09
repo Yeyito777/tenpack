@@ -2,6 +2,8 @@
 
 Purpose: quick decision log for Create addons discussed after the curated rails/deco/food batch. This prevents re-litigating the same addon list without new information.
 
+For the small/tiny-addon sweep, see `notes/create-small-addon-audit.md`.
+
 ## Already added locally
 
 See `notes/create-addon-selection.md` for the committed local batch:
@@ -66,11 +68,23 @@ Decision: **unknown / not now**.
 
 Reason: overlaps with the electricity/advanced-power question and may push Tenpack toward tech-pack territory. Revisit only after deciding whether Crafts & Additions belongs.
 
+### Applied Energistics 2 / Create: Applied Kinetics
+
+Decision: **defer**.
+
+Reason: AE2 was recommended, but we are not sure Tenpack actually wants AE2. Create: Applied Kinetics should not be considered separately; it only belongs if the pack intentionally adopts AE2.
+
 ### Create: Pattern Schematics
 
 Decision: **soft maybe; not immediate**.
 
 Reason: could help faction builders repeat station/factory/hangar patterns, but it is not urgent and the value is unclear without seeing it in play. Add only if it improves building workflow without adding clutter.
+
+### Create structure addons
+
+Decision: **separate structure/worldgen check**.
+
+Reason: Create: Easy Structures and similar mods are not a horrible idea, but they could easily become bloat, progression-breaking loot, or visual noise. Test in a throwaway world before adding.
 
 ## Out for now
 
@@ -111,6 +125,36 @@ Reason: personal flight conflicts with Aeronautics progression, aircraft logisti
 Decision: **out**.
 
 Reason: too likely to add mobility/tool bypasses and general gadget noise.
+
+### Waystones: Sable / waystone-like teleportation
+
+Decision: **no**.
+
+Reason: teleportation is a hard no. Sable/Aeronautics compatibility does not change the travel philosophy; Tenpack should protect roads, rails, animal travel, vehicles, aircraft, borders, and fuel/logistics pressure.
+
+### Backpacks and backpack integrations
+
+Decision: **no**.
+
+Reason: no backpacks. Do not add backpack mods or Create integrations for backpack mods.
+
+### Create: Escalated
+
+Decision: **no / unnecessary**.
+
+Reason: it is about functional Create escalators/stairs, not combat escalation. Cute, but not needed.
+
+### Ender/remote machine transfer
+
+Decision: **no**.
+
+Reason: remote transfer fights physical logistics, routes, exposed infrastructure, and faction pressure points.
+
+### Simple Storage Network resource pack
+
+Decision: **cosmetic support is okay if the storage mod is ever intentionally present**.
+
+Reason: the Created Simple Storage Network resource pack is fine by itself, but it is not a reason to add a storage network. Storage systems need their own logistics/storage decision.
 
 ## Still deferred elsewhere
 

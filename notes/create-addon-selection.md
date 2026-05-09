@@ -49,6 +49,7 @@ Reason: Farmer's Delight and Central Kitchen need actual Create-adjacent food au
 ## Chosen vs set aside
 
 For the broader addon decision log, see `notes/create-addon-disposition.md`.
+For the tiny/specialized addon sweep, see `notes/create-small-addon-audit.md`.
 
 ### Create Deco vs Create: Design n' Decor
 
@@ -61,6 +62,10 @@ Reason: both fill the same broad industrial-decoration niche. Create Deco is a w
 ### Create: Enchantment Industry / Enchantable Machinery
 
 Defer to an XP/equipment economy pass. XP automation can be very strong in factions and can affect combat, death mechanics, trading, and enchanted gear availability.
+
+### AE2 / Create: Applied Kinetics
+
+Defer. AE2 was recommended, but Tenpack has not decided whether it wants AE2-style storage/autocrafting at all.
 
 ### Create Crafts & Additions
 
@@ -78,9 +83,19 @@ Defer to pressure-point meetings. Vents and ore-like systems affect territory/re
 
 Avoid for now. Tenpack is deliberately protecting animal travel, rails, roads, vehicles, Aeronautics, and fuel logistics. Cheap personal mobility can bypass too much of that.
 
+Waystones: Sable is explicitly out: teleportation is not aligned with the pack, even if the compatibility layer works with Sable/Aeronautics.
+
+### Backpacks
+
+Out. Tenpack is not adding backpacks or Create integrations for backpacks.
+
 ### Create Mechanical Extruder / Create: Connected / Configurable Machine Outputs
 
 Out for now. Extruder risks trivial renewable material generation; Connected feels too convenience-heavy; Configurable Machine Outputs is not needed without a specific problem.
+
+### Create: Escalated
+
+Out for now. It is escalators/stairs, not combat escalation, and it does not solve a current Tenpack need.
 
 ### Create: New Age / Create: Pattern Schematics
 
