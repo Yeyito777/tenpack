@@ -7,7 +7,9 @@
       "filename": "§6Immersive§8_§6Interfaces§8.zip",
       "source": "https://cdn.modrinth.com/data/3sV1gvyJ/versions/rhXvPOmr/%C2%A76Immersive%C2%A78_%C2%A76Interfaces%C2%A78.zip",
       "project": "https://modrinth.com/resourcepack/shrimps-immersive-interfaces",
-      "loadOrderNote": "GUI overhaul; keep as highest-priority pack."
+      "loadOrderNote": "GUI overhaul; keep as highest-priority pack.",
+      "compatibility": "range-includes-1.21.1",
+      "acceptedIncompatible": false
     },
     {
       "name": "Vanilla Evolved",
@@ -15,7 +17,9 @@
       "filename": "VanillaEvolved_1.17.0.zip",
       "source": "https://cdn.modrinth.com/data/5Wz8MWHt/versions/ltHEptpg/VanillaEvolved_1.17.0.zip",
       "project": "https://modrinth.com/resourcepack/vanilla-evolved",
-      "loadOrderNote": "Base vanilla-style texture/model overhaul; load below add-ons and focused overrides."
+      "loadOrderNote": "Base vanilla-style texture/model overhaul; load below add-ons and focused overrides.",
+      "compatibility": "native-1.21.1-pack-format-34",
+      "acceptedIncompatible": false
     },
     {
       "name": "xali's Enhanced Vanilla",
@@ -23,7 +27,9 @@
       "filename": "xali's Enhanced Vanilla -1.11.2b-rev.54d51d4.zip",
       "source": "https://cdn.modrinth.com/data/Srw5RQ6k/versions/dEGWry22/xali%27s%20Enhanced%20Vanilla%20-1.11.2b-rev.54d51d4.zip",
       "project": "https://modrinth.com/resourcepack/xalis-enhanced-vanilla",
-      "loadOrderNote": "Focused vanilla block/item improvements; load above Vanilla Evolved."
+      "loadOrderNote": "Focused vanilla block/item improvements; load above Vanilla Evolved.",
+      "compatibility": "native-1.21.1-pack-format-34",
+      "acceptedIncompatible": false
     },
     {
       "name": "xali's Bushy Leaves",
@@ -31,7 +37,9 @@
       "filename": "xali's Bushy Leaves v3.5.0.zip",
       "source": "https://cdn.modrinth.com/data/ff4JOkSA/versions/ZslQczG8/xali%27s%20Bushy%20Leaves%20v3.5.0.zip",
       "project": "https://modrinth.com/resourcepack/xalis-bushy-leaves",
-      "loadOrderNote": "Latest upstream is tagged through 1.20.1; enabled on 1.21.1 as an accepted incompatible resource pack."
+      "loadOrderNote": "Latest upstream is tagged through 1.20.1; enabled on 1.21.1 as an accepted incompatible resource pack.",
+      "compatibility": "accepted-incompatible-old-pack-format-15",
+      "acceptedIncompatible": true
     },
     {
       "name": "xali's Enchanted Books",
@@ -39,7 +47,9 @@
       "filename": "xali's enchanted books v0.13.0.zip",
       "source": "https://cdn.modrinth.com/data/ZpBKASR2/versions/b0JG3qEi/xali%27s%20enchanted%20books%20v0.13.0.zip",
       "project": "https://modrinth.com/resourcepack/xalis-enchanted-books",
-      "loadOrderNote": "Version selected for Minecraft 1.21.1 pack-format compatibility."
+      "loadOrderNote": "Version selected for Minecraft 1.21.1 pack-format compatibility.",
+      "compatibility": "native-1.21.1-pack-format-34",
+      "acceptedIncompatible": false
     },
     {
       "name": "Vanilla Evolved Extra 3D (Optional)",
@@ -47,7 +57,9 @@
       "filename": "VanillaEvolved Extra 3D (Optional).zip",
       "source": "https://cdn.modrinth.com/data/5Wz8MWHt/versions/URyQePpS/VanillaEvolved%20Extra%203D%20%28Optional%29.zip",
       "project": "https://modrinth.com/resourcepack/vanilla-evolved",
-      "loadOrderNote": "Vanilla Evolved add-on for custom flowers/extra 3D models; enabled above base pack. Tagged for newer pack format, so accepted as incompatible on 1.21.1."
+      "loadOrderNote": "Vanilla Evolved add-on for custom flowers/extra 3D models; enabled above base pack. Tagged for newer pack format, so accepted as incompatible on 1.21.1.",
+      "compatibility": "accepted-incompatible-newer-pack-format-55",
+      "acceptedIncompatible": true
     }
   ],
   "recommendedEnabledOrderLowToHighPriority": [

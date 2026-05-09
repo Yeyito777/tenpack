@@ -1,0 +1,15 @@
+{
+  "minecraft": "1.21.1",
+  "shaderpacks": [
+    {
+      "name": "Eclipse Shader Unstable",
+      "version": "0e70ca33",
+      "filename": "Eclipse-Shader-Unstable-0e70ca33.zip",
+      "source": "local archive / pinned unstable Eclipse shader build",
+      "recommendedDefault": false,
+      "performanceWarning": true,
+      "loadOrderNote": "Optional visual preset only. Keep disabled by default during Create/Aeronautics performance testing; enable manually after confirming factory, cave, darkness, and flight readability."
+    }
+  ],
+  "recommendedEnabledByDefault": []
+}
