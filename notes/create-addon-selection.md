@@ -48,6 +48,8 @@ Reason: Farmer's Delight and Central Kitchen need actual Create-adjacent food au
 
 ## Chosen vs set aside
 
+For the broader addon decision log, see `notes/create-addon-disposition.md`.
+
 ### Create Deco vs Create: Design n' Decor
 
 Decision for now: **choose Create Deco**, set aside **Create: Design n' Decor**.
@@ -66,11 +68,23 @@ Not added in this pass. It is probably a good fit **if gated and configured**, b
 
 ### Create Ore Excavation
 
-Very promising as another territorial resource-pressure system, but it should get an oilfield-style design/config pass before adding.
+Very promising as another territorial resource-pressure system, but it should get an oilfield-style design/config pass before adding. The interesting direction is to slow ordinary infinite ore-generation machines and make discovered infinite veins clearly better so ore outposts become real faction pressure points.
 
-### Jetpacks / Stuff 'N Additions / Hypertubes / Waystone-like travel
+### Create: Molten Vents / Create: Trading Floor / Create: Hypertubes
 
-Defer or avoid for now. Tenpack is deliberately protecting animal travel, rails, roads, vehicles, Aeronautics, and fuel logistics. Cheap personal mobility can bypass too much of that.
+Defer to pressure-point meetings. Vents and ore-like systems affect territory/resources; Trading Floor affects economy; Hypertubes affect travel infrastructure.
+
+### Jetpacks / Stuff 'N Additions / Waystone-like travel
+
+Avoid for now. Tenpack is deliberately protecting animal travel, rails, roads, vehicles, Aeronautics, and fuel logistics. Cheap personal mobility can bypass too much of that.
+
+### Create Mechanical Extruder / Create: Connected / Configurable Machine Outputs
+
+Out for now. Extruder risks trivial renewable material generation; Connected feels too convenience-heavy; Configurable Machine Outputs is not needed without a specific problem.
+
+### Create: New Age / Create: Pattern Schematics
+
+No immediate action. New Age overlaps with the future electricity decision. Pattern Schematics is a soft maybe for builders, but not urgent.
 
 ## Runtime caveat
 
