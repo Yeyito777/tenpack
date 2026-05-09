@@ -6,6 +6,8 @@ Purpose: audit the whole active mod stack after the Create progression rewrite. 
 
 This pass intentionally does **not** approve unrelated uncommitted Tenpack Travel work; the audit was run from a clean tree with that work stashed aside.
 
+For a player/progression-facing map of how these categories sit around the Create eras, see `notes/create-era-accessibility-map.md`.
+
 ## Static integrity result
 
 Command:
@@ -21,6 +23,8 @@ Result after this pass:
 - client-only jars: 19
 - all server jars are mirrored to the client by filename
 - required metadata dependencies are satisfied after accounting for JarJar/nested jars and Connector/Forgified Fabric API
+- current client-only jars are allowlisted so accidental client-only content additions get noticed
+- hard-no/deferred addon categories are blocked from silently entering the mod list
 
 Create-specific command:
 

@@ -8,7 +8,8 @@ NeoForge + Connector pack:
 - every server mod jar must also be mirrored to the client;
 - required metadata dependencies should be present, including JarJar/nested jars;
 - Fabric mods running through Connector should have their direct Fabric deps present;
-- client-only jars should not be treated as server omissions.
+- client-only jars should not be treated as server omissions;
+- hard-no/deferred addon decisions should not silently enter the pack.
 """
 
 from __future__ import annotations
@@ -36,6 +37,75 @@ IGNORED_DEP_IDS = {
 # Forgified Fabric API is represented to NeoForge as fabric_api, while many
 # Fabric mods depend on individual fabric-* module ids.
 FABRIC_API_MODULE_PREFIX = "fabric-"
+
+ALLOWED_CLIENT_ONLY_JARS = {
+    "AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar",
+    "CameraOverhaul-v2.0.6-fabric+mc[1.21.0-1.21.2].jar",
+    "CreativeCore_NEOFORGE_v2.13.38_mc1.21.1.jar",
+    "Iceberg-1.21.1-neoforge-1.3.2.jar",
+    "LegendaryTooltips-1.21.1-neoforge-1.5.5.jar",
+    "PresenceFootsteps-1.21.1-1.12.0-beta.1-1.21NeoForge.jar",
+    "Prism-1.21.1-neoforge-1.0.11.jar",
+    "autohud-8.11+1.21.1-neoforge.jar",
+    "eg_particle_interactions-0.4.1-neoforge-mc1.21.1.jar",
+    "fallingleaves-1.17.1+1.21.1.jar",
+    "fusion-1.2.12-neoforge-mc1.21.1.jar",
+    "iris-neoforge-1.8.12+mc1.21.1.jar",
+    "lambdynamiclights-3.1.4-neo-0+1.21.1.jar",
+    "more_darkness-neoforge-1.21.1-1.0.0.jar",
+    "mru-1.0.19+LTS+1.21.1+neoforge.jar",
+    "particlerain-4.0.0-beta.9+1.21.1-neoforge.jar",
+    "sodium-neoforge-0.6.13+mc1.21.1.jar",
+    "sounds-2.4.22+lts+1.21.1-neoforge.jar",
+    "voxy-0.2.14-alpha-mc_1211-f308c254.jar",
+}
+
+DISALLOWED_MOD_IDS = {
+    # Travel bypasses.
+    "waystones": "teleportation bypasses roads, rails, animals, vehicles, Aeronautics, and fuel logistics",
+    "waystones_sable": "Sable-compatible teleportation is still teleportation",
+    "waystones_sable_compat": "Sable-compatible teleportation is still teleportation",
+    # Backpack/storage-network bypasses.
+    "sophisticatedbackpacks": "backpacks are a hard no for Tenpack",
+    "sophisticated_backpacks": "backpacks are a hard no for Tenpack",
+    "sophisticatedbackpacks_create_integration": "backpack Create integrations are a hard no",
+    "sophisticatedstorage": "full storage integrations are deferred/no until a storage pass",
+    "simple_storage_network": "storage networks require an explicit storage/logistics pass",
+    "toms_storage": "storage networks require an explicit storage/logistics pass",
+    "toms_storage_create_recipes": "storage-network Create recipes require an explicit storage/logistics pass",
+    "createcontraptionterminals": "contraption terminals require an explicit storage/logistics pass",
+    # AE2 / digital storage is deferred, not a casual addon.
+    "ae2": "AE2 is deferred; Create Applied Kinetics belongs only if AE2 is intentionally adopted",
+    "appeng": "AE2 is deferred; Create Applied Kinetics belongs only if AE2 is intentionally adopted",
+    "create_applied_kinetics": "deferred with AE2",
+    "applied_kinetics": "deferred with AE2",
+    # Create addon decisions from notes/create-addon-disposition.md.
+    "escalated": "Create: Escalated is unnecessary escalators/stairs",
+    "create_escalated": "Create: Escalated is unnecessary escalators/stairs",
+    "create_enchantment_industry": "deferred to XP/equipment economy pass",
+    "create_enchantable_machinery": "deferred to XP/equipment economy pass",
+    "create_jetpack": "personal flight bypasses Aeronautics and travel pressure",
+    "create_stuff_additions": "too likely to add mobility/tool bypasses",
+    "create_connected": "set aside as convenience/bypass risk",
+    "create_mechanical_extruder": "renewable generation needs pressure-point redesign first",
+    "create_sifting": "resource generation needs pressure-point redesign first",
+    "create_mechanical_spawner": "mob/resource generation needs pressure-point redesign first",
+    "create_ender_transmission": "remote/ender transfer fights physical logistics",
+    "ender_transmission": "remote/ender transfer fights physical logistics",
+}
+
+DISALLOWED_FILENAME_TOKENS = {
+    "waystones-sable": "Sable-compatible teleportation is still teleportation",
+    "waystones": "teleportation bypasses physical travel",
+    "sophisticated-backpacks": "backpacks are a hard no for Tenpack",
+    "create-applied-kinetics": "deferred with AE2",
+    "applied-kinetics": "deferred with AE2",
+    "enchantment-industry": "deferred to XP/equipment economy pass",
+    "enchantable-machinery": "deferred to XP/equipment economy pass",
+    "create-jetpack": "personal flight bypasses Aeronautics",
+    "stuff-additions": "mobility/tool bypass risk",
+    "ender-transmission": "remote/ender transfer fights physical logistics",
+}
 
 
 @dataclass
@@ -178,6 +248,21 @@ def main() -> int:
     for filename in sorted(missing_from_client):
         errors.append(f"server mod is not mirrored to client/mods: {filename}")
 
+    client_only = filenames_by_side["client"] - filenames_by_side["server"]
+    unexpected_client_only = client_only - ALLOWED_CLIENT_ONLY_JARS
+    for filename in sorted(unexpected_client_only):
+        errors.append(f"unexpected client-only jar; add to ALLOWED_CLIENT_ONLY_JARS if intentional: {filename}")
+
+    for side, jars in jars_by_side.items():
+        for jar in jars:
+            for mod_id in sorted(jar.all_ids):
+                if mod_id in DISALLOWED_MOD_IDS:
+                    errors.append(f"{side}: disallowed/deferred mod id {mod_id} in {jar.path.name}: {DISALLOWED_MOD_IDS[mod_id]}")
+            lower_filename = jar.path.name.lower()
+            for token, reason in DISALLOWED_FILENAME_TOKENS.items():
+                if token in lower_filename:
+                    errors.append(f"{side}: disallowed/deferred filename token {token!r} in {jar.path.name}: {reason}")
+
     for side, jars in jars_by_side.items():
         for jar in jars:
             for dep_id, dep_side in jar.required_deps:
@@ -189,7 +274,6 @@ def main() -> int:
 
     print(f"client jars: {len(jars_by_side['client'])}; mod ids/provides incl nested: {len(present_by_side['client'])}")
     print(f"server jars: {len(jars_by_side['server'])}; mod ids/provides incl nested: {len(present_by_side['server'])}")
-    client_only = filenames_by_side["client"] - filenames_by_side["server"]
     print(f"client-only jars: {len(client_only)}")
 
     if errors:
