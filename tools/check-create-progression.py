@@ -20,6 +20,7 @@ from typing import Any
 
 
 DATAPACK_REL = Path("server/world/datapacks/tenpack-create-progression")
+OLD_DATAPACK_REL = Path("server/datapacks/tenpack-create-progression")
 CDG_SERVER_CONFIG_REL = Path("server/config/createdieselgenerators-server.toml")
 CDG_COMMON_CONFIG_RELS = [
     Path("client/config/createdieselgenerators-common.toml"),
@@ -386,19 +387,27 @@ def check_oilfield_config(errors: list[str], repo: Path) -> None:
 def main() -> int:
     repo = Path(__file__).resolve().parents[1]
     root = repo / DATAPACK_REL
-    if not root.exists():
-        print(f"missing datapack: {root}", file=sys.stderr)
-        return 1
-
     errors: list[str] = []
+
+    old_root = repo / OLD_DATAPACK_REL
+    if old_root.exists():
+        errors.append(
+            f"Create progression datapack is in old deploy path {OLD_DATAPACK_REL}; "
+            f"move it under {DATAPACK_REL} so it loads inside the server world"
+        )
+    if not root.exists():
+        errors.append(f"missing datapack: {DATAPACK_REL}")
+
+    if not errors:
+        check_all_datapack_json_parses(errors, root)
+        check_create_encased_variants(errors, root)
+        check_recipe_gates(errors, root)
+        check_oilfield_tags(errors, root)
+        check_oil_scanner_stays_early(errors, root)
+        check_oil_logistics_recipes(errors, root)
+        check_oil_fuel_types(errors, root)
+
     check_required_create_mods(errors, repo)
-    check_all_datapack_json_parses(errors, root)
-    check_create_encased_variants(errors, root)
-    check_recipe_gates(errors, root)
-    check_oilfield_tags(errors, root)
-    check_oil_scanner_stays_early(errors, root)
-    check_oil_logistics_recipes(errors, root)
-    check_oil_fuel_types(errors, root)
     check_oilfield_config(errors, repo)
 
     if errors:

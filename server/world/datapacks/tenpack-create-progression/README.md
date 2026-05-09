@@ -97,7 +97,8 @@ Run this after editing recipes:
 
 ```bash
 ./tools/check-create-progression.py
+./tools/check-create-addon-recipes.py
 ./tools/tenpack-build-public.py --out public
 ```
 
-The checker enforces the design invariants that are easiest to break: Create Encased variants must upgrade from tuned base machines, heavy industry must stay behind precision, controlled flight must stay behind precision/gyro progression, and oilfield/logistics tuning must keep rich oil territorial while keeping serious fuel movement infrastructure-oriented.
+The checkers enforce the design invariants that are easiest to break: the datapack must live under `server/world/datapacks/` so it loads in the deployed world, Create Encased variants must upgrade from tuned base machines, heavy industry must stay behind precision, controlled flight must stay behind precision/gyro progression, oilfield/logistics tuning must keep rich oil territorial while keeping serious fuel movement infrastructure-oriented, and installed Create addons must not reintroduce unreviewed recipes for controlled progression outputs.

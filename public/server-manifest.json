@@ -530,9 +530,9 @@
     },
     {
       "path": "world/datapacks/tenpack-create-progression/README.md",
-      "sha256": "1591b6ea48615d1bbb0b7fd18ba2b64b36d3195eff52d0691040426bc8ed0594",
-      "size": 9347,
-      "url": "files/15/1591b6ea48615d1bbb0b7fd18ba2b64b36d3195eff52d0691040426bc8ed0594"
+      "sha256": "1fb729aea9f4a302644cd3859fe8625c0ed05c456a28f4a81e966948d5481068",
+      "size": 9575,
+      "url": "files/1f/1fb729aea9f4a302644cd3859fe8625c0ed05c456a28f4a81e966948d5481068"
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/aeronautics/recipe/adjustable_burner.json",
