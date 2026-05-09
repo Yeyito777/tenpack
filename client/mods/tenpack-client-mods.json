@@ -412,6 +412,20 @@
       "note": "Tenpack-specific Corpse behavior add-on. Configured by config/tenpackdeath.properties: non-owners are blocked until the corpse becomes a skeleton, ops do not bypass by default, after 5 minutes it warns the owner and removes one random stored item stack every 30 seconds, and player death plays a Re:Zero Return-by-Death-inspired vanilla sound cue."
     },
     {
+      "name": "Tenpack Travel",
+      "version": "0.1.0",
+      "filename": "tenpack_travel-0.1.0.jar",
+      "source": "local source: mods-src/tenpack-travel/",
+      "note": "Tenpack-specific travel utility mod. Adds the Grooming Brush item for no-Jade animal inspection, per-player use-based animal bonding, a bond-gated whistle keybind, and the first active animal-role hook: scout eagles can briefly ping visible danger when answering a whistle. Also adds physical camp infrastructure: Hitching Post and Feed Trough. Survival output uses coarse bands/roles/bond labels instead of passive stat overlays; infrastructure preserves physical animals with no GPS, no teleport recall, and no backpack-style cargo bypass."
+    },
+    {
+      "name": "LeashAll",
+      "version": "1.3.1 (NeoForge 1.21.1)",
+      "filename": "leashall-neoforge-1.21.1-1.3.1-1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/oKERV1Bi/versions/L1cA0vZH/leashall-neoforge-1.21.1-1.3.1-1.21.1.jar",
+      "note": "Physical lead-handling expansion. Server-required/client-optional mod installed on both sides per Tenpack rules. Default config caps each player at 6 leashes and blocks bosses, raiders, villagers/traders, players, and major boss mobs so leads improve animal handling without becoming teleport/GPS/control magic."
+    },
+    {
       "name": "Lifesteal",
       "version": "9.3.3 (NeoForge 1.21.1)",
       "filename": "lifesteal-9.3.3+1.21.1.jar",

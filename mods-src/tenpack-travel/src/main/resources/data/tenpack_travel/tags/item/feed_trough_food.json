@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:wheat",
+    "minecraft:hay_block",
+    "minecraft:apple",
+    "minecraft:carrot",
+    "minecraft:golden_carrot",
+    "minecraft:sugar",
+    "minecraft:sweet_berries",
+    "minecraft:melon_slice",
+    "minecraft:bamboo",
+    "minecraft:salmon",
+    "minecraft:cod",
+    "minecraft:tropical_fish",
+    "minecraft:rotten_flesh",
+    {"id": "alexsmobs:banana", "required": false},
+    {"id": "alexsmobs:acacia_blossom", "required": false},
+    {"id": "alexsmobs:cosmic_cod", "required": false},
+    {"id": "alexsmobs:lobster_tail", "required": false},
+    {"id": "alexsmobs:cooked_lobster_tail", "required": false},
+    {"id": "alexsmobs:mosquito_larva", "required": false}
+  ]
+}

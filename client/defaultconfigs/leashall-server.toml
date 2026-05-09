@@ -1,0 +1,6 @@
+# Tenpack default LeashAll rules.
+# Keep lead handling physical and useful without opening obvious multiplayer/boss abuse.
+useEntityAllowList = false
+maxLeashesPerPlayer = 6
+blockedEntities = ["#c:bosses", "#minecraft:raiders", "minecraft:warden", "minecraft:ender_dragon", "minecraft:wither", "minecraft:elder_guardian", "minecraft:villager", "minecraft:wandering_trader", "minecraft:player"]
+allowedEntities = []

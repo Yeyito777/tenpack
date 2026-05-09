@@ -103,6 +103,12 @@
       "url": "files/8b/8bcad332ab96ca33166dfc861f27b4893a30e544274b640aec53816cd98205bf"
     },
     {
+      "path": "defaultconfigs/leashall-server.toml",
+      "sha256": "38422a12e41a3ac8ebed92feb265b45293defe14e1172b2445aa8da96368a147",
+      "size": 415,
+      "url": "files/38/38422a12e41a3ac8ebed92feb265b45293defe14e1172b2445aa8da96368a147"
+    },
+    {
       "path": "mods/AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar",
       "sha256": "07ee6fd24d8427ee079e2e376095b0ac92450b0153331f1575f8195e2c9cf90b",
       "size": 84811632,
@@ -451,6 +457,12 @@
       "url": "files/3b/3b4c08218c4fcbfa5af29d224829f282eeeb13ee1272ce0ece9c7897a42fe1be"
     },
     {
+      "path": "mods/leashall-neoforge-1.21.1-1.3.1-1.21.1.jar",
+      "sha256": "6617f21323f88ccf586a4069b8783343565b356701260324aa45c5d25d20fe14",
+      "size": 59149,
+      "url": "files/66/6617f21323f88ccf586a4069b8783343565b356701260324aa45c5d25d20fe14"
+    },
+    {
       "path": "mods/legendarysurvivaloverhaul-1.21.1-2.4.2.jar",
       "sha256": "da9c38f05df4dfe09e5226f17d43a0c1725c16ede3ea6dd2d945c111b1d413e4",
       "size": 3742368,
@@ -584,9 +596,15 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "e7fcb532e1fa8bd717a77da41882b07f54ef432f15c71f76dcaf8e9bfdc45fa5",
-      "size": 34410,
-      "url": "files/e7/e7fcb532e1fa8bd717a77da41882b07f54ef432f15c71f76dcaf8e9bfdc45fa5"
+      "sha256": "d1a0dc6ab9a6d749231b5ee70bf9baac45579ecb23233e643196aa94ddfe2a3c",
+      "size": 35735,
+      "url": "files/d1/d1a0dc6ab9a6d749231b5ee70bf9baac45579ecb23233e643196aa94ddfe2a3c"
+    },
+    {
+      "path": "mods/tenpack_travel-0.1.0.jar",
+      "sha256": "6e498ed4ef56adcf436114d3cec1ae0640a8e549a0d51d4525d1834ea36865e5",
+      "size": 48497,
+      "url": "files/6e/6e498ed4ef56adcf436114d3cec1ae0640a8e549a0d51d4525d1834ea36865e5"
     },
     {
       "path": "mods/tenpackdeath-0.1.0.jar",
