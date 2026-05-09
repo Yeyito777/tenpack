@@ -949,6 +949,36 @@
       "url": "files/5d/5d13a9043864b2fdf61ac394b89449313e567b5847c2791ec00fd1cc72015e7f"
     },
     {
+      "path": "datapacks/tenpack-stronghold-startup/README.md",
+      "sha256": "ffc88044cd12f1feb4d9bde508f5ca3e4a9e077790ae11b484a1de0483ea340d",
+      "size": 707,
+      "url": "files/ff/ffc88044cd12f1feb4d9bde508f5ca3e4a9e077790ae11b484a1de0483ea340d"
+    },
+    {
+      "path": "datapacks/tenpack-stronghold-startup/data/minecraft/tags/worldgen/biome/has_structure/stronghold.json",
+      "sha256": "a7a86535dff3a63938644e8456df41ff7aaab85f6cf6112bc85cab975f1a181f",
+      "size": 71,
+      "url": "files/a7/a7a86535dff3a63938644e8456df41ff7aaab85f6cf6112bc85cab975f1a181f"
+    },
+    {
+      "path": "datapacks/tenpack-stronghold-startup/data/minecraft/tags/worldgen/biome/stronghold_biased_to.json",
+      "sha256": "a7a86535dff3a63938644e8456df41ff7aaab85f6cf6112bc85cab975f1a181f",
+      "size": 71,
+      "url": "files/a7/a7a86535dff3a63938644e8456df41ff7aaab85f6cf6112bc85cab975f1a181f"
+    },
+    {
+      "path": "datapacks/tenpack-stronghold-startup/data/minecraft/worldgen/structure_set/strongholds.json",
+      "sha256": "9e9c17dd56fdb3fc0f81faa75919f5aac2f51ccdefada3bae64b231ee2cfef60",
+      "size": 290,
+      "url": "files/9e/9e9c17dd56fdb3fc0f81faa75919f5aac2f51ccdefada3bae64b231ee2cfef60"
+    },
+    {
+      "path": "datapacks/tenpack-stronghold-startup/pack.mcmeta",
+      "sha256": "ad8ed28f0c5c1c2eee1acfef8888aacb5e6d8ffdce2b238e9592ac2e45254551",
+      "size": 138,
+      "url": "files/ad/ad8ed28f0c5c1c2eee1acfef8888aacb5e6d8ffdce2b238e9592ac2e45254551"
+    },
+    {
       "path": "mods/Chunky-NeoForge-1.4.23.jar",
       "sha256": "d72f235cf1f56f2c374f52c00bdda5034524b28142305a84cfc123a3f92ad274",
       "size": 340572,
