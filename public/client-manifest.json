@@ -25,18 +25,6 @@
       "url": "files/ee/ee32faf303d3beaff76ee54091bc95788048046b6e948ea7795d1eb34f365607"
     },
     {
-      "path": "config/improvedmobs/common.toml",
-      "sha256": "89162a7f276100406909e0879812eb2827fc9a02e0a7f733d13a52f62f08b208",
-      "size": 12929,
-      "url": "files/89/89162a7f276100406909e0879812eb2827fc9a02e0a7f733d13a52f62f08b208"
-    },
-    {
-      "path": "config/improvedmobs/equipment.json",
-      "sha256": "9619c44b9584ca9715a93b280d9cfbcd20e7889b58125ed2b0ba1a2e490936b4",
-      "size": 2466,
-      "url": "files/96/9619c44b9584ca9715a93b280d9cfbcd20e7889b58125ed2b0ba1a2e490936b4"
-    },
-    {
       "path": "config/legendarysurvivaloverhaul-client.toml",
       "sha256": "c75192c66d9a113cc4381603186285559e5ceb7ea465cb445574d938f94a85af",
       "size": 5285,

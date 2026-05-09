@@ -8,6 +8,7 @@ This pass intentionally does **not** approve unrelated uncommitted Tenpack Trave
 
 For a player/progression-facing map of how these categories sit around the Create eras, see `notes/create-era-accessibility-map.md`.
 For the direct recipe scan of installed Create addon jars, see `notes/create-addon-recipe-era-audit.md`.
+For the non-Create world/survival/death/client stack audit, see `notes/non-create-stack-era-audit.md`.
 
 ## Static integrity result
 
@@ -27,6 +28,7 @@ Result after this pass:
 - current client-only jars are allowlisted so accidental client-only content additions get noticed
 - hard-no/deferred addon categories are blocked from silently entering the mod list
 - installed Create addon recipe outputs/era anchors are checked separately by `./tools/check-create-addon-recipes.py`
+- non-recipe pack config policy is checked separately by `./tools/check-pack-configs.py`
 
 Create-specific command:
 

@@ -5,6 +5,7 @@ Purpose: player-facing/maintainer-facing map of how the installed mods fit aroun
 This is not a new progression system. It documents the current intent so future addon additions can be judged quickly.
 
 For a direct recipe-level audit of the installed Create addon jars, see `notes/create-addon-recipe-era-audit.md`.
+For the surrounding non-Create world/survival/death/client audit, see `notes/non-create-stack-era-audit.md`.
 
 ## Era summary
 
