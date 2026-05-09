@@ -22,6 +22,8 @@ The files under `data/<modid>/recipe/...` deliberately mirror upstream recipe id
 - `data/offroad/recipe/...` — Create Offroad vehicle/bore pacing.
 - `data/createcasing/recipe/...` — Create Encased variants rewritten as upgrades from the tuned base machines, preventing alternate casings from bypassing Tenpack's era gates.
 - `data/createdieselgenerators/recipe/...` — diesel/oil power nudged into precision-era heavy industry.
+- `data/createdieselgenerators/createdieselgenerators/fuel_type/...` — diesel/gasoline fuel burn tuned so fuel remains a recurring logistics concern instead of a one-time bucket chore.
+- `data/createdieselgenerators/tags/worldgen/biome/...` — oilfield geography. Rich oil is concentrated in dry faction-pressure biomes instead of being equally viable everywhere.
 - `data/createbigcannons/recipe/...` — cannon production machinery nudged into precision-era faction warfare.
 
 The repeated `neoforge:conditions` blocks are intentional. Datapack JSON has no shared helper/import system, and conditional recipes fail more gracefully if one of the Create addon modules is removed later.
@@ -34,13 +36,13 @@ The repeated `neoforge:conditions` blocks are intentional. Datapack JSON has no 
 | 1. Kinetic machines | First real automation step. | Press, mixer, saw, drill, fan, mechanical bearing, piston, gantry, portable storage interfaces, harvester, plough ask for a little more casing/alloy/sheet investment. |
 | 2. Fluid/sealed machines | Fluid handling becomes a second learning step. | Spout, item drain, portable fluid interface require copper sheets/pipes/plumbing parts. |
 | 3. Precision/brass | Advanced automation and logistics. | Precision mechanisms require electron tubes; mechanical crafters, steam engines, elevators, package logistics, stock links, train controls/signals/stations lean on precision. |
-| 4. Heavy industry and Aeronautics control | Vehicles are accessible, controlled flight/artillery/diesel power are earned. | Physics assembler starts after basic bearings; propeller bearing, gyro bearing, smart propeller, engines, burners, vents, diesel oil infrastructure, and cannon production use precision/gyro progression. |
+| 4. Heavy industry and Aeronautics control | Vehicles are accessible, controlled flight/artillery/diesel power are earned. | Physics assembler starts after basic bearings; propeller bearing, gyro bearing, smart propeller, engines, burners, vents, desert oil infrastructure, and cannon production use precision/gyro progression. |
 
 ## Player-facing guidance
 
 This datapack adds a small advancement chain under the `tenpack_create:create_progression/*` namespace. It is intentionally lightweight: enough to communicate eras without adding a full quest book.
 
-Milestones include starter logistics, kinetic workshop, fluid handling, precision engineering, smart logistics, physics age, controlled flight, first-plane moment, and heavy industry.
+Milestones include starter logistics, kinetic workshop, fluid handling, precision engineering, black-gold prospecting, smart logistics, physics age, controlled flight, first-plane moment, and heavy industry.
 
 ## Important recipe anchors
 
@@ -64,6 +66,13 @@ Milestones include starter logistics, kinetic workshop, fluid handling, precisio
 ### Heavy industry / warfare
 
 - `createdieselgenerators:pumpjack_bearing`, `createdieselgenerators:distillation_controller`, and `createdieselgenerators:diesel_engine` require precision-era parts so diesel/oil power does not undercut steam and early Aeronautics pacing.
+- `createdieselgenerators:oil_scanner` stays early and readable: scouting for dry-biome oilfields should happen before a faction can fully exploit them. This is intentional pressure-point pacing—players can discover and contest land before they can industrialize it.
+- `createdieselgenerators:canister` remains an early/emergency transport item, but Tenpack caps canisters at 2000 mB plus 500 mB per capacity enchantment level. Serious faction fuel movement should prefer placed barrels, tanks, trains, and depots.
+- `createdieselgenerators:oil_barrel` now crafts in pairs from one wooden barrel and iron plates. Bulk storage should be easy enough that visible tank farms are the natural answer to fuel wealth.
+- Diesel and gasoline fuel definitions use `burn_rate = 0.1` for normal, modular, and huge engines. This is still forgiving, but doubles the default recurring fuel demand so supply lines matter once a faction relies on diesel power.
+- Rich Create Diesel Generators oil biomes are replaced with dry oilfield biomes: desert, badlands, eroded/wooded badlands, savanna, savanna plateau, and windswept savanna. Optional vanilla `#minecraft:is_badlands` and `#minecraft:is_savanna` tag references are included so compatible dry variants stay oil-rich. Plains and oceans are intentionally removed from the rich-oil set.
+- Normal non-oilfield chunks remain enabled but weak (`Normal oil chunks oil amount multiplier = 0.75`) so they act as rare finite fallback deposits, not a basis for a fuel empire. High oilfield chunks are boosted (`High oil chunks oil amount multiplier = 2.25`) so deserts/badlands/savannas become the places worth scouting, claiming, railroading to, and defending.
+- Ocean, river, beach/shore, snowy, cold-peak, and mushroom biomes are denied oil, with optional vanilla ocean/river/beach tag references for broader coverage. This keeps offshore/ocean oil from undercutting the desert refinery fantasy and gives hot inland terrain a clear strategic identity.
 - Create Big Cannons production blocks (`cannon_builder`, `cannon_drill`, `cannon_mount`, `fixed_cannon_mount`, `cannon_welder`, and mount extension) require precision-era parts so faction artillery arrives as a serious industrial milestone.
 
 ## Tuning guidelines
@@ -91,4 +100,4 @@ Run this after editing recipes:
 ./tools/tenpack-build-public.py --out public
 ```
 
-The checker enforces the design invariants that are easiest to break: Create Encased variants must upgrade from tuned base machines, heavy industry must stay behind precision, and controlled flight must stay behind precision/gyro progression.
+The checker enforces the design invariants that are easiest to break: Create Encased variants must upgrade from tuned base machines, heavy industry must stay behind precision, controlled flight must stay behind precision/gyro progression, and oilfield/logistics tuning must keep rich oil territorial while keeping serious fuel movement infrastructure-oriented.

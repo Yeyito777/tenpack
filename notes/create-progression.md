@@ -10,6 +10,8 @@ People who finished CABIN should recognize a satisfying progression arc. People 
 
 The first real plane should be a server moment.
 
+Heavy industry should also create faction pressure points: resources should lead to architecture. A faction that controls something important should be forced to build visible infrastructure around it—pumpjacks, refineries, tanks, train spurs, airfields, cannon foundries—so other players can understand power by looking at the world.
+
 ## Audience split
 
 - CABIN veterans: want meaningful automation work, not vanilla-fast Create.
@@ -102,6 +104,16 @@ Unlocks:
 - Create Big Cannons production machinery
 
 Pacing goal: the first plane should take faction-level or dedicated-player effort. It should feel like a technological threshold, not a JEI click. Heavy artillery and diesel infrastructure belong around this same threshold because they reshape faction conflict and logistics.
+
+Oil has an extra territorial rule: rich Create Diesel Generators oilfields are now concentrated in deserts, badlands, and savannas. The oil scanner intentionally remains an early tool so factions can prospect, claim, bluff, and fight over dry land before they can fully exploit it. Pumpjacks, refineries, and diesel engines remain precision/heavy-industry milestones. Non-oilfield chunks still have a weak finite fallback chance, but they should not support a true fuel empire. Tenpack keeps portable canisters useful for scouting/emergencies and makes barrels cheap enough for visible tank farms, while diesel/gasoline burn rates are high enough to create recurring supply demand. The intended faction story is that oil groups become rich from fuel while creating exposed infrastructure, pumpjack defense, and long supply lines.
+
+This is the preferred pressure-point pattern for Tenpack:
+
+1. a resource is tied to visible geography,
+2. exploiting it demands visible architecture,
+3. moving it demands logistics,
+4. enemies can raid, blockade, tax, or negotiate around that logistics,
+5. ownership helps a faction without instantly winning the server.
 
 ## Current implementation philosophy
 

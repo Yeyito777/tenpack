@@ -1,0 +1,38 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:ocean",
+    "minecraft:deep_ocean",
+    "minecraft:cold_ocean",
+    "minecraft:deep_cold_ocean",
+    "minecraft:frozen_ocean",
+    "minecraft:deep_frozen_ocean",
+    "minecraft:lukewarm_ocean",
+    "minecraft:deep_lukewarm_ocean",
+    "minecraft:warm_ocean",
+    {
+      "id": "#minecraft:is_ocean",
+      "required": false
+    },
+    "minecraft:river",
+    "minecraft:frozen_river",
+    {
+      "id": "#minecraft:is_river",
+      "required": false
+    },
+    "minecraft:snowy_plains",
+    "minecraft:ice_spikes",
+    "minecraft:snowy_taiga",
+    "minecraft:snowy_beach",
+    "minecraft:stony_shore",
+    {
+      "id": "#minecraft:is_beach",
+      "required": false
+    },
+    "minecraft:grove",
+    "minecraft:snowy_slopes",
+    "minecraft:frozen_peaks",
+    "minecraft:jagged_peaks",
+    "minecraft:mushroom_fields"
+  ]
+}

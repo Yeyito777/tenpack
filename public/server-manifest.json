@@ -7,6 +7,18 @@
       "url": "files/b2/b2e0fc5e849084256310526838c6da62356f51ec98cc740afcd6b1d13ada9644"
     },
     {
+      "path": "config/createdieselgenerators-common.toml",
+      "sha256": "41a1f5c5bf571d08505f40c656943f398cb76cf7cb16fb624e63f374c5b0645f",
+      "size": 547,
+      "url": "files/41/41a1f5c5bf571d08505f40c656943f398cb76cf7cb16fb624e63f374c5b0645f"
+    },
+    {
+      "path": "config/createdieselgenerators-server.toml",
+      "sha256": "2d91803f38b4d4199d7d8469a8f2debf5a3365e23d27b3edb4482a946d38beb4",
+      "size": 1410,
+      "url": "files/2d/2d91803f38b4d4199d7d8469a8f2debf5a3365e23d27b3edb4482a946d38beb4"
+    },
+    {
       "path": "config/do_a_barrel_roll-server.json",
       "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
       "size": 2,
@@ -92,9 +104,9 @@
     },
     {
       "path": "datapacks/tenpack-create-progression/README.md",
-      "sha256": "ca98b6c5041565dac5d51421d5b20ebbe163cc5aa2f1ba5027fb63db6dd11605",
-      "size": 6852,
-      "url": "files/ca/ca98b6c5041565dac5d51421d5b20ebbe163cc5aa2f1ba5027fb63db6dd11605"
+      "sha256": "1591b6ea48615d1bbb0b7fd18ba2b64b36d3195eff52d0691040426bc8ed0594",
+      "size": 9347,
+      "url": "files/15/1591b6ea48615d1bbb0b7fd18ba2b64b36d3195eff52d0691040426bc8ed0594"
     },
     {
       "path": "datapacks/tenpack-create-progression/data/aeronautics/recipe/adjustable_burner.json",
@@ -787,6 +799,24 @@
       "url": "files/f8/f83dc2bb20650c9114621ec13181434be1a297ea33baa0f989b6b9d58ee825b4"
     },
     {
+      "path": "datapacks/tenpack-create-progression/data/createdieselgenerators/createdieselgenerators/fuel_type/diesel.json",
+      "sha256": "e0877bdba9703c8f0b7baa67f2a5bfaf2ac2b1c53aec42ca2d03dafe4eabd715",
+      "size": 331,
+      "url": "files/e0/e0877bdba9703c8f0b7baa67f2a5bfaf2ac2b1c53aec42ca2d03dafe4eabd715"
+    },
+    {
+      "path": "datapacks/tenpack-create-progression/data/createdieselgenerators/createdieselgenerators/fuel_type/gasoline.json",
+      "sha256": "f8c01e48171f44138aef5d262f501b797a15718c462c525f95c4280f2fe05d08",
+      "size": 333,
+      "url": "files/f8/f8c01e48171f44138aef5d262f501b797a15718c462c525f95c4280f2fe05d08"
+    },
+    {
+      "path": "datapacks/tenpack-create-progression/data/createdieselgenerators/recipe/crafting/canister.json",
+      "sha256": "a4a6063a91ce7782c5170ae41f446dad5d8b1f4e6e372318a95875cce5dbed34",
+      "size": 612,
+      "url": "files/a4/a4a6063a91ce7782c5170ae41f446dad5d8b1f4e6e372318a95875cce5dbed34"
+    },
+    {
       "path": "datapacks/tenpack-create-progression/data/createdieselgenerators/recipe/crafting/diesel_engine.json",
       "sha256": "cb6dfc153657eb77ed4f6d93d45ebde1c2ffc4c26eda7ff40bb923afb47ee5e9",
       "size": 779,
@@ -799,10 +829,34 @@
       "url": "files/56/563c5ad37e06220b4a185bb9e59f6160301a45e098ce0c30e68e3805f06eef4e"
     },
     {
+      "path": "datapacks/tenpack-create-progression/data/createdieselgenerators/recipe/crafting/oil_barrel.json",
+      "sha256": "6a448b652242afb2beb33e8643bb2f6a7cf71a3ec38712dc91a741b4ca8653c5",
+      "size": 408,
+      "url": "files/6a/6a448b652242afb2beb33e8643bb2f6a7cf71a3ec38712dc91a741b4ca8653c5"
+    },
+    {
+      "path": "datapacks/tenpack-create-progression/data/createdieselgenerators/recipe/crafting/oil_scanner.json",
+      "sha256": "1074e70368d2489cc919ba5ea197b41250648f22ccab00f34ff3d55fc0b914d1",
+      "size": 608,
+      "url": "files/10/1074e70368d2489cc919ba5ea197b41250648f22ccab00f34ff3d55fc0b914d1"
+    },
+    {
       "path": "datapacks/tenpack-create-progression/data/createdieselgenerators/recipe/crafting/pumpjack_bearing.json",
       "sha256": "e5be065185fb5cbcf445b64f866c236f5154b380e1850685ff73d3b58568b4fb",
       "size": 637,
       "url": "files/e5/e5be065185fb5cbcf445b64f866c236f5154b380e1850685ff73d3b58568b4fb"
+    },
+    {
+      "path": "datapacks/tenpack-create-progression/data/createdieselgenerators/tags/worldgen/biome/deny_oil_biomes.json",
+      "sha256": "0ca5028f0ea1cc7b48aee1bd7d17d87f19a3512eee3eeea30993170e4849cb73",
+      "size": 875,
+      "url": "files/0c/0ca5028f0ea1cc7b48aee1bd7d17d87f19a3512eee3eeea30993170e4849cb73"
+    },
+    {
+      "path": "datapacks/tenpack-create-progression/data/createdieselgenerators/tags/worldgen/biome/oil_biomes.json",
+      "sha256": "4a95f15bc9b3353f56fc177512bad2b3ca88389a9b8a42049c38591204eeb65d",
+      "size": 398,
+      "url": "files/4a/4a95f15bc9b3353f56fc177512bad2b3ca88389a9b8a42049c38591204eeb65d"
     },
     {
       "path": "datapacks/tenpack-create-progression/data/minecraft/recipe/cannon_welder_mirrored.json",
@@ -845,6 +899,12 @@
       "sha256": "00be576207660607fb0653855485cb5e57cfb36fcd7c59898c5674caff4d535d",
       "size": 2005,
       "url": "files/00/00be576207660607fb0653855485cb5e57cfb36fcd7c59898c5674caff4d535d"
+    },
+    {
+      "path": "datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/black_gold.json",
+      "sha256": "513fa4f65c212813f24a6cfe6589562f02c3066dda3e09ddad30070a4f76be93",
+      "size": 1200,
+      "url": "files/51/513fa4f65c212813f24a6cfe6589562f02c3066dda3e09ddad30070a4f76be93"
     },
     {
       "path": "datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/controlled_flight.json",

@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "create:andesite_alloy"
+    },
+    "B": {
+      "tag": "c:barrels/wooden"
+    },
+    "C": {
+      "item": "create:copper_sheet"
+    },
+    "I": {
+      "tag": "c:plates/iron"
+    }
+  },
+  "pattern": [
+    "ACA",
+    "IBI",
+    " I "
+  ],
+  "result": {
+    "count": 1,
+    "id": "createdieselgenerators:canister"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createdieselgenerators"
+    }
+  ]
+}

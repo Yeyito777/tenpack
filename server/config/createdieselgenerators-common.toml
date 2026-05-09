@@ -1,0 +1,10 @@
+["Common Config"]
+	#Capacity of Tools requiring Fluids in mB
+	"Capacity of Tools requiring Fluids" = 200
+	#Tool Capacity Enchantment Capacity Addition in mB
+	"Capacity Addition of Tools with Capacity Enchantment" = 100
+	#Canister Capacity in mB. Tenpack keeps canisters useful for scouting/emergency fuel,
+	#but small enough that serious fuel logistics prefer placed barrels, tanks, and trains.
+	"Capacity of Canisters" = 2000
+	#Canister Capacity Enchantment Capacity Addition in mB
+	"Capacity Addition of Capacity Enchantment in Canisters" = 500

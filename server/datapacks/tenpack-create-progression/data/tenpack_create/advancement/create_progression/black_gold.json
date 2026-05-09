@@ -1,0 +1,56 @@
+{
+  "criteria": {
+    "oil_scanner": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "createdieselgenerators:oil_scanner"
+          }
+        ]
+      }
+    },
+    "pumpjack": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "createdieselgenerators:pumpjack_bearing"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Craft an Oil Scanner and scout deserts, badlands, and savannas. Fuel empires start with maps, heat, pumpjacks, and supply lines."
+    },
+    "icon": {
+      "count": 1,
+      "id": "createdieselgenerators:oil_scanner"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Black Gold"
+    }
+  },
+  "requirements": [
+    [
+      "oil_scanner",
+      "pumpjack"
+    ]
+  ],
+  "sends_telemetry_event": false,
+  "parent": "tenpack_create:create_progression/root",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createdieselgenerators"
+    }
+  ]
+}

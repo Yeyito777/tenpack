@@ -13,6 +13,12 @@
       "url": "files/b2/b2e0fc5e849084256310526838c6da62356f51ec98cc740afcd6b1d13ada9644"
     },
     {
+      "path": "config/createdieselgenerators-common.toml",
+      "sha256": "41a1f5c5bf571d08505f40c656943f398cb76cf7cb16fb624e63f374c5b0645f",
+      "size": 547,
+      "url": "files/41/41a1f5c5bf571d08505f40c656943f398cb76cf7cb16fb624e63f374c5b0645f"
+    },
+    {
       "path": "config/do_a_barrel_roll-client.json",
       "sha256": "ee32faf303d3beaff76ee54091bc95788048046b6e948ea7795d1eb34f365607",
       "size": 1762,
