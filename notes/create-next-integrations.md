@@ -12,6 +12,23 @@ Installed in the local working tree:
 
 Reason: Tenpack Create progression depends on players being able to inspect modified recipes. Advancements and a future questbook can explain the path, but JEI should be the recipe source of truth.
 
+## Current local Create stack
+
+Installed locally in this branch as the concrete Create workflow baseline:
+
+- Create `6.0.10+mc1.21.1`
+- Sable `1.2.2+mc1.21.1`
+- Create Aeronautics bundled `1.2.1+mc1.21.1`
+- Create: Diesel Generators `1.21.1-1.3.11`
+- Create Big Cannons `5.11.3+mc.1.21.1`
+- Ritchie's Projectile Library `2.1.2+mc.1.21.1`, required by Create Big Cannons
+- Create Encased `1.8-ht2`
+- Farmer's Delight `1.21.1-1.3.1`
+- Create: Dragons Plus `1.10.0b`, required by Central Kitchen
+- Create: Central Kitchen `2.4.0`
+
+The important caveat is still runtime testing. The static pack build can verify mirroring/manifests, but it does not prove that the full Create stack launches cleanly together.
+
 ## Create: Estrogen
 
 Desired, but not an immediate drop-in.
@@ -34,7 +51,7 @@ Design note: if ported, audit its recipes immediately. Estrogen/Create addons te
 
 ## Farmer's Delight
 
-Available for Minecraft `1.21.1` NeoForge.
+Available for Minecraft `1.21.1` NeoForge and installed locally in this branch.
 
 Latest compatible version found:
 
@@ -42,19 +59,18 @@ Latest compatible version found:
 - File: `FarmersDelight-1.21.1-1.3.1.jar`
 - Source: `https://cdn.modrinth.com/data/R2OftAxM/versions/9gp7w8NC/FarmersDelight-1.21.1-1.3.1.jar`
 
-Do not just add it blindly. It changes food economy, farming incentives, comfort effects, and early-game survival pacing. Tenpack already has Legendary Survival Overhaul temperature enabled and various survival/world-atmosphere systems, so food effects should be checked before deployment.
+It changes food economy, farming incentives, comfort effects, and early-game survival pacing. Tenpack already has Legendary Survival Overhaul temperature enabled and various survival/world-atmosphere systems, so food effects should be checked in-game before deployment.
 
-Recommended add pass:
+Recommended follow-up pass:
 
-1. Add Farmer's Delight to both client and server.
-2. Add Create: Central Kitchen if compatible with the installed Create version.
-3. Audit recipes for Create progression bypasses.
-4. Check food effects against Legendary Survival Overhaul and Tenpack death/faction pacing.
-5. Add a short questbook chapter for cooking/farms only if it creates useful player-facing progression.
+1. Audit recipes for Create progression bypasses.
+2. Check food effects against Legendary Survival Overhaul and Tenpack death/faction pacing.
+3. Playtest Create harvester/deployer/belt interactions with Farmer's Delight crops/foods.
+4. Convert `notes/create-farm-kitchen-pass.md` into a questbook chapter if the gameplay feels good.
 
 ## Create: Central Kitchen
 
-Available for Minecraft `1.21.1` NeoForge and Create `6.0.10`.
+Available for Minecraft `1.21.1` NeoForge and Create `6.0.10`; installed locally in this branch.
 
 Latest compatible version found:
 
@@ -63,21 +79,4 @@ Latest compatible version found:
 - Source: `https://cdn.modrinth.com/data/btq68HMO/versions/TUJIHmUh/create-central-kitchen-2.4.0.jar`
 - Required dependency from Modrinth API: Create project `dzb1a5WV` / installed Create.
 
-This is the obvious Farmer's Delight/Create bridge. Add it in the same pass as Farmer's Delight, not separately, so recipe/functionality interactions can be audited together.
-
-## Important current repo caveat
-
-The current checked-in `client/mods` and `server/mods` directories do not contain Create-family jars even though the Create progression datapack is present. The previous recipe audit was done against local/test-instance Create-family jars. Before deploying a full Create pack state, verify which Create jars are meant to be checked into this repo versus supplied by another sync/source.
-
-Known target from the progression audit:
-
-- Create `1.21.1-6.0.10`
-
-Related addons referenced by the datapack/checker include:
-
-- Create Aeronautics / Simulated / Offroad
-- Create Encased
-- Create Diesel Generators
-- Create Big Cannons
-
-If those are not actually in the deployed pack, the conditional datapack recipes will fail gracefully where possible, but players will not have the intended Create experience.
+This is the obvious Farmer's Delight/Create bridge. It appears mostly code/tag integration rather than a large recipe datapack, but it still needs in-game JEI/playtesting.

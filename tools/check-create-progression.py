@@ -25,6 +25,21 @@ CDG_COMMON_CONFIG_RELS = [
     Path("client/config/createdieselgenerators-common.toml"),
     Path("server/config/createdieselgenerators-common.toml"),
 ]
+EXPECTED_CREATE_STACK_MODS = {
+    "create-1.21.1-6.0.10.jar",
+    "sable-neoforge-1.21.1-1.2.2.jar",
+    "create-aeronautics-bundled-1.21.1-1.2.1.jar",
+    "createdieselgenerators-1.21.1-1.3.11.jar",
+    "ritchiesprojectilelib-2.1.2+mc.1.21.1-neoforge.jar",
+    "createbigcannons-5.11.3+mc.1.21.1.jar",
+    "Create Encased-1.21.1-1.8-ht2.jar",
+    "FarmersDelight-1.21.1-1.3.1.jar",
+    "CreateDragonsPlus-1.10.0b.jar",
+    "create-central-kitchen-2.4.0.jar",
+}
+EXPECTED_CLIENT_ONLY_CREATE_TOOLS = {
+    "jei-1.21.1-neoforge-19.27.0.340.jar",
+}
 
 CREATECASING_BASE_MACHINES = {
     "press": "create:mechanical_press",
@@ -219,6 +234,21 @@ def check_all_datapack_json_parses(errors: list[str], root: Path) -> None:
         read_json(errors, path, str(path.relative_to(root)))
 
 
+def check_required_create_mods(errors: list[str], repo: Path) -> None:
+    for filename in sorted(EXPECTED_CREATE_STACK_MODS):
+        client_mod = repo / "client/mods" / filename
+        server_mod = repo / "server/mods" / filename
+        if not client_mod.exists():
+            errors.append(f"missing expected Create stack client mod: {client_mod.relative_to(repo)}")
+        if not server_mod.exists():
+            errors.append(f"missing expected Create stack server mod: {server_mod.relative_to(repo)}")
+
+    for filename in sorted(EXPECTED_CLIENT_ONLY_CREATE_TOOLS):
+        client_mod = repo / "client/mods" / filename
+        if not client_mod.exists():
+            errors.append(f"missing expected client Create workflow tool: {client_mod.relative_to(repo)}")
+
+
 def check_create_encased_variants(errors: list[str], root: Path) -> None:
     # Create Encased variants can otherwise bypass Tenpack's tuned base recipes.
     for category, base_machine in CREATECASING_BASE_MACHINES.items():
@@ -344,6 +374,7 @@ def main() -> int:
         return 1
 
     errors: list[str] = []
+    check_required_create_mods(errors, repo)
     check_all_datapack_json_parses(errors, root)
     check_create_encased_variants(errors, root)
     check_recipe_gates(errors, root)

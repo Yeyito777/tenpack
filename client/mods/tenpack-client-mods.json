@@ -426,6 +426,76 @@
       "note": "Installed on both client and server. Configured so every death removes 2 hitpoints / 1 heart; player kills keep lifesteal enabled so the killer gains that heart, while mob and environmental deaths still cost the victim a heart."
     },
     {
+      "name": "Create",
+      "version": "6.0.10+mc1.21.1 (NeoForge)",
+      "filename": "create-1.21.1-6.0.10.jar",
+      "source": "https://cdn.modrinth.com/data/LNytGWDc/versions/UjX6dr61/create-1.21.1-6.0.10.jar",
+      "note": "Core Create mod. Installed on both client and server; Tenpack Create progression datapack targets Create 6.0.10."
+    },
+    {
+      "name": "Sable",
+      "version": "1.2.2+mc1.21.1 (NeoForge)",
+      "filename": "sable-neoforge-1.21.1-1.2.2.jar",
+      "source": "https://cdn.modrinth.com/data/T9PomCSv/versions/3FMsUjO4/sable-neoforge-1.21.1-1.2.2.jar",
+      "note": "Required by Create Aeronautics bundled 1.2.1. Includes its embedded dependency per Modrinth metadata."
+    },
+    {
+      "name": "Create Aeronautics",
+      "version": "1.2.1+mc1.21.1 bundled (NeoForge)",
+      "filename": "create-aeronautics-bundled-1.21.1-1.2.1.jar",
+      "source": "https://cdn.modrinth.com/data/oWaK0Q19/versions/YhZLrAFC/create-aeronautics-bundled-1.21.1-1.2.1.jar",
+      "note": "Bundled Aeronautics stack used by Tenpack progression; includes Aeronautics/Simulated/Offroad modules that are gated by the Create progression datapack."
+    },
+    {
+      "name": "Create: Diesel Generators",
+      "version": "1.21.1-1.3.11 (NeoForge)",
+      "filename": "createdieselgenerators-1.21.1-1.3.11.jar",
+      "source": "https://cdn.modrinth.com/data/ZM3tt6p1/versions/uxgzKkcD/createdieselgenerators-1.21.1-1.3.11.jar",
+      "note": "Oil, pumpjacks, refineries, diesel engines, canisters, and oil barrels. Tenpack tunes this into dry-biome faction oilfields and fuel logistics."
+    },
+    {
+      "name": "Ritchie's Projectile Library",
+      "version": "2.1.2+mc.1.21.1 (NeoForge)",
+      "filename": "ritchiesprojectilelib-2.1.2+mc.1.21.1-neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/B3pb093D/versions/hZ6B2Z0x/ritchiesprojectilelib-2.1.2%2Bmc.1.21.1-neoforge.jar",
+      "note": "Required by Create Big Cannons."
+    },
+    {
+      "name": "Create Big Cannons",
+      "version": "5.11.3+mc.1.21.1 (NeoForge)",
+      "filename": "createbigcannons-5.11.3+mc.1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/GWp4jCJj/versions/bsGaXKEd/createbigcannons-5.11.3%2Bmc.1.21.1.jar",
+      "note": "Create-based artillery and cannon production. Tenpack gates production machinery into precision-era faction heavy industry."
+    },
+    {
+      "name": "Create Encased",
+      "version": "1.8-ht2 for 1.21.1 (NeoForge)",
+      "filename": "Create Encased-1.21.1-1.8-ht2.jar",
+      "source": "https://cdn.modrinth.com/data/hSSqdyU1/versions/sjCAxK2s/Create%20Encased-1.21.1-1.8-ht2.jar",
+      "note": "Alternate casing variants for Create machines. Tenpack datapack rewrites these as upgrades from tuned base machines so they do not bypass progression."
+    },
+    {
+      "name": "Farmer's Delight",
+      "version": "1.21.1-1.3.1 (NeoForge)",
+      "filename": "FarmersDelight-1.21.1-1.3.1.jar",
+      "source": "https://cdn.modrinth.com/data/R2OftAxM/versions/9gp7w8NC/FarmersDelight-1.21.1-1.3.1.jar",
+      "note": "Food/cooking/farming expansion. Added for the Create workflow food/farming angle; audit with Central Kitchen before further balance changes."
+    },
+    {
+      "name": "Create: Dragons Plus",
+      "version": "1.10.0b for Create 6.0.10 (NeoForge)",
+      "filename": "CreateDragonsPlus-1.10.0b.jar",
+      "source": "https://cdn.modrinth.com/data/dzb1a5WV/versions/ew6gKsnx/CreateDragonsPlus-1.10.0b.jar",
+      "note": "Required by Create: Central Kitchen and also part of the broader Create addon ecosystem."
+    },
+    {
+      "name": "Create: Central Kitchen",
+      "version": "2.4.0 for Create 6.0.10 (NeoForge)",
+      "filename": "create-central-kitchen-2.4.0.jar",
+      "source": "https://cdn.modrinth.com/data/btq68HMO/versions/TUJIHmUh/create-central-kitchen-2.4.0.jar",
+      "note": "Create/Farmer's Delight integration. Added to make farms/cooking part of the Create workflow rather than a disconnected food mod."
+    },
+    {
       "name": "Just Enough Items",
       "version": "19.27.0.340 (NeoForge 1.21.1)",
       "filename": "jei-1.21.1-neoforge-19.27.0.340.jar",

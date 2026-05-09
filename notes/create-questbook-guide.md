@@ -96,6 +96,22 @@ Suggested quests:
    - Text: A good train route solves a real problem: oil to refinery, refinery to airfield, mine to foundry, or supplies to a front.
    - Completion: optional/manual quest.
 
+## Chapter 4B: Farms and kitchens
+
+Goal: make Farmer's Delight + Create farming feel like infrastructure, not hunger homework.
+
+Suggested quests:
+
+1. **Mechanical Harvester**
+   - Text: Farms are one of the easiest ways to understand Create. A harvester turns a field into infrastructure.
+   - Completion: hold `create:mechanical_harvester`.
+2. **Cooking Pot**
+   - Text: Farmer's Delight gives farms a reason to become kitchens. Food should be useful enough to ship, not annoying enough to become a chore.
+   - Completion: hold `farmersdelight:cooking_pot`.
+3. **Kitchen Line**
+   - Text: Belts, basins, fans, deployers, and Farmer's Delight ingredients can become a visible faction food district.
+   - Completion: hold a prepared Farmer's Delight meal or manual/team quest.
+
 ## Chapter 5: Black Gold
 
 Goal: explain oil without turning the questbook into a spreadsheet.

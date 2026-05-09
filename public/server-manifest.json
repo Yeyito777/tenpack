@@ -1015,6 +1015,24 @@
       "url": "files/d7/d72f235cf1f56f2c374f52c00bdda5034524b28142305a84cfc123a3f92ad274"
     },
     {
+      "path": "mods/Create Encased-1.21.1-1.8-ht2.jar",
+      "sha256": "d66b7caac3fe29bb95ed6c53c8271d797a2f0cacfc98c8819406bc445783d12c",
+      "size": 2410332,
+      "url": "files/d6/d66b7caac3fe29bb95ed6c53c8271d797a2f0cacfc98c8819406bc445783d12c"
+    },
+    {
+      "path": "mods/CreateDragonsPlus-1.10.0b.jar",
+      "sha256": "8cc47a5ea04c8bbefd24ebca67d45e6a44f80925723cb2f82676d27b0a2a9d66",
+      "size": 756460,
+      "url": "files/8c/8cc47a5ea04c8bbefd24ebca67d45e6a44f80925723cb2f82676d27b0a2a9d66"
+    },
+    {
+      "path": "mods/FarmersDelight-1.21.1-1.3.1.jar",
+      "sha256": "f02ffbf597af17d481b930daeed4b5906d6a6fddb464d392f28f42560965f4f4",
+      "size": 3124506,
+      "url": "files/f0/f02ffbf597af17d481b930daeed4b5906d6a6fddb464d392f28f42560965f4f4"
+    },
+    {
       "path": "mods/GlitchCore-neoforge-1.21.1-2.1.0.0.jar",
       "sha256": "31589ffc136ac031319db88fa7ce2599ba789ae5d18bd5125e1857e20a834993",
       "size": 90918,
@@ -1141,6 +1159,36 @@
       "url": "files/80/80d984f0a17d968220129cc58edd5c9f28a5f61a84ec67dcc41228a46dfa4bb1"
     },
     {
+      "path": "mods/create-1.21.1-6.0.10.jar",
+      "sha256": "ef87fe5709f1ba1f5b8bb20a2925b5afb4669e178fd6d8bf10c167759eefe37a",
+      "size": 19123767,
+      "url": "files/ef/ef87fe5709f1ba1f5b8bb20a2925b5afb4669e178fd6d8bf10c167759eefe37a"
+    },
+    {
+      "path": "mods/create-aeronautics-bundled-1.21.1-1.2.1.jar",
+      "sha256": "5a8c6d168ec1b47ecee7f2e83a93accbca71544d2b14ca1ca1b1271855f26248",
+      "size": 33030286,
+      "url": "files/5a/5a8c6d168ec1b47ecee7f2e83a93accbca71544d2b14ca1ca1b1271855f26248"
+    },
+    {
+      "path": "mods/create-central-kitchen-2.4.0.jar",
+      "sha256": "259a9b88d305780234bb2020359879406d74b945616d99a16871334d7aee1826",
+      "size": 342464,
+      "url": "files/25/259a9b88d305780234bb2020359879406d74b945616d99a16871334d7aee1826"
+    },
+    {
+      "path": "mods/createbigcannons-5.11.3+mc.1.21.1.jar",
+      "sha256": "16cb451c1673198131148cec8196bb6325b3eb85168172bd629c0b93261381df",
+      "size": 3715787,
+      "url": "files/16/16cb451c1673198131148cec8196bb6325b3eb85168172bd629c0b93261381df"
+    },
+    {
+      "path": "mods/createdieselgenerators-1.21.1-1.3.11.jar",
+      "sha256": "8e5e0cb90cd1fd6336f22994d6c6a31dd56373096275b80910c6983a4dccc864",
+      "size": 3132480,
+      "url": "files/8e/8e5e0cb90cd1fd6336f22994d6c6a31dd56373096275b80910c6983a4dccc864"
+    },
+    {
       "path": "mods/curios-neoforge-9.5.1+1.21.1.jar",
       "sha256": "a45df2125c26219974aba7507ffc9afe7b83acc941a386af3faacb1cc0056fde",
       "size": 410690,
@@ -1199,6 +1247,18 @@
       "sha256": "eec4df0500ced908e7979299e4073fc86d88ebb9ac815be652136b2eb6ab7f1b",
       "size": 201639,
       "url": "files/ee/eec4df0500ced908e7979299e4073fc86d88ebb9ac815be652136b2eb6ab7f1b"
+    },
+    {
+      "path": "mods/ritchiesprojectilelib-2.1.2+mc.1.21.1-neoforge.jar",
+      "sha256": "cc509060833736fb650aa4c36b1ce33a7eeeb9ca6e9f8e80a7c951c9e7487b24",
+      "size": 76369,
+      "url": "files/cc/cc509060833736fb650aa4c36b1ce33a7eeeb9ca6e9f8e80a7c951c9e7487b24"
+    },
+    {
+      "path": "mods/sable-neoforge-1.21.1-1.2.2.jar",
+      "sha256": "15fb660a0d368204b37f3967bfcc48137397b7174ca2945c5635cc4539c755f8",
+      "size": 12719293,
+      "url": "files/15/15fb660a0d368204b37f3967bfcc48137397b7174ca2945c5635cc4539c755f8"
     },
     {
       "path": "mods/simpleclouds-0.8.0f-b5-all.jar",
