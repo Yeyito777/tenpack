@@ -343,6 +343,12 @@
       "url": "files/3e/3e3f94d2d5cdcb8145c4385d521974aa2d8669b2cc212351f70cf06488182e83"
     },
     {
+      "path": "mods/jei-1.21.1-neoforge-19.27.0.340.jar",
+      "sha256": "8aaf547432f1b4958239b036356b910692fe40f858c3073d996f56bbf7c99826",
+      "size": 1529391,
+      "url": "files/8a/8aaf547432f1b4958239b036356b910692fe40f858c3073d996f56bbf7c99826"
+    },
+    {
       "path": "mods/lambdynamiclights-4.8.8+1.21.1.jar",
       "sha256": "5c41d55ad9306f8d0a8c1b0174d71a3e333026b08adb6883653cd91ab6c5bea0",
       "size": 2017417,
@@ -434,9 +440,9 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "08ff58646543d726e098a12df382a5147daade6a68ac196362dbcad57b07516f",
-      "size": 23525,
-      "url": "files/08/08ff58646543d726e098a12df382a5147daade6a68ac196362dbcad57b07516f"
+      "sha256": "8012ad680183f123147750344d797a0082235ada09bceb9074633a0f1c5589a5",
+      "size": 23980,
+      "url": "files/80/8012ad680183f123147750344d797a0082235ada09bceb9074633a0f1c5589a5"
     },
     {
       "path": "mods/tenpackdeath-0.1.0.jar",

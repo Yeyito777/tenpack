@@ -424,6 +424,13 @@
       "filename": "lifesteal-9.3.3+1.21.1.jar",
       "source": "https://cdn.modrinth.com/data/YX0eip4b/versions/f5mnj6lv/lifesteal-9.3.3%2B1.21.1.jar",
       "note": "Installed on both client and server. Configured so every death removes 2 hitpoints / 1 heart; player kills keep lifesteal enabled so the killer gains that heart, while mob and environmental deaths still cost the victim a heart."
+    },
+    {
+      "name": "Just Enough Items",
+      "version": "19.27.0.340 (NeoForge 1.21.1)",
+      "filename": "jei-1.21.1-neoforge-19.27.0.340.jar",
+      "source": "https://cdn.modrinth.com/data/u6dRKJwZ/versions/YAcQ6elZ/jei-1.21.1-neoforge-19.27.0.340.jar",
+      "note": "Client-side recipe and item viewer. Required for Tenpack Create progression readability; datapack recipe changes are intended to be inspected through JEI. No dependencies."
     }
   ],
   "note": "Trimmed to requested mods plus required libraries. Experiment 2026-05-06: restored Camera Overhaul/Falling Leaves; CameraOverhaul jar patched to accept cloth_config >=15; using Fabric Cloth Config v15 through Sinytra Connector because NeoForge Cloth Config v16 requires NeoForge 21.2.x / MC 1.21.2+. Added Simple Voice Chat stack on 2026-05-07: Simple Voice Chat, Voice Chat Interaction via Connector, and Voiceless Survival."
