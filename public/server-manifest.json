@@ -1219,6 +1219,12 @@
       "url": "files/a1/a1b6ce25e8627aa7e748672eedb6b71af68e0993462313649c259f38e42bcac9"
     },
     {
+      "path": "mods/jei-1.21.1-neoforge-19.27.0.340-tenpack-mcrangefix.jar",
+      "sha256": "4a452ff660b3209631ac081a83acd34fd1f3086d4c2b1c3813d763f4aeb04b81",
+      "size": 1529391,
+      "url": "files/4a/4a452ff660b3209631ac081a83acd34fd1f3086d4c2b1c3813d763f4aeb04b81"
+    },
+    {
       "path": "mods/legendarysurvivaloverhaul-1.21.1-2.4.2.jar",
       "sha256": "da9c38f05df4dfe09e5226f17d43a0c1725c16ede3ea6dd2d945c111b1d413e4",
       "size": 3742368,
@@ -1283,6 +1289,12 @@
       "sha256": "8dc3c01ed548f2eecbc52b1a2f8301267e265d746fb09961776984a81e343e3b",
       "size": 845442,
       "url": "files/8d/8dc3c01ed548f2eecbc52b1a2f8301267e265d746fb09961776984a81e343e3b"
+    },
+    {
+      "path": "mods/tenpack_travel-0.1.0.jar",
+      "sha256": "14bfd2b7cf80ae78485942c76adf6db2aac7fa386a968440511f18a1466c4366",
+      "size": 13613,
+      "url": "files/14/14bfd2b7cf80ae78485942c76adf6db2aac7fa386a968440511f18a1466c4366"
     },
     {
       "path": "mods/tenpackdeath-0.1.0.jar",

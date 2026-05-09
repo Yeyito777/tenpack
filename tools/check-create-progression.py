@@ -38,7 +38,7 @@ EXPECTED_CREATE_STACK_MODS = {
     "create-central-kitchen-2.4.0.jar",
 }
 EXPECTED_CLIENT_ONLY_CREATE_TOOLS = {
-    "jei-1.21.1-neoforge-19.27.0.340.jar",
+    "jei-1.21.1-neoforge-19.27.0.340-tenpack-mcrangefix.jar",
 }
 
 CREATECASING_BASE_MACHINES = {

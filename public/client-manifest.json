@@ -391,10 +391,10 @@
       "url": "files/3e/3e3f94d2d5cdcb8145c4385d521974aa2d8669b2cc212351f70cf06488182e83"
     },
     {
-      "path": "mods/jei-1.21.1-neoforge-19.27.0.340.jar",
-      "sha256": "8aaf547432f1b4958239b036356b910692fe40f858c3073d996f56bbf7c99826",
+      "path": "mods/jei-1.21.1-neoforge-19.27.0.340-tenpack-mcrangefix.jar",
+      "sha256": "4a452ff660b3209631ac081a83acd34fd1f3086d4c2b1c3813d763f4aeb04b81",
       "size": 1529391,
-      "url": "files/8a/8aaf547432f1b4958239b036356b910692fe40f858c3073d996f56bbf7c99826"
+      "url": "files/4a/4a452ff660b3209631ac081a83acd34fd1f3086d4c2b1c3813d763f4aeb04b81"
     },
     {
       "path": "mods/lambdynamiclights-4.8.8+1.21.1.jar",
@@ -500,9 +500,15 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "d44de2ce7ecf3244bae29a554c353c25b842208b8820c06a7809224bfae1dc41",
-      "size": 28449,
-      "url": "files/d4/d44de2ce7ecf3244bae29a554c353c25b842208b8820c06a7809224bfae1dc41"
+      "sha256": "ccbe0737b7814026946cdfa36878a663d3d8a8060126935f26de8405d0502097",
+      "size": 28622,
+      "url": "files/cc/ccbe0737b7814026946cdfa36878a663d3d8a8060126935f26de8405d0502097"
+    },
+    {
+      "path": "mods/tenpack_travel-0.1.0.jar",
+      "sha256": "14bfd2b7cf80ae78485942c76adf6db2aac7fa386a968440511f18a1466c4366",
+      "size": 13613,
+      "url": "files/14/14bfd2b7cf80ae78485942c76adf6db2aac7fa386a968440511f18a1466c4366"
     },
     {
       "path": "mods/tenpackdeath-0.1.0.jar",

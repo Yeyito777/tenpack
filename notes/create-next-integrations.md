@@ -7,8 +7,9 @@ Status note for follow-up passes after the Create progression/oilfield work.
 Installed in the local working tree:
 
 - Just Enough Items `19.27.0.340` for Minecraft `1.21.1` NeoForge
-- File: `client/mods/jei-1.21.1-neoforge-19.27.0.340.jar`
+- File: `client/mods/jei-1.21.1-neoforge-19.27.0.340-tenpack-mcrangefix.jar`
 - Source: `https://cdn.modrinth.com/data/u6dRKJwZ/versions/YAcQ6elZ/jei-1.21.1-neoforge-19.27.0.340.jar`
+- Local patch: only `META-INF/neoforge.mods.toml` is changed. The upstream file is labeled `1.21.1` on Modrinth but declares Minecraft `versionRange="[1.21, 1.21.1)"`, which would exclude Tenpack's actual Minecraft `1.21.1`. Tenpack changes that range to `"[1.21.1, 1.21.2)"`.
 
 Reason: Tenpack Create progression depends on players being able to inspect modified recipes. Advancements and a future questbook can explain the path, but JEI should be the recipe source of truth.
 

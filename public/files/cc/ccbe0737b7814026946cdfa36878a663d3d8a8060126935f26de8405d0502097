@@ -504,10 +504,10 @@
     },
     {
       "name": "Just Enough Items",
-      "version": "19.27.0.340 (NeoForge 1.21.1)",
-      "filename": "jei-1.21.1-neoforge-19.27.0.340.jar",
+      "version": "19.27.0.340 (NeoForge 1.21.1; Tenpack metadata range fix)",
+      "filename": "jei-1.21.1-neoforge-19.27.0.340-tenpack-mcrangefix.jar",
       "source": "https://cdn.modrinth.com/data/u6dRKJwZ/versions/YAcQ6elZ/jei-1.21.1-neoforge-19.27.0.340.jar",
-      "note": "Client-side recipe and item viewer. Required for Tenpack Create progression readability; datapack recipe changes are intended to be inspected through JEI. No dependencies."
+      "note": "Recipe and item viewer. Tenpack patches only META-INF/neoforge.mods.toml from the upstream jar so the Minecraft dependency range admits 1.21.1; upstream Modrinth labels the file 1.21.1 but the jar metadata declares [1.21, 1.21.1). Installed on both client and server for integration compatibility."
     }
   ],
   "note": "Trimmed to requested mods plus required libraries. Experiment 2026-05-06: restored Camera Overhaul/Falling Leaves; CameraOverhaul jar patched to accept cloth_config >=15; using Fabric Cloth Config v15 through Sinytra Connector because NeoForge Cloth Config v16 requires NeoForge 21.2.x / MC 1.21.2+. Added Simple Voice Chat stack on 2026-05-07: Simple Voice Chat, Voice Chat Interaction via Connector, and Voiceless Survival."
