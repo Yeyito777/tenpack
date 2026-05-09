@@ -419,6 +419,13 @@
       "note": "Tenpack-specific Corpse behavior add-on. Configured by config/tenpackdeath.properties: non-owners are blocked until the corpse becomes a skeleton, ops do not bypass by default, after 5 minutes it warns the owner and removes one random stored item stack every 30 seconds, and player death plays a Re:Zero Return-by-Death-inspired vanilla sound cue."
     },
     {
+      "name": "Tenpack Travel",
+      "version": "0.1.0",
+      "filename": "tenpack_travel-0.1.0.jar",
+      "source": "local source: mods-src/tenpack-travel/",
+      "note": "Tenpack-specific travel utility mod. Adds the Grooming Brush: an intentional item-based animal inspection tool for horses, mules, llamas, camels, and key Alex's Mobs mounts/cargo animals. Survival output uses coarse bands instead of Jade-style passive stat overlays."
+    },
+    {
       "name": "Lifesteal",
       "version": "9.3.3 (NeoForge 1.21.1)",
       "filename": "lifesteal-9.3.3+1.21.1.jar",
