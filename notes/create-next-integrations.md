@@ -28,6 +28,26 @@ Installed locally in this branch as the concrete Create workflow baseline:
 - Create: Dragons Plus `1.10.0b`, required by Central Kitchen
 - Create: Central Kitchen `2.4.0`
 
+Installed in the first curated addon batch:
+
+- Create: Steam 'n' Rails `0.2.0-beta.2+neoforge-mc1.21.1`
+- Create Railways Navigator `1.21.1-beta-0.9.0-C6`
+- DragonLib `1.21.1-beta-3.0.26`, required by Railways Navigator
+- Architectury API `13.0.8+neoforge`, required by DragonLib
+- Create: Copycats+ `3.0.4+mc.1.21.1-neoforge`
+- Create Deco `2.1.3`
+- Create: Bells & Whistles `0.4.7`
+- Rechiseled `1.2.4-neoforge-mc1.21`
+- Rechiseled: Create `1.1.0-neoforge-mc1.21`
+- SuperMartijn642's Core Lib `1.1.21-neoforge-mc1.21`, required by Rechiseled
+- SuperMartijn642's Config Lib `1.1.8-neoforge-mc1.21`, required by Rechiseled
+- Fusion `1.2.12-neoforge-mc1.21.1`, client-side dependency required by Rechiseled
+- Kotlin for Forge `5.11.0`, required by Slice & Dice
+- Create Slice & Dice `4.2.4`
+- Create Confectionery `1.1.2`
+- Create: Winery `2.0.2-neoforge-1.21.1`
+- Create: Bitterballen `1.0.2C`
+
 The important caveat is still runtime testing. The static pack build can verify mirroring/manifests, but it does not prove that the full Create stack launches cleanly together.
 
 ## Create: Estrogen

@@ -117,13 +117,6 @@
       "source": "https://cdn.modrinth.com/data/iv9jp2k9/versions/wqHGyD4G/lithosphere-1.7.jar"
     },
     {
-      "name": "Architectury API",
-      "version": "13.0.8+neoforge",
-      "filename": "architectury-13.0.8-neoforge.jar",
-      "source": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/ZxYGwlk0/architectury-13.0.8-neoforge.jar",
-      "note": "Required by Countered's Terrain Slabs and Gabou's Libs."
-    },
-    {
       "name": "Countered's Terrain Slabs",
       "version": "3.0.3 (NeoForge)",
       "filename": "terrain_slabs-neoforge-3.0.3.jar",
@@ -494,6 +487,125 @@
       "filename": "create-central-kitchen-2.4.0.jar",
       "source": "https://cdn.modrinth.com/data/btq68HMO/versions/TUJIHmUh/create-central-kitchen-2.4.0.jar",
       "note": "Create/Farmer's Delight integration. Added to make farms/cooking part of the Create workflow rather than a disconnected food mod."
+    },
+    {
+      "name": "Create: Steam 'n' Rails",
+      "version": "0.2.0-beta.2+neoforge-mc1.21.1",
+      "filename": "railways-0.2.0-beta.2+neoforge-mc1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/L3Jv0QZI/versions/dZa50kut/railways-0.2.0-beta.2%2Bneoforge-mc1.21.1.jar",
+      "note": "Railway expansion for Create. Added because trains are a core Tenpack faction logistics pressure point."
+    },
+    {
+      "name": "Architectury API",
+      "version": "13.0.8+neoforge",
+      "filename": "architectury-13.0.8-neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/ZxYGwlk0/architectury-13.0.8-neoforge.jar",
+      "note": "Required by DragonLib, which is required by Create Railways Navigator."
+    },
+    {
+      "name": "Kotlin for Forge",
+      "version": "5.11.0",
+      "filename": "kotlinforforge-5.11.0-all.jar",
+      "source": "https://cdn.modrinth.com/data/ordsPcFz/versions/NrSebcsG/kotlinforforge-5.11.0-all.jar",
+      "note": "Required by Create Slice & Dice on NeoForge."
+    },
+    {
+      "name": "DragonLib",
+      "version": "1.21.1-beta-3.0.26",
+      "filename": "dragonlib-neoforge-1.21.1-beta-3.0.26.jar",
+      "source": "https://cdn.modrinth.com/data/sbIsGaOV/versions/6bSNB0Np/dragonlib-neoforge-1.21.1-beta-3.0.26.jar",
+      "note": "Required by Create Railways Navigator."
+    },
+    {
+      "name": "Create Railways Navigator",
+      "version": "1.21.1-beta-0.9.0-C6",
+      "filename": "createrailwaysnavigator-neoforge-1.21.1-beta-0.9.0-C6.jar",
+      "source": "https://cdn.modrinth.com/data/Dq3STxps/versions/n4iiBI1w/createrailwaysnavigator-neoforge-1.21.1-beta-0.9.0-C6.jar",
+      "note": "Route/navigation tools for Create rail networks; supports readable public/faction rail systems."
+    },
+    {
+      "name": "Create: Copycats+",
+      "version": "3.0.4+mc.1.21.1-neoforge",
+      "filename": "copycats-3.0.4+mc.1.21.1-neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/UT2M39wf/versions/kecZ0sl7/copycats-3.0.4%2Bmc.1.21.1-neoforge.jar",
+      "note": "Create-themed copycat blocks for faction architecture, factories, rails, refineries, hangars, and cannon works."
+    },
+    {
+      "name": "Create Deco",
+      "version": "2.1.3",
+      "filename": "createdeco-2.1.3.jar",
+      "source": "https://cdn.modrinth.com/data/sMvUb4Rb/versions/qrcMVoBD/createdeco-2.1.3.jar",
+      "note": "Industrial decorative blocks. Chosen over Create: Design n' Decor for the first decoration pass to avoid overlapping deco bloat."
+    },
+    {
+      "name": "Create: Bells & Whistles",
+      "version": "0.4.7 for 1.21.1",
+      "filename": "bellsandwhistles-0.4.7-1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/gJ5afkVv/versions/w0mifib8/bellsandwhistles-0.4.7-1.21.1.jar",
+      "note": "Railway/building decoration that makes faction train stations and industrial routes more expressive."
+    },
+    {
+      "name": "SuperMartijn642's Core Lib",
+      "version": "1.1.21-neoforge-mc1.21",
+      "filename": "supermartijn642corelib-1.1.21-neoforge-mc1.21.jar",
+      "source": "https://cdn.modrinth.com/data/rOUBggPv/versions/hcYSe7v7/supermartijn642corelib-1.1.21-neoforge-mc1.21.jar",
+      "note": "Required by Rechiseled."
+    },
+    {
+      "name": "SuperMartijn642's Config Lib",
+      "version": "1.1.8-neoforge-mc1.21",
+      "filename": "supermartijn642configlib-1.1.8-neoforge-mc1.21.jar",
+      "source": "https://cdn.modrinth.com/data/LN9BxssP/versions/qKL9jM75/supermartijn642configlib-1.1.8-neoforge-mc1.21.jar",
+      "note": "Required by Rechiseled."
+    },
+    {
+      "name": "Fusion",
+      "version": "1.2.12-neoforge-mc1.21.1",
+      "filename": "fusion-1.2.12-neoforge-mc1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/p19vrgc2/versions/h2GrA0Ku/fusion-1.2.12-neoforge-mc1.21.1.jar",
+      "note": "Client-side connected texture dependency required by Rechiseled. Client-only; not installed on the dedicated server."
+    },
+    {
+      "name": "Rechiseled",
+      "version": "1.2.4-neoforge-mc1.21",
+      "filename": "rechiseled-1.2.4-neoforge-mc1.21.jar",
+      "source": "https://cdn.modrinth.com/data/B0g2vT6l/versions/b3uurWWs/rechiseled-1.2.4-neoforge-mc1.21.jar",
+      "note": "Required by Rechiseled: Create and useful decorative block palette on its own."
+    },
+    {
+      "name": "Rechiseled: Create",
+      "version": "1.1.0-neoforge-mc1.21",
+      "filename": "rechiseledcreate-1.1.0-neoforge-mc1.21.jar",
+      "source": "https://cdn.modrinth.com/data/E6867niZ/versions/TzPaH8MY/rechiseledcreate-1.1.0-neoforge-mc1.21.jar",
+      "note": "Create-themed Rechiseled blocks for industrial/faction architecture."
+    },
+    {
+      "name": "Create Slice & Dice",
+      "version": "4.2.4",
+      "filename": "sliceanddice-forge-4.2.4.jar",
+      "source": "https://cdn.modrinth.com/data/GmjmRQ0A/versions/tyVnEa75/sliceanddice-forge-4.2.4.jar",
+      "note": "Create/Farmer's Delight food automation bridge for faction kitchens and farm districts."
+    },
+    {
+      "name": "Create Confectionery",
+      "version": "1.1.2 for 1.21.1",
+      "filename": "create-confectionery1.21.1_v1.1.2.jar",
+      "source": "https://cdn.modrinth.com/data/WPE5gRs9/versions/m9KI739R/create-confectionery1.21.1_v1.1.2.jar",
+      "note": "Food/flavor Create processing for sweets and trade goods; low-stakes faction economy flavor."
+    },
+    {
+      "name": "Create: Winery",
+      "version": "2.0.2-neoforge-1.21.1",
+      "filename": "create_winery-2.0.2-neoforge-1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/zBuk6egG/versions/vTUNDdDM/create_winery-2.0.2-neoforge-1.21.1.jar",
+      "note": "Create beverage/winery processing for farm districts, taverns, and trade goods."
+    },
+    {
+      "name": "Create: Bitterballen",
+      "version": "1.0.2C for 1.21.1",
+      "filename": "create_bic_bit-1.0.2C.jar",
+      "source": "https://cdn.modrinth.com/data/16DuAG4k/versions/15wUZ9Rw/create_bic_bit-1.0.2C.jar",
+      "note": "Small funny food/flavor Create addon approved for now; audit in JEI during food pass."
     },
     {
       "name": "Just Enough Items",

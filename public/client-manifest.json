@@ -271,6 +271,12 @@
       "url": "files/a1/a18b7b3eba737a1b39030412f4726ad74e07c8c006dc51deb64ef5be8aba0e2f"
     },
     {
+      "path": "mods/bellsandwhistles-0.4.7-1.21.1.jar",
+      "sha256": "a438cf2ea3a05120e12342484f1e12ca11526fbf4195d259ce1d7df8a9b3ffca",
+      "size": 193619,
+      "url": "files/a4/a438cf2ea3a05120e12342484f1e12ca11526fbf4195d259ce1d7df8a9b3ffca"
+    },
+    {
       "path": "mods/betterdays-1.21.1-3.3.6.3-NEOFORGE.jar",
       "sha256": "03acad0637dd5d86361178eb3e87ad8f2ed965e9c84514df4dc4228bb24aa2aa",
       "size": 585998,
@@ -307,6 +313,12 @@
       "url": "files/a7/a79817f1076e2e6499b0ab09c4e8c032d04b071341b66d036c3d96112804e51b"
     },
     {
+      "path": "mods/copycats-3.0.4+mc.1.21.1-neoforge.jar",
+      "sha256": "8480e2a62eaa625f75776831c1d8a9ef3d77d2d816fa2e67566c6ec25ba745d1",
+      "size": 1791747,
+      "url": "files/84/8480e2a62eaa625f75776831c1d8a9ef3d77d2d816fa2e67566c6ec25ba745d1"
+    },
+    {
       "path": "mods/corpse-neoforge-1.21.1-1.1.13.jar",
       "sha256": "80d984f0a17d968220129cc58edd5c9f28a5f61a84ec67dcc41228a46dfa4bb1",
       "size": 253694,
@@ -331,16 +343,46 @@
       "url": "files/25/259a9b88d305780234bb2020359879406d74b945616d99a16871334d7aee1826"
     },
     {
+      "path": "mods/create-confectionery1.21.1_v1.1.2.jar",
+      "sha256": "abf25a26f4e814bc208e60ddbe53a52bbd7638fb689184dd220b2146190b43b3",
+      "size": 2126985,
+      "url": "files/ab/abf25a26f4e814bc208e60ddbe53a52bbd7638fb689184dd220b2146190b43b3"
+    },
+    {
+      "path": "mods/create_bic_bit-1.0.2C.jar",
+      "sha256": "9e3846da4988b79e0c2284081f08e7b2afe9b8ba37e9b7187c54fd01ffd6e79b",
+      "size": 395943,
+      "url": "files/9e/9e3846da4988b79e0c2284081f08e7b2afe9b8ba37e9b7187c54fd01ffd6e79b"
+    },
+    {
+      "path": "mods/create_winery-2.0.2-neoforge-1.21.1.jar",
+      "sha256": "fc79b74000361cfbb7586e72c28a584d22e605561a2a1952f5c82310373f8612",
+      "size": 513007,
+      "url": "files/fc/fc79b74000361cfbb7586e72c28a584d22e605561a2a1952f5c82310373f8612"
+    },
+    {
       "path": "mods/createbigcannons-5.11.3+mc.1.21.1.jar",
       "sha256": "16cb451c1673198131148cec8196bb6325b3eb85168172bd629c0b93261381df",
       "size": 3715787,
       "url": "files/16/16cb451c1673198131148cec8196bb6325b3eb85168172bd629c0b93261381df"
     },
     {
+      "path": "mods/createdeco-2.1.3.jar",
+      "sha256": "edacf1ad0bd6b9f1667d711650dc0cde604356d91caca7ca1ec428c2f9400c6e",
+      "size": 3328498,
+      "url": "files/ed/edacf1ad0bd6b9f1667d711650dc0cde604356d91caca7ca1ec428c2f9400c6e"
+    },
+    {
       "path": "mods/createdieselgenerators-1.21.1-1.3.11.jar",
       "sha256": "8e5e0cb90cd1fd6336f22994d6c6a31dd56373096275b80910c6983a4dccc864",
       "size": 3132480,
       "url": "files/8e/8e5e0cb90cd1fd6336f22994d6c6a31dd56373096275b80910c6983a4dccc864"
+    },
+    {
+      "path": "mods/createrailwaysnavigator-neoforge-1.21.1-beta-0.9.0-C6.jar",
+      "sha256": "b6b2360ea87358192621ae0bc3233f5f3c8b74007617545c2ff9ea5cb8842709",
+      "size": 2060438,
+      "url": "files/b6/b6b2360ea87358192621ae0bc3233f5f3c8b74007617545c2ff9ea5cb8842709"
     },
     {
       "path": "mods/curios-neoforge-9.5.1+1.21.1.jar",
@@ -353,6 +395,12 @@
       "sha256": "e56395ebb26318c11f3a9474bba14518f17f4f2028683eb0aa9cdc7dacf124e2",
       "size": 465787,
       "url": "files/e5/e56395ebb26318c11f3a9474bba14518f17f4f2028683eb0aa9cdc7dacf124e2"
+    },
+    {
+      "path": "mods/dragonlib-neoforge-1.21.1-beta-3.0.26.jar",
+      "sha256": "f1c9c6b808b9405b6f9fe52ca680145d015a65ad6f4c43ddf22ff7171e8f8dd4",
+      "size": 2098083,
+      "url": "files/f1/f1c9c6b808b9405b6f9fe52ca680145d015a65ad6f4c43ddf22ff7171e8f8dd4"
     },
     {
       "path": "mods/eg_particle_interactions-0.4.1-neoforge-mc1.21.1.jar",
@@ -371,6 +419,12 @@
       "sha256": "68abf2864e957df26ac0cc3bd5352ee67880e052b47a80f22f28556c1179f18d",
       "size": 5569793,
       "url": "files/68/68abf2864e957df26ac0cc3bd5352ee67880e052b47a80f22f28556c1179f18d"
+    },
+    {
+      "path": "mods/fusion-1.2.12-neoforge-mc1.21.1.jar",
+      "sha256": "5961f78d85b7bd88205bc65c9f8182bc041646aa3579fa39810878d9b5b87c0c",
+      "size": 532912,
+      "url": "files/59/5961f78d85b7bd88205bc65c9f8182bc041646aa3579fa39810878d9b5b87c0c"
     },
     {
       "path": "mods/gaboulibs-neoforge-1.4.jar",
@@ -395,6 +449,12 @@
       "sha256": "4a452ff660b3209631ac081a83acd34fd1f3086d4c2b1c3813d763f4aeb04b81",
       "size": 1529391,
       "url": "files/4a/4a452ff660b3209631ac081a83acd34fd1f3086d4c2b1c3813d763f4aeb04b81"
+    },
+    {
+      "path": "mods/kotlinforforge-5.11.0-all.jar",
+      "sha256": "ac827b62ce8fe71760208671b4a694e3ccd35049075f9406a751cffb5a5c9779",
+      "size": 6869790,
+      "url": "files/ac/ac827b62ce8fe71760208671b4a694e3ccd35049075f9406a751cffb5a5c9779"
     },
     {
       "path": "mods/lambdynamiclights-4.8.8+1.21.1.jar",
@@ -451,6 +511,24 @@
       "url": "files/dd/dd886cfd14c6cf1d23aec5d40871fd4b8794e65bc4153a74619e418a1b3165ba"
     },
     {
+      "path": "mods/railways-0.2.0-beta.2+neoforge-mc1.21.1.jar",
+      "sha256": "8dd9e285da0bd01c24f2cddc14182c01b570197dc2a9c9d5aa85e0b6bae47570",
+      "size": 11904503,
+      "url": "files/8d/8dd9e285da0bd01c24f2cddc14182c01b570197dc2a9c9d5aa85e0b6bae47570"
+    },
+    {
+      "path": "mods/rechiseled-1.2.4-neoforge-mc1.21.jar",
+      "sha256": "3316acf7af3a250fd0f2fa5c39540ee4e81c21f7ead29c4107d6a95f47642dd2",
+      "size": 11488067,
+      "url": "files/33/3316acf7af3a250fd0f2fa5c39540ee4e81c21f7ead29c4107d6a95f47642dd2"
+    },
+    {
+      "path": "mods/rechiseledcreate-1.1.0-neoforge-mc1.21.jar",
+      "sha256": "13832eec4d25548658ab93b235889d314b0add4abe7ca0c603db3efdf7664e73",
+      "size": 981192,
+      "url": "files/13/13832eec4d25548658ab93b235889d314b0add4abe7ca0c603db3efdf7664e73"
+    },
+    {
       "path": "mods/ritchiesprojectilelib-2.1.2+mc.1.21.1-neoforge.jar",
       "sha256": "cc509060833736fb650aa4c36b1ce33a7eeeb9ca6e9f8e80a7c951c9e7487b24",
       "size": 76369,
@@ -467,6 +545,12 @@
       "sha256": "50a10cb5db89bd1c02debb37f25b88efc3043f28cf7a5bc009ccec314d8a209c",
       "size": 2265660,
       "url": "files/50/50a10cb5db89bd1c02debb37f25b88efc3043f28cf7a5bc009ccec314d8a209c"
+    },
+    {
+      "path": "mods/sliceanddice-forge-4.2.4.jar",
+      "sha256": "c3bd743a73eed3de14f6be5221fe68655cfeed0749f8f467f2ce2012ed1416bd",
+      "size": 406699,
+      "url": "files/c3/c3bd743a73eed3de14f6be5221fe68655cfeed0749f8f467f2ce2012ed1416bd"
     },
     {
       "path": "mods/sodium-neoforge-0.6.13+mc1.21.1.jar",
@@ -499,16 +583,22 @@
       "url": "files/8d/8dc3c01ed548f2eecbc52b1a2f8301267e265d746fb09961776984a81e343e3b"
     },
     {
-      "path": "mods/tenpack-client-mods.json",
-      "sha256": "ccbe0737b7814026946cdfa36878a663d3d8a8060126935f26de8405d0502097",
-      "size": 28622,
-      "url": "files/cc/ccbe0737b7814026946cdfa36878a663d3d8a8060126935f26de8405d0502097"
+      "path": "mods/supermartijn642configlib-1.1.8-neoforge-mc1.21.jar",
+      "sha256": "d2ba7b839a2268e4e223457e813d11aa2476c3bf708a7bba691d8fc851778a4b",
+      "size": 207514,
+      "url": "files/d2/d2ba7b839a2268e4e223457e813d11aa2476c3bf708a7bba691d8fc851778a4b"
     },
     {
-      "path": "mods/tenpack_travel-0.1.0.jar",
-      "sha256": "14bfd2b7cf80ae78485942c76adf6db2aac7fa386a968440511f18a1466c4366",
-      "size": 13613,
-      "url": "files/14/14bfd2b7cf80ae78485942c76adf6db2aac7fa386a968440511f18a1466c4366"
+      "path": "mods/supermartijn642corelib-1.1.21-neoforge-mc1.21.jar",
+      "sha256": "d22b6dfea6922cb534adb9f8c5d43e4a3c27c864e512951df801cb1435a4d4d8",
+      "size": 558371,
+      "url": "files/d2/d22b6dfea6922cb534adb9f8c5d43e4a3c27c864e512951df801cb1435a4d4d8"
+    },
+    {
+      "path": "mods/tenpack-client-mods.json",
+      "sha256": "6dc5e8df79187350b6c88a94d226e482271d2731fd3875c7aa5ba5a025b92bc4",
+      "size": 33916,
+      "url": "files/6d/6dc5e8df79187350b6c88a94d226e482271d2731fd3875c7aa5ba5a025b92bc4"
     },
     {
       "path": "mods/tenpackdeath-0.1.0.jar",

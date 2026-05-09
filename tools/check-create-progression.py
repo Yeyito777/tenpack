@@ -36,9 +36,26 @@ EXPECTED_CREATE_STACK_MODS = {
     "FarmersDelight-1.21.1-1.3.1.jar",
     "CreateDragonsPlus-1.10.0b.jar",
     "create-central-kitchen-2.4.0.jar",
+    "architectury-13.0.8-neoforge.jar",
+    "railways-0.2.0-beta.2+neoforge-mc1.21.1.jar",
+    "dragonlib-neoforge-1.21.1-beta-3.0.26.jar",
+    "createrailwaysnavigator-neoforge-1.21.1-beta-0.9.0-C6.jar",
+    "copycats-3.0.4+mc.1.21.1-neoforge.jar",
+    "createdeco-2.1.3.jar",
+    "bellsandwhistles-0.4.7-1.21.1.jar",
+    "supermartijn642corelib-1.1.21-neoforge-mc1.21.jar",
+    "supermartijn642configlib-1.1.8-neoforge-mc1.21.jar",
+    "rechiseled-1.2.4-neoforge-mc1.21.jar",
+    "rechiseledcreate-1.1.0-neoforge-mc1.21.jar",
+    "kotlinforforge-5.11.0-all.jar",
+    "sliceanddice-forge-4.2.4.jar",
+    "create-confectionery1.21.1_v1.1.2.jar",
+    "create_winery-2.0.2-neoforge-1.21.1.jar",
+    "create_bic_bit-1.0.2C.jar",
 }
 EXPECTED_CLIENT_ONLY_CREATE_TOOLS = {
     "jei-1.21.1-neoforge-19.27.0.340-tenpack-mcrangefix.jar",
+    "fusion-1.2.12-neoforge-mc1.21.1.jar",
 }
 
 CREATECASING_BASE_MACHINES = {
