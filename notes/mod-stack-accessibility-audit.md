@@ -7,6 +7,7 @@ Purpose: audit the whole active mod stack after the Create progression rewrite. 
 This pass intentionally does **not** approve unrelated uncommitted Tenpack Travel work; the audit was run from a clean tree with that work stashed aside.
 
 For a player/progression-facing map of how these categories sit around the Create eras, see `notes/create-era-accessibility-map.md`.
+For the direct recipe scan of installed Create addon jars, see `notes/create-addon-recipe-era-audit.md`.
 
 ## Static integrity result
 
@@ -25,6 +26,7 @@ Result after this pass:
 - required metadata dependencies are satisfied after accounting for JarJar/nested jars and Connector/Forgified Fabric API
 - current client-only jars are allowlisted so accidental client-only content additions get noticed
 - hard-no/deferred addon categories are blocked from silently entering the mod list
+- installed Create addon recipe outputs/era anchors are checked separately by `./tools/check-create-addon-recipes.py`
 
 Create-specific command:
 

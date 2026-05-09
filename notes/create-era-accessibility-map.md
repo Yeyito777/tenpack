@@ -4,6 +4,8 @@ Purpose: player-facing/maintainer-facing map of how the installed mods fit aroun
 
 This is not a new progression system. It documents the current intent so future addon additions can be judged quickly.
 
+For a direct recipe-level audit of the installed Create addon jars, see `notes/create-addon-recipe-era-audit.md`.
+
 ## Era summary
 
 | Era | Player fantasy | Core unlocks | Social/faction pressure | Teaching surface |
@@ -159,6 +161,7 @@ Pressure intent:
 Guardrail:
 
 - future tiny addons should prefer this low-risk visual/infrastructure role; see `notes/create-small-addon-audit.md`.
+- addon recipes are scanned by `tools/check-create-addon-recipes.py` so decorative compat outputs do not accidentally become progression bypasses.
 
 ### Food/farm/kitchen Create ecosystem
 
