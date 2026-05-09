@@ -91,912 +91,6 @@
       "url": "files/8b/8bcad332ab96ca33166dfc861f27b4893a30e544274b640aec53816cd98205bf"
     },
     {
-      "path": "datapacks/tenpack-create-progression/README.md",
-      "sha256": "1591b6ea48615d1bbb0b7fd18ba2b64b36d3195eff52d0691040426bc8ed0594",
-      "size": 9347,
-      "url": "files/15/1591b6ea48615d1bbb0b7fd18ba2b64b36d3195eff52d0691040426bc8ed0594"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/aeronautics/recipe/adjustable_burner.json",
-      "sha256": "8bea6079a60366c79d0c9af6ca3b001db81d10724c203a2f4ce0d49a8792f2fd",
-      "size": 671,
-      "url": "files/8b/8bea6079a60366c79d0c9af6ca3b001db81d10724c203a2f4ce0d49a8792f2fd"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/aeronautics/recipe/gyroscopic_propeller_bearing.json",
-      "sha256": "6012d13a9a34b9aacfa4c74be9317eef9999900b8c55503b0c290360b607488b",
-      "size": 663,
-      "url": "files/60/6012d13a9a34b9aacfa4c74be9317eef9999900b8c55503b0c290360b607488b"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/aeronautics/recipe/propeller_bearing.json",
-      "sha256": "2d6334f2e25a0bfd5490cbf3b6ea7b2555316fcd29d1ee1d82cc1b26709d237a",
-      "size": 572,
-      "url": "files/2d/2d6334f2e25a0bfd5490cbf3b6ea7b2555316fcd29d1ee1d82cc1b26709d237a"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/aeronautics/recipe/smart_propeller.json",
-      "sha256": "3b63d832ebcf82d43dca80f3d9e8571799fa0787e7f3714cdae687763bd7eafe",
-      "size": 637,
-      "url": "files/3b/3b63d832ebcf82d43dca80f3d9e8571799fa0787e7f3714cdae687763bd7eafe"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/aeronautics/recipe/steam_vent.json",
-      "sha256": "cbb29135977119cb9fa87224c87877d77b8b457b2bc30fc53f05a7e53abf6662",
-      "size": 550,
-      "url": "files/cb/cbb29135977119cb9fa87224c87877d77b8b457b2bc30fc53f05a7e53abf6662"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/elevator_pulley.json",
-      "sha256": "3283cfa46e4e9a90296d6bf6ec386ae87f16e69a0f2923796a855cdc0f480f3d",
-      "size": 468,
-      "url": "files/32/3283cfa46e4e9a90296d6bf6ec386ae87f16e69a0f2923796a855cdc0f480f3d"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/encased_fan.json",
-      "sha256": "4465df0dbf8d917989d1b4a9619b7237d06394592172a70b6244bc7e44032b5d",
-      "size": 513,
-      "url": "files/44/4465df0dbf8d917989d1b4a9619b7237d06394592172a70b6244bc7e44032b5d"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/gantry_carriage.json",
-      "sha256": "9992aaf78471df4ee8f5b212be069b30f2ef82e9693b63f79cdc4f5b7da71fe6",
-      "size": 525,
-      "url": "files/99/9992aaf78471df4ee8f5b212be069b30f2ef82e9693b63f79cdc4f5b7da71fe6"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/item_drain.json",
-      "sha256": "8f90fff471e9182ddc28e40fb55e167042bebc0b30be9fe44747a37eaf34a475",
-      "size": 516,
-      "url": "files/8f/8f90fff471e9182ddc28e40fb55e167042bebc0b30be9fe44747a37eaf34a475"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/mechanical_bearing.json",
-      "sha256": "96021b750c0624728a47df4e8bcf1185cf645e2947cdb307a279eb18b03f4484",
-      "size": 525,
-      "url": "files/96/96021b750c0624728a47df4e8bcf1185cf645e2947cdb307a279eb18b03f4484"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/mechanical_crafter.json",
-      "sha256": "191d4e732ea10c1a31e9501fd399255cbc8f83c114326e7007341d284053c357",
-      "size": 538,
-      "url": "files/19/191d4e732ea10c1a31e9501fd399255cbc8f83c114326e7007341d284053c357"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/mechanical_drill.json",
-      "sha256": "b673e37743af753ee5cfad4ed516c592913daea72b79ce6c41a073e66ef9c948",
-      "size": 467,
-      "url": "files/b6/b673e37743af753ee5cfad4ed516c592913daea72b79ce6c41a073e66ef9c948"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/mechanical_harvester.json",
-      "sha256": "a35624b2b55364675766b20bb967859a579f89a352f42a1ff4d8e611c712bf0c",
-      "size": 518,
-      "url": "files/a3/a35624b2b55364675766b20bb967859a579f89a352f42a1ff4d8e611c712bf0c"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/mechanical_mixer.json",
-      "sha256": "b956adbb19843e286b5fa3cf2f1955159859a87f4091e5eeabc0818d8f341c6b",
-      "size": 517,
-      "url": "files/b9/b956adbb19843e286b5fa3cf2f1955159859a87f4091e5eeabc0818d8f341c6b"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/mechanical_piston.json",
-      "sha256": "dcc253bb6d575c7897deed906469803258927006f83c05479cc3c117583c3a18",
-      "size": 540,
-      "url": "files/dc/dcc253bb6d575c7897deed906469803258927006f83c05479cc3c117583c3a18"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/mechanical_plough.json",
-      "sha256": "f23ef96bcacd8cf48751cc8b36be868e526d3fdc92a06dc8333fdebbddcce92b",
-      "size": 515,
-      "url": "files/f2/f23ef96bcacd8cf48751cc8b36be868e526d3fdc92a06dc8333fdebbddcce92b"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/mechanical_press.json",
-      "sha256": "d4f1cd895aa7b4d002e55806df73da10d9ff51c16a8dbbf73b29d13316e2eeb4",
-      "size": 522,
-      "url": "files/d4/d4f1cd895aa7b4d002e55806df73da10d9ff51c16a8dbbf73b29d13316e2eeb4"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/mechanical_saw.json",
-      "sha256": "397369d2ff7cd6cbeb3c4efeb3c790618830914fe238495f8de1512c923c7b44",
-      "size": 456,
-      "url": "files/39/397369d2ff7cd6cbeb3c4efeb3c790618830914fe238495f8de1512c923c7b44"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/portable_fluid_interface.json",
-      "sha256": "97dfec63656022e8b39ba2aa4240903f915b2a2d0cc285304cdb7d1ef9a05149",
-      "size": 527,
-      "url": "files/97/97dfec63656022e8b39ba2aa4240903f915b2a2d0cc285304cdb7d1ef9a05149"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/portable_storage_interface.json",
-      "sha256": "4ee8d64751c43c4385391b98cde4a18aeef0dba71bc687e5285f0ad23fc305e9",
-      "size": 524,
-      "url": "files/4e/4ee8d64751c43c4385391b98cde4a18aeef0dba71bc687e5285f0ad23fc305e9"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/spout.json",
-      "sha256": "65723764ee578d6073f5705817cd93baf0be449a38225ed205677475bbf6c06b",
-      "size": 512,
-      "url": "files/65/65723764ee578d6073f5705817cd93baf0be449a38225ed205677475bbf6c06b"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/steam_engine.json",
-      "sha256": "7eb12af2b62ff485ec7a45682f91875f75ce11331e85d3e3b52b2f98984b478f",
-      "size": 524,
-      "url": "files/7e/7eb12af2b62ff485ec7a45682f91875f75ce11331e85d3e3b52b2f98984b478f"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/track_observer.json",
-      "sha256": "e0bb2498f7417f2231b0433ea1f5731b2c041fab49889068b875b04cff958db9",
-      "size": 488,
-      "url": "files/e0/e0bb2498f7417f2231b0433ea1f5731b2c041fab49889068b875b04cff958db9"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/track_signal.json",
-      "sha256": "002e45202273d8a94d64dde1fee04a79d1e5ad421d67ff14ef29af77c5ef3163",
-      "size": 464,
-      "url": "files/00/002e45202273d8a94d64dde1fee04a79d1e5ad421d67ff14ef29af77c5ef3163"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/track_station.json",
-      "sha256": "b7663faeb6914899320223b4706d4d49c1492ffb37fe78c1166f42d2207a4962",
-      "size": 473,
-      "url": "files/b7/b7663faeb6914899320223b4706d4d49c1492ffb37fe78c1166f42d2207a4962"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/logistics/package_frogport.json",
-      "sha256": "dbdd77b561950dfec9dbf2c1428439fbf887b945dd4602fe8b0ee28314981a3d",
-      "size": 522,
-      "url": "files/db/dbdd77b561950dfec9dbf2c1428439fbf887b945dd4602fe8b0ee28314981a3d"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/logistics/packager.json",
-      "sha256": "1323d7e6a40443bf5a55000f2786734fdc426f77948ae9e9c7d582a23080f144",
-      "size": 575,
-      "url": "files/13/1323d7e6a40443bf5a55000f2786734fdc426f77948ae9e9c7d582a23080f144"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/crafting/logistics/stock_link.json",
-      "sha256": "01af0c6dc169c9e288542accd7f9b745bea26104fab2f29be2074ccda9ee5d62",
-      "size": 467,
-      "url": "files/01/01af0c6dc169c9e288542accd7f9b745bea26104fab2f29be2074ccda9ee5d62"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/create/recipe/sequenced_assembly/precision_mechanism.json",
-      "sha256": "8a98a71d63d2f6183e8c391f82a1c09809652c84b9bc43a04ba37cda63ca0aa4",
-      "size": 1555,
-      "url": "files/8a/8a98a71d63d2f6183e8c391f82a1c09809652c84b9bc43a04ba37cda63ca0aa4"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createbigcannons/recipe/cannon_builder.json",
-      "sha256": "3935a0716c6d9421eb77e8790ea27670236070be5d52070e73f4a82faf1dc9a3",
-      "size": 675,
-      "url": "files/39/3935a0716c6d9421eb77e8790ea27670236070be5d52070e73f4a82faf1dc9a3"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createbigcannons/recipe/cannon_drill.json",
-      "sha256": "956a46350fdcac120b9aad274a9d5c459e0140c2df7db3f3f9b88096a9c9973e",
-      "size": 615,
-      "url": "files/95/956a46350fdcac120b9aad274a9d5c459e0140c2df7db3f3f9b88096a9c9973e"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createbigcannons/recipe/cannon_mount.json",
-      "sha256": "a35b9fe5305f5f81c22b735d1118ef5b3c563a1f083103f8cb585afe59b43061",
-      "size": 672,
-      "url": "files/a3/a35b9fe5305f5f81c22b735d1118ef5b3c563a1f083103f8cb585afe59b43061"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createbigcannons/recipe/cannon_mount_extension.json",
-      "sha256": "03e534bea7d93b5e31c99a3e8af1adb927b770923560de8698dca4b39551f396",
-      "size": 632,
-      "url": "files/03/03e534bea7d93b5e31c99a3e8af1adb927b770923560de8698dca4b39551f396"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createbigcannons/recipe/cannon_welder.json",
-      "sha256": "38d952b1d7876f3806e186d14d68a9cec4e76afcb828cba07c0c4df651b8deb2",
-      "size": 662,
-      "url": "files/38/38d952b1d7876f3806e186d14d68a9cec4e76afcb828cba07c0c4df651b8deb2"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createbigcannons/recipe/fixed_cannon_mount.json",
-      "sha256": "18c78a1a04252ea83eaa37ba9574042a80ad304a3a8bc00969ac73beeafae252",
-      "size": 628,
-      "url": "files/18/18c78a1a04252ea83eaa37ba9574042a80ad304a3a8bc00969ac73beeafae252"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/deployer/brass.json",
-      "sha256": "d9275c5d6ad043df54932373d7f220c69d44b32b68fb50a849301d9233072ed7",
-      "size": 444,
-      "url": "files/d9/d9275c5d6ad043df54932373d7f220c69d44b32b68fb50a849301d9233072ed7"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/deployer/copper.json",
-      "sha256": "285cd739d243186ea77099e8a022809ee6417066180f85f4439ed13b93f7f150",
-      "size": 446,
-      "url": "files/28/285cd739d243186ea77099e8a022809ee6417066180f85f4439ed13b93f7f150"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/deployer/creative.json",
-      "sha256": "10325ebebeaf6151e9d8bab2e6a15763cdd04a8f38f0a8d6d692d0f6b73df10f",
-      "size": 456,
-      "url": "files/10/10325ebebeaf6151e9d8bab2e6a15763cdd04a8f38f0a8d6d692d0f6b73df10f"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/deployer/industrial_iron.json",
-      "sha256": "95e9b159452f21cac3d793c4839968a47f7ef30088bfbfa3f416709f525a24ca",
-      "size": 463,
-      "url": "files/95/95e9b159452f21cac3d793c4839968a47f7ef30088bfbfa3f416709f525a24ca"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/deployer/railway.json",
-      "sha256": "990b95f50088adbd6cba6010bab311c5e5ae4ccbfbc9084e6189abf1955f462b",
-      "size": 448,
-      "url": "files/99/990b95f50088adbd6cba6010bab311c5e5ae4ccbfbc9084e6189abf1955f462b"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/deployer/refined_radiance.json",
-      "sha256": "0d7f343f6be7bb9c47ab15f8712b64c85bd0fe5109e01acfc25ac398e41a33be",
-      "size": 466,
-      "url": "files/0d/0d7f343f6be7bb9c47ab15f8712b64c85bd0fe5109e01acfc25ac398e41a33be"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/deployer/shadow_steel.json",
-      "sha256": "69169450f07c8a79b4efb5886bd33a0e586b2bc7c4efc131fc3e7b2ac1d08d90",
-      "size": 458,
-      "url": "files/69/69169450f07c8a79b4efb5886bd33a0e586b2bc7c4efc131fc3e7b2ac1d08d90"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/deployer/weathered_iron.json",
-      "sha256": "5af80fec992468a3dfa43b4cccc94d0e45d594009e74348f85afbff7513112c6",
-      "size": 461,
-      "url": "files/5a/5af80fec992468a3dfa43b4cccc94d0e45d594009e74348f85afbff7513112c6"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/drill/brass.json",
-      "sha256": "2fb33c888da56f0f76b2749985ac9876d5e48c9915add044bad2ab05e78910a1",
-      "size": 460,
-      "url": "files/2f/2fb33c888da56f0f76b2749985ac9876d5e48c9915add044bad2ab05e78910a1"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/drill/copper.json",
-      "sha256": "c5e602067b77c808802343d7a90cc3fecb75dbd12537b8d2753c8ad08e0e816a",
-      "size": 462,
-      "url": "files/c5/c5e602067b77c808802343d7a90cc3fecb75dbd12537b8d2753c8ad08e0e816a"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/drill/creative.json",
-      "sha256": "73624baf60273dca38de7ca37288a87d1a4773799c95d7f29180de13cac71c7c",
-      "size": 472,
-      "url": "files/73/73624baf60273dca38de7ca37288a87d1a4773799c95d7f29180de13cac71c7c"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/drill/industrial_iron.json",
-      "sha256": "d89464430f1a7b082e14a3dc120be8d411b5f6b0238822a33cc1515664fe1cb9",
-      "size": 479,
-      "url": "files/d8/d89464430f1a7b082e14a3dc120be8d411b5f6b0238822a33cc1515664fe1cb9"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/drill/railway.json",
-      "sha256": "6ad8220c38158b7ac8b6706db15958c27e0594f93ccaaf8eb0d4322ad32f0509",
-      "size": 464,
-      "url": "files/6a/6ad8220c38158b7ac8b6706db15958c27e0594f93ccaaf8eb0d4322ad32f0509"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/drill/refined_radiance.json",
-      "sha256": "468065e3f67a106ea8a5795cc7cdcfa7785e987fb442e790c52b82acc572de74",
-      "size": 482,
-      "url": "files/46/468065e3f67a106ea8a5795cc7cdcfa7785e987fb442e790c52b82acc572de74"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/drill/shadow_steel.json",
-      "sha256": "92689aff22aa4f9d27fc48b22593b0137d109b52992124bc7e69aef8d1f6f0ee",
-      "size": 474,
-      "url": "files/92/92689aff22aa4f9d27fc48b22593b0137d109b52992124bc7e69aef8d1f6f0ee"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/drill/weathered_iron.json",
-      "sha256": "7c38ee4f77a139ed9c7a2438fa6f2619f41eaff31036427b95ee7f74e1e7dd55",
-      "size": 477,
-      "url": "files/7c/7c38ee4f77a139ed9c7a2438fa6f2619f41eaff31036427b95ee7f74e1e7dd55"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/encased_fan/brass.json",
-      "sha256": "5ecad66af9fd0ee3d86d2d4e95b9bd995653708a74c43f10227dafea486e76b1",
-      "size": 450,
-      "url": "files/5e/5ecad66af9fd0ee3d86d2d4e95b9bd995653708a74c43f10227dafea486e76b1"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/encased_fan/copper.json",
-      "sha256": "1f2767beae0ac240f05db345fd542b8dc899e786b9b1e32e5399271303233c02",
-      "size": 452,
-      "url": "files/1f/1f2767beae0ac240f05db345fd542b8dc899e786b9b1e32e5399271303233c02"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/encased_fan/creative.json",
-      "sha256": "02420c1afee5b3a20719f42fdf57486d425f0fa9e31d1581ed6f2cf039a8f42a",
-      "size": 462,
-      "url": "files/02/02420c1afee5b3a20719f42fdf57486d425f0fa9e31d1581ed6f2cf039a8f42a"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/encased_fan/industrial_iron.json",
-      "sha256": "491cc13973d6aad915779696d5ebeb909f217f8838020df0605a22a7282df3f1",
-      "size": 469,
-      "url": "files/49/491cc13973d6aad915779696d5ebeb909f217f8838020df0605a22a7282df3f1"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/encased_fan/railway.json",
-      "sha256": "7b0cd9c3d9dc7f3dbfcb69ecb7a10737f3b17702441a4744f868cb7dd1d89c62",
-      "size": 454,
-      "url": "files/7b/7b0cd9c3d9dc7f3dbfcb69ecb7a10737f3b17702441a4744f868cb7dd1d89c62"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/encased_fan/refined_radiance.json",
-      "sha256": "e2368d15a2cf31281c8b37c070395a97a06510239986851d321ce166d32239ff",
-      "size": 472,
-      "url": "files/e2/e2368d15a2cf31281c8b37c070395a97a06510239986851d321ce166d32239ff"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/encased_fan/shadow_steel.json",
-      "sha256": "ffbb44635843091aea467bfcd34d1f746ac8ce88e18745ed5e0592b201c4e971",
-      "size": 464,
-      "url": "files/ff/ffbb44635843091aea467bfcd34d1f746ac8ce88e18745ed5e0592b201c4e971"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/encased_fan/weathered_iron.json",
-      "sha256": "706ab770df3a0151aa6f59bc6e8838bd8a3a6f521bbc5c50a325c8af0e4274e3",
-      "size": 467,
-      "url": "files/70/706ab770df3a0151aa6f59bc6e8838bd8a3a6f521bbc5c50a325c8af0e4274e3"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/harvester/brass.json",
-      "sha256": "a85d7bdc7123adf13e0aa31569e8004ae767a826deb5684dbb242762086717d1",
-      "size": 468,
-      "url": "files/a8/a85d7bdc7123adf13e0aa31569e8004ae767a826deb5684dbb242762086717d1"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/harvester/copper.json",
-      "sha256": "34379ddc426e0432da42fb61ff7cdcd7f9062511f0a72475b9c94d4f369a0123",
-      "size": 470,
-      "url": "files/34/34379ddc426e0432da42fb61ff7cdcd7f9062511f0a72475b9c94d4f369a0123"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/harvester/creative.json",
-      "sha256": "3ef782b59eaf50da6ad4896be2d76d5cfc7afb4e0a906e4a2c19aa4e4056e56d",
-      "size": 480,
-      "url": "files/3e/3ef782b59eaf50da6ad4896be2d76d5cfc7afb4e0a906e4a2c19aa4e4056e56d"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/harvester/industrial_iron.json",
-      "sha256": "d1a8edc35131cc19772028c070d46db46df249e255e24916b3a3b6361e22475c",
-      "size": 487,
-      "url": "files/d1/d1a8edc35131cc19772028c070d46db46df249e255e24916b3a3b6361e22475c"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/harvester/railway.json",
-      "sha256": "141a27a54bad90f017ad459cf0615675e966771814395ec46d60bbcb0b0ab870",
-      "size": 472,
-      "url": "files/14/141a27a54bad90f017ad459cf0615675e966771814395ec46d60bbcb0b0ab870"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/harvester/refined_radiance.json",
-      "sha256": "8eead7688b6169c1c42793d367d84f4863960414b8f7f2ffe7de1223869b61ed",
-      "size": 490,
-      "url": "files/8e/8eead7688b6169c1c42793d367d84f4863960414b8f7f2ffe7de1223869b61ed"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/harvester/shadow_steel.json",
-      "sha256": "cf68bbf0ccb35ca14e865aedd8350aa29fb442d67c54bb5a93516781f7e99e73",
-      "size": 482,
-      "url": "files/cf/cf68bbf0ccb35ca14e865aedd8350aa29fb442d67c54bb5a93516781f7e99e73"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/harvester/weathered_iron.json",
-      "sha256": "73f7c589b0df56cec3f22fb661565511a9e8710e3a8aba6ae6a0048cea4c10d6",
-      "size": 485,
-      "url": "files/73/73f7c589b0df56cec3f22fb661565511a9e8710e3a8aba6ae6a0048cea4c10d6"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/mixer/brass.json",
-      "sha256": "3a96257006a0a0e9d922e1c4519f262ea5d395d02e68764237a2c6ad9f506da6",
-      "size": 449,
-      "url": "files/3a/3a96257006a0a0e9d922e1c4519f262ea5d395d02e68764237a2c6ad9f506da6"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/mixer/copper.json",
-      "sha256": "e26d07dacdfd13285bc7e58db1b38fd97f303f0c90fe6c61b7df6850b823f3a8",
-      "size": 451,
-      "url": "files/e2/e26d07dacdfd13285bc7e58db1b38fd97f303f0c90fe6c61b7df6850b823f3a8"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/mixer/creative.json",
-      "sha256": "7d3c194333d10f0cb9f523e1c85372d7c2df7e1d5eb5709988ee276289a759f3",
-      "size": 461,
-      "url": "files/7d/7d3c194333d10f0cb9f523e1c85372d7c2df7e1d5eb5709988ee276289a759f3"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/mixer/industrial_iron.json",
-      "sha256": "0d7bdd883d6e7dc089b870798b2526176cd80aa8fd625e29fa435c4b76fff3b4",
-      "size": 468,
-      "url": "files/0d/0d7bdd883d6e7dc089b870798b2526176cd80aa8fd625e29fa435c4b76fff3b4"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/mixer/railway.json",
-      "sha256": "b1329d3b038647cc41567f2413f9d9d352357b60bf7c3c9cb79ba017e218f024",
-      "size": 453,
-      "url": "files/b1/b1329d3b038647cc41567f2413f9d9d352357b60bf7c3c9cb79ba017e218f024"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/mixer/refined_radiance.json",
-      "sha256": "129e6ba05b7f00aa67c8bb90294745a06ce5909ccd225452b9bc2f38db735072",
-      "size": 471,
-      "url": "files/12/129e6ba05b7f00aa67c8bb90294745a06ce5909ccd225452b9bc2f38db735072"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/mixer/shadow_steel.json",
-      "sha256": "1b3c1f9fdee965aba014673cf6d849a09764f0c35d446745dae56b7f04239dd4",
-      "size": 463,
-      "url": "files/1b/1b3c1f9fdee965aba014673cf6d849a09764f0c35d446745dae56b7f04239dd4"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/mixer/weathered_iron.json",
-      "sha256": "23128ceff5927870fb330b9d5c990fbc08d9feaba479bb962aeb7315b1918803",
-      "size": 466,
-      "url": "files/23/23128ceff5927870fb330b9d5c990fbc08d9feaba479bb962aeb7315b1918803"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/plough/brass.json",
-      "sha256": "434985bb1b8174f3b61273184748fa0d0e37fad65146e9b70b3f0d3293321a45",
-      "size": 462,
-      "url": "files/43/434985bb1b8174f3b61273184748fa0d0e37fad65146e9b70b3f0d3293321a45"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/plough/copper.json",
-      "sha256": "a2ba78be5eec10eb6a95e9d932a915c5fe1fcc39980ec91b7460b15e51bd4753",
-      "size": 464,
-      "url": "files/a2/a2ba78be5eec10eb6a95e9d932a915c5fe1fcc39980ec91b7460b15e51bd4753"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/plough/creative.json",
-      "sha256": "42d70ed671c65f7a030ebd0d0b40859d268ee1cd1b5ea16f5d5c141ca5287214",
-      "size": 474,
-      "url": "files/42/42d70ed671c65f7a030ebd0d0b40859d268ee1cd1b5ea16f5d5c141ca5287214"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/plough/industrial_iron.json",
-      "sha256": "3fedacaf7c9acad0d75c02f9129f0a3fff291226eb871a667f629c34cfe353cd",
-      "size": 481,
-      "url": "files/3f/3fedacaf7c9acad0d75c02f9129f0a3fff291226eb871a667f629c34cfe353cd"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/plough/railway.json",
-      "sha256": "056b52c99d5bd4b9c39b2617abb619e515e2a27147b24e368dd563ea94c8de6c",
-      "size": 466,
-      "url": "files/05/056b52c99d5bd4b9c39b2617abb619e515e2a27147b24e368dd563ea94c8de6c"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/plough/refined_radiance.json",
-      "sha256": "b2ea31aeae8e99e9e9117fac36947c9aa2303b757d92ed4747796ee0db720f68",
-      "size": 484,
-      "url": "files/b2/b2ea31aeae8e99e9e9117fac36947c9aa2303b757d92ed4747796ee0db720f68"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/plough/shadow_steel.json",
-      "sha256": "a8ecca071fc89e806a43e0d727285951642bfd334d94daf490e088edde637c9e",
-      "size": 476,
-      "url": "files/a8/a8ecca071fc89e806a43e0d727285951642bfd334d94daf490e088edde637c9e"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/plough/weathered_iron.json",
-      "sha256": "11993ba2a1b356bf4be64052c0c16b4a3207c455f40101b2bef7c50939ca9e55",
-      "size": 479,
-      "url": "files/11/11993ba2a1b356bf4be64052c0c16b4a3207c455f40101b2bef7c50939ca9e55"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/portable_storage_interface/brass.json",
-      "sha256": "ac5e1834e760af0d6cb1551b26b2a7e26fb7f1085763e2e53aaafacaf1d0cea4",
-      "size": 480,
-      "url": "files/ac/ac5e1834e760af0d6cb1551b26b2a7e26fb7f1085763e2e53aaafacaf1d0cea4"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/portable_storage_interface/copper.json",
-      "sha256": "b7f6fea4e84a8a62d95d914b207f41595382f77bd6e0336dd410694370903451",
-      "size": 482,
-      "url": "files/b7/b7f6fea4e84a8a62d95d914b207f41595382f77bd6e0336dd410694370903451"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/portable_storage_interface/creative.json",
-      "sha256": "13539140d8f36b2b131aec1574bc8740c41c796e9176f4bb34f2b756e7261e7e",
-      "size": 492,
-      "url": "files/13/13539140d8f36b2b131aec1574bc8740c41c796e9176f4bb34f2b756e7261e7e"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/portable_storage_interface/industrial_iron.json",
-      "sha256": "a46e3e885f20761fe5cffcdcd70a14081f176c801630d4934d525714555b0b58",
-      "size": 499,
-      "url": "files/a4/a46e3e885f20761fe5cffcdcd70a14081f176c801630d4934d525714555b0b58"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/portable_storage_interface/railway.json",
-      "sha256": "d22316c8ddbaacd69673e75c6c7b20d73d6cde378407e803922bdb9237d8c7e9",
-      "size": 484,
-      "url": "files/d2/d22316c8ddbaacd69673e75c6c7b20d73d6cde378407e803922bdb9237d8c7e9"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/portable_storage_interface/refined_radiance.json",
-      "sha256": "766eea3965461fc4f0c3a8f1d5efa582861eda60c7c49687af2d8fb4285c890f",
-      "size": 502,
-      "url": "files/76/766eea3965461fc4f0c3a8f1d5efa582861eda60c7c49687af2d8fb4285c890f"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/portable_storage_interface/shadow_steel.json",
-      "sha256": "9293794334c19c9ada13a26e665e5fbbccd4f9b883ce57e98bb0ca864afd5227",
-      "size": 494,
-      "url": "files/92/9293794334c19c9ada13a26e665e5fbbccd4f9b883ce57e98bb0ca864afd5227"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/portable_storage_interface/weathered_iron.json",
-      "sha256": "5ec680e2410f3ba44a1f6cb59ed7534382c89414b0d6c0e6c8211120fa1fb4be",
-      "size": 497,
-      "url": "files/5e/5ec680e2410f3ba44a1f6cb59ed7534382c89414b0d6c0e6c8211120fa1fb4be"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/press/brass.json",
-      "sha256": "baa330dec70f56ff900f318eafe3f8b0a08156ddacdaa0cdb9a7ddec8ff681ad",
-      "size": 449,
-      "url": "files/ba/baa330dec70f56ff900f318eafe3f8b0a08156ddacdaa0cdb9a7ddec8ff681ad"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/press/copper.json",
-      "sha256": "d270ebd0593b9df15caa3d1681228ed5b52b1fd0df8de863a5cc1a1fd5285ea8",
-      "size": 451,
-      "url": "files/d2/d270ebd0593b9df15caa3d1681228ed5b52b1fd0df8de863a5cc1a1fd5285ea8"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/press/creative.json",
-      "sha256": "83516edb49d00662210c5d2f094cd0a8fcc5c21fb863636224012cefb0af801a",
-      "size": 461,
-      "url": "files/83/83516edb49d00662210c5d2f094cd0a8fcc5c21fb863636224012cefb0af801a"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/press/industrial_iron.json",
-      "sha256": "262849e9a7280f9e16fa36c47fd54cbb93f5bccd97a15715619ae335f1cb16a3",
-      "size": 468,
-      "url": "files/26/262849e9a7280f9e16fa36c47fd54cbb93f5bccd97a15715619ae335f1cb16a3"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/press/railway.json",
-      "sha256": "20f94046c070b168f44a2ed90b69547ce0bca4b81ee753633fedc55112807b91",
-      "size": 453,
-      "url": "files/20/20f94046c070b168f44a2ed90b69547ce0bca4b81ee753633fedc55112807b91"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/press/refined_radiance.json",
-      "sha256": "f5d965e547b557a9296f1031f08e4c843adbf477311e82858a0a799922d36485",
-      "size": 471,
-      "url": "files/f5/f5d965e547b557a9296f1031f08e4c843adbf477311e82858a0a799922d36485"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/press/shadow_steel.json",
-      "sha256": "3494ad1846a8a43808dccde1691fef0f66e9df859fe539107d9793477dca569d",
-      "size": 463,
-      "url": "files/34/3494ad1846a8a43808dccde1691fef0f66e9df859fe539107d9793477dca569d"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/press/weathered_iron.json",
-      "sha256": "8d3fb1d17ac633ecd2522c92a0d9ea634c95c3593639932d1aa785364821b0f4",
-      "size": 466,
-      "url": "files/8d/8d3fb1d17ac633ecd2522c92a0d9ea634c95c3593639932d1aa785364821b0f4"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/roller/brass.json",
-      "sha256": "033dc57a965e70e1a9e4bb21eca30da471eb93a72d9cde50bb237f9e1c8b7736",
-      "size": 462,
-      "url": "files/03/033dc57a965e70e1a9e4bb21eca30da471eb93a72d9cde50bb237f9e1c8b7736"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/roller/copper.json",
-      "sha256": "340df6138350f5914d43eb0f5470fbb4b06a9dc12638d6590f15059ace737a98",
-      "size": 464,
-      "url": "files/34/340df6138350f5914d43eb0f5470fbb4b06a9dc12638d6590f15059ace737a98"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/roller/creative.json",
-      "sha256": "93f60c577ce1190c31df505eb9a44c15029c286af4a543e0c71d29e1113941e0",
-      "size": 474,
-      "url": "files/93/93f60c577ce1190c31df505eb9a44c15029c286af4a543e0c71d29e1113941e0"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/roller/industrial_iron.json",
-      "sha256": "65b95969ec683b748e93da70eb2a0957edf8052c0cc4c9e51426a61f9cf94998",
-      "size": 481,
-      "url": "files/65/65b95969ec683b748e93da70eb2a0957edf8052c0cc4c9e51426a61f9cf94998"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/roller/railway.json",
-      "sha256": "a7f59ac380594b28cef02ae1c8865fabdd2f91208e83cd524883bb5273340486",
-      "size": 466,
-      "url": "files/a7/a7f59ac380594b28cef02ae1c8865fabdd2f91208e83cd524883bb5273340486"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/roller/refined_radiance.json",
-      "sha256": "3679dba8b53ec5166030f2d778a25016c2dddb5d8560e9ba4d56518cccf25ab9",
-      "size": 484,
-      "url": "files/36/3679dba8b53ec5166030f2d778a25016c2dddb5d8560e9ba4d56518cccf25ab9"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/roller/shadow_steel.json",
-      "sha256": "59ec251c45074f9da670eaaf48aaad0785c07d0a412e0b40dce0ea006ce7507d",
-      "size": 476,
-      "url": "files/59/59ec251c45074f9da670eaaf48aaad0785c07d0a412e0b40dce0ea006ce7507d"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/roller/weathered_iron.json",
-      "sha256": "b05f39cf68105204b0d9d3473d73222f100025fe1c32c4d6b0a64a5df67b81d7",
-      "size": 479,
-      "url": "files/b0/b05f39cf68105204b0d9d3473d73222f100025fe1c32c4d6b0a64a5df67b81d7"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/saw/brass.json",
-      "sha256": "64a8ad21be7a206e156a86d3a18df08d3a1abe0092ee56b20ecfb03ed0f912a8",
-      "size": 456,
-      "url": "files/64/64a8ad21be7a206e156a86d3a18df08d3a1abe0092ee56b20ecfb03ed0f912a8"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/saw/copper.json",
-      "sha256": "422d5cfbbd220ef5030c6c97ff01740389aed663b2de6b075cee64c4e3a93d65",
-      "size": 458,
-      "url": "files/42/422d5cfbbd220ef5030c6c97ff01740389aed663b2de6b075cee64c4e3a93d65"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/saw/creative.json",
-      "sha256": "0cc1106113bfce80ba0a654741b6d05ee4caa2e55be6679a9678ebcd25c49618",
-      "size": 468,
-      "url": "files/0c/0cc1106113bfce80ba0a654741b6d05ee4caa2e55be6679a9678ebcd25c49618"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/saw/industrial_iron.json",
-      "sha256": "26a8386614b34696aa17de1c2ef58e7a84d95c1c6a8853133eb6f53c7611267d",
-      "size": 475,
-      "url": "files/26/26a8386614b34696aa17de1c2ef58e7a84d95c1c6a8853133eb6f53c7611267d"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/saw/railway.json",
-      "sha256": "edda382378809884e228f1e39eaec5c8bccdb4ce47dd08663fb0106f3db5abf4",
-      "size": 460,
-      "url": "files/ed/edda382378809884e228f1e39eaec5c8bccdb4ce47dd08663fb0106f3db5abf4"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/saw/refined_radiance.json",
-      "sha256": "a382ea8433537eee8610f26c1f7389d1bb9f236e68ad2a502fedcfa34808e5ad",
-      "size": 478,
-      "url": "files/a3/a382ea8433537eee8610f26c1f7389d1bb9f236e68ad2a502fedcfa34808e5ad"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/saw/shadow_steel.json",
-      "sha256": "3bacdaeb83d1ed78fe20255f8bed7f5b212b00dbdb5e3905a986209537f46a85",
-      "size": 470,
-      "url": "files/3b/3bacdaeb83d1ed78fe20255f8bed7f5b212b00dbdb5e3905a986209537f46a85"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/saw/weathered_iron.json",
-      "sha256": "f83dc2bb20650c9114621ec13181434be1a297ea33baa0f989b6b9d58ee825b4",
-      "size": 473,
-      "url": "files/f8/f83dc2bb20650c9114621ec13181434be1a297ea33baa0f989b6b9d58ee825b4"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createdieselgenerators/createdieselgenerators/fuel_type/diesel.json",
-      "sha256": "e0877bdba9703c8f0b7baa67f2a5bfaf2ac2b1c53aec42ca2d03dafe4eabd715",
-      "size": 331,
-      "url": "files/e0/e0877bdba9703c8f0b7baa67f2a5bfaf2ac2b1c53aec42ca2d03dafe4eabd715"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createdieselgenerators/createdieselgenerators/fuel_type/gasoline.json",
-      "sha256": "f8c01e48171f44138aef5d262f501b797a15718c462c525f95c4280f2fe05d08",
-      "size": 333,
-      "url": "files/f8/f8c01e48171f44138aef5d262f501b797a15718c462c525f95c4280f2fe05d08"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createdieselgenerators/recipe/crafting/canister.json",
-      "sha256": "a4a6063a91ce7782c5170ae41f446dad5d8b1f4e6e372318a95875cce5dbed34",
-      "size": 612,
-      "url": "files/a4/a4a6063a91ce7782c5170ae41f446dad5d8b1f4e6e372318a95875cce5dbed34"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createdieselgenerators/recipe/crafting/diesel_engine.json",
-      "sha256": "cb6dfc153657eb77ed4f6d93d45ebde1c2ffc4c26eda7ff40bb923afb47ee5e9",
-      "size": 779,
-      "url": "files/cb/cb6dfc153657eb77ed4f6d93d45ebde1c2ffc4c26eda7ff40bb923afb47ee5e9"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createdieselgenerators/recipe/crafting/distillation_controller.json",
-      "sha256": "563c5ad37e06220b4a185bb9e59f6160301a45e098ce0c30e68e3805f06eef4e",
-      "size": 686,
-      "url": "files/56/563c5ad37e06220b4a185bb9e59f6160301a45e098ce0c30e68e3805f06eef4e"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createdieselgenerators/recipe/crafting/oil_barrel.json",
-      "sha256": "6a448b652242afb2beb33e8643bb2f6a7cf71a3ec38712dc91a741b4ca8653c5",
-      "size": 408,
-      "url": "files/6a/6a448b652242afb2beb33e8643bb2f6a7cf71a3ec38712dc91a741b4ca8653c5"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createdieselgenerators/recipe/crafting/oil_scanner.json",
-      "sha256": "1074e70368d2489cc919ba5ea197b41250648f22ccab00f34ff3d55fc0b914d1",
-      "size": 608,
-      "url": "files/10/1074e70368d2489cc919ba5ea197b41250648f22ccab00f34ff3d55fc0b914d1"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createdieselgenerators/recipe/crafting/pumpjack_bearing.json",
-      "sha256": "e5be065185fb5cbcf445b64f866c236f5154b380e1850685ff73d3b58568b4fb",
-      "size": 637,
-      "url": "files/e5/e5be065185fb5cbcf445b64f866c236f5154b380e1850685ff73d3b58568b4fb"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createdieselgenerators/tags/worldgen/biome/deny_oil_biomes.json",
-      "sha256": "0ca5028f0ea1cc7b48aee1bd7d17d87f19a3512eee3eeea30993170e4849cb73",
-      "size": 875,
-      "url": "files/0c/0ca5028f0ea1cc7b48aee1bd7d17d87f19a3512eee3eeea30993170e4849cb73"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/createdieselgenerators/tags/worldgen/biome/oil_biomes.json",
-      "sha256": "4a95f15bc9b3353f56fc177512bad2b3ca88389a9b8a42049c38591204eeb65d",
-      "size": 398,
-      "url": "files/4a/4a95f15bc9b3353f56fc177512bad2b3ca88389a9b8a42049c38591204eeb65d"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/minecraft/recipe/cannon_welder_mirrored.json",
-      "sha256": "ca7c4ea469fa8ec1c5f79f8683fac019a32947a1dacd7d47cff4df0bae4b8d25",
-      "size": 662,
-      "url": "files/ca/ca7c4ea469fa8ec1c5f79f8683fac019a32947a1dacd7d47cff4df0bae4b8d25"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/offroad/recipe/borehead_bearing.json",
-      "sha256": "c65eb028db94322af6a9a503853a0ded976f801323eb2d36ed7d21958c42ac6a",
-      "size": 612,
-      "url": "files/c6/c65eb028db94322af6a9a503853a0ded976f801323eb2d36ed7d21958c42ac6a"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/offroad/recipe/tire.json",
-      "sha256": "f61db4ab2583b9dda42989fb0b22666beeab30972f32157cd15b7877ef1725c3",
-      "size": 474,
-      "url": "files/f6/f61db4ab2583b9dda42989fb0b22666beeab30972f32157cd15b7877ef1725c3"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/offroad/recipe/wheel_mount.json",
-      "sha256": "81ea5c8594efa12c6d019826a7d509d180b233d05951c98d5eb2581e6ee1a400",
-      "size": 618,
-      "url": "files/81/81ea5c8594efa12c6d019826a7d509d180b233d05951c98d5eb2581e6ee1a400"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/simulated/recipe/physics_assembler.json",
-      "sha256": "702e503c9d5567bf7d78c7751af2997129fd5357830dbaae6bf81718f59f42c6",
-      "size": 606,
-      "url": "files/70/702e503c9d5567bf7d78c7751af2997129fd5357830dbaae6bf81718f59f42c6"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/simulated/recipe/sequenced_assembly/engine_assembly.json",
-      "sha256": "e3e82edfc527857ef845e0e6542a802e251a31152475e26f275cc72b937f3715",
-      "size": 1592,
-      "url": "files/e3/e3e82edfc527857ef845e0e6542a802e251a31152475e26f275cc72b937f3715"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/simulated/recipe/sequenced_assembly/gyroscopic_mechanism.json",
-      "sha256": "00be576207660607fb0653855485cb5e57cfb36fcd7c59898c5674caff4d535d",
-      "size": 2005,
-      "url": "files/00/00be576207660607fb0653855485cb5e57cfb36fcd7c59898c5674caff4d535d"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/black_gold.json",
-      "sha256": "513fa4f65c212813f24a6cfe6589562f02c3066dda3e09ddad30070a4f76be93",
-      "size": 1200,
-      "url": "files/51/513fa4f65c212813f24a6cfe6589562f02c3066dda3e09ddad30070a4f76be93"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/controlled_flight.json",
-      "sha256": "674506d37166263d66ad2747ebd4703ad13f710f88f3d0a73b502e88bbe39114",
-      "size": 1218,
-      "url": "files/67/674506d37166263d66ad2747ebd4703ad13f710f88f3d0a73b502e88bbe39114"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/first_plane.json",
-      "sha256": "953cf39cf44159c1baeba123c29f6645eada2c1010d2a9f74be98a47afacc179",
-      "size": 1243,
-      "url": "files/95/953cf39cf44159c1baeba123c29f6645eada2c1010d2a9f74be98a47afacc179"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/fluid_handling.json",
-      "sha256": "923d505cf36910a1dab330276943f6bb920d42bce1ae203ac6babe4b01d71e1a",
-      "size": 1002,
-      "url": "files/92/923d505cf36910a1dab330276943f6bb920d42bce1ae203ac6babe4b01d71e1a"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/heavy_industry.json",
-      "sha256": "446f5db3033553cdef8019a73d057de95203f6ea6ee0740ee439fb0f3dd46246",
-      "size": 1261,
-      "url": "files/44/446f5db3033553cdef8019a73d057de95203f6ea6ee0740ee439fb0f3dd46246"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/kinetic_workshop.json",
-      "sha256": "7de9aa92a35492332dc8e8eee05e5e20d98e540ec48c331b00be3f5f1c2b002b",
-      "size": 1054,
-      "url": "files/7d/7de9aa92a35492332dc8e8eee05e5e20d98e540ec48c331b00be3f5f1c2b002b"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/physics_age.json",
-      "sha256": "0f8b26b99d92d69b9f0c6c0706554b5151617670c3ae5f3a3a57b18e6d8759b6",
-      "size": 906,
-      "url": "files/0f/0f8b26b99d92d69b9f0c6c0706554b5151617670c3ae5f3a3a57b18e6d8759b6"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/precision_engineering.json",
-      "sha256": "81d1e1cab7da1d4a5c5ee6fc14bc4a77b86c94d541c45ce244a813ece8cc63e8",
-      "size": 829,
-      "url": "files/81/81d1e1cab7da1d4a5c5ee6fc14bc4a77b86c94d541c45ce244a813ece8cc63e8"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/root.json",
-      "sha256": "864740d29239ef36e8ab3a50d65807b0c2b3a2454ffd12e55c2928c4d3724df0",
-      "size": 731,
-      "url": "files/86/864740d29239ef36e8ab3a50d65807b0c2b3a2454ffd12e55c2928c4d3724df0"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/smart_logistics.json",
-      "sha256": "af1556934db43ee1956db808690b87d679dee52af7c7c3e951bcd87163ee71a9",
-      "size": 1044,
-      "url": "files/af/af1556934db43ee1956db808690b87d679dee52af7c7c3e951bcd87163ee71a9"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/starter_logistics.json",
-      "sha256": "63937cb379edba4d0989cbd5fef18a60c50ac6bb08f6885dab995e2d0aef1e26",
-      "size": 796,
-      "url": "files/63/63937cb379edba4d0989cbd5fef18a60c50ac6bb08f6885dab995e2d0aef1e26"
-    },
-    {
-      "path": "datapacks/tenpack-create-progression/pack.mcmeta",
-      "sha256": "6065c45a6a4fe6d475c69fabbb599a561e298eb7dc5041be92b4ae8cb9b129ae",
-      "size": 131,
-      "url": "files/60/6065c45a6a4fe6d475c69fabbb599a561e298eb7dc5041be92b4ae8cb9b129ae"
-    },
-    {
-      "path": "datapacks/tenpack-lifesteal-balance/README.md",
-      "sha256": "077e363a15fdbf2cb5318a98f902e50d64502d061782736454256cc2c3ed757e",
-      "size": 783,
-      "url": "files/07/077e363a15fdbf2cb5318a98f902e50d64502d061782736454256cc2c3ed757e"
-    },
-    {
-      "path": "datapacks/tenpack-lifesteal-balance/data/lifesteal/worldgen/placed_feature/deepslate_heart_geode_placed.json",
-      "sha256": "8831f3f04cb05b8780a6525626ae91f8a622d950a30eff261ffddb940aebb44e",
-      "size": 483,
-      "url": "files/88/8831f3f04cb05b8780a6525626ae91f8a622d950a30eff261ffddb940aebb44e"
-    },
-    {
-      "path": "datapacks/tenpack-lifesteal-balance/data/lifesteal/worldgen/placed_feature/heart_ore_placed.json",
-      "sha256": "82ae88afe57395e222c1699cc91cce58b94268ba02e08aba1935c0d59884c68c",
-      "size": 532,
-      "url": "files/82/82ae88afe57395e222c1699cc91cce58b94268ba02e08aba1935c0d59884c68c"
-    },
-    {
-      "path": "datapacks/tenpack-lifesteal-balance/data/lifesteal/worldgen/placed_feature/nether_heart_geode_placed.json",
-      "sha256": "19c42a890dc3b6ffc980c8b2a621fe036d09d1b506989370f9dfc95c327c144a",
-      "size": 477,
-      "url": "files/19/19c42a890dc3b6ffc980c8b2a621fe036d09d1b506989370f9dfc95c327c144a"
-    },
-    {
-      "path": "datapacks/tenpack-lifesteal-balance/data/lifesteal/worldgen/placed_feature/nether_heart_ore_placed.json",
-      "sha256": "c5d8020ed1afa8353ddba107bba1bd987b6ea67a6e574e40ab5bdb4163f633ce",
-      "size": 536,
-      "url": "files/c5/c5d8020ed1afa8353ddba107bba1bd987b6ea67a6e574e40ab5bdb4163f633ce"
-    },
-    {
-      "path": "datapacks/tenpack-lifesteal-balance/pack.mcmeta",
-      "sha256": "5d13a9043864b2fdf61ac394b89449313e567b5847c2791ec00fd1cc72015e7f",
-      "size": 129,
-      "url": "files/5d/5d13a9043864b2fdf61ac394b89449313e567b5847c2791ec00fd1cc72015e7f"
-    },
-    {
       "path": "mods/Chunky-NeoForge-1.4.23.jar",
       "sha256": "d72f235cf1f56f2c374f52c00bdda5034524b28142305a84cfc123a3f92ad274",
       "size": 340572,
@@ -1292,9 +386,9 @@
     },
     {
       "path": "mods/locksmith-1.0.3.jar",
-      "sha256": "eec4df0500ced908e7979299e4073fc86d88ebb9ac815be652136b2eb6ab7f1b",
-      "size": 201639,
-      "url": "files/ee/eec4df0500ced908e7979299e4073fc86d88ebb9ac815be652136b2eb6ab7f1b"
+      "sha256": "4b0bc2236aecc6dc9ab22b3723cceda3eb3e64fed7d6d689fc008e491943fc1c",
+      "size": 193579,
+      "url": "files/4b/4b0bc2236aecc6dc9ab22b3723cceda3eb3e64fed7d6d689fc008e491943fc1c"
     },
     {
       "path": "mods/railways-0.2.0-beta.2+neoforge-mc1.21.1.jar",
@@ -1427,6 +521,948 @@
       "sha256": "75eb229f77737bacaa06ccfa87c5068caea7d39b2edad0d93a3d473986c380df",
       "size": 1361,
       "url": "files/75/75eb229f77737bacaa06ccfa87c5068caea7d39b2edad0d93a3d473986c380df"
+    },
+    {
+      "path": "user_jvm_args.txt",
+      "sha256": "3f605a8b45397eb90d22e286acdf76a7edfd5f5efab15d9f21450c9d57bf7ceb",
+      "size": 525,
+      "url": "files/3f/3f605a8b45397eb90d22e286acdf76a7edfd5f5efab15d9f21450c9d57bf7ceb"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/README.md",
+      "sha256": "1591b6ea48615d1bbb0b7fd18ba2b64b36d3195eff52d0691040426bc8ed0594",
+      "size": 9347,
+      "url": "files/15/1591b6ea48615d1bbb0b7fd18ba2b64b36d3195eff52d0691040426bc8ed0594"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/aeronautics/recipe/adjustable_burner.json",
+      "sha256": "8bea6079a60366c79d0c9af6ca3b001db81d10724c203a2f4ce0d49a8792f2fd",
+      "size": 671,
+      "url": "files/8b/8bea6079a60366c79d0c9af6ca3b001db81d10724c203a2f4ce0d49a8792f2fd"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/aeronautics/recipe/gyroscopic_propeller_bearing.json",
+      "sha256": "6012d13a9a34b9aacfa4c74be9317eef9999900b8c55503b0c290360b607488b",
+      "size": 663,
+      "url": "files/60/6012d13a9a34b9aacfa4c74be9317eef9999900b8c55503b0c290360b607488b"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/aeronautics/recipe/propeller_bearing.json",
+      "sha256": "2d6334f2e25a0bfd5490cbf3b6ea7b2555316fcd29d1ee1d82cc1b26709d237a",
+      "size": 572,
+      "url": "files/2d/2d6334f2e25a0bfd5490cbf3b6ea7b2555316fcd29d1ee1d82cc1b26709d237a"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/aeronautics/recipe/smart_propeller.json",
+      "sha256": "3b63d832ebcf82d43dca80f3d9e8571799fa0787e7f3714cdae687763bd7eafe",
+      "size": 637,
+      "url": "files/3b/3b63d832ebcf82d43dca80f3d9e8571799fa0787e7f3714cdae687763bd7eafe"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/aeronautics/recipe/steam_vent.json",
+      "sha256": "cbb29135977119cb9fa87224c87877d77b8b457b2bc30fc53f05a7e53abf6662",
+      "size": 550,
+      "url": "files/cb/cbb29135977119cb9fa87224c87877d77b8b457b2bc30fc53f05a7e53abf6662"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/elevator_pulley.json",
+      "sha256": "3283cfa46e4e9a90296d6bf6ec386ae87f16e69a0f2923796a855cdc0f480f3d",
+      "size": 468,
+      "url": "files/32/3283cfa46e4e9a90296d6bf6ec386ae87f16e69a0f2923796a855cdc0f480f3d"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/encased_fan.json",
+      "sha256": "4465df0dbf8d917989d1b4a9619b7237d06394592172a70b6244bc7e44032b5d",
+      "size": 513,
+      "url": "files/44/4465df0dbf8d917989d1b4a9619b7237d06394592172a70b6244bc7e44032b5d"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/gantry_carriage.json",
+      "sha256": "9992aaf78471df4ee8f5b212be069b30f2ef82e9693b63f79cdc4f5b7da71fe6",
+      "size": 525,
+      "url": "files/99/9992aaf78471df4ee8f5b212be069b30f2ef82e9693b63f79cdc4f5b7da71fe6"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/item_drain.json",
+      "sha256": "8f90fff471e9182ddc28e40fb55e167042bebc0b30be9fe44747a37eaf34a475",
+      "size": 516,
+      "url": "files/8f/8f90fff471e9182ddc28e40fb55e167042bebc0b30be9fe44747a37eaf34a475"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/mechanical_bearing.json",
+      "sha256": "96021b750c0624728a47df4e8bcf1185cf645e2947cdb307a279eb18b03f4484",
+      "size": 525,
+      "url": "files/96/96021b750c0624728a47df4e8bcf1185cf645e2947cdb307a279eb18b03f4484"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/mechanical_crafter.json",
+      "sha256": "191d4e732ea10c1a31e9501fd399255cbc8f83c114326e7007341d284053c357",
+      "size": 538,
+      "url": "files/19/191d4e732ea10c1a31e9501fd399255cbc8f83c114326e7007341d284053c357"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/mechanical_drill.json",
+      "sha256": "b673e37743af753ee5cfad4ed516c592913daea72b79ce6c41a073e66ef9c948",
+      "size": 467,
+      "url": "files/b6/b673e37743af753ee5cfad4ed516c592913daea72b79ce6c41a073e66ef9c948"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/mechanical_harvester.json",
+      "sha256": "a35624b2b55364675766b20bb967859a579f89a352f42a1ff4d8e611c712bf0c",
+      "size": 518,
+      "url": "files/a3/a35624b2b55364675766b20bb967859a579f89a352f42a1ff4d8e611c712bf0c"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/mechanical_mixer.json",
+      "sha256": "b956adbb19843e286b5fa3cf2f1955159859a87f4091e5eeabc0818d8f341c6b",
+      "size": 517,
+      "url": "files/b9/b956adbb19843e286b5fa3cf2f1955159859a87f4091e5eeabc0818d8f341c6b"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/mechanical_piston.json",
+      "sha256": "dcc253bb6d575c7897deed906469803258927006f83c05479cc3c117583c3a18",
+      "size": 540,
+      "url": "files/dc/dcc253bb6d575c7897deed906469803258927006f83c05479cc3c117583c3a18"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/mechanical_plough.json",
+      "sha256": "f23ef96bcacd8cf48751cc8b36be868e526d3fdc92a06dc8333fdebbddcce92b",
+      "size": 515,
+      "url": "files/f2/f23ef96bcacd8cf48751cc8b36be868e526d3fdc92a06dc8333fdebbddcce92b"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/mechanical_press.json",
+      "sha256": "d4f1cd895aa7b4d002e55806df73da10d9ff51c16a8dbbf73b29d13316e2eeb4",
+      "size": 522,
+      "url": "files/d4/d4f1cd895aa7b4d002e55806df73da10d9ff51c16a8dbbf73b29d13316e2eeb4"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/mechanical_saw.json",
+      "sha256": "397369d2ff7cd6cbeb3c4efeb3c790618830914fe238495f8de1512c923c7b44",
+      "size": 456,
+      "url": "files/39/397369d2ff7cd6cbeb3c4efeb3c790618830914fe238495f8de1512c923c7b44"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/portable_fluid_interface.json",
+      "sha256": "97dfec63656022e8b39ba2aa4240903f915b2a2d0cc285304cdb7d1ef9a05149",
+      "size": 527,
+      "url": "files/97/97dfec63656022e8b39ba2aa4240903f915b2a2d0cc285304cdb7d1ef9a05149"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/portable_storage_interface.json",
+      "sha256": "4ee8d64751c43c4385391b98cde4a18aeef0dba71bc687e5285f0ad23fc305e9",
+      "size": 524,
+      "url": "files/4e/4ee8d64751c43c4385391b98cde4a18aeef0dba71bc687e5285f0ad23fc305e9"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/spout.json",
+      "sha256": "65723764ee578d6073f5705817cd93baf0be449a38225ed205677475bbf6c06b",
+      "size": 512,
+      "url": "files/65/65723764ee578d6073f5705817cd93baf0be449a38225ed205677475bbf6c06b"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/steam_engine.json",
+      "sha256": "7eb12af2b62ff485ec7a45682f91875f75ce11331e85d3e3b52b2f98984b478f",
+      "size": 524,
+      "url": "files/7e/7eb12af2b62ff485ec7a45682f91875f75ce11331e85d3e3b52b2f98984b478f"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/track_observer.json",
+      "sha256": "e0bb2498f7417f2231b0433ea1f5731b2c041fab49889068b875b04cff958db9",
+      "size": 488,
+      "url": "files/e0/e0bb2498f7417f2231b0433ea1f5731b2c041fab49889068b875b04cff958db9"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/track_signal.json",
+      "sha256": "002e45202273d8a94d64dde1fee04a79d1e5ad421d67ff14ef29af77c5ef3163",
+      "size": 464,
+      "url": "files/00/002e45202273d8a94d64dde1fee04a79d1e5ad421d67ff14ef29af77c5ef3163"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/track_station.json",
+      "sha256": "b7663faeb6914899320223b4706d4d49c1492ffb37fe78c1166f42d2207a4962",
+      "size": 473,
+      "url": "files/b7/b7663faeb6914899320223b4706d4d49c1492ffb37fe78c1166f42d2207a4962"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/logistics/package_frogport.json",
+      "sha256": "dbdd77b561950dfec9dbf2c1428439fbf887b945dd4602fe8b0ee28314981a3d",
+      "size": 522,
+      "url": "files/db/dbdd77b561950dfec9dbf2c1428439fbf887b945dd4602fe8b0ee28314981a3d"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/logistics/packager.json",
+      "sha256": "1323d7e6a40443bf5a55000f2786734fdc426f77948ae9e9c7d582a23080f144",
+      "size": 575,
+      "url": "files/13/1323d7e6a40443bf5a55000f2786734fdc426f77948ae9e9c7d582a23080f144"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/logistics/stock_link.json",
+      "sha256": "01af0c6dc169c9e288542accd7f9b745bea26104fab2f29be2074ccda9ee5d62",
+      "size": 467,
+      "url": "files/01/01af0c6dc169c9e288542accd7f9b745bea26104fab2f29be2074ccda9ee5d62"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/sequenced_assembly/precision_mechanism.json",
+      "sha256": "8a98a71d63d2f6183e8c391f82a1c09809652c84b9bc43a04ba37cda63ca0aa4",
+      "size": 1555,
+      "url": "files/8a/8a98a71d63d2f6183e8c391f82a1c09809652c84b9bc43a04ba37cda63ca0aa4"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createbigcannons/recipe/cannon_builder.json",
+      "sha256": "3935a0716c6d9421eb77e8790ea27670236070be5d52070e73f4a82faf1dc9a3",
+      "size": 675,
+      "url": "files/39/3935a0716c6d9421eb77e8790ea27670236070be5d52070e73f4a82faf1dc9a3"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createbigcannons/recipe/cannon_drill.json",
+      "sha256": "956a46350fdcac120b9aad274a9d5c459e0140c2df7db3f3f9b88096a9c9973e",
+      "size": 615,
+      "url": "files/95/956a46350fdcac120b9aad274a9d5c459e0140c2df7db3f3f9b88096a9c9973e"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createbigcannons/recipe/cannon_mount.json",
+      "sha256": "a35b9fe5305f5f81c22b735d1118ef5b3c563a1f083103f8cb585afe59b43061",
+      "size": 672,
+      "url": "files/a3/a35b9fe5305f5f81c22b735d1118ef5b3c563a1f083103f8cb585afe59b43061"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createbigcannons/recipe/cannon_mount_extension.json",
+      "sha256": "03e534bea7d93b5e31c99a3e8af1adb927b770923560de8698dca4b39551f396",
+      "size": 632,
+      "url": "files/03/03e534bea7d93b5e31c99a3e8af1adb927b770923560de8698dca4b39551f396"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createbigcannons/recipe/cannon_welder.json",
+      "sha256": "38d952b1d7876f3806e186d14d68a9cec4e76afcb828cba07c0c4df651b8deb2",
+      "size": 662,
+      "url": "files/38/38d952b1d7876f3806e186d14d68a9cec4e76afcb828cba07c0c4df651b8deb2"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createbigcannons/recipe/fixed_cannon_mount.json",
+      "sha256": "18c78a1a04252ea83eaa37ba9574042a80ad304a3a8bc00969ac73beeafae252",
+      "size": 628,
+      "url": "files/18/18c78a1a04252ea83eaa37ba9574042a80ad304a3a8bc00969ac73beeafae252"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/deployer/brass.json",
+      "sha256": "d9275c5d6ad043df54932373d7f220c69d44b32b68fb50a849301d9233072ed7",
+      "size": 444,
+      "url": "files/d9/d9275c5d6ad043df54932373d7f220c69d44b32b68fb50a849301d9233072ed7"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/deployer/copper.json",
+      "sha256": "285cd739d243186ea77099e8a022809ee6417066180f85f4439ed13b93f7f150",
+      "size": 446,
+      "url": "files/28/285cd739d243186ea77099e8a022809ee6417066180f85f4439ed13b93f7f150"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/deployer/creative.json",
+      "sha256": "10325ebebeaf6151e9d8bab2e6a15763cdd04a8f38f0a8d6d692d0f6b73df10f",
+      "size": 456,
+      "url": "files/10/10325ebebeaf6151e9d8bab2e6a15763cdd04a8f38f0a8d6d692d0f6b73df10f"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/deployer/industrial_iron.json",
+      "sha256": "95e9b159452f21cac3d793c4839968a47f7ef30088bfbfa3f416709f525a24ca",
+      "size": 463,
+      "url": "files/95/95e9b159452f21cac3d793c4839968a47f7ef30088bfbfa3f416709f525a24ca"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/deployer/railway.json",
+      "sha256": "990b95f50088adbd6cba6010bab311c5e5ae4ccbfbc9084e6189abf1955f462b",
+      "size": 448,
+      "url": "files/99/990b95f50088adbd6cba6010bab311c5e5ae4ccbfbc9084e6189abf1955f462b"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/deployer/refined_radiance.json",
+      "sha256": "0d7f343f6be7bb9c47ab15f8712b64c85bd0fe5109e01acfc25ac398e41a33be",
+      "size": 466,
+      "url": "files/0d/0d7f343f6be7bb9c47ab15f8712b64c85bd0fe5109e01acfc25ac398e41a33be"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/deployer/shadow_steel.json",
+      "sha256": "69169450f07c8a79b4efb5886bd33a0e586b2bc7c4efc131fc3e7b2ac1d08d90",
+      "size": 458,
+      "url": "files/69/69169450f07c8a79b4efb5886bd33a0e586b2bc7c4efc131fc3e7b2ac1d08d90"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/deployer/weathered_iron.json",
+      "sha256": "5af80fec992468a3dfa43b4cccc94d0e45d594009e74348f85afbff7513112c6",
+      "size": 461,
+      "url": "files/5a/5af80fec992468a3dfa43b4cccc94d0e45d594009e74348f85afbff7513112c6"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/drill/brass.json",
+      "sha256": "2fb33c888da56f0f76b2749985ac9876d5e48c9915add044bad2ab05e78910a1",
+      "size": 460,
+      "url": "files/2f/2fb33c888da56f0f76b2749985ac9876d5e48c9915add044bad2ab05e78910a1"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/drill/copper.json",
+      "sha256": "c5e602067b77c808802343d7a90cc3fecb75dbd12537b8d2753c8ad08e0e816a",
+      "size": 462,
+      "url": "files/c5/c5e602067b77c808802343d7a90cc3fecb75dbd12537b8d2753c8ad08e0e816a"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/drill/creative.json",
+      "sha256": "73624baf60273dca38de7ca37288a87d1a4773799c95d7f29180de13cac71c7c",
+      "size": 472,
+      "url": "files/73/73624baf60273dca38de7ca37288a87d1a4773799c95d7f29180de13cac71c7c"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/drill/industrial_iron.json",
+      "sha256": "d89464430f1a7b082e14a3dc120be8d411b5f6b0238822a33cc1515664fe1cb9",
+      "size": 479,
+      "url": "files/d8/d89464430f1a7b082e14a3dc120be8d411b5f6b0238822a33cc1515664fe1cb9"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/drill/railway.json",
+      "sha256": "6ad8220c38158b7ac8b6706db15958c27e0594f93ccaaf8eb0d4322ad32f0509",
+      "size": 464,
+      "url": "files/6a/6ad8220c38158b7ac8b6706db15958c27e0594f93ccaaf8eb0d4322ad32f0509"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/drill/refined_radiance.json",
+      "sha256": "468065e3f67a106ea8a5795cc7cdcfa7785e987fb442e790c52b82acc572de74",
+      "size": 482,
+      "url": "files/46/468065e3f67a106ea8a5795cc7cdcfa7785e987fb442e790c52b82acc572de74"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/drill/shadow_steel.json",
+      "sha256": "92689aff22aa4f9d27fc48b22593b0137d109b52992124bc7e69aef8d1f6f0ee",
+      "size": 474,
+      "url": "files/92/92689aff22aa4f9d27fc48b22593b0137d109b52992124bc7e69aef8d1f6f0ee"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/drill/weathered_iron.json",
+      "sha256": "7c38ee4f77a139ed9c7a2438fa6f2619f41eaff31036427b95ee7f74e1e7dd55",
+      "size": 477,
+      "url": "files/7c/7c38ee4f77a139ed9c7a2438fa6f2619f41eaff31036427b95ee7f74e1e7dd55"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/encased_fan/brass.json",
+      "sha256": "5ecad66af9fd0ee3d86d2d4e95b9bd995653708a74c43f10227dafea486e76b1",
+      "size": 450,
+      "url": "files/5e/5ecad66af9fd0ee3d86d2d4e95b9bd995653708a74c43f10227dafea486e76b1"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/encased_fan/copper.json",
+      "sha256": "1f2767beae0ac240f05db345fd542b8dc899e786b9b1e32e5399271303233c02",
+      "size": 452,
+      "url": "files/1f/1f2767beae0ac240f05db345fd542b8dc899e786b9b1e32e5399271303233c02"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/encased_fan/creative.json",
+      "sha256": "02420c1afee5b3a20719f42fdf57486d425f0fa9e31d1581ed6f2cf039a8f42a",
+      "size": 462,
+      "url": "files/02/02420c1afee5b3a20719f42fdf57486d425f0fa9e31d1581ed6f2cf039a8f42a"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/encased_fan/industrial_iron.json",
+      "sha256": "491cc13973d6aad915779696d5ebeb909f217f8838020df0605a22a7282df3f1",
+      "size": 469,
+      "url": "files/49/491cc13973d6aad915779696d5ebeb909f217f8838020df0605a22a7282df3f1"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/encased_fan/railway.json",
+      "sha256": "7b0cd9c3d9dc7f3dbfcb69ecb7a10737f3b17702441a4744f868cb7dd1d89c62",
+      "size": 454,
+      "url": "files/7b/7b0cd9c3d9dc7f3dbfcb69ecb7a10737f3b17702441a4744f868cb7dd1d89c62"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/encased_fan/refined_radiance.json",
+      "sha256": "e2368d15a2cf31281c8b37c070395a97a06510239986851d321ce166d32239ff",
+      "size": 472,
+      "url": "files/e2/e2368d15a2cf31281c8b37c070395a97a06510239986851d321ce166d32239ff"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/encased_fan/shadow_steel.json",
+      "sha256": "ffbb44635843091aea467bfcd34d1f746ac8ce88e18745ed5e0592b201c4e971",
+      "size": 464,
+      "url": "files/ff/ffbb44635843091aea467bfcd34d1f746ac8ce88e18745ed5e0592b201c4e971"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/encased_fan/weathered_iron.json",
+      "sha256": "706ab770df3a0151aa6f59bc6e8838bd8a3a6f521bbc5c50a325c8af0e4274e3",
+      "size": 467,
+      "url": "files/70/706ab770df3a0151aa6f59bc6e8838bd8a3a6f521bbc5c50a325c8af0e4274e3"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/harvester/brass.json",
+      "sha256": "a85d7bdc7123adf13e0aa31569e8004ae767a826deb5684dbb242762086717d1",
+      "size": 468,
+      "url": "files/a8/a85d7bdc7123adf13e0aa31569e8004ae767a826deb5684dbb242762086717d1"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/harvester/copper.json",
+      "sha256": "34379ddc426e0432da42fb61ff7cdcd7f9062511f0a72475b9c94d4f369a0123",
+      "size": 470,
+      "url": "files/34/34379ddc426e0432da42fb61ff7cdcd7f9062511f0a72475b9c94d4f369a0123"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/harvester/creative.json",
+      "sha256": "3ef782b59eaf50da6ad4896be2d76d5cfc7afb4e0a906e4a2c19aa4e4056e56d",
+      "size": 480,
+      "url": "files/3e/3ef782b59eaf50da6ad4896be2d76d5cfc7afb4e0a906e4a2c19aa4e4056e56d"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/harvester/industrial_iron.json",
+      "sha256": "d1a8edc35131cc19772028c070d46db46df249e255e24916b3a3b6361e22475c",
+      "size": 487,
+      "url": "files/d1/d1a8edc35131cc19772028c070d46db46df249e255e24916b3a3b6361e22475c"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/harvester/railway.json",
+      "sha256": "141a27a54bad90f017ad459cf0615675e966771814395ec46d60bbcb0b0ab870",
+      "size": 472,
+      "url": "files/14/141a27a54bad90f017ad459cf0615675e966771814395ec46d60bbcb0b0ab870"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/harvester/refined_radiance.json",
+      "sha256": "8eead7688b6169c1c42793d367d84f4863960414b8f7f2ffe7de1223869b61ed",
+      "size": 490,
+      "url": "files/8e/8eead7688b6169c1c42793d367d84f4863960414b8f7f2ffe7de1223869b61ed"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/harvester/shadow_steel.json",
+      "sha256": "cf68bbf0ccb35ca14e865aedd8350aa29fb442d67c54bb5a93516781f7e99e73",
+      "size": 482,
+      "url": "files/cf/cf68bbf0ccb35ca14e865aedd8350aa29fb442d67c54bb5a93516781f7e99e73"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/harvester/weathered_iron.json",
+      "sha256": "73f7c589b0df56cec3f22fb661565511a9e8710e3a8aba6ae6a0048cea4c10d6",
+      "size": 485,
+      "url": "files/73/73f7c589b0df56cec3f22fb661565511a9e8710e3a8aba6ae6a0048cea4c10d6"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/mixer/brass.json",
+      "sha256": "3a96257006a0a0e9d922e1c4519f262ea5d395d02e68764237a2c6ad9f506da6",
+      "size": 449,
+      "url": "files/3a/3a96257006a0a0e9d922e1c4519f262ea5d395d02e68764237a2c6ad9f506da6"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/mixer/copper.json",
+      "sha256": "e26d07dacdfd13285bc7e58db1b38fd97f303f0c90fe6c61b7df6850b823f3a8",
+      "size": 451,
+      "url": "files/e2/e26d07dacdfd13285bc7e58db1b38fd97f303f0c90fe6c61b7df6850b823f3a8"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/mixer/creative.json",
+      "sha256": "7d3c194333d10f0cb9f523e1c85372d7c2df7e1d5eb5709988ee276289a759f3",
+      "size": 461,
+      "url": "files/7d/7d3c194333d10f0cb9f523e1c85372d7c2df7e1d5eb5709988ee276289a759f3"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/mixer/industrial_iron.json",
+      "sha256": "0d7bdd883d6e7dc089b870798b2526176cd80aa8fd625e29fa435c4b76fff3b4",
+      "size": 468,
+      "url": "files/0d/0d7bdd883d6e7dc089b870798b2526176cd80aa8fd625e29fa435c4b76fff3b4"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/mixer/railway.json",
+      "sha256": "b1329d3b038647cc41567f2413f9d9d352357b60bf7c3c9cb79ba017e218f024",
+      "size": 453,
+      "url": "files/b1/b1329d3b038647cc41567f2413f9d9d352357b60bf7c3c9cb79ba017e218f024"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/mixer/refined_radiance.json",
+      "sha256": "129e6ba05b7f00aa67c8bb90294745a06ce5909ccd225452b9bc2f38db735072",
+      "size": 471,
+      "url": "files/12/129e6ba05b7f00aa67c8bb90294745a06ce5909ccd225452b9bc2f38db735072"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/mixer/shadow_steel.json",
+      "sha256": "1b3c1f9fdee965aba014673cf6d849a09764f0c35d446745dae56b7f04239dd4",
+      "size": 463,
+      "url": "files/1b/1b3c1f9fdee965aba014673cf6d849a09764f0c35d446745dae56b7f04239dd4"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/mixer/weathered_iron.json",
+      "sha256": "23128ceff5927870fb330b9d5c990fbc08d9feaba479bb962aeb7315b1918803",
+      "size": 466,
+      "url": "files/23/23128ceff5927870fb330b9d5c990fbc08d9feaba479bb962aeb7315b1918803"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/plough/brass.json",
+      "sha256": "434985bb1b8174f3b61273184748fa0d0e37fad65146e9b70b3f0d3293321a45",
+      "size": 462,
+      "url": "files/43/434985bb1b8174f3b61273184748fa0d0e37fad65146e9b70b3f0d3293321a45"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/plough/copper.json",
+      "sha256": "a2ba78be5eec10eb6a95e9d932a915c5fe1fcc39980ec91b7460b15e51bd4753",
+      "size": 464,
+      "url": "files/a2/a2ba78be5eec10eb6a95e9d932a915c5fe1fcc39980ec91b7460b15e51bd4753"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/plough/creative.json",
+      "sha256": "42d70ed671c65f7a030ebd0d0b40859d268ee1cd1b5ea16f5d5c141ca5287214",
+      "size": 474,
+      "url": "files/42/42d70ed671c65f7a030ebd0d0b40859d268ee1cd1b5ea16f5d5c141ca5287214"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/plough/industrial_iron.json",
+      "sha256": "3fedacaf7c9acad0d75c02f9129f0a3fff291226eb871a667f629c34cfe353cd",
+      "size": 481,
+      "url": "files/3f/3fedacaf7c9acad0d75c02f9129f0a3fff291226eb871a667f629c34cfe353cd"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/plough/railway.json",
+      "sha256": "056b52c99d5bd4b9c39b2617abb619e515e2a27147b24e368dd563ea94c8de6c",
+      "size": 466,
+      "url": "files/05/056b52c99d5bd4b9c39b2617abb619e515e2a27147b24e368dd563ea94c8de6c"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/plough/refined_radiance.json",
+      "sha256": "b2ea31aeae8e99e9e9117fac36947c9aa2303b757d92ed4747796ee0db720f68",
+      "size": 484,
+      "url": "files/b2/b2ea31aeae8e99e9e9117fac36947c9aa2303b757d92ed4747796ee0db720f68"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/plough/shadow_steel.json",
+      "sha256": "a8ecca071fc89e806a43e0d727285951642bfd334d94daf490e088edde637c9e",
+      "size": 476,
+      "url": "files/a8/a8ecca071fc89e806a43e0d727285951642bfd334d94daf490e088edde637c9e"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/plough/weathered_iron.json",
+      "sha256": "11993ba2a1b356bf4be64052c0c16b4a3207c455f40101b2bef7c50939ca9e55",
+      "size": 479,
+      "url": "files/11/11993ba2a1b356bf4be64052c0c16b4a3207c455f40101b2bef7c50939ca9e55"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/portable_storage_interface/brass.json",
+      "sha256": "ac5e1834e760af0d6cb1551b26b2a7e26fb7f1085763e2e53aaafacaf1d0cea4",
+      "size": 480,
+      "url": "files/ac/ac5e1834e760af0d6cb1551b26b2a7e26fb7f1085763e2e53aaafacaf1d0cea4"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/portable_storage_interface/copper.json",
+      "sha256": "b7f6fea4e84a8a62d95d914b207f41595382f77bd6e0336dd410694370903451",
+      "size": 482,
+      "url": "files/b7/b7f6fea4e84a8a62d95d914b207f41595382f77bd6e0336dd410694370903451"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/portable_storage_interface/creative.json",
+      "sha256": "13539140d8f36b2b131aec1574bc8740c41c796e9176f4bb34f2b756e7261e7e",
+      "size": 492,
+      "url": "files/13/13539140d8f36b2b131aec1574bc8740c41c796e9176f4bb34f2b756e7261e7e"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/portable_storage_interface/industrial_iron.json",
+      "sha256": "a46e3e885f20761fe5cffcdcd70a14081f176c801630d4934d525714555b0b58",
+      "size": 499,
+      "url": "files/a4/a46e3e885f20761fe5cffcdcd70a14081f176c801630d4934d525714555b0b58"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/portable_storage_interface/railway.json",
+      "sha256": "d22316c8ddbaacd69673e75c6c7b20d73d6cde378407e803922bdb9237d8c7e9",
+      "size": 484,
+      "url": "files/d2/d22316c8ddbaacd69673e75c6c7b20d73d6cde378407e803922bdb9237d8c7e9"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/portable_storage_interface/refined_radiance.json",
+      "sha256": "766eea3965461fc4f0c3a8f1d5efa582861eda60c7c49687af2d8fb4285c890f",
+      "size": 502,
+      "url": "files/76/766eea3965461fc4f0c3a8f1d5efa582861eda60c7c49687af2d8fb4285c890f"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/portable_storage_interface/shadow_steel.json",
+      "sha256": "9293794334c19c9ada13a26e665e5fbbccd4f9b883ce57e98bb0ca864afd5227",
+      "size": 494,
+      "url": "files/92/9293794334c19c9ada13a26e665e5fbbccd4f9b883ce57e98bb0ca864afd5227"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/portable_storage_interface/weathered_iron.json",
+      "sha256": "5ec680e2410f3ba44a1f6cb59ed7534382c89414b0d6c0e6c8211120fa1fb4be",
+      "size": 497,
+      "url": "files/5e/5ec680e2410f3ba44a1f6cb59ed7534382c89414b0d6c0e6c8211120fa1fb4be"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/press/brass.json",
+      "sha256": "baa330dec70f56ff900f318eafe3f8b0a08156ddacdaa0cdb9a7ddec8ff681ad",
+      "size": 449,
+      "url": "files/ba/baa330dec70f56ff900f318eafe3f8b0a08156ddacdaa0cdb9a7ddec8ff681ad"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/press/copper.json",
+      "sha256": "d270ebd0593b9df15caa3d1681228ed5b52b1fd0df8de863a5cc1a1fd5285ea8",
+      "size": 451,
+      "url": "files/d2/d270ebd0593b9df15caa3d1681228ed5b52b1fd0df8de863a5cc1a1fd5285ea8"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/press/creative.json",
+      "sha256": "83516edb49d00662210c5d2f094cd0a8fcc5c21fb863636224012cefb0af801a",
+      "size": 461,
+      "url": "files/83/83516edb49d00662210c5d2f094cd0a8fcc5c21fb863636224012cefb0af801a"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/press/industrial_iron.json",
+      "sha256": "262849e9a7280f9e16fa36c47fd54cbb93f5bccd97a15715619ae335f1cb16a3",
+      "size": 468,
+      "url": "files/26/262849e9a7280f9e16fa36c47fd54cbb93f5bccd97a15715619ae335f1cb16a3"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/press/railway.json",
+      "sha256": "20f94046c070b168f44a2ed90b69547ce0bca4b81ee753633fedc55112807b91",
+      "size": 453,
+      "url": "files/20/20f94046c070b168f44a2ed90b69547ce0bca4b81ee753633fedc55112807b91"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/press/refined_radiance.json",
+      "sha256": "f5d965e547b557a9296f1031f08e4c843adbf477311e82858a0a799922d36485",
+      "size": 471,
+      "url": "files/f5/f5d965e547b557a9296f1031f08e4c843adbf477311e82858a0a799922d36485"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/press/shadow_steel.json",
+      "sha256": "3494ad1846a8a43808dccde1691fef0f66e9df859fe539107d9793477dca569d",
+      "size": 463,
+      "url": "files/34/3494ad1846a8a43808dccde1691fef0f66e9df859fe539107d9793477dca569d"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/press/weathered_iron.json",
+      "sha256": "8d3fb1d17ac633ecd2522c92a0d9ea634c95c3593639932d1aa785364821b0f4",
+      "size": 466,
+      "url": "files/8d/8d3fb1d17ac633ecd2522c92a0d9ea634c95c3593639932d1aa785364821b0f4"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/roller/brass.json",
+      "sha256": "033dc57a965e70e1a9e4bb21eca30da471eb93a72d9cde50bb237f9e1c8b7736",
+      "size": 462,
+      "url": "files/03/033dc57a965e70e1a9e4bb21eca30da471eb93a72d9cde50bb237f9e1c8b7736"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/roller/copper.json",
+      "sha256": "340df6138350f5914d43eb0f5470fbb4b06a9dc12638d6590f15059ace737a98",
+      "size": 464,
+      "url": "files/34/340df6138350f5914d43eb0f5470fbb4b06a9dc12638d6590f15059ace737a98"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/roller/creative.json",
+      "sha256": "93f60c577ce1190c31df505eb9a44c15029c286af4a543e0c71d29e1113941e0",
+      "size": 474,
+      "url": "files/93/93f60c577ce1190c31df505eb9a44c15029c286af4a543e0c71d29e1113941e0"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/roller/industrial_iron.json",
+      "sha256": "65b95969ec683b748e93da70eb2a0957edf8052c0cc4c9e51426a61f9cf94998",
+      "size": 481,
+      "url": "files/65/65b95969ec683b748e93da70eb2a0957edf8052c0cc4c9e51426a61f9cf94998"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/roller/railway.json",
+      "sha256": "a7f59ac380594b28cef02ae1c8865fabdd2f91208e83cd524883bb5273340486",
+      "size": 466,
+      "url": "files/a7/a7f59ac380594b28cef02ae1c8865fabdd2f91208e83cd524883bb5273340486"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/roller/refined_radiance.json",
+      "sha256": "3679dba8b53ec5166030f2d778a25016c2dddb5d8560e9ba4d56518cccf25ab9",
+      "size": 484,
+      "url": "files/36/3679dba8b53ec5166030f2d778a25016c2dddb5d8560e9ba4d56518cccf25ab9"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/roller/shadow_steel.json",
+      "sha256": "59ec251c45074f9da670eaaf48aaad0785c07d0a412e0b40dce0ea006ce7507d",
+      "size": 476,
+      "url": "files/59/59ec251c45074f9da670eaaf48aaad0785c07d0a412e0b40dce0ea006ce7507d"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/roller/weathered_iron.json",
+      "sha256": "b05f39cf68105204b0d9d3473d73222f100025fe1c32c4d6b0a64a5df67b81d7",
+      "size": 479,
+      "url": "files/b0/b05f39cf68105204b0d9d3473d73222f100025fe1c32c4d6b0a64a5df67b81d7"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/saw/brass.json",
+      "sha256": "64a8ad21be7a206e156a86d3a18df08d3a1abe0092ee56b20ecfb03ed0f912a8",
+      "size": 456,
+      "url": "files/64/64a8ad21be7a206e156a86d3a18df08d3a1abe0092ee56b20ecfb03ed0f912a8"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/saw/copper.json",
+      "sha256": "422d5cfbbd220ef5030c6c97ff01740389aed663b2de6b075cee64c4e3a93d65",
+      "size": 458,
+      "url": "files/42/422d5cfbbd220ef5030c6c97ff01740389aed663b2de6b075cee64c4e3a93d65"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/saw/creative.json",
+      "sha256": "0cc1106113bfce80ba0a654741b6d05ee4caa2e55be6679a9678ebcd25c49618",
+      "size": 468,
+      "url": "files/0c/0cc1106113bfce80ba0a654741b6d05ee4caa2e55be6679a9678ebcd25c49618"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/saw/industrial_iron.json",
+      "sha256": "26a8386614b34696aa17de1c2ef58e7a84d95c1c6a8853133eb6f53c7611267d",
+      "size": 475,
+      "url": "files/26/26a8386614b34696aa17de1c2ef58e7a84d95c1c6a8853133eb6f53c7611267d"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/saw/railway.json",
+      "sha256": "edda382378809884e228f1e39eaec5c8bccdb4ce47dd08663fb0106f3db5abf4",
+      "size": 460,
+      "url": "files/ed/edda382378809884e228f1e39eaec5c8bccdb4ce47dd08663fb0106f3db5abf4"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/saw/refined_radiance.json",
+      "sha256": "a382ea8433537eee8610f26c1f7389d1bb9f236e68ad2a502fedcfa34808e5ad",
+      "size": 478,
+      "url": "files/a3/a382ea8433537eee8610f26c1f7389d1bb9f236e68ad2a502fedcfa34808e5ad"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/saw/shadow_steel.json",
+      "sha256": "3bacdaeb83d1ed78fe20255f8bed7f5b212b00dbdb5e3905a986209537f46a85",
+      "size": 470,
+      "url": "files/3b/3bacdaeb83d1ed78fe20255f8bed7f5b212b00dbdb5e3905a986209537f46a85"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/saw/weathered_iron.json",
+      "sha256": "f83dc2bb20650c9114621ec13181434be1a297ea33baa0f989b6b9d58ee825b4",
+      "size": 473,
+      "url": "files/f8/f83dc2bb20650c9114621ec13181434be1a297ea33baa0f989b6b9d58ee825b4"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createdieselgenerators/createdieselgenerators/fuel_type/diesel.json",
+      "sha256": "e0877bdba9703c8f0b7baa67f2a5bfaf2ac2b1c53aec42ca2d03dafe4eabd715",
+      "size": 331,
+      "url": "files/e0/e0877bdba9703c8f0b7baa67f2a5bfaf2ac2b1c53aec42ca2d03dafe4eabd715"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createdieselgenerators/createdieselgenerators/fuel_type/gasoline.json",
+      "sha256": "f8c01e48171f44138aef5d262f501b797a15718c462c525f95c4280f2fe05d08",
+      "size": 333,
+      "url": "files/f8/f8c01e48171f44138aef5d262f501b797a15718c462c525f95c4280f2fe05d08"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createdieselgenerators/recipe/crafting/canister.json",
+      "sha256": "a4a6063a91ce7782c5170ae41f446dad5d8b1f4e6e372318a95875cce5dbed34",
+      "size": 612,
+      "url": "files/a4/a4a6063a91ce7782c5170ae41f446dad5d8b1f4e6e372318a95875cce5dbed34"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createdieselgenerators/recipe/crafting/diesel_engine.json",
+      "sha256": "cb6dfc153657eb77ed4f6d93d45ebde1c2ffc4c26eda7ff40bb923afb47ee5e9",
+      "size": 779,
+      "url": "files/cb/cb6dfc153657eb77ed4f6d93d45ebde1c2ffc4c26eda7ff40bb923afb47ee5e9"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createdieselgenerators/recipe/crafting/distillation_controller.json",
+      "sha256": "563c5ad37e06220b4a185bb9e59f6160301a45e098ce0c30e68e3805f06eef4e",
+      "size": 686,
+      "url": "files/56/563c5ad37e06220b4a185bb9e59f6160301a45e098ce0c30e68e3805f06eef4e"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createdieselgenerators/recipe/crafting/oil_barrel.json",
+      "sha256": "6a448b652242afb2beb33e8643bb2f6a7cf71a3ec38712dc91a741b4ca8653c5",
+      "size": 408,
+      "url": "files/6a/6a448b652242afb2beb33e8643bb2f6a7cf71a3ec38712dc91a741b4ca8653c5"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createdieselgenerators/recipe/crafting/oil_scanner.json",
+      "sha256": "1074e70368d2489cc919ba5ea197b41250648f22ccab00f34ff3d55fc0b914d1",
+      "size": 608,
+      "url": "files/10/1074e70368d2489cc919ba5ea197b41250648f22ccab00f34ff3d55fc0b914d1"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createdieselgenerators/recipe/crafting/pumpjack_bearing.json",
+      "sha256": "e5be065185fb5cbcf445b64f866c236f5154b380e1850685ff73d3b58568b4fb",
+      "size": 637,
+      "url": "files/e5/e5be065185fb5cbcf445b64f866c236f5154b380e1850685ff73d3b58568b4fb"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createdieselgenerators/tags/worldgen/biome/deny_oil_biomes.json",
+      "sha256": "0ca5028f0ea1cc7b48aee1bd7d17d87f19a3512eee3eeea30993170e4849cb73",
+      "size": 875,
+      "url": "files/0c/0ca5028f0ea1cc7b48aee1bd7d17d87f19a3512eee3eeea30993170e4849cb73"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/createdieselgenerators/tags/worldgen/biome/oil_biomes.json",
+      "sha256": "4a95f15bc9b3353f56fc177512bad2b3ca88389a9b8a42049c38591204eeb65d",
+      "size": 398,
+      "url": "files/4a/4a95f15bc9b3353f56fc177512bad2b3ca88389a9b8a42049c38591204eeb65d"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/minecraft/recipe/cannon_welder_mirrored.json",
+      "sha256": "ca7c4ea469fa8ec1c5f79f8683fac019a32947a1dacd7d47cff4df0bae4b8d25",
+      "size": 662,
+      "url": "files/ca/ca7c4ea469fa8ec1c5f79f8683fac019a32947a1dacd7d47cff4df0bae4b8d25"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/offroad/recipe/borehead_bearing.json",
+      "sha256": "c65eb028db94322af6a9a503853a0ded976f801323eb2d36ed7d21958c42ac6a",
+      "size": 612,
+      "url": "files/c6/c65eb028db94322af6a9a503853a0ded976f801323eb2d36ed7d21958c42ac6a"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/offroad/recipe/tire.json",
+      "sha256": "f61db4ab2583b9dda42989fb0b22666beeab30972f32157cd15b7877ef1725c3",
+      "size": 474,
+      "url": "files/f6/f61db4ab2583b9dda42989fb0b22666beeab30972f32157cd15b7877ef1725c3"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/offroad/recipe/wheel_mount.json",
+      "sha256": "81ea5c8594efa12c6d019826a7d509d180b233d05951c98d5eb2581e6ee1a400",
+      "size": 618,
+      "url": "files/81/81ea5c8594efa12c6d019826a7d509d180b233d05951c98d5eb2581e6ee1a400"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/simulated/recipe/physics_assembler.json",
+      "sha256": "702e503c9d5567bf7d78c7751af2997129fd5357830dbaae6bf81718f59f42c6",
+      "size": 606,
+      "url": "files/70/702e503c9d5567bf7d78c7751af2997129fd5357830dbaae6bf81718f59f42c6"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/simulated/recipe/sequenced_assembly/engine_assembly.json",
+      "sha256": "e3e82edfc527857ef845e0e6542a802e251a31152475e26f275cc72b937f3715",
+      "size": 1592,
+      "url": "files/e3/e3e82edfc527857ef845e0e6542a802e251a31152475e26f275cc72b937f3715"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/simulated/recipe/sequenced_assembly/gyroscopic_mechanism.json",
+      "sha256": "00be576207660607fb0653855485cb5e57cfb36fcd7c59898c5674caff4d535d",
+      "size": 2005,
+      "url": "files/00/00be576207660607fb0653855485cb5e57cfb36fcd7c59898c5674caff4d535d"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/black_gold.json",
+      "sha256": "513fa4f65c212813f24a6cfe6589562f02c3066dda3e09ddad30070a4f76be93",
+      "size": 1200,
+      "url": "files/51/513fa4f65c212813f24a6cfe6589562f02c3066dda3e09ddad30070a4f76be93"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/controlled_flight.json",
+      "sha256": "674506d37166263d66ad2747ebd4703ad13f710f88f3d0a73b502e88bbe39114",
+      "size": 1218,
+      "url": "files/67/674506d37166263d66ad2747ebd4703ad13f710f88f3d0a73b502e88bbe39114"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/first_plane.json",
+      "sha256": "953cf39cf44159c1baeba123c29f6645eada2c1010d2a9f74be98a47afacc179",
+      "size": 1243,
+      "url": "files/95/953cf39cf44159c1baeba123c29f6645eada2c1010d2a9f74be98a47afacc179"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/fluid_handling.json",
+      "sha256": "923d505cf36910a1dab330276943f6bb920d42bce1ae203ac6babe4b01d71e1a",
+      "size": 1002,
+      "url": "files/92/923d505cf36910a1dab330276943f6bb920d42bce1ae203ac6babe4b01d71e1a"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/heavy_industry.json",
+      "sha256": "446f5db3033553cdef8019a73d057de95203f6ea6ee0740ee439fb0f3dd46246",
+      "size": 1261,
+      "url": "files/44/446f5db3033553cdef8019a73d057de95203f6ea6ee0740ee439fb0f3dd46246"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/kinetic_workshop.json",
+      "sha256": "7de9aa92a35492332dc8e8eee05e5e20d98e540ec48c331b00be3f5f1c2b002b",
+      "size": 1054,
+      "url": "files/7d/7de9aa92a35492332dc8e8eee05e5e20d98e540ec48c331b00be3f5f1c2b002b"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/physics_age.json",
+      "sha256": "0f8b26b99d92d69b9f0c6c0706554b5151617670c3ae5f3a3a57b18e6d8759b6",
+      "size": 906,
+      "url": "files/0f/0f8b26b99d92d69b9f0c6c0706554b5151617670c3ae5f3a3a57b18e6d8759b6"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/precision_engineering.json",
+      "sha256": "81d1e1cab7da1d4a5c5ee6fc14bc4a77b86c94d541c45ce244a813ece8cc63e8",
+      "size": 829,
+      "url": "files/81/81d1e1cab7da1d4a5c5ee6fc14bc4a77b86c94d541c45ce244a813ece8cc63e8"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/root.json",
+      "sha256": "864740d29239ef36e8ab3a50d65807b0c2b3a2454ffd12e55c2928c4d3724df0",
+      "size": 731,
+      "url": "files/86/864740d29239ef36e8ab3a50d65807b0c2b3a2454ffd12e55c2928c4d3724df0"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/smart_logistics.json",
+      "sha256": "af1556934db43ee1956db808690b87d679dee52af7c7c3e951bcd87163ee71a9",
+      "size": 1044,
+      "url": "files/af/af1556934db43ee1956db808690b87d679dee52af7c7c3e951bcd87163ee71a9"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/starter_logistics.json",
+      "sha256": "63937cb379edba4d0989cbd5fef18a60c50ac6bb08f6885dab995e2d0aef1e26",
+      "size": 796,
+      "url": "files/63/63937cb379edba4d0989cbd5fef18a60c50ac6bb08f6885dab995e2d0aef1e26"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/pack.mcmeta",
+      "sha256": "6065c45a6a4fe6d475c69fabbb599a561e298eb7dc5041be92b4ae8cb9b129ae",
+      "size": 131,
+      "url": "files/60/6065c45a6a4fe6d475c69fabbb599a561e298eb7dc5041be92b4ae8cb9b129ae"
+    },
+    {
+      "path": "world/datapacks/tenpack-lifesteal-balance/README.md",
+      "sha256": "077e363a15fdbf2cb5318a98f902e50d64502d061782736454256cc2c3ed757e",
+      "size": 783,
+      "url": "files/07/077e363a15fdbf2cb5318a98f902e50d64502d061782736454256cc2c3ed757e"
+    },
+    {
+      "path": "world/datapacks/tenpack-lifesteal-balance/data/lifesteal/worldgen/placed_feature/deepslate_heart_geode_placed.json",
+      "sha256": "8831f3f04cb05b8780a6525626ae91f8a622d950a30eff261ffddb940aebb44e",
+      "size": 483,
+      "url": "files/88/8831f3f04cb05b8780a6525626ae91f8a622d950a30eff261ffddb940aebb44e"
+    },
+    {
+      "path": "world/datapacks/tenpack-lifesteal-balance/data/lifesteal/worldgen/placed_feature/heart_ore_placed.json",
+      "sha256": "82ae88afe57395e222c1699cc91cce58b94268ba02e08aba1935c0d59884c68c",
+      "size": 532,
+      "url": "files/82/82ae88afe57395e222c1699cc91cce58b94268ba02e08aba1935c0d59884c68c"
+    },
+    {
+      "path": "world/datapacks/tenpack-lifesteal-balance/data/lifesteal/worldgen/placed_feature/nether_heart_geode_placed.json",
+      "sha256": "19c42a890dc3b6ffc980c8b2a621fe036d09d1b506989370f9dfc95c327c144a",
+      "size": 477,
+      "url": "files/19/19c42a890dc3b6ffc980c8b2a621fe036d09d1b506989370f9dfc95c327c144a"
+    },
+    {
+      "path": "world/datapacks/tenpack-lifesteal-balance/data/lifesteal/worldgen/placed_feature/nether_heart_ore_placed.json",
+      "sha256": "c5d8020ed1afa8353ddba107bba1bd987b6ea67a6e574e40ab5bdb4163f633ce",
+      "size": 536,
+      "url": "files/c5/c5d8020ed1afa8353ddba107bba1bd987b6ea67a6e574e40ab5bdb4163f633ce"
+    },
+    {
+      "path": "world/datapacks/tenpack-lifesteal-balance/pack.mcmeta",
+      "sha256": "5d13a9043864b2fdf61ac394b89449313e567b5847c2791ec00fd1cc72015e7f",
+      "size": 129,
+      "url": "files/5d/5d13a9043864b2fdf61ac394b89449313e567b5847c2791ec00fd1cc72015e7f"
+    },
+    {
+      "path": "world/datapacks/tenpack-stronghold-startup/README.md",
+      "sha256": "ffc88044cd12f1feb4d9bde508f5ca3e4a9e077790ae11b484a1de0483ea340d",
+      "size": 707,
+      "url": "files/ff/ffc88044cd12f1feb4d9bde508f5ca3e4a9e077790ae11b484a1de0483ea340d"
+    },
+    {
+      "path": "world/datapacks/tenpack-stronghold-startup/data/minecraft/tags/worldgen/biome/has_structure/stronghold.json",
+      "sha256": "a7a86535dff3a63938644e8456df41ff7aaab85f6cf6112bc85cab975f1a181f",
+      "size": 71,
+      "url": "files/a7/a7a86535dff3a63938644e8456df41ff7aaab85f6cf6112bc85cab975f1a181f"
+    },
+    {
+      "path": "world/datapacks/tenpack-stronghold-startup/data/minecraft/tags/worldgen/biome/stronghold_biased_to.json",
+      "sha256": "a7a86535dff3a63938644e8456df41ff7aaab85f6cf6112bc85cab975f1a181f",
+      "size": 71,
+      "url": "files/a7/a7a86535dff3a63938644e8456df41ff7aaab85f6cf6112bc85cab975f1a181f"
+    },
+    {
+      "path": "world/datapacks/tenpack-stronghold-startup/data/minecraft/worldgen/structure_set/strongholds.json",
+      "sha256": "9e9c17dd56fdb3fc0f81faa75919f5aac2f51ccdefada3bae64b231ee2cfef60",
+      "size": 290,
+      "url": "files/9e/9e9c17dd56fdb3fc0f81faa75919f5aac2f51ccdefada3bae64b231ee2cfef60"
+    },
+    {
+      "path": "world/datapacks/tenpack-stronghold-startup/pack.mcmeta",
+      "sha256": "ad8ed28f0c5c1c2eee1acfef8888aacb5e6d8ffdce2b238e9592ac2e45254551",
+      "size": 138,
+      "url": "files/ad/ad8ed28f0c5c1c2eee1acfef8888aacb5e6d8ffdce2b238e9592ac2e45254551"
     }
   ],
   "loader": "neoforge",

@@ -1,6 +1,6 @@
 # Tenpack Create Addon Audit
 
-This records the progression audit behind `server/datapacks/tenpack-create-progression`.
+This records the progression audit behind `server/world/datapacks/tenpack-create-progression`.
 
 ## Audited source
 

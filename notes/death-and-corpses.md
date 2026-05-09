@@ -37,7 +37,7 @@ Status: implemented/pushed. For the current player-facing design, see `notes/dea
 
 ## Heart ore / crystal economy
 
-Added server datapack: `server/datapacks/tenpack-lifesteal-balance/`.
+Added server datapack: `server/world/datapacks/tenpack-lifesteal-balance/`.
 
 This overrides Lifesteal's default heart crystal worldgen so heart ore is closer to old-school diamond hunting:
 

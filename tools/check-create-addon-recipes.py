@@ -39,7 +39,7 @@ ADDON_JARS = {
 
 # Core progression outputs controlled by Tenpack's datapack. Addons should not
 # introduce parallel recipes for these unless the recipe is explicitly audited
-# and moved into server/datapacks/tenpack-create-progression.
+# and moved into server/world/datapacks/tenpack-create-progression.
 CONTROLLED_CREATE_OUTPUTS = {
     "create:mechanical_press",
     "create:mechanical_mixer",

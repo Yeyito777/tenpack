@@ -100,7 +100,7 @@ Heart crystal progression still exists, but its ore source is intentionally rare
 Tenpack adds a server datapack:
 
 ```text
-server/datapacks/tenpack-lifesteal-balance/
+server/world/datapacks/tenpack-lifesteal-balance/
 ```
 
 It changes Lifesteal's default heart crystal worldgen:

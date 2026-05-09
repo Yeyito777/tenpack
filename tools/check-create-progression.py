@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import Any
 
 
-DATAPACK_REL = Path("server/datapacks/tenpack-create-progression")
+DATAPACK_REL = Path("server/world/datapacks/tenpack-create-progression")
 CDG_SERVER_CONFIG_REL = Path("server/config/createdieselgenerators-server.toml")
 CDG_COMMON_CONFIG_RELS = [
     Path("client/config/createdieselgenerators-common.toml"),

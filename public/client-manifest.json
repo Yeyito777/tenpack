@@ -476,9 +476,9 @@
     },
     {
       "path": "mods/locksmith-1.0.3.jar",
-      "sha256": "eec4df0500ced908e7979299e4073fc86d88ebb9ac815be652136b2eb6ab7f1b",
-      "size": 201639,
-      "url": "files/ee/eec4df0500ced908e7979299e4073fc86d88ebb9ac815be652136b2eb6ab7f1b"
+      "sha256": "4b0bc2236aecc6dc9ab22b3723cceda3eb3e64fed7d6d689fc008e491943fc1c",
+      "size": 193579,
+      "url": "files/4b/4b0bc2236aecc6dc9ab22b3723cceda3eb3e64fed7d6d689fc008e491943fc1c"
     },
     {
       "path": "mods/more_darkness-neoforge-1.21.1-1.0.0.jar",
@@ -584,9 +584,9 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "a4425ad5726caa6746037e33f1b1f37c1f7fd47f6f10cbf2064350fabc9d7dda",
-      "size": 34106,
-      "url": "files/a4/a4425ad5726caa6746037e33f1b1f37c1f7fd47f6f10cbf2064350fabc9d7dda"
+      "sha256": "e7fcb532e1fa8bd717a77da41882b07f54ef432f15c71f76dcaf8e9bfdc45fa5",
+      "size": 34410,
+      "url": "files/e7/e7fcb532e1fa8bd717a77da41882b07f54ef432f15c71f76dcaf8e9bfdc45fa5"
     },
     {
       "path": "mods/tenpackdeath-0.1.0.jar",
