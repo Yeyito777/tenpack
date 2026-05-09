@@ -16,10 +16,10 @@
     },
     {
       "name": "LambDynamicLights",
-      "version": "4.8.8+1.21.1",
-      "filename": "lambdynamiclights-4.8.8+1.21.1.jar",
-      "source": "https://cdn.modrinth.com/data/yBW8D80W/versions/IQcvNDtF/lambdynamiclights-4.8.8%2B1.21.1.jar",
-      "note": "Client-side dynamic lighting for held/dropped light-emitting items and luminous entities; installed only on the client. Incompatible with Sodium Dynamic Lights and RyoamicLights, which are not installed."
+      "version": "3.1.4-neo-0+1.21.1 (Unofficial NeoForge)",
+      "filename": "lambdynamiclights-3.1.4-neo-0+1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/g1BboDNl/versions/quylAxP6/lambdynamiclights-3.1.4-neo-0%2B1.21.1.jar",
+      "note": "Client-side dynamic lighting. Switched from the 4.8.8 multiloader wrapper to the simpler unofficial NeoForge 3.1.4 build during the mod-stack audit because the wrapper declares nested runtime/library mod IDs that are easy to miss in static dependency checks."
     },
     {
       "name": "Sinytra Connector",
@@ -308,10 +308,10 @@
     },
     {
       "name": "Camera Overhaul",
-      "version": "2.0.6-neoforge+mc.1.21.0-1.21.1",
-      "filename": "CameraOverhaul-v2.0.6-neoforge+mc[1.21.0-1.21.1].jar",
-      "source": "https://cdn.modrinth.com/data/m0oRwcZx/versions/zTY9SqFy/CameraOverhaul-v2.0.6-neoforge%2Bmc%5B1.21.0-1.21.1%5D.jar",
-      "note": "Client-side camera motion/tilt mod. Local jar patch lowers declared cloth_config dependency from >=16.0.0 to >=15.0.0 because MC 1.21.1 NeoForge only has Cloth Config v15."
+      "version": "2.0.6-fabric+mc.1.21.0-1.21.2 via Sinytra Connector",
+      "filename": "CameraOverhaul-v2.0.6-fabric+mc[1.21.0-1.21.2].jar",
+      "source": "https://cdn.modrinth.com/data/m0oRwcZx/versions/9Lrvwa1B/CameraOverhaul-v2.0.6-fabric%2Bmc%5B1.21.0-1.21.2%5D.jar",
+      "note": "Client-side camera motion/tilt mod. Switched from the NeoForge jar to the Fabric jar during the mod-stack audit so it is satisfied by the existing Fabric Cloth Config/Connector stack instead of requiring a second cloth_config NeoForge library alongside cloth-config."
     },
     {
       "name": "Falling Leaves",
@@ -615,5 +615,5 @@
       "note": "Recipe and item viewer. Tenpack patches only META-INF/neoforge.mods.toml from the upstream jar so the Minecraft dependency range admits 1.21.1; upstream Modrinth labels the file 1.21.1 but the jar metadata declares [1.21, 1.21.1). Installed on both client and server for integration compatibility."
     }
   ],
-  "note": "Trimmed to requested mods plus required libraries. Experiment 2026-05-06: restored Camera Overhaul/Falling Leaves; CameraOverhaul jar patched to accept cloth_config >=15; using Fabric Cloth Config v15 through Sinytra Connector because NeoForge Cloth Config v16 requires NeoForge 21.2.x / MC 1.21.2+. Added Simple Voice Chat stack on 2026-05-07: Simple Voice Chat, Voice Chat Interaction via Connector, and Voiceless Survival."
+  "note": "Trimmed to requested mods plus required libraries. Experiment 2026-05-06: restored Camera Overhaul/Falling Leaves; CameraOverhaul now uses the Fabric jar through Sinytra Connector so the existing Fabric Cloth Config v15 satisfies it without a duplicate NeoForge cloth_config library. Added Simple Voice Chat stack on 2026-05-07: Simple Voice Chat, Voice Chat Interaction via Connector, and Voiceless Survival."
 }

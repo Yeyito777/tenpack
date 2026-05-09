@@ -121,10 +121,10 @@
       "url": "files/07/07ee6fd24d8427ee079e2e376095b0ac92450b0153331f1575f8195e2c9cf90b"
     },
     {
-      "path": "mods/CameraOverhaul-v2.0.6-neoforge+mc[1.21.0-1.21.1].jar",
-      "sha256": "3319718d2bad9c24542fde7e84029cfcf9f1187f84b376831444f7b1cb03c223",
-      "size": 143829,
-      "url": "files/33/3319718d2bad9c24542fde7e84029cfcf9f1187f84b376831444f7b1cb03c223"
+      "path": "mods/CameraOverhaul-v2.0.6-fabric+mc[1.21.0-1.21.2].jar",
+      "sha256": "ad12f984efbd1f4564814f0c2623fe11aa27e1e8a3279d33ffb5079ed4427440",
+      "size": 142798,
+      "url": "files/ad/ad12f984efbd1f4564814f0c2623fe11aa27e1e8a3279d33ffb5079ed4427440"
     },
     {
       "path": "mods/Chunky-NeoForge-1.4.23.jar",
@@ -457,10 +457,10 @@
       "url": "files/ac/ac827b62ce8fe71760208671b4a694e3ccd35049075f9406a751cffb5a5c9779"
     },
     {
-      "path": "mods/lambdynamiclights-4.8.8+1.21.1.jar",
-      "sha256": "5c41d55ad9306f8d0a8c1b0174d71a3e333026b08adb6883653cd91ab6c5bea0",
-      "size": 2017417,
-      "url": "files/5c/5c41d55ad9306f8d0a8c1b0174d71a3e333026b08adb6883653cd91ab6c5bea0"
+      "path": "mods/lambdynamiclights-3.1.4-neo-0+1.21.1.jar",
+      "sha256": "3b4c08218c4fcbfa5af29d224829f282eeeb13ee1272ce0ece9c7897a42fe1be",
+      "size": 440704,
+      "url": "files/3b/3b4c08218c4fcbfa5af29d224829f282eeeb13ee1272ce0ece9c7897a42fe1be"
     },
     {
       "path": "mods/legendarysurvivaloverhaul-1.21.1-2.4.2.jar",
@@ -596,9 +596,9 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "6dc5e8df79187350b6c88a94d226e482271d2731fd3875c7aa5ba5a025b92bc4",
-      "size": 33916,
-      "url": "files/6d/6dc5e8df79187350b6c88a94d226e482271d2731fd3875c7aa5ba5a025b92bc4"
+      "sha256": "a4425ad5726caa6746037e33f1b1f37c1f7fd47f6f10cbf2064350fabc9d7dda",
+      "size": 34106,
+      "url": "files/a4/a4425ad5726caa6746037e33f1b1f37c1f7fd47f6f10cbf2064350fabc9d7dda"
     },
     {
       "path": "mods/tenpackdeath-0.1.0.jar",
