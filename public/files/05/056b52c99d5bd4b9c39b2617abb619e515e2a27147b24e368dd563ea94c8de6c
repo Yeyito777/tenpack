@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create:mechanical_plough"
+    },
+    {
+      "item": "create:railway_casing"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "createcasing:railway_mechanical_plough"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createcasing"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "create:sturdy_sheet"
+  },
+  "loops": 4,
+  "results": [
+    {
+      "chance": 80.0,
+      "id": "simulated:engine_assembly"
+    },
+    {
+      "chance": 10.0,
+      "id": "create:sturdy_sheet"
+    },
+    {
+      "chance": 8.0,
+      "id": "create:industrial_iron_block"
+    },
+    {
+      "chance": 3.0,
+      "id": "minecraft:iron_bars"
+    },
+    {
+      "id": "minecraft:blast_furnace"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "simulated:incomplete_engine_assembly"
+        },
+        {
+          "item": "create:precision_mechanism"
+        }
+      ],
+      "results": [
+        {
+          "id": "simulated:incomplete_engine_assembly"
+        }
+      ]
+    },
+    {
+      "type": "create:cutting",
+      "ingredients": [
+        {
+          "item": "simulated:incomplete_engine_assembly"
+        }
+      ],
+      "results": [
+        {
+          "id": "simulated:incomplete_engine_assembly"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "simulated:incomplete_engine_assembly"
+        }
+      ],
+      "results": [
+        {
+          "id": "simulated:incomplete_engine_assembly"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "simulated:incomplete_engine_assembly"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "simulated"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

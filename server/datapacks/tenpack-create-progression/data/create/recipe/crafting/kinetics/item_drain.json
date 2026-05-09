@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:iron_bars"
+    },
+    "P": {
+      "item": "create:fluid_pipe"
+    },
+    "C": {
+      "item": "create:copper_casing"
+    },
+    "S": {
+      "item": "create:copper_sheet"
+    }
+  },
+  "pattern": [
+    " B ",
+    "PCP",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "create:item_drain"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "item": "minecraft:lever"
+    },
+    "C": {
+      "item": "create:andesite_alloy"
+    },
+    "B": {
+      "item": "create:mechanical_bearing"
+    },
+    "M": {
+      "item": "minecraft:compass"
+    }
+  },
+  "pattern": [
+    " L ",
+    "CBC",
+    " M "
+  ],
+  "result": {
+    "count": 1,
+    "id": "simulated:physics_assembler"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "simulated"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

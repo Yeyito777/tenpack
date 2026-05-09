@@ -1,0 +1,62 @@
+{
+  "criteria": {
+    "gyro_bearing": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "aeronautics:gyroscopic_propeller_bearing"
+          }
+        ]
+      }
+    },
+    "smart_propeller": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "aeronautics:smart_propeller"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "If this flies, it should feel like the server just entered a new era."
+    },
+    "icon": {
+      "count": 1,
+      "id": "aeronautics:smart_propeller"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "First Plane Moment"
+    }
+  },
+  "requirements": [
+    [
+      "gyro_bearing"
+    ],
+    [
+      "smart_propeller"
+    ]
+  ],
+  "sends_telemetry_event": false,
+  "parent": "tenpack_create:create_progression/controlled_flight",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "simulated"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aeronautics"
+    }
+  ]
+}

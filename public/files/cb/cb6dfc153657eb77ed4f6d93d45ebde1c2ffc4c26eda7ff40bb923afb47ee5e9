@@ -1,0 +1,43 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "createdieselgenerators:engine_piston"
+    },
+    "Q": {
+      "item": "minecraft:flint_and_steel"
+    },
+    "M": {
+      "item": "create:precision_mechanism"
+    },
+    "B": {
+      "tag": "c:storage_blocks/brass"
+    },
+    "S": {
+      "item": "minecraft:polished_blackstone_slab"
+    },
+    "F": {
+      "item": "create:fluid_tank"
+    }
+  },
+  "pattern": [
+    "SQS",
+    "PMP",
+    "BFB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "createdieselgenerators:diesel_engine"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createdieselgenerators"
+    }
+  ]
+}

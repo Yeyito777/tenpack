@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create:encased_fan"
+    },
+    {
+      "item": "create:weathered_iron_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "createcasing:weathered_iron_encased_fan"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createcasing"
+    }
+  ]
+}

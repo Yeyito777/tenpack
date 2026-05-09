@@ -1,0 +1,54 @@
+{
+  "criteria": {
+    "press": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:mechanical_press"
+          }
+        ]
+      }
+    },
+    "mixer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:mechanical_mixer"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "text": "Build the first real machine suite: pressing, mixing, cutting, drilling, fans, and contraptions."
+    },
+    "icon": {
+      "count": 1,
+      "id": "create:mechanical_press"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Kinetic Workshop"
+    }
+  },
+  "requirements": [
+    [
+      "press"
+    ],
+    [
+      "mixer"
+    ]
+  ],
+  "sends_telemetry_event": false,
+  "parent": "tenpack_create:create_progression/starter_logistics",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

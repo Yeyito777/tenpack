@@ -1,0 +1,54 @@
+{
+  "criteria": {
+    "spout": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:spout"
+          }
+        ]
+      }
+    },
+    "drain": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:item_drain"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "text": "Copper casing, pipes, spouts, and drains open the next layer of automation."
+    },
+    "icon": {
+      "count": 1,
+      "id": "create:spout"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Fluid Handling"
+    }
+  },
+  "requirements": [
+    [
+      "spout"
+    ],
+    [
+      "drain"
+    ]
+  ],
+  "sends_telemetry_event": false,
+  "parent": "tenpack_create:create_progression/kinetic_workshop",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

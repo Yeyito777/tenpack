@@ -1,0 +1,104 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "create:precision_mechanism"
+  },
+  "loops": 3,
+  "results": [
+    {
+      "chance": 160.0,
+      "id": "simulated:gyroscopic_mechanism"
+    },
+    {
+      "chance": 8.0,
+      "id": "create:precision_mechanism"
+    },
+    {
+      "chance": 5.0,
+      "id": "minecraft:compass"
+    },
+    {
+      "chance": 3.0,
+      "id": "create:brass_nugget"
+    },
+    {
+      "id": "minecraft:clock"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "simulated:incomplete_gyroscopic_mechanism"
+        },
+        {
+          "item": "minecraft:compass"
+        }
+      ],
+      "results": [
+        {
+          "id": "simulated:incomplete_gyroscopic_mechanism"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "simulated:incomplete_gyroscopic_mechanism"
+        },
+        {
+          "item": "create:electron_tube"
+        }
+      ],
+      "results": [
+        {
+          "id": "simulated:incomplete_gyroscopic_mechanism"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "simulated:incomplete_gyroscopic_mechanism"
+        },
+        {
+          "tag": "c:plates/brass"
+        }
+      ],
+      "results": [
+        {
+          "id": "simulated:incomplete_gyroscopic_mechanism"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "simulated:incomplete_gyroscopic_mechanism"
+        }
+      ],
+      "results": [
+        {
+          "id": "simulated:incomplete_gyroscopic_mechanism"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "simulated:incomplete_gyroscopic_mechanism"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "simulated"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

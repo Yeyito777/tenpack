@@ -1,0 +1,62 @@
+{
+  "criteria": {
+    "diesel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "createdieselgenerators:diesel_engine"
+          }
+        ]
+      }
+    },
+    "cannon_builder": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "createbigcannons:cannon_builder"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Diesel power and cannon production are precision-era faction technologies."
+    },
+    "icon": {
+      "count": 1,
+      "id": "createdieselgenerators:diesel_engine"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Heavy Industry"
+    }
+  },
+  "requirements": [
+    [
+      "diesel"
+    ],
+    [
+      "cannon_builder"
+    ]
+  ],
+  "sends_telemetry_event": false,
+  "parent": "tenpack_create:create_progression/precision_engineering",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createdieselgenerators"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createbigcannons"
+    }
+  ]
+}

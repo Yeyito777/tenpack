@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "item": "create:electron_tube"
+    },
+    "P": {
+      "tag": "c:dusts/redstone"
+    },
+    "R": {
+      "item": "create:railway_casing"
+    }
+  },
+  "pattern": [
+    " T ",
+    " P ",
+    " R "
+  ],
+  "result": {
+    "count": 4,
+    "id": "create:track_signal"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

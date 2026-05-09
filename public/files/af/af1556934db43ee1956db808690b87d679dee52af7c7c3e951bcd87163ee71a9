@@ -1,0 +1,54 @@
+{
+  "criteria": {
+    "crafter": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:mechanical_crafter"
+          }
+        ]
+      }
+    },
+    "stock_link": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:stock_link"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "text": "Mechanical crafters and package logistics now sit in the precision era."
+    },
+    "icon": {
+      "count": 1,
+      "id": "create:mechanical_crafter"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Smart Logistics"
+    }
+  },
+  "requirements": [
+    [
+      "crafter"
+    ],
+    [
+      "stock_link"
+    ]
+  ],
+  "sends_telemetry_event": false,
+  "parent": "tenpack_create:create_progression/precision_engineering",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

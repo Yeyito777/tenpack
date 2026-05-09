@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create:mechanical_drill"
+    },
+    {
+      "item": "create:copper_casing"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "createcasing:copper_mechanical_drill"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createcasing"
+    }
+  ]
+}

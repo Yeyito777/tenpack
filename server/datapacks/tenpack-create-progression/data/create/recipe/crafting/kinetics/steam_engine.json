@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "create:precision_mechanism"
+    },
+    "A": {
+      "item": "create:andesite_alloy"
+    },
+    "S": {
+      "item": "create:shaft"
+    },
+    "C": {
+      "tag": "c:storage_blocks/copper"
+    }
+  },
+  "pattern": [
+    " P ",
+    "ASA",
+    " C "
+  ],
+  "result": {
+    "count": 1,
+    "id": "create:steam_engine"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

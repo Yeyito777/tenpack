@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create:mechanical_plough"
+    },
+    {
+      "item": "create:refined_radiance_casing"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "createcasing:refined_radiance_mechanical_plough"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createcasing"
+    }
+  ]
+}
