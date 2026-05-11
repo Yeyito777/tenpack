@@ -1,0 +1,33 @@
+{
+	"required": true,
+	"package": "dev.nonamecrackers2.simpleclouds.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"refmap": "simpleclouds.refmap.json",
+	"plugin": "dev.nonamecrackers2.simpleclouds.common.mixin.SimpleCloudsMixinPlugin",
+	"mixins": [
+		"MixinServerLevel",
+		"MixinWeatherCommand",
+		"MixinLevel",
+		"MixinServerLevelAccessor",
+		"vanillacompat.MixinWeatherCheck"
+	],
+	"client": [
+		"MixinLevelRenderer",
+		"MixinGameRenderer",
+		"MixinOptions",
+		"MixinGameRendererAccessor",
+		"MixinPostChain",
+		"MixinClientLevel",
+		"MixinLightTexture",
+		"MixinMinecraft",
+		"MixinFrustumAccessor",
+		"MixinRenderTargetAccessor",
+		"MixinUniform",
+		"MixinSoundManagerPreperations",
+		"vivecraft.MixinVRRenderer",
+		"vivecraft.MixinMinecraftVRMixin",
+		"vivecraft.MixinRenderTarget",
+		"skyaesthetics.MixinSkyRenderer"
+	],
+	"minVersion": "0.8"
+}

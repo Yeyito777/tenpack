@@ -1,0 +1,166 @@
+
+plugins {
+    id 'java-library'
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+    id 'net.neoforged.gradle.userdev' version '7.0.165'
+}
+
+tasks.named('wrapper', Wrapper).configure {
+    distributionType = Wrapper.DistributionType.BIN
+}
+
+version = mod_version
+group = mod_group_id
+
+base {
+    archivesName = mod_id
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+//minecraft.accessTransformers.file rootProject.file('src/main/resources/META-INF/accesstransformer.cfg')
+//minecraft.accessTransformers.entry public net.minecraft.client.Minecraft textureManager # textureManager
+
+runs {
+    configureEach {
+        systemProperty 'forge.logging.markers', 'REGISTRIES'
+
+        systemProperty 'forge.logging.console.level', 'debug'
+
+        modSource project.sourceSets.main
+    }
+
+    client {
+        systemProperty 'forge.enabledGameTestNamespaces', project.mod_id
+    }
+
+    server {
+        systemProperty 'forge.enabledGameTestNamespaces', project.mod_id
+        programArgument '--nogui'
+    }
+
+    gameTestServer {
+        systemProperty 'forge.enabledGameTestNamespaces', project.mod_id
+    }
+
+    data {
+        programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+    }
+}
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+configurations {
+    runtimeClasspath.extendsFrom localRuntime
+}
+
+repositories {
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
+    maven {
+        name "nonamecrackers2Maven"
+        url "https://maven.nonamecrackers2.dev/releases"
+    }
+}
+
+dependencies {
+    implementation "net.neoforged:neoforge:${neo_version}"
+
+    jarJar("nonamecrackers2:crackerslib-neoforge:${crackerslib_version}") {
+    	jarJar.ranged(it, "${crackerslib_version_range}")
+    }
+    implementation "nonamecrackers2:crackerslib-neoforge:${crackerslib_version}"
+    
+    jarJar("nonamecrackers2:simplecloudsapi-neoforge:${api_version}") {
+		jarJar.ranged(it, api_version_range)
+	}
+    implementation "nonamecrackers2:simplecloudsapi-neoforge:${api_version}"
+    
+	implementation "maven.modrinth:DistantHorizonsApi:${dh_api_version}"
+	//implementation "maven.modrinth:DistantHorizons:${dh_version}-${minecraft_version}"
+	
+	//implementation "maven.modrinth:Vivecraft:1.21.1-1.2.5-neoforge"
+	
+	//runtimeOnly "maven.modrinth:Sodium:mc1.21.1-0.6.13-neoforge"
+	//runtimeOnly "maven.modrinth:Stellaris:1.4.6"
+	//runtimeOnly "maven.modrinth:Potentials:EEjnSxLK"
+	//runtimeOnly "maven.modrinth:Architectury-API:13.0.8+neoforge"
+	
+}
+
+// This block of code expands all declared replace properties in the specified resource targets.
+// A missing property will result in an error. Properties are expanded using ${} Groovy notation.
+// When "copyIdeResources" is enabled, this will also run before the game launches in IDE environments.
+// See https://docs.gradle.org/current/dsl/org.gradle.language.jvm.tasks.ProcessResources.html
+tasks.withType(ProcessResources).configureEach {
+    var replaceProperties = [
+            minecraft_version         : minecraft_version,
+            minecraft_version_range   : minecraft_version_range,
+            neo_version               : neo_version,
+            neo_version_range         : neo_version_range,
+            loader_version_range      : loader_version_range,
+            mod_id                    : mod_id,
+            mod_name                  : mod_name,
+            mod_license               : mod_license,
+            mod_version               : mod_version,
+            mod_authors               : mod_authors,
+            mod_description           : mod_description,
+            crackerslib_version_range : crackerslib_version_range
+    ]
+    inputs.properties replaceProperties
+
+    filesMatching(['META-INF/neoforge.mods.toml']) {
+        expand replaceProperties
+    }
+}
+
+java {
+	withSourcesJar()
+}
+
+publishing {
+    publications {
+        register('mavenJava', MavenPublication) {
+            group = mod_authors
+            artifactId = "${mod_id}-neoforge"
+            artifact jar
+            artifact sourcesJar
+        }
+    }
+    repositories {
+        maven {
+		    name "nonamecrackers2Maven"
+		    url "https://maven.nonamecrackers2.dev/${maven_dir}"
+		    credentials(PasswordCredentials)
+		    authentication {
+		    	basic(BasicAuthentication)
+		    }
+		}
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(Jar).configureEach {
+	from("${rootProject.projectDir}/LICENSE.md")
+}
+
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = true
+    }
+}
