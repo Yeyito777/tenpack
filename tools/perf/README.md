@@ -13,6 +13,23 @@ Typical intended run:
   --world Test3
 ```
 
+For uncapped client FPS/frame-time work on the GPU-capable xenv/Xephyr setup,
+use the server-backed path and disable VSync in the copied disposable options:
+
+```bash
+./tools/perf/run-client-profile.py \
+  --run-id gpu-server-nospark-vsync-off \
+  --disable-vsync \
+  --max-fps 170 \
+  --warmup 10 \
+  --duration 30 \
+  --no-spark \
+  --world '' \
+  --server yeyito.dev:25566 \
+  --offline '' \
+  --keep-xenv
+```
+
 The runner:
 
 1. Builds the harness mod.
@@ -25,14 +42,18 @@ The runner:
 
 Run outputs go under `perf-runs/<run-id>/` and are gitignored.
 
-## Current environment limitation
+## Profiling notes
 
-The current `xenv`/Xephyr environment exposes Mesa `llvmpipe` instead of the real AMD GPU. Full Tenpack + Simple Clouds currently aborts inside Mesa/LLVM while compiling Simple Clouds compute shader work under llvmpipe before the world is entered. Because of that, the runner and harness can be built and launched, but full representative Simple Clouds profiling needs either:
+`xenv`/Xephyr now exposes the real AMD GPU through DRI3/render-node acceleration. Representative Tenpack client profiling should verify the log contains an AMD `OpenGL Renderer`, not `llvmpipe`.
 
-- a GPU-capable nested display/compositor, or
-- explicit permission to run the perf instance on the real host X display, which is currently disallowed by Exocortex safety policy.
+Spark profiles are useful for call-tree attribution, but the Spark sampler itself can add visible frame-time overhead in uncapped runs. Prefer no-Spark runs for before/after FPS comparisons, then use shorter Spark runs only to identify likely bottleneck paths.
 
 Do not treat llvmpipe runs as representative for frame-time optimization.
+
+The runner can temporarily patch copied client settings for experiments without touching the base Prism instance:
+
+- `--disable-vsync` and `--max-fps N` patch `options.txt` for uncapped FPS profiling.
+- `--simpleclouds-preset medium|low|ultra_low` applies Simple Clouds' built-in client presets to the copied `simpleclouds-client.toml` for A/B testing.
 
 ## Compare two completed runs
 

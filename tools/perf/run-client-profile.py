@@ -64,6 +64,12 @@ def copy_file_if_exists(src: Path, dst: Path) -> None:
         shutil.copy2(src, dst)
 
 
+def copy_file_if_missing(src: Path, dst: Path) -> None:
+    if src.exists() and not dst.exists():
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(src, dst)
+
+
 def copy_tree_if_missing_or_refresh(src: Path, dst: Path, refresh: bool) -> None:
     if refresh and dst.exists():
         shutil.rmtree(dst)
@@ -161,22 +167,119 @@ def prepare_instance(args: argparse.Namespace, run_dir: Path) -> Path:
             args.refresh_world,
         )
 
-    for rel in ["options.txt", "servers.dat", "config/simpleclouds-client.toml", "config/simpleclouds-server.toml"]:
+    for rel in ["options.txt", "servers.dat"]:
         copy_file_if_exists(BASE_INSTANCE / "minecraft" / rel, mc_dir / rel)
+    for rel in ["config/simpleclouds-client.toml", "config/simpleclouds-server.toml"]:
+        copy_file_if_missing(BASE_INSTANCE / "minecraft" / rel, mc_dir / rel)
 
-    if args.disable_simpleclouds_mesh:
-        cfg = mc_dir / "config" / "simpleclouds-client.toml"
-        if cfg.exists():
-            text = cfg.read_text(encoding="utf-8")
-            text = text.replace("generateMesh = true", "generateMesh = false")
-            cfg.write_text(text, encoding="utf-8")
-            print("patched simpleclouds-client.toml: generateMesh = false")
+    if args.disable_vsync or args.max_fps:
+        patch_options(mc_dir / "options.txt", args)
+    patch_simpleclouds_config(mc_dir / "config" / "simpleclouds-client.toml", args)
 
     # Inject dev-only harness after mirroring, otherwise the sync would delete it.
     mods_dir = mc_dir / "mods"
     mods_dir.mkdir(parents=True, exist_ok=True)
     shutil.copy2(HARNESS_JAR, mods_dir / HARNESS_JAR.name)
     return mc_dir
+
+
+def patch_options(options: Path, args: argparse.Namespace) -> None:
+    if not options.exists():
+        return
+    text = options.read_text(encoding="utf-8")
+    if args.disable_vsync:
+        text = replace_options_value(text, "enableVsync", "false")
+    if args.max_fps:
+        text = replace_options_value(text, "maxFps", str(args.max_fps))
+    options.write_text(text, encoding="utf-8")
+    print("patched options.txt: " + ", ".join(
+        part for part in [
+            "enableVsync=false" if args.disable_vsync else "",
+            f"maxFps={args.max_fps}" if args.max_fps else "",
+        ] if part
+    ))
+
+
+def replace_options_value(text: str, key: str, value: str) -> str:
+    lines = []
+    changed = False
+    for line in text.splitlines(keepends=True):
+        if line.startswith(f"{key}:"):
+            newline = "\n" if line.endswith("\n") else ""
+            lines.append(f"{key}:{value}{newline}")
+            changed = True
+        else:
+            lines.append(line)
+    if not changed:
+        suffix = "\n" if text and not text.endswith("\n") else ""
+        lines.append(f"{suffix}{key}:{value}\n")
+    return "".join(lines)
+
+
+def toml_replace_value(text: str, key: str, value: str) -> str:
+    lines = []
+    changed = False
+    for line in text.splitlines(keepends=True):
+        stripped = line.lstrip("\t ")
+        if stripped.startswith(f"{key} = "):
+            indent = line[: len(line) - len(stripped)]
+            newline = "\n" if line.endswith("\n") else ""
+            lines.append(f"{indent}{key} = {value}{newline}")
+            changed = True
+        else:
+            lines.append(line)
+    if not changed:
+        print(f"warning: simpleclouds-client.toml did not contain {key}")
+    return "".join(lines)
+
+
+def patch_simpleclouds_config(cfg: Path, args: argparse.Namespace) -> None:
+    if not cfg.exists():
+        return
+    text = cfg.read_text(encoding="utf-8")
+    changes: dict[str, str] = {}
+
+    # These presets mirror Simple Clouds' own client config presets. They are a
+    # convenient way to benchmark quality/performance tradeoffs reproducibly.
+    if args.simpleclouds_preset == "medium":
+        changes.update({
+            "generationInterval": '"STATIC"',
+            "framesToGenerateMesh": "10",
+            "levelOfDetail": '"MEDIUM"',
+            "shadowDistance": "2500",
+        })
+    elif args.simpleclouds_preset == "low":
+        changes.update({
+            "generationInterval": '"DYNAMIC"',
+            "framesToGenerateMesh": "20",
+            "levelOfDetail": '"LOW"',
+            "renderLodClouds": "false",
+            "transparency": "false",
+            "atmosphericClouds": "false",
+            "shadowDistance": "2500",
+            "distantShadows": "false",
+        })
+    elif args.simpleclouds_preset == "ultra_low":
+        changes.update({
+            "generationInterval": '"DYNAMIC"',
+            "framesToGenerateMesh": "20",
+            "levelOfDetail": '"LOW"',
+            "renderLodClouds": "false",
+            "transparency": "false",
+            "renderStormFog": "false",
+            "atmosphericClouds": "false",
+            "shadowDistance": "1000",
+            "distantShadows": "false",
+        })
+
+    if args.disable_simpleclouds_mesh:
+        changes["generateMesh"] = "false"
+
+    for key, value in changes.items():
+        text = toml_replace_value(text, key, value)
+    if changes:
+        cfg.write_text(text, encoding="utf-8")
+        print("patched simpleclouds-client.toml: " + ", ".join(f"{k}={v}" for k, v in changes.items()))
 
 
 def ensure_xenv(name: str) -> None:
@@ -353,7 +456,11 @@ def write_report(run_dir: Path, args: argparse.Namespace, done: dict, artifacts:
 def kill_perf_processes(instance: str) -> None:
     # Best-effort cleanup, intentionally scoped to the perf instance name.
     subprocess.run(["pkill", "-f", f"instances/{instance}"], check=False)
-    subprocess.run(["pkill", "-f", f"--launch {instance}"], check=False)
+    # Avoid a pattern beginning with '-' because procps pkill treats the pattern
+    # as another option unless it is carefully separated. This regex matches the
+    # normal Prism command line ("--launch tenpack-perf") without relying on a
+    # leading-dash pattern.
+    subprocess.run(["pkill", "-f", f"[-]-launch {instance}"], check=False)
 
 
 def parse_args() -> argparse.Namespace:
@@ -374,11 +481,15 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--max-mem", type=int, default=12000)
     p.add_argument("--width", type=int, default=1280)
     p.add_argument("--height", type=int, default=720)
+    p.add_argument("--disable-vsync", action="store_true", help="Patch copied options.txt with enableVsync:false for uncapped FPS profiling")
+    p.add_argument("--max-fps", type=int, default=0, help="Patch copied options.txt maxFps for this run (0 leaves the copied value unchanged)")
     p.add_argument("--pitch", type=float)
     p.add_argument("--yaw-degrees-per-second", type=float)
     p.add_argument("--refresh-world", action="store_true")
     p.add_argument("--mesa-gl-override", action=argparse.BooleanOptionalAction, default=True)
     p.add_argument("--zink", action=argparse.BooleanOptionalAction, default=False)
+    p.add_argument("--simpleclouds-preset", default="current", choices=["current", "medium", "low", "ultra_low"],
+                   help="Patch the copied simpleclouds-client.toml with one of Simple Clouds' built-in client presets for this run")
     p.add_argument("--disable-simpleclouds-mesh", action="store_true", help="xenv/llvmpipe smoke-test escape hatch; not representative for Simple Clouds profiling")
     p.add_argument("--no-build", action="store_true")
     p.add_argument("--no-spark", dest="spark", action="store_false")
@@ -403,6 +514,7 @@ def main() -> int:
 
     started_at = time.time()
     try:
+        kill_perf_processes(args.instance)
         if not args.no_build:
             build_harness()
         mc_dir = prepare_instance(args, run_dir)

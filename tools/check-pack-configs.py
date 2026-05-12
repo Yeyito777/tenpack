@@ -27,6 +27,7 @@ ALLOWED_ACTIVE_CONFIG_FILES = {
     "client/config/lifesteal-common.toml",
     "client/config/more_darkness.json",
     "client/config/projectatmosphere/biome_temps.json",
+    "client/config/simpleclouds-client.toml",
     "client/config/sound_physics_remastered/occlusion.properties",
     "client/config/sound_physics_remastered/reflectivity.properties",
     "client/config/sound_physics_remastered/soundphysics.properties",
@@ -179,10 +180,22 @@ def check_connector_config(errors: list[str]) -> None:
         errors.append("Connector globalModAliases must be an object")
 
 
+def check_client_performance_configs(errors: list[str]) -> None:
+    simpleclouds = read_toml(errors, ROOT / "client/config/simpleclouds-client.toml")
+    performance = simpleclouds.get("performance", {}) if isinstance(simpleclouds, dict) else {}
+    mesh = performance.get("mesh_generation", {}) if isinstance(performance, dict) else {}
+    distant_horizons = simpleclouds.get("distant_horizons", {}) if isinstance(simpleclouds, dict) else {}
+    require_equal(errors, "Simple Clouds mesh generationInterval", mesh.get("generationInterval"), "STATIC", "spread cloud mesh generation work over multiple frames")
+    require_equal(errors, "Simple Clouds framesToGenerateMesh", mesh.get("framesToGenerateMesh"), 10, "medium preset reduces cloud mesh frame-time spikes")
+    require_equal(errors, "Simple Clouds levelOfDetail", performance.get("levelOfDetail"), "MEDIUM", "medium preset keeps clouds enabled while reducing mesh cost")
+    require_equal(errors, "Simple Clouds shadowDistance", distant_horizons.get("shadowDistance"), 2500, "medium preset trims distant cloud shadow work")
+
+
 def main() -> int:
     errors: list[str] = []
     check_active_config_allowlist(errors)
     check_connector_config(errors)
+    check_client_performance_configs(errors)
     check_travel_and_world_configs(errors)
     check_survival_pressure_configs(errors)
     check_death_and_faction_configs(errors)
