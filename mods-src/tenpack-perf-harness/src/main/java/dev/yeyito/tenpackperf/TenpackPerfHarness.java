@@ -23,6 +23,7 @@ import java.nio.file.Path;
 import java.time.Instant;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import java.util.Locale;
 
 @Mod(TenpackPerfHarness.MODID)
@@ -51,6 +52,7 @@ public final class TenpackPerfHarness {
     private final String sparkStopCommand;
     private final boolean quitWhenDone;
     private final Path outputDir;
+    private final Path commandFile;
 
     private State state = State.DISABLED;
     private long stateStartedNs = 0L;
@@ -67,6 +69,7 @@ public final class TenpackPerfHarness {
     private long over50 = 0L;
     private boolean sparkStarted = false;
     private boolean sparkStopIssued = false;
+    private boolean startupCommandsIssued = false;
     private BufferedWriter frames;
     private BufferedWriter events;
 
@@ -82,6 +85,7 @@ public final class TenpackPerfHarness {
         this.sparkStopCommand = System.getProperty("tenpack.perfharness.sparkStop", "sparkc profiler stop --save-to-file");
         this.quitWhenDone = Boolean.parseBoolean(System.getProperty("tenpack.perfharness.quit", "true"));
         this.outputDir = Path.of(System.getProperty("tenpack.perfharness.outputDir", "perf-runs/" + this.runId)).toAbsolutePath();
+        this.commandFile = Path.of(System.getProperty("tenpack.perfharness.commandFile", "")).toAbsolutePath();
 
         if (FMLEnvironment.dist != Dist.CLIENT) {
             LOGGER.warn("Tenpack Perf Harness loaded on non-client dist; disabled");
@@ -183,6 +187,7 @@ public final class TenpackPerfHarness {
     private void tickWaitingForWorld(Minecraft minecraft, long now) throws IOException {
         if (minecraft.player != null && minecraft.level != null && ClientCommandHandler.getDispatcher() != null) {
             minecraft.setScreen(null);
+            runStartupServerCommands(minecraft);
             transition(State.WARMUP, now, "world ready; starting warmup");
             return;
         }
@@ -289,6 +294,32 @@ public final class TenpackPerfHarness {
         }
         boolean handled = ClientCommandHandler.runCommand(trimmed);
         logEvent("client command handled=" + handled + ": " + trimmed);
+    }
+
+    private void runStartupServerCommands(Minecraft minecraft) throws IOException {
+        if (this.startupCommandsIssued || this.commandFile.toString().isBlank() || !Files.isRegularFile(this.commandFile)) {
+            this.startupCommandsIssued = true;
+            return;
+        }
+        if (minecraft.player == null || minecraft.player.connection == null) {
+            return;
+        }
+        List<String> commands = Files.readAllLines(this.commandFile, StandardCharsets.UTF_8);
+        int issued = 0;
+        for (String command : commands) {
+            String trimmed = command.trim();
+            if (trimmed.isEmpty() || trimmed.startsWith("#")) {
+                continue;
+            }
+            if (trimmed.startsWith("/")) {
+                trimmed = trimmed.substring(1);
+            }
+            minecraft.player.connection.sendCommand(trimmed);
+            issued++;
+            logEvent("server command issued: " + trimmed);
+        }
+        this.startupCommandsIssued = true;
+        logEvent("startup server commands issued=" + issued + " file=" + this.commandFile);
     }
 
     private void transition(State next, long now, String reason) throws IOException {

@@ -61,8 +61,10 @@ public class ComputeShader
 	private final ComputeShader.CompiledShader compiledShader;
 	private final String name;
 	private final Map<String, WithBinding> unique = Maps.newHashMap();
+	private final Map<String, Integer> uniformLocations = Maps.newHashMap();
 	private final List<String> missingUniformErrors = Lists.newArrayList();
-	
+	private boolean dispatchBatchActive;
+
 	private ComputeShader(int id, ComputeShader.CompiledShader compiledShader, String name)
 	{
 		this.id = id;
@@ -70,12 +72,12 @@ public class ComputeShader
 		this.compiledShader.attachToShader(this);
 		this.name = name;
 	}
-	
+
 	public void close()
 	{
 		RenderSystem.assertOnRenderThread();
 		LOGGER.debug("Closing compute shader id={}", this.id);
-		this.unique.values().forEach(buffer -> 
+		this.unique.values().forEach(buffer ->
 		{
 			buffer.close();
 			BindingManager.freeShaderStorageBinding(buffer.getBinding());
@@ -87,37 +89,42 @@ public class ComputeShader
 			this.id = -1;
 		}
 		this.compiledShader.close();
+		this.uniformLocations.clear();
 		this.missingUniformErrors.clear();
+		this.dispatchBatchActive = false;
 	}
-	
+
 	public void forUniform(String name, BiConsumer<Integer, Integer> consumer)
 	{
 		RenderSystem.assertOnRenderThreadOrInit();
 		this.assertValid();
+		int loc = this.getUniformLocation(name);
+		if (loc != -1)
+			consumer.accept(this.id, loc);
+	}
+
+	private int getUniformLocation(String name)
+	{
+		Integer cached = this.uniformLocations.get(name);
+		if (cached != null)
+			return cached.intValue();
 		int loc = Uniform.glGetUniformLocation(this.id, name);
+		this.uniformLocations.put(name, loc);
 		if (loc == -1 && !this.missingUniformErrors.contains(name))
 		{
 			LOGGER.warn("Could not find uniform with name '{}'", name);
 			this.missingUniformErrors.add(name);
 		}
-		else
-		{
-			consumer.accept(this.id, loc);
-		}
+		return loc;
 	}
-	
+
 	private void setSampler(String name, Runnable binder, int id)
 	{
 		RenderSystem.assertOnRenderThreadOrInit();
 		this.assertValid();
 		ProgramManager.glUseProgram(this.id);
-		int loc = Uniform.glGetUniformLocation(this.id, name);
-		if (loc == -1 && !this.missingUniformErrors.contains(name))
-		{
-			LOGGER.warn("Could not find sampler with name '{}'", name);
-			this.missingUniformErrors.add(name);
-		}
-		else
+		int loc = this.getUniformLocation(name);
+		if (loc != -1)
 		{
 			Uniform.uploadInteger(loc, id);
 			RenderSystem.activeTexture(GL13.GL_TEXTURE0 + id);
@@ -125,26 +132,26 @@ public class ComputeShader
 		}
 		ProgramManager.glUseProgram(0);
 	}
-	
+
 	public void setSampler2D(String name, int texture, int id)
 	{
 		this.setSampler(name, () -> RenderSystem.bindTexture(texture), id);
 	}
-	
+
 	public void setSampler3D(String name, int texture, int id)
 	{
 		this.setSampler(name, () -> GL11.glBindTexture(GL12.GL_TEXTURE_3D, texture), id);
 	}
-	
+
 	public void setSampler2DArray(String name, int texture, int id)
 	{
 		this.setSampler(name, () -> GL11.glBindTexture(GL30.GL_TEXTURE_2D_ARRAY, texture), id);
 	}
-	
+
 	/**
-	 * Automatically creates a shader storage buffer using the next available binding in the context. 
+	 * Automatically creates a shader storage buffer using the next available binding in the context.
 	 * In other words, makes a new SSBO unique to this shader.
-	 * 
+	 *
 	 * @param name The name of the block in the shader.
 	 * @param usage One of:<br><table><tr><td>{@link GL15C#GL_STREAM_DRAW STREAM_DRAW}</td><td>{@link GL15C#GL_STREAM_READ STREAM_READ}</td><td>{@link GL15C#GL_STREAM_COPY STREAM_COPY}</td><td>{@link GL15C#GL_STATIC_DRAW STATIC_DRAW}</td><td>{@link GL15C#GL_STATIC_READ STATIC_READ}</td><td>{@link GL15C#GL_STATIC_COPY STATIC_COPY}</td><td>{@link GL15C#GL_DYNAMIC_DRAW DYNAMIC_DRAW}</td></tr><tr><td>{@link GL15C#GL_DYNAMIC_READ DYNAMIC_READ}</td><td>{@link GL15C#GL_DYNAMIC_COPY DYNAMIC_COPY}</td></tr></table>
 	 * @return {@link ShaderStorageBufferObject}
@@ -153,14 +160,14 @@ public class ComputeShader
 	{
 		RenderSystem.assertOnRenderThreadOrInit();
 		this.assertValid();
-		
+
 		if (this.unique.containsKey(name))
 			throw new IllegalArgumentException("Buffer with name '" + name + "' is already defined");
-		
+
 		int index = GL43.glGetProgramResourceIndex(this.id, GL43.GL_SHADER_STORAGE_BLOCK, name);
 		if (index == -1)
 			throw new NullPointerException("Unknown block index with name '" + name + "'");
-		
+
 		int binding = BindingManager.getAvailableShaderStorageBinding();
 		GL43.glShaderStorageBlockBinding(this.id, index, binding);
 		int bufferId = GlStateManager._glGenBuffers();
@@ -168,47 +175,47 @@ public class ComputeShader
 		ShaderStorageBufferObject buffer = new ShaderStorageBufferObject(bufferId, binding, usage);
 		this.unique.put(name, buffer);
 		BindingManager.useShaderStorageBinding(binding);
-		
+
 		return buffer;
 	}
-	
+
 	public int findAndUseSSBOBinding(String name)
 	{
 		RenderSystem.assertOnRenderThreadOrInit();
 		this.assertValid();
-		
+
 		if (this.unique.containsKey(name))
 			throw new IllegalArgumentException("Buffer with name '" + name + "' is already defined");
-		
+
 		int index = GL43.glGetProgramResourceIndex(this.id, GL43.GL_SHADER_STORAGE_BLOCK, name);
 		if (index == -1)
 			throw new NullPointerException("Unknown block index with name '" + name + "'");
-		
+
 		int binding = BindingManager.getAvailableShaderStorageBinding();
 		GL43.glShaderStorageBlockBinding(this.id, index, binding);
 		this.unique.put(name, new UniqueBinding(binding));
 		BindingManager.useShaderStorageBinding(binding);
-		
+
 		return binding;
 	}
-	
+
 	public void setImageUnit(String name, int unit)
 	{
 		RenderSystem.assertOnRenderThreadOrInit();
 		this.assertValid();
-		int loc = GL20.glGetUniformLocation(this.id, name);
+		int loc = this.getUniformLocation(name);
 		if (loc == -1)
 			throw new NullPointerException("Unknown image with name '" + name + "'");
 		GL41.glProgramUniform1i(this.id, loc, unit);
 	}
-	
+
 	private WithBinding getUniqueObject(String name)
 	{
 		RenderSystem.assertOnRenderThread();
 		this.assertValid();
 		return Objects.requireNonNull(this.unique.get(name), "Unknown buffer with name '" + name + "'");
 	}
-	
+
 	public ShaderStorageBufferObject getShaderStorageBuffer(String name)
 	{
 		WithBinding unique = this.getUniqueObject(name);
@@ -216,12 +223,12 @@ public class ComputeShader
 			throw new ClassCastException("Object with name '" + name + "' is not an SSBO object!");
 		return (ShaderStorageBufferObject)unique;
 	}
-	
+
 	public int getShaderStorageBinding(String name)
 	{
 		return this.getUniqueObject(name).getBinding();
 	}
-	
+
 	public void dispatch(int groupX, int groupY, int groupZ, boolean wait)
 	{
 		RenderSystem.assertOnRenderThread();
@@ -237,50 +244,73 @@ public class ComputeShader
 			throw new IllegalArgumentException("Work group count too large! Wanted: x=" + groupX + ", y=" + groupY + ", z=" + groupZ + "; Max allowed: x=" + maxGroupX + ", y=" + maxGroupY + ", z=" + maxGroupZ);
 		else if (groupX <= 0 || groupY <= 0 || groupZ <= 0)
 			throw new IllegalArgumentException("Work group count must be greater than zero!");
-		ProgramManager.glUseProgram(this.id);
+		if (!this.dispatchBatchActive)
+			ProgramManager.glUseProgram(this.id);
 		GL43.glDispatchCompute(groupX, groupY, groupZ);
 		if (wait)
 			GL42.glMemoryBarrier(GL43.GL_SHADER_STORAGE_BARRIER_BIT | GL42.GL_ATOMIC_COUNTER_BARRIER_BIT | GL42.GL_UNIFORM_BARRIER_BIT | GL42.GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);
-		ProgramManager.glUseProgram(0);
+		if (!this.dispatchBatchActive)
+			ProgramManager.glUseProgram(0);
 	}
-	
+
+	public void beginDispatchBatch()
+	{
+		RenderSystem.assertOnRenderThread();
+		this.assertValid();
+		if (!this.dispatchBatchActive)
+		{
+			ProgramManager.glUseProgram(this.id);
+			this.dispatchBatchActive = true;
+		}
+	}
+
+	public void endDispatchBatch()
+	{
+		RenderSystem.assertOnRenderThread();
+		if (this.dispatchBatchActive)
+		{
+			ProgramManager.glUseProgram(0);
+			this.dispatchBatchActive = false;
+		}
+	}
+
 	public void dispatchAndWait(int groupX, int groupY, int groupZ)
 	{
 		this.dispatch(groupX, groupY, groupZ, true);
 	}
-	
+
 	public String getName()
 	{
 		return this.name;
 	}
-	
+
 	public int getId()
 	{
 		return this.id;
 	}
-	
+
 	@Override
 	public String toString()
 	{
 		return "ComputeShader[id=" + this.id + ", name=" + this.name + "]";
 	}
-	
+
 	private void assertValid()
 	{
 		if (!this.isValid())
 			throw new IllegalStateException("Compute shader is no longer valid!");
 	}
-	
+
 	public boolean isValid()
 	{
 		return this.id != -1 && this.compiledShader.getId() != -1;
 	}
-	
+
 	public static ComputeShader loadShader(ResourceLocation loc, ResourceProvider provider, int localX, int localY, int localZ) throws IOException
 	{
 		return loadShader(loc, provider, localX, localY, localZ, ImmutableMap.of());
 	}
-	
+
 	public static ComputeShader loadShader(ResourceLocation loc, ResourceProvider provider, int localX, int localY, int localZ, ImmutableMap<String, String> parameters) throws IOException
 	{
 		if (maxLocalGroupX == -1 || maxLocalGroupY == -1 || maxLocalGroupZ == -1)
@@ -314,18 +344,18 @@ public class ComputeShader
 			String path = "shaders/compute/" + loc.getPath() + ".comp";
 			ResourceLocation finalLoc = ResourceLocation.fromNamespaceAndPath(loc.getNamespace(), path);
 			Resource resource = provider.getResourceOrThrow(finalLoc);
-				
+
 			try (InputStream inputStream = resource.open())
 			{
 				final String fullPath = FileUtil.getFullResourcePath(path);
 				compiledShader = compileShader(loc.toString(), compiledShaderId, inputStream, resource.sourcePackId(), new GlslPreprocessor()
 				{
 					private final Set<String> importedPaths = Sets.newHashSet();
-		
+
 					@Override
 					public List<String> process(String file)
 					{
-						file = LOCAL_GROUP_REPLACER.matcher(file).replaceAll(result -> 
+						file = LOCAL_GROUP_REPLACER.matcher(file).replaceAll(result ->
 						{
 							String group = result.group();
 							for (var entry : parameters.entrySet())
@@ -351,7 +381,7 @@ public class ComputeShader
 						});
 						return super.process(file);
 					}
-					
+
 					public String applyImport(boolean isRelative, String importPath)
 					{
 						ResourceLocation glslImport = ClientHooks.getShaderImportLocation(fullPath, isRelative, importPath);
@@ -376,7 +406,7 @@ public class ComputeShader
 				COMPILED_PROGRAMS.put(compiledShaderId, compiledShader);
 			}
 		}
-		
+
 		int programId = ProgramManager.createProgram();
 		ComputeShader shader = new ComputeShader(programId, compiledShader, loc.toString());
 		GlStateManager.glLinkProgram(programId);
@@ -385,7 +415,7 @@ public class ComputeShader
 			throw new RuntimeException("An error occured when linking program containing computer shader " + loc + ". Log output: " + GlStateManager.glGetProgramInfoLog(programId, 32768));
 		return shader;
 	}
-	
+
 	private static ComputeShader.CompiledShader compileShader(String loc, String id, InputStream inputStream, String packId, GlslPreprocessor preprocessor) throws IOException
 	{
 		RenderSystem.assertOnRenderThread();
@@ -402,7 +432,7 @@ public class ComputeShader
 		}
 		return new ComputeShader.CompiledShader(shaderId, id);
 	}
-	
+
 	public static void destroyCompiledShaders()
 	{
 		var iterator = COMPILED_PROGRAMS.values().iterator();
@@ -412,24 +442,24 @@ public class ComputeShader
 				iterator.remove();
 		}
 	}
-	
+
 	public static class CompiledShader
 	{
 		private final String shaderId;
 		private int id;
 		private int references;
-		
+
 		protected CompiledShader(int id, String shaderId)
 		{
 			this.id = id;
 			this.shaderId = shaderId;
 		}
-		
+
 		public int getId()
 		{
 			return this.id;
 		}
-		
+
 		public void attachToShader(ComputeShader shader)
 		{
 			if (this.id != -1)
@@ -440,7 +470,7 @@ public class ComputeShader
 				LOGGER.debug("Attached compiled shader id={} to compute shader id={}, total references={}", this.id, shader.getId(), this.references);
 			}
 		}
-		
+
 		public void close()
 		{
 			if (this.id == -1)
@@ -452,7 +482,7 @@ public class ComputeShader
 					COMPILED_PROGRAMS.remove(this.shaderId);
 			}
 		}
-		
+
 		private boolean destroy()
 		{
 			if (this.id != -1)

@@ -2,6 +2,7 @@ package dev.nonamecrackers2.simpleclouds.client.mesh.generator;
 
 import java.io.IOException;
 import java.nio.IntBuffer;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.IdentityHashMap;
@@ -46,6 +47,7 @@ import net.minecraft.CrashReportCategory;
 import net.minecraft.client.renderer.culling.Frustum;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;
+import net.minecraft.world.phys.Vec2;
 
 public final class MultiRegionCloudMeshGenerator extends CloudMeshGenerator {
 	private static final Logger LOGGER = LogManager.getLogger("simpleclouds/MultiRegionCloudMeshGenerator");
@@ -73,7 +75,7 @@ public final class MultiRegionCloudMeshGenerator extends CloudMeshGenerator {
 	}
 
 	public void setCloudGetter(CloudGetter getter) {
-		this.cloudGetter = Objects.requireNonNull(getter, "Cloud getter cannot be null");
+		this.cloudGetter = StressCloudGetter.wrapIfEnabled(Objects.requireNonNull(getter, "Cloud getter cannot be null"));
 		this.updateCloudTypes();
 	}
 
@@ -256,9 +258,13 @@ public final class MultiRegionCloudMeshGenerator extends CloudMeshGenerator {
 					chunk.x() * (float) SimpleCloudsConstants.CHUNK_SIZE + (float) this.requiredRegionTexSize / 2.0F,
 					chunk.z() * (float) SimpleCloudsConstants.CHUNK_SIZE + (float) this.requiredRegionTexSize / 2.0F);
 		});
-		this.shader.setSampler2DArray("RegionsSampler", this.cloudRegionTextureId, 0);
 
 		super.generateChunk(task);
+	}
+
+	@Override
+	protected void beforeExecuteChunkGenTasks() {
+		this.shader.setSampler2DArray("RegionsSampler", this.cloudRegionTextureId, 0);
 	}
 
 	private void runRegionGenerator(float meshOffsetX, float meshOffsetZ, float partialTick) {
@@ -383,7 +389,7 @@ public final class MultiRegionCloudMeshGenerator extends CloudMeshGenerator {
 	protected void onOffGen() {
 		super.onOffGen();
 
-		if (this.regionTextureGenerator != null)
+		if (CloudMeshGenerator.forceOnOffGenReadback() && this.regionTextureGenerator != null)
 			this.regionTextureGenerator.getShaderStorageBuffer("CloudRegions").readData(buf -> {
 			}, BYTES_PER_REGION * Math.max(1, this.currentCloudFormationCapacity));
 	}
@@ -436,5 +442,74 @@ public final class MultiRegionCloudMeshGenerator extends CloudMeshGenerator {
 		this.regionTextureGenerator.getShaderStorageBuffer(CLOUD_REGIONS_NAME)
 				.allocateBuffer(requiredCapacity * BYTES_PER_REGION);
 		this.currentCloudFormationCapacity = requiredCapacity;
+	}
+
+	private static class StressCloudGetter implements CloudGetter {
+		private static final boolean ENABLED = Boolean.getBoolean("simpleclouds.stressClouds");
+		private static final ResourceLocation DEFAULT_TYPE = SimpleCloudsMod.id("cumulonimbus");
+		private final CloudGetter delegate;
+		private final List<CloudRegion> regions;
+		private final ResourceLocation typeId;
+
+		private StressCloudGetter(CloudGetter delegate) {
+			this.delegate = delegate;
+			this.typeId = this.resolveTypeId(delegate);
+			this.regions = this.createStressRegions(this.typeId);
+		}
+
+		private static CloudGetter wrapIfEnabled(CloudGetter delegate) {
+			return ENABLED ? new StressCloudGetter(delegate) : delegate;
+		}
+
+		private ResourceLocation resolveTypeId(CloudGetter delegate) {
+			ResourceLocation configured = ResourceLocation.tryParse(System.getProperty("simpleclouds.stressCloudType", DEFAULT_TYPE.toString()));
+			if (configured != null && delegate.getCloudTypeForId(configured) != null)
+				return configured;
+			for (CloudType type : delegate.getIndexedCloudTypes()) {
+				if (type != null && type != SimpleCloudsConstants.EMPTY)
+					return type.id();
+			}
+			return DEFAULT_TYPE;
+		}
+
+		private List<CloudRegion> createStressRegions(ResourceLocation typeId) {
+			List<CloudRegion> generated = new ArrayList<>();
+			float spacing = 1024.0F;
+			float radius = 900.0F;
+			for (int x = -2; x <= 2; x++) {
+				for (int z = -2; z <= 2; z++) {
+					CloudRegion region = new CloudRegion(typeId, new Vec2(1.0F, 0.0F), 0.0F, 0.0F,
+							x * spacing, z * spacing, radius, 0.0F, 1.0F, 20 * 60 * 60, 0,
+							Integer.MAX_VALUE - generated.size());
+					region.setRadius(radius);
+					generated.add(region);
+				}
+			}
+			return List.copyOf(generated);
+		}
+
+		@Override
+		public List<CloudRegion> getClouds() {
+			return this.regions;
+		}
+
+		@Override
+		public Pair<CloudType, Float> getCloudTypeAtPosition(float x, float z) {
+			Pair<CloudRegion, Float> result = CloudRegion.calculateAt(this.regions, x, z);
+			CloudType type = result.getLeft() != null ? this.getCloudTypeForId(result.getLeft().getCloudTypeId()) : null;
+			if (type == null)
+				type = SimpleCloudsConstants.EMPTY;
+			return Pair.of(type, 1.0F - result.getRight());
+		}
+
+		@Override
+		public CloudType getCloudTypeForId(ResourceLocation id) {
+			return this.delegate.getCloudTypeForId(id);
+		}
+
+		@Override
+		public CloudType[] getIndexedCloudTypes() {
+			return this.delegate.getIndexedCloudTypes();
+		}
 	}
 }

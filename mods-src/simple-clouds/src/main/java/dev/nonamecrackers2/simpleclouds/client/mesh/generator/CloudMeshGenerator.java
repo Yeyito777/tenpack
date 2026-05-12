@@ -12,6 +12,7 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.lwjgl.opengl.GL31;
+import org.lwjgl.opengl.GL32;
 import org.lwjgl.opengl.GL41;
 import org.lwjgl.opengl.GL42;
 import org.lwjgl.opengl.GL43;
@@ -62,7 +63,7 @@ import net.minecraft.world.phys.AABB;
  * <p>
  * Use {@link CloudMeshGenerator#render} to render the currently generated cloud
  * mesh.
- * 
+ *
  * @author nonamecrackers2
  */
 public abstract class CloudMeshGenerator {
@@ -74,6 +75,7 @@ public abstract class CloudMeshGenerator {
 	public static final int LOCAL_SIZE = 8;
 	public static final int WORK_SIZE = SimpleCloudsConstants.CHUNK_SIZE / LOCAL_SIZE;
 	public static final int TICKS_UNTIL_FADE_RESET = 120;
+	private static final boolean FORCE_ON_OFF_GEN_READBACK = Boolean.getBoolean("simpleclouds.forceOnOffGenReadback");
 
 	// Opaque
 	public static final int BYTES_PER_SIDE_INFO = 24;
@@ -124,11 +126,12 @@ public abstract class CloudMeshGenerator {
 	private int transparentBufferBytesUsed;
 	private int opaqueBytesPerChunk;
 	private int transparentBytesPerChunk;
+	private long meshGenFence;
 
 	/**
 	 * Creates a cloud mesh generator, <b>but does not initialize it for
 	 * generating</b> (use {@link CloudMeshGenerator#init})
-	 * 
+	 *
 	 * @param meshShaderLoc
 	 *                        The location of the cloud mesh generator compute
 	 *                        shader
@@ -184,7 +187,7 @@ public abstract class CloudMeshGenerator {
 	 * <p>
 	 * Enabling can improve performance at the cost of some visual artifacts
 	 * or an incomplete cloud mesh
-	 * 
+	 *
 	 * @param flag
 	 * @return
 	 */
@@ -195,7 +198,7 @@ public abstract class CloudMeshGenerator {
 
 	/**
 	 * Sets the fade start and end distances as decimal percentages
-	 * 
+	 *
 	 * @param fadeStart
 	 * @param fadeEnd
 	 */
@@ -256,6 +259,10 @@ public abstract class CloudMeshGenerator {
 		return this.cubeMesh;
 	}
 
+	protected static boolean forceOnOffGenReadback() {
+		return FORCE_ON_OFF_GEN_READBACK;
+	}
+
 	public int getOpaqueBufferSize() {
 		return this.opaqueBufferSize;
 	}
@@ -301,6 +308,7 @@ public abstract class CloudMeshGenerator {
 		this.transparentBytesPerChunk = 0;
 
 		GL42.glMemoryBarrier(GL42.GL_ALL_BARRIER_BITS);
+		this.deleteMeshGenFence();
 		this.taskScheduler.clear();
 
 		if (this.shader != null)
@@ -344,6 +352,7 @@ public abstract class CloudMeshGenerator {
 		this.transparentBytesPerChunk = 0;
 
 		GL42.glMemoryBarrier(GL42.GL_ALL_BARRIER_BITS);
+		this.deleteMeshGenFence();
 		this.taskScheduler.clear();
 
 		LOGGER.debug("Beginning mesh generator initialization");
@@ -472,7 +481,7 @@ public abstract class CloudMeshGenerator {
 		this.prepareMeshGen(0.0D, 0.0D, 0.0D, 0.0F, 0.0F, null, 1, 1.0F);
 
 		if (this.taskScheduler.hasPendingTasks())
-			this.taskScheduler.executeAllPendingTasks(this::runChunkGenTask);
+			this.executePendingChunkGenTasks(() -> this.taskScheduler.executeAllPendingTasks(this::runChunkGenTask), false);
 
 		this.meshGenStatus = this.finalizeMeshGen();
 		this.taskScheduler.clearCompletedTasks();
@@ -485,7 +494,7 @@ public abstract class CloudMeshGenerator {
 
 	/**
 	 * Generates the cloud mesh on a per-frame basis
-	 * 
+	 *
 	 * @param originX
 	 * @param originY
 	 * @param originZ
@@ -502,9 +511,13 @@ public abstract class CloudMeshGenerator {
 		float meshGenOffsetZ = (float) Mth.floor(originZ / chunkSize) * chunkSize;
 
 		if (!this.taskScheduler.hasPendingTasks()) {
-			this.meshGenStatus = this.finalizeMeshGen(); // Split the combined mesh data from the GPU, and store them in
-															// the VBOs for each chunk that was generated
-			this.taskScheduler.clearCompletedTasks();
+			if (this.taskScheduler.hasCompletedTasks()) {
+				if (!this.completedChunkGenTasksReady())
+					return;
+				this.meshGenStatus = this.finalizeMeshGen(); // Split the combined mesh data from the GPU, and store them in
+														// the VBOs for each chunk that was generated
+				this.taskScheduler.clearCompletedTasks();
+			}
 
 			// Prepare the next batch of chunks to generate meshes for
 			this.taskScheduler.scheduleNextBatch(this.meshGenIntervalCalculator,
@@ -515,7 +528,40 @@ public abstract class CloudMeshGenerator {
 		}
 
 		if (this.taskScheduler.hasPendingTasks())
-			this.taskScheduler.executeScheduledTasks(this::runChunkGenTask);
+			this.executePendingChunkGenTasks(() -> this.taskScheduler.executeScheduledTasks(this::runChunkGenTask), true);
+	}
+
+	protected void beforeExecuteChunkGenTasks() {
+	}
+
+	private void executePendingChunkGenTasks(Runnable taskExecutor, boolean asyncFence) {
+		this.beforeExecuteChunkGenTasks();
+		this.shader.beginDispatchBatch();
+		try {
+			taskExecutor.run();
+		} finally {
+			this.shader.endDispatchBatch();
+		}
+		if (asyncFence && !this.taskScheduler.hasPendingTasks() && this.taskScheduler.hasCompletedTasks() && this.meshGenFence == 0L)
+			this.meshGenFence = GL32.glFenceSync(GL32.GL_SYNC_GPU_COMMANDS_COMPLETE, 0);
+	}
+
+	private boolean completedChunkGenTasksReady() {
+		if (this.meshGenFence == 0L)
+			return true;
+		int result = GL32.glClientWaitSync(this.meshGenFence, 0, 0);
+		if (result == GL32.GL_ALREADY_SIGNALED || result == GL32.GL_CONDITION_SATISFIED) {
+			this.deleteMeshGenFence();
+			return true;
+		}
+		return false;
+	}
+
+	private void deleteMeshGenFence() {
+		if (this.meshGenFence != 0L) {
+			GL32.glDeleteSync(this.meshGenFence);
+			this.meshGenFence = 0L;
+		}
 	}
 
 	private static double getChunkDistanceSquared(AABB bounds) {
@@ -575,22 +621,23 @@ public abstract class CloudMeshGenerator {
 		CloudMeshGenerator.MeshGenStatus status = CloudMeshGenerator.MeshGenStatus.NORMAL;
 
 		if (!this.useFixedMeshDataSectionSize) {
-			// Get the total amount of sides and indices across all chunks and reset
-			this.shader.getShaderStorageBuffer(totalCountBufferName).writeData(b -> {
-				b.putInt(0, 0);
-			}, 4, true);
+			// Reset the total counter on the GPU. Mapping just to write zero can force
+			// an avoidable CPU/GPU synchronization point.
+			this.shader.getShaderStorageBuffer(totalCountBufferName).clearIntData();
 		}
 
-		// Get the amount of total sides each chunk has and reset each counter
-		this.shader.getShaderStorageBuffer(countPerChunkBufferName).readWriteData(buffer -> {
+		// Get the amount of total sides each chunk has. Reset the counters with a
+		// GPU-side clear after the CPU has copied the counts out, rather than mapping
+		// the buffer for read/write and storing zeros through the mapped pointer.
+		this.shader.getShaderStorageBuffer(countPerChunkBufferName).readData(buffer -> {
 			for (CloudMeshGenerator.ChunkGenTask gennedChunk : this.taskScheduler.getCompletedTasks()) {
 				MeshChunk.BufferSet bufferSet = bufferSetFunction.apply(gennedChunk.chunk());
 				int index = gennedChunk.index() * 4;
 				int count = buffer.getInt(index);
 				bufferSet.setTotalElementCount(count);
-				buffer.putInt(index, 0);
 			}
 		}, this.chunks.size() * 4);
+		this.shader.getShaderStorageBuffer(countPerChunkBufferName).clearIntData();
 
 		List<MeshChunk> completedChunks = Lists.newArrayListWithCapacity(this.taskScheduler.getCompletedTasks().size());
 		for (CloudMeshGenerator.ChunkGenTask completedGenTask : this.taskScheduler.getCompletedTasks())
@@ -617,7 +664,7 @@ public abstract class CloudMeshGenerator {
 
 	/**
 	 * Queues a list of chunk gen tasks for each chunk in this mesh generator
-	 * 
+	 *
 	 * @param meshGenOffsetX
 	 * @param meshGenOffsetZ
 	 * @param frustum
@@ -647,6 +694,9 @@ public abstract class CloudMeshGenerator {
 	}
 
 	protected void onOffGen() {
+		if (!FORCE_ON_OFF_GEN_READBACK)
+			return;
+
 		// We read these SSBOs here to avoid weird frame spikes when in fullscreen
 		// V-Sync, not sure why it happens
 		if (!this.useFixedMeshDataSectionSize)
@@ -665,7 +715,7 @@ public abstract class CloudMeshGenerator {
 
 	/**
 	 * Queues a given chunk for mesh genning or clears it if empty
-	 * 
+	 *
 	 * @param chunk
 	 *                       The given {@link MeshChunk} to generate a mesh for
 	 * @param chunkIndex
@@ -709,7 +759,7 @@ public abstract class CloudMeshGenerator {
 
 	/**
 	 * Does mesh generating for a given amount of chunks defined by tasksPerTick
-	 * 
+	 *
 	 * @param tasksPerTick
 	 */
 	private void runChunkGenTask(CloudMeshGenerator.ChunkGenTask task) {
@@ -725,7 +775,7 @@ public abstract class CloudMeshGenerator {
 
 	/**
 	 * Generates a given chunk, or completes a chunk gen task
-	 * 
+	 *
 	 * @param task
 	 * @param scale
 	 * @param globalOffsetX

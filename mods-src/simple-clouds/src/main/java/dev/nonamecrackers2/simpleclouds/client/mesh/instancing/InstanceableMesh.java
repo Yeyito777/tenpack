@@ -24,17 +24,17 @@ public class InstanceableMesh
 	private @Nullable ByteBuffer vertexBuffer;
 	private @Nullable ByteBuffer indexBuffer;
 	private int totalIndices;
-	
+
 	public InstanceableMesh(int vertexBufferSize, int indexBufferSize, VertexFormat format, Consumer<ByteBuffer> vertexBufferGenerator, Function<ByteBuffer, Integer> indexBufferGenerator)
 	{
 		RenderSystem.assertOnRenderThread();
-		
+
 		this.arrayObjectId = GL30.glGenVertexArrays();
 		this.vertexBufferId = GL15.glGenBuffers();
 		this.indexBufferId = GL15.glGenBuffers();
-		
+
 		GL30.glBindVertexArray(this.arrayObjectId);
-		
+
 		GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, this.vertexBufferId);
 		this.vertexBuffer = MemoryUtil.memAlloc(vertexBufferSize);
 		vertexBufferGenerator.accept(this.vertexBuffer);
@@ -44,13 +44,13 @@ public class InstanceableMesh
 		this.indexBuffer = MemoryUtil.memAlloc(indexBufferSize);
 		this.totalIndices = indexBufferGenerator.apply(this.indexBuffer);
 		GL15.glBufferData(GL15.GL_ELEMENT_ARRAY_BUFFER, this.indexBuffer, GL15.GL_STATIC_DRAW);
-		
+
 		GL30.glBindVertexArray(0);
 	}
-	
+
 	public static InstanceableMesh defaultSide()
 	{
-		return new InstanceableMesh(48, 24, DefaultVertexFormat.POSITION, buffer -> 
+		return new InstanceableMesh(48, 24, DefaultVertexFormat.POSITION, buffer ->
 		{
 			buffer.putFloat(-1.0F); buffer.putFloat(-1.0F); buffer.putFloat( 1.0F);
 			buffer.putFloat(-1.0F); buffer.putFloat(-1.0F); buffer.putFloat(-1.0F);
@@ -69,10 +69,10 @@ public class InstanceableMesh
 			return 6;
 		});
 	}
-	
+
 	public static InstanceableMesh defaultNonCulledSide()
 	{
-		return new InstanceableMesh(48, 48, DefaultVertexFormat.POSITION, buffer -> 
+		return new InstanceableMesh(48, 48, DefaultVertexFormat.POSITION, buffer ->
 		{
 			buffer.putFloat(-1.0F); buffer.putFloat(-1.0F); buffer.putFloat( 1.0F);
 			buffer.putFloat(-1.0F); buffer.putFloat(-1.0F); buffer.putFloat(-1.0F);
@@ -87,19 +87,19 @@ public class InstanceableMesh
 			buffer.putInt(0);
 			buffer.putInt(2);
 			buffer.putInt(3);
-			
+
 			buffer.putInt(2);
 			buffer.putInt(1);
 			buffer.putInt(0);
 			buffer.putInt(3);
 			buffer.putInt(2);
 			buffer.putInt(0);
-			
+
 			buffer.rewind();
 			return 12;
 		});
 	}
-	
+
 //	public static PreparedMesh defaultCube()
 //	{
 //		return new PreparedMesh(576, 144, SimpleCloudsShaders.POSITION_NORMAL, buffer -> {
@@ -133,7 +133,7 @@ public class InstanceableMesh
 //			buffer.putFloat(-1.0F); buffer.putFloat( 1.0F); buffer.putFloat( 1.0F); buffer.put((byte)0); buffer.put((byte)0); buffer.put((byte)1); buffer.put((byte)0);
 //			buffer.putFloat( 1.0F); buffer.putFloat( 1.0F); buffer.putFloat( 1.0F); buffer.put((byte)0); buffer.put((byte)0); buffer.put((byte)1); buffer.put((byte)0);
 //			buffer.putFloat( 1.0F); buffer.putFloat(-1.0F); buffer.putFloat( 1.0F); buffer.put((byte)0); buffer.put((byte)0); buffer.put((byte)1); buffer.put((byte)0);
-//			
+//
 //			buffer.rewind();
 //		}, buffer -> {
 //			buffer.putInt(0); buffer.putInt(1); buffer.putInt(2); buffer.putInt(0); buffer.putInt(2); buffer.putInt(3); // -x
@@ -146,10 +146,10 @@ public class InstanceableMesh
 //			return 36;
 //		});
 //	}
-	
+
 	public static InstanceableMesh defaultCube()
 	{
-		return new InstanceableMesh(96, 144, DefaultVertexFormat.POSITION, buffer -> 
+		return new InstanceableMesh(96, 144, DefaultVertexFormat.POSITION, buffer ->
 		{
 			buffer.putFloat(-1.0F); buffer.putFloat(-1.0F); buffer.putFloat(-1.0F);
 			buffer.putFloat( 1.0F); buffer.putFloat(-1.0F); buffer.putFloat(-1.0F);
@@ -160,7 +160,7 @@ public class InstanceableMesh
 			buffer.putFloat(-1.0F); buffer.putFloat( 1.0F); buffer.putFloat( 1.0F);
 			buffer.putFloat(-1.0F); buffer.putFloat(-1.0F); buffer.putFloat( 1.0F);
 			buffer.rewind();
-		}, buffer -> 
+		}, buffer ->
 		{
 			buffer.putInt(0); buffer.putInt(1); buffer.putInt(2); buffer.putInt(0); buffer.putInt(2); buffer.putInt(3); // -z
 			buffer.putInt(4); buffer.putInt(7); buffer.putInt(6); buffer.putInt(4); buffer.putInt(6); buffer.putInt(5); // +z
@@ -172,43 +172,64 @@ public class InstanceableMesh
 			return 36;
 		});
 	}
-	
+
 	public void drawInstanced(int count)
 	{
 		RenderSystem.assertOnRenderThread();
-		
+
+		this.bind();
+		this.drawInstancedBound(count);
+	}
+
+	public void bind()
+	{
+		RenderSystem.assertOnRenderThread();
+
 		GL30.glBindVertexArray(this.arrayObjectId);
+	}
+
+	public void drawInstancedBound(int count)
+	{
+		RenderSystem.assertOnRenderThread();
+
 		GL31.glDrawElementsInstanced(GL11.GL_TRIANGLES, this.totalIndices, GL11.GL_UNSIGNED_INT, 0L, count);
 	}
-	
+
+	public static void unbind()
+	{
+		RenderSystem.assertOnRenderThread();
+
+		GL30.glBindVertexArray(0);
+	}
+
 	public void destroy()
 	{
 		this.totalIndices = 0;
-		
+
 		if (this.arrayObjectId >= 0)
 		{
 			RenderSystem.glDeleteVertexArrays(this.arrayObjectId);
 			this.arrayObjectId = -1;
 		}
-		
+
 		if (this.vertexBufferId >= 0)
 		{
 			RenderSystem.glDeleteBuffers(this.vertexBufferId);
 			this.vertexBufferId = -1;
 		}
-		
+
 		if (this.vertexBuffer != null)
 		{
 			MemoryUtil.memFree(this.vertexBuffer);
 			this.vertexBuffer = null;
 		}
-		
+
 		if (this.indexBufferId >= 0)
 		{
 			RenderSystem.glDeleteBuffers(this.indexBufferId);
 			this.indexBufferId = -1;
 		}
-		
+
 		if (this.indexBuffer != null)
 		{
 			MemoryUtil.memFree(this.indexBuffer);

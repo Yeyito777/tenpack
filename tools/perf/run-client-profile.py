@@ -144,6 +144,12 @@ def prepare_instance(args: argparse.Namespace, run_dir: Path) -> Path:
         jvm_args.append(f"-Dtenpack.perfharness.pitch={args.pitch}")
     if args.yaw_degrees_per_second is not None:
         jvm_args.append(f"-Dtenpack.perfharness.yawDegreesPerSecond={args.yaw_degrees_per_second}")
+    if args.command_file:
+        jvm_args.append(f"-Dtenpack.perfharness.commandFile={Path(args.command_file).resolve()}")
+    if args.simpleclouds_stress_clouds:
+        jvm_args.append("-Dsimpleclouds.stressClouds=true")
+    if args.simpleclouds_stress_cloud_type:
+        jvm_args.append(f"-Dsimpleclouds.stressCloudType={args.simpleclouds_stress_cloud_type}")
     g["JvmArgs"] = " ".join(jvm_args)
     write_instance_cfg(cfg, cfg_path)
 
@@ -493,6 +499,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--max-fps", type=int, default=0, help="Patch copied options.txt maxFps for this run (0 leaves the copied value unchanged)")
     p.add_argument("--pitch", type=float)
     p.add_argument("--yaw-degrees-per-second", type=float)
+    p.add_argument("--command-file", default="", help="Optional newline-delimited server commands for the harness to issue after joining")
     p.add_argument("--refresh-world", action="store_true")
     p.add_argument("--mesa-gl-override", action=argparse.BooleanOptionalAction, default=True)
     p.add_argument("--zink", action=argparse.BooleanOptionalAction, default=False)
@@ -502,6 +509,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--simpleclouds-frames-to-generate-mesh", type=int, default=0, help="Override Simple Clouds framesToGenerateMesh in the copied config")
     p.add_argument("--simpleclouds-level-of-detail", choices=["LOW", "MEDIUM", "HIGH"], help="Override Simple Clouds levelOfDetail in the copied config")
     p.add_argument("--simpleclouds-shadow-distance", type=int, default=0, help="Override Simple Clouds shadowDistance in the copied config")
+    p.add_argument("--simpleclouds-stress-clouds", action="store_true", help="Enable Simple Clouds' dev-only stress CloudGetter for cloud-heavy profiling")
+    p.add_argument("--simpleclouds-stress-cloud-type", default="", help="Cloud type id for --simpleclouds-stress-clouds, default simpleclouds:cumulonimbus")
     p.add_argument("--disable-simpleclouds-mesh", action="store_true", help="xenv/llvmpipe smoke-test escape hatch; not representative for Simple Clouds profiling")
     p.add_argument("--no-build", action="store_true")
     p.add_argument("--no-spark", dest="spark", action="store_false")

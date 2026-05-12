@@ -52,6 +52,7 @@ import dev.nonamecrackers2.simpleclouds.client.mesh.chunk.MeshChunk;
 import dev.nonamecrackers2.simpleclouds.client.mesh.generator.CloudMeshGenerator;
 import dev.nonamecrackers2.simpleclouds.client.mesh.generator.MultiRegionCloudMeshGenerator;
 import dev.nonamecrackers2.simpleclouds.client.mesh.generator.SingleRegionCloudMeshGenerator;
+import dev.nonamecrackers2.simpleclouds.client.mesh.instancing.InstanceableMesh;
 import dev.nonamecrackers2.simpleclouds.client.mesh.lod.LevelOfDetailConfig;
 import dev.nonamecrackers2.simpleclouds.client.mesh.lod.PreparedChunk;
 import dev.nonamecrackers2.simpleclouds.client.renderer.lightning.LightningBolt;
@@ -540,23 +541,30 @@ public class SimpleCloudsRenderer implements ResourceManagerReloadListener {
 		SimpleCloudsRenderer.prepareShader(shader, stack.last().pose(), projMat, fogStart, fogEnd);
 		shader.apply();
 
+		boolean renderLodClouds = SimpleCloudsConfig.CLIENT.renderLodClouds.get();
+		int shaderStorageBinding = shader.getShaderStorageBinding();
+		float[] lastAlpha = new float[] { Float.NaN };
+		generator.getSideMesh().bind();
 		generator.forRenderableMeshChunks(frustum, MeshChunk::getOpaqueBuffers, (chunk, opaqueBuffers) -> {
-			if (!SimpleCloudsConfig.CLIENT.renderLodClouds.get() && chunk.getChunkInfo().lodLevel() > 0)
+			if (!renderLodClouds && chunk.getChunkInfo().lodLevel() > 0)
 				return;
 			if (ditherFade) {
-				RenderSystem.setShaderColor(r, g, b, chunk.getAlpha(partialTick));
-				shader.COLOR_MODULATOR.set(RenderSystem.getShaderColor());
-				shader.COLOR_MODULATOR.upload();
+				float alpha = chunk.getAlpha(partialTick);
+				if (alpha != lastAlpha[0]) {
+					RenderSystem.setShaderColor(r, g, b, alpha);
+					shader.COLOR_MODULATOR.set(RenderSystem.getShaderColor());
+					shader.COLOR_MODULATOR.upload();
+					lastAlpha[0] = alpha;
+				}
 			}
-			GL30.glBindBufferBase(GL43.GL_SHADER_STORAGE_BUFFER, shader.getShaderStorageBinding(),
+			GL30.glBindBufferBase(GL43.GL_SHADER_STORAGE_BUFFER, shaderStorageBinding,
 					opaqueBuffers.getBufferId());
-			generator.getSideMesh().drawInstanced(opaqueBuffers.getElementCount());
+			generator.getSideMesh().drawInstancedBound(opaqueBuffers.getElementCount());
 		}, ditherFade);
-		GL30.glBindBufferBase(GL43.GL_SHADER_STORAGE_BUFFER, shader.getShaderStorageBinding(), 0);
+		InstanceableMesh.unbind();
+		GL30.glBindBufferBase(GL43.GL_SHADER_STORAGE_BUFFER, shaderStorageBinding, 0);
 
 		shader.clear();
-
-		GL30.glBindVertexArray(0);
 
 		RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 		RenderSystem.enableCull();
@@ -599,21 +607,30 @@ public class SimpleCloudsRenderer implements ResourceManagerReloadListener {
 		GL40.glBlendFunci(0, GL11.GL_ONE, GL11.GL_ONE);
 		GL40.glBlendFunci(1, GL11.GL_ZERO, GL11.GL_ONE_MINUS_SRC_COLOR);
 
+		boolean renderLodClouds = SimpleCloudsConfig.CLIENT.renderLodClouds.get();
+		int shaderStorageBinding = shader.getShaderStorageBinding();
+		float[] lastAlpha = new float[] { Float.NaN };
+		generator.getCubeMesh().bind();
 		generator.forRenderableMeshChunks(frustum, c -> c.getTransparentBuffers().get(),
 				(chunk, transparentBuffers) -> {
-					if (!SimpleCloudsConfig.CLIENT.renderLodClouds.get() && chunk.getChunkInfo().lodLevel() > 0)
+					if (!renderLodClouds && chunk.getChunkInfo().lodLevel() > 0)
 						return;
 					if (ditherFade) {
-						RenderSystem.setShaderColor(r, g, b, chunk.getAlpha(partialTick));
-						shader.COLOR_MODULATOR.set(RenderSystem.getShaderColor());
-						shader.COLOR_MODULATOR.upload();
+						float alpha = chunk.getAlpha(partialTick);
+						if (alpha != lastAlpha[0]) {
+							RenderSystem.setShaderColor(r, g, b, alpha);
+							shader.COLOR_MODULATOR.set(RenderSystem.getShaderColor());
+							shader.COLOR_MODULATOR.upload();
+							lastAlpha[0] = alpha;
+						}
 					}
 
-					GL30.glBindBufferBase(GL43.GL_SHADER_STORAGE_BUFFER, shader.getShaderStorageBinding(),
+					GL30.glBindBufferBase(GL43.GL_SHADER_STORAGE_BUFFER, shaderStorageBinding,
 							transparentBuffers.getBufferId());
-					generator.getCubeMesh().drawInstanced(transparentBuffers.getElementCount());
+					generator.getCubeMesh().drawInstancedBound(transparentBuffers.getElementCount());
 				}, ditherFade);
-		GL30.glBindBufferBase(GL43.GL_SHADER_STORAGE_BUFFER, shader.getShaderStorageBinding(), 0);
+		InstanceableMesh.unbind();
+		GL30.glBindBufferBase(GL43.GL_SHADER_STORAGE_BUFFER, shaderStorageBinding, 0);
 
 		shader.clear();
 
@@ -621,8 +638,6 @@ public class SimpleCloudsRenderer implements ResourceManagerReloadListener {
 		GL30.glDisablei(GL11.GL_BLEND, 1);
 		GL40.glBlendFuncSeparatei(0, GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA, GL11.GL_ONE, GL11.GL_ZERO);
 		GL40.glBlendFuncSeparatei(1, GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA, GL11.GL_ONE, GL11.GL_ZERO);
-
-		GL30.glBindVertexArray(0);
 
 		RenderSystem.depthMask(true);
 
@@ -658,15 +673,18 @@ public class SimpleCloudsRenderer implements ResourceManagerReloadListener {
 		shadowMap.bind();
 		shadowMap.clear(Minecraft.ON_OSX);
 
+		boolean renderLodClouds = SimpleCloudsConfig.CLIENT.renderLodClouds.get();
+		int shaderStorageBinding = shader.getShaderStorageBinding();
+		this.meshGenerator.getSideMesh().bind();
 		this.meshGenerator.forRenderableMeshChunks(frustum, MeshChunk::getOpaqueBuffers, (chunk, opaqueBuffers) -> {
-			if (!SimpleCloudsConfig.CLIENT.renderLodClouds.get() && chunk.getChunkInfo().lodLevel() > 0)
+			if (!renderLodClouds && chunk.getChunkInfo().lodLevel() > 0)
 				return;
-			GL30.glBindBufferBase(GL43.GL_SHADER_STORAGE_BUFFER, shader.getShaderStorageBinding(),
+			GL30.glBindBufferBase(GL43.GL_SHADER_STORAGE_BUFFER, shaderStorageBinding,
 					opaqueBuffers.getBufferId());
-			this.meshGenerator.getSideMesh().drawInstanced(opaqueBuffers.getElementCount());
+			this.meshGenerator.getSideMesh().drawInstancedBound(opaqueBuffers.getElementCount());
 		});
-		GL30.glBindBufferBase(GL43.GL_SHADER_STORAGE_BUFFER, shader.getShaderStorageBinding(), 0);
-		GL30.glBindVertexArray(0);
+		InstanceableMesh.unbind();
+		GL30.glBindBufferBase(GL43.GL_SHADER_STORAGE_BUFFER, shaderStorageBinding, 0);
 
 		shadowMap.unbind();
 

@@ -1,6 +1,7 @@
 package dev.nonamecrackers2.simpleclouds.client.shader.buffer;
 
 import java.nio.ByteBuffer;
+import java.nio.IntBuffer;
 import java.util.function.Consumer;
 
 import javax.annotation.Nullable;
@@ -11,6 +12,7 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL15;
 import org.lwjgl.opengl.GL30;
 import org.lwjgl.opengl.GL43;
+import org.lwjgl.system.MemoryStack;
 import org.lwjgl.system.MemoryUtil;
 
 import com.mojang.blaze3d.platform.GlStateManager;
@@ -24,31 +26,31 @@ public class ShaderStorageBufferObject implements WithBinding
 	protected final int binding;
 	protected final int usage;
 	protected @Nullable ByteBuffer buffer;
-	
+
 	public ShaderStorageBufferObject(int id, int binding, int usage)
 	{
 		this.id = id;
 		this.binding = binding;
 		this.usage = usage;
 	}
-	
+
 	public static int getMaxSize()
 	{
 		if (maxSize == -1)
 			maxSize = GL11.glGetInteger(GL43.GL_MAX_SHADER_STORAGE_BLOCK_SIZE);
 		return maxSize;
 	}
-	
+
 	public void bindToProgram(String name, int programId)
 	{
 		this.bindToProgram(name, programId, true);
 	}
-	
+
 	public void optionalBindToProgram(String name, int programId)
 	{
 		this.bindToProgram(name, programId, false);
 	}
-	
+
 	private void bindToProgram(String name, int programId, boolean throwIfMissing)
 	{
 		RenderSystem.assertOnRenderThreadOrInit();
@@ -59,7 +61,7 @@ public class ShaderStorageBufferObject implements WithBinding
 		if (index != -1)
 			GL43.glShaderStorageBlockBinding(programId, index, this.binding);
 	}
-	
+
 	public void uploadData(ByteBuffer buffer)
 	{
 		int size = buffer.remaining();
@@ -72,14 +74,25 @@ public class ShaderStorageBufferObject implements WithBinding
 		GlStateManager._glBindBuffer(GL43.GL_SHADER_STORAGE_BUFFER, 0);
 		this.buffer = buffer;
 	}
-	
+
+	public void allocateBufferStorage(int bytes)
+	{
+		int size = Math.min(bytes, getMaxSize());
+		RenderSystem.assertOnRenderThread();
+		this.assertValid();
+		GlStateManager._glBindBuffer(GL43.GL_SHADER_STORAGE_BUFFER, this.id);
+		GL15.glBufferData(GL43.GL_SHADER_STORAGE_BUFFER, (long)size, this.usage);
+		GlStateManager._glBindBuffer(GL43.GL_SHADER_STORAGE_BUFFER, 0);
+		this.buffer = null;
+	}
+
 	public int allocateBuffer(int bytes)
 	{
 		int size = Math.min(bytes, getMaxSize());
-		this.uploadData(MemoryUtil.memAlloc(size));
+		this.allocateBufferStorage(size);
 		return size;
 	}
-	
+
 	@Override
 	public void close()
 	{
@@ -96,7 +109,7 @@ public class ShaderStorageBufferObject implements WithBinding
 			this.buffer = null;
 		}
 	}
-	
+
 	public void fetchData(Consumer<ByteBuffer> consumer, int access, int size)
 	{
 		RenderSystem.assertOnRenderThread();
@@ -108,12 +121,12 @@ public class ShaderStorageBufferObject implements WithBinding
 		GlStateManager._glUnmapBuffer(GL43.GL_SHADER_STORAGE_BUFFER);
 		GlStateManager._glBindBuffer(GL43.GL_SHADER_STORAGE_BUFFER, 0);
 	}
-	
+
 	public void readData(Consumer<ByteBuffer> consumer, int size)
 	{
 		this.fetchData(consumer, GL30.GL_MAP_READ_BIT, size);
 	}
-	
+
 	public void writeData(Consumer<ByteBuffer> consumer, int size, boolean invalidate)
 	{
 		int access = GL30.GL_MAP_WRITE_BIT;
@@ -121,34 +134,47 @@ public class ShaderStorageBufferObject implements WithBinding
 			access |= GL30.GL_MAP_INVALIDATE_BUFFER_BIT;
 		this.fetchData(consumer, access, size);
 	}
-	
+
 	public void readWriteData(Consumer<ByteBuffer> consumer, int size)
 	{
 		this.fetchData(consumer, GL30.GL_MAP_WRITE_BIT | GL30.GL_MAP_READ_BIT, size);
 	}
-	
+
+	public void clearIntData()
+	{
+		RenderSystem.assertOnRenderThread();
+		this.assertValid();
+		GlStateManager._glBindBuffer(GL43.GL_SHADER_STORAGE_BUFFER, this.id);
+		try (MemoryStack stack = MemoryStack.stackPush())
+		{
+			IntBuffer zero = stack.ints(0);
+			GL43.glClearBufferData(GL43.GL_SHADER_STORAGE_BUFFER, GL30.GL_R32I, GL30.GL_RED_INTEGER, GL11.GL_INT, zero);
+		}
+		GlStateManager._glBindBuffer(GL43.GL_SHADER_STORAGE_BUFFER, 0);
+	}
+
 	@Override
 	public int getBinding()
 	{
 		return this.binding;
 	}
-	
+
 	public int getId()
 	{
 		return this.id;
 	}
-	
+
 	public int getUsage()
 	{
 		return this.usage;
 	}
-	
+
 	protected void assertValid()
 	{
 		if (this.id == -1)
 			throw new IllegalStateException("Buffer is no longer valid!");
 	}
-	
+
 	@Override
 	public String toString()
 	{
