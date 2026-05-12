@@ -105,7 +105,7 @@ showVivecraftNotice = true
 	#Specifies the quality of the level of detail. A lower setting makes clouds lower quality faster.
 	#Default: HIGH
 	#Allowed Values: LOW, MEDIUM, HIGH
-	levelOfDetail = "MEDIUM"
+	levelOfDetail = "HIGH"
 	#Specifies if distant level-of-detail cloud chunks should be rendered. Disabling can improve performance, but removes faraway cloud coverage.
 	#Default: true
 	renderLodClouds = true

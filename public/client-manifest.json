@@ -56,9 +56,9 @@
     },
     {
       "path": "config/simpleclouds-client.toml",
-      "sha256": "18ad9c260c63b31b993074ab35febd4afe68495d9f16a5e1a4ab7f0b4ff697f0",
-      "size": 7826,
-      "url": "files/18/18ad9c260c63b31b993074ab35febd4afe68495d9f16a5e1a4ab7f0b4ff697f0"
+      "sha256": "0f6cbaf00bf0a8310902b9316b594a68c0a17125b0f883dd6d677190996da8cc",
+      "size": 7824,
+      "url": "files/0f/0f6cbaf00bf0a8310902b9316b594a68c0a17125b0f883dd6d677190996da8cc"
     },
     {
       "path": "config/sound_physics_remastered/occlusion.properties",
