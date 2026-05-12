@@ -185,10 +185,10 @@ def check_client_performance_configs(errors: list[str]) -> None:
     performance = simpleclouds.get("performance", {}) if isinstance(simpleclouds, dict) else {}
     mesh = performance.get("mesh_generation", {}) if isinstance(performance, dict) else {}
     distant_horizons = simpleclouds.get("distant_horizons", {}) if isinstance(simpleclouds, dict) else {}
-    require_equal(errors, "Simple Clouds mesh generationInterval", mesh.get("generationInterval"), "STATIC", "spread cloud mesh generation work over multiple frames")
-    require_equal(errors, "Simple Clouds framesToGenerateMesh", mesh.get("framesToGenerateMesh"), 10, "spread cloud mesh frame-time spikes without lowering detail")
+    require_equal(errors, "Simple Clouds mesh generationInterval", mesh.get("generationInterval"), "TARGET_FPS", "restore default continuous cloud mesh pacing for visual comparison")
+    require_equal(errors, "Simple Clouds framesToGenerateMesh", mesh.get("framesToGenerateMesh"), 1, "restore default one-frame mesh generation for visual comparison")
     require_equal(errors, "Simple Clouds levelOfDetail", performance.get("levelOfDetail"), "HIGH", "keep the intended Simple Clouds visual quality")
-    require_equal(errors, "Simple Clouds shadowDistance", distant_horizons.get("shadowDistance"), 2500, "trim distant cloud shadow work while preserving cloud detail")
+    require_equal(errors, "Simple Clouds shadowDistance", distant_horizons.get("shadowDistance"), 4096, "restore default cloud shadow distance for visual comparison")
 
 
 def main() -> int:

@@ -126,12 +126,12 @@ showVivecraftNotice = true
 		#How the amount of frames used to generate the entire mesh is calculated. Static will use the 'Frames To Generate Mesh' option. Dynamic will calculate it automatically depending on your FPS. Target FPS will target a certain perceived framerate for mesh generation.
 		#Default: TARGET_FPS
 		#Allowed Values: STATIC, DYNAMIC, TARGET_FPS
-		generationInterval = "STATIC"
+		generationInterval = "TARGET_FPS"
 		#Specifies how many frames it should take to generate the entire cloud mesh. Higher values will improve performance at the cost of stuttery cloud movement.
 		#Default: 1
 		# Default: 1
 		# Range: 1 ~ 30
-		framesToGenerateMesh = 10
+		framesToGenerateMesh = 1
 		#Used to set the target FPS with the 'Target FPS' option in 'Generation Interval'.
 		#Default: 24
 		# Default: 24
@@ -172,4 +172,4 @@ showVivecraftNotice = true
 	#Default: 4096
 	# Default: 4096
 	# Range: 512 ~ 16384
-	shadowDistance = 2500
+	shadowDistance = 4096
