@@ -274,6 +274,14 @@ def patch_simpleclouds_config(cfg: Path, args: argparse.Namespace) -> None:
 
     if args.disable_simpleclouds_mesh:
         changes["generateMesh"] = "false"
+    if args.simpleclouds_generation_interval:
+        changes["generationInterval"] = f'"{args.simpleclouds_generation_interval}"'
+    if args.simpleclouds_frames_to_generate_mesh:
+        changes["framesToGenerateMesh"] = str(args.simpleclouds_frames_to_generate_mesh)
+    if args.simpleclouds_level_of_detail:
+        changes["levelOfDetail"] = f'"{args.simpleclouds_level_of_detail}"'
+    if args.simpleclouds_shadow_distance:
+        changes["shadowDistance"] = str(args.simpleclouds_shadow_distance)
 
     for key, value in changes.items():
         text = toml_replace_value(text, key, value)
@@ -490,6 +498,10 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--zink", action=argparse.BooleanOptionalAction, default=False)
     p.add_argument("--simpleclouds-preset", default="current", choices=["current", "medium", "low", "ultra_low"],
                    help="Patch the copied simpleclouds-client.toml with one of Simple Clouds' built-in client presets for this run")
+    p.add_argument("--simpleclouds-generation-interval", choices=["STATIC", "DYNAMIC", "TARGET_FPS"], help="Override Simple Clouds mesh generationInterval in the copied config")
+    p.add_argument("--simpleclouds-frames-to-generate-mesh", type=int, default=0, help="Override Simple Clouds framesToGenerateMesh in the copied config")
+    p.add_argument("--simpleclouds-level-of-detail", choices=["LOW", "MEDIUM", "HIGH"], help="Override Simple Clouds levelOfDetail in the copied config")
+    p.add_argument("--simpleclouds-shadow-distance", type=int, default=0, help="Override Simple Clouds shadowDistance in the copied config")
     p.add_argument("--disable-simpleclouds-mesh", action="store_true", help="xenv/llvmpipe smoke-test escape hatch; not representative for Simple Clouds profiling")
     p.add_argument("--no-build", action="store_true")
     p.add_argument("--no-spark", dest="spark", action="store_false")

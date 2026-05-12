@@ -54,6 +54,7 @@ The runner can temporarily patch copied client settings for experiments without 
 
 - `--disable-vsync` and `--max-fps N` patch `options.txt` for uncapped FPS profiling.
 - `--simpleclouds-preset medium|low|ultra_low` applies Simple Clouds' built-in client presets to the copied `simpleclouds-client.toml` for A/B testing.
+- `--simpleclouds-generation-interval`, `--simpleclouds-frames-to-generate-mesh`, `--simpleclouds-level-of-detail`, and `--simpleclouds-shadow-distance` can override individual copied Simple Clouds settings for narrower experiments.
 
 ## Compare two completed runs
 
