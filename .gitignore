@@ -58,3 +58,4 @@ tmp/
 # Generated/local build output
 dist/
 .gradle/
+perf-runs/
