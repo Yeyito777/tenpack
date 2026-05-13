@@ -518,9 +518,9 @@
     },
     {
       "path": "mods/voxy-worldgen-v2-1.21.1-2.2.1.jar",
-      "sha256": "8404cda9a94af76ab160fe1c7fa6d086b31c7ddf6173e606391c046bb2d98f63",
-      "size": 216791,
-      "url": "files/84/8404cda9a94af76ab160fe1c7fa6d086b31c7ddf6173e606391c046bb2d98f63"
+      "sha256": "eaadc98b066ba9d7db444497b2d172003945b06e5246b7843125981295c2b25a",
+      "size": 216525,
+      "url": "files/ea/eaadc98b066ba9d7db444497b2d172003945b06e5246b7843125981295c2b25a"
     },
     {
       "path": "mods/weaponmaster_ydm-1.21.1-neoforge-4.2.7.jar",
