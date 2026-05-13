@@ -762,13 +762,6 @@
       "note": "Physicalized enchanting station/interaction overhaul. sha256: b88abf67b7d49c7f9d60e1a47d2145acb3984f8f532c76f2988514dd08ab593e"
     },
     {
-      "name": "Seamless Sleep",
-      "version": "2.5.1",
-      "filename": "seamlesssleep-neoforge-1.21.1-2.5.1.jar",
-      "source": "https://cdn.modrinth.com/data/IyHq05yB/versions/ZW6KipjH/seamlesssleep-neoforge-1.21.1-2.5.1.jar",
-      "note": "Multiplayer-friendly sleep progression. Exact NeoForge 1.21.1 build selected after 2.5.3 declared an exclusive <1.21.1 Minecraft range in neoforge.mods.toml. sha256: 299c28aa7ce95bcb59b09e83706e0dd453d55b8b440c20c70ca3bd72e7720742"
-    },
-    {
       "name": "Entity Texture Features",
       "version": "7.1",
       "filename": "entity_texture_features_1.21-neoforge-7.1.jar",

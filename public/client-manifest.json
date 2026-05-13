@@ -811,12 +811,6 @@
       "url": "files/15/15fb660a0d368204b37f3967bfcc48137397b7174ca2945c5635cc4539c755f8"
     },
     {
-      "path": "mods/seamlesssleep-neoforge-1.21.1-2.5.1.jar",
-      "sha256": "299c28aa7ce95bcb59b09e83706e0dd453d55b8b440c20c70ca3bd72e7720742",
-      "size": 140443,
-      "url": "files/29/299c28aa7ce95bcb59b09e83706e0dd453d55b8b440c20c70ca3bd72e7720742"
-    },
-    {
       "path": "mods/simpleblockphysics-1.21.1-neoforge-1.2.0.jar",
       "sha256": "624d5120b5f998fe6f3c47c06dd569ac80268b68d7c3f06ed94825ddb187fc51",
       "size": 25829,
@@ -896,9 +890,9 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "b67fff70a1d6de4233ecf69bd2e9278ad95922a83d419222d941e711fe74a5de",
-      "size": 51011,
-      "url": "files/b6/b67fff70a1d6de4233ecf69bd2e9278ad95922a83d419222d941e711fe74a5de"
+      "sha256": "73dfa14dedc2a7fc900b09db39259d5652e5be2580d7a00cde4275effc6164b1",
+      "size": 50516,
+      "url": "files/73/73dfa14dedc2a7fc900b09db39259d5652e5be2580d7a00cde4275effc6164b1"
     },
     {
       "path": "mods/tenpack_travel-0.1.0.jar",

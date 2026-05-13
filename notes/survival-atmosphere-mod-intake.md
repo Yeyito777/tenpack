@@ -12,7 +12,6 @@ Requested pass: environmental danger / survival tension, exploration atmosphere,
 - Grim kingdoms: Lost structures & ruins `grim-kingdoms-lost-structures-ruins-v1.0.3.jar`
 - Wildex Bestiary `wildex-3.0.0.jar`
 - Immersive Enchanting `immersiveenchanting-5.0.1-neoforge-1.21.1.jar`
-- Seamless Sleep `seamlesssleep-neoforge-1.21.1-2.5.1.jar`
 
 ## Added to client only
 
@@ -67,6 +66,7 @@ There was no NeoForge 1.21.1 VeinMiner mod jar in the Modrinth version list. The
 - Enhanced Visuals — no Minecraft 1.21.1 compatible mod build found during this pass.
 - Live Texture Editor — no Minecraft 1.21.1 build found; also a developer/debug-oriented client tool, so not forced into the shipped client.
 - Big Water — available builds found were for newer Minecraft versions, not 1.21.1.
+- Seamless Sleep — removed after the initial deploy at user request.
 
 ## Risk notes for playtest
 
