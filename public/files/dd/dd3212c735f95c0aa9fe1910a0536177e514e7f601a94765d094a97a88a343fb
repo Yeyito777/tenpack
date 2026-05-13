@@ -15,5 +15,6 @@
   "historicalSyncMaxMspt": 75,
   "historicalPullBatchSize": 64,
   "historicalPullMaxInFlight": 128,
+  "historicalPullServerMaxInFlight": 64,
   "historicalPullTimeoutSeconds": 45
 }
