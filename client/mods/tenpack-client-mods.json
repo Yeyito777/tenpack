@@ -350,10 +350,10 @@
     },
     {
       "name": "Cloth Config API",
-      "version": "15.0.140+neoforge",
-      "filename": "cloth-config-15.0.140-neoforge.jar",
-      "source": "https://cdn.modrinth.com/data/9s6osm5g/versions/izKINKFg/cloth-config-15.0.140-neoforge.jar",
-      "note": "NeoForge Cloth Config provider. Switched from the Fabric jar after Drip Sounds required the NeoForge mod id cloth_config; connector.json aliases Fabric cloth-config/cloth-config2 dependencies to cloth_config for Connector-loaded Fabric client mods. sha256: 65e722e0d98431a07c45f8bdd8d529a217cc8c175fde1740248bd5c1b4f3c0d4"
+      "version": "15.0.140+fabric via Sinytra Connector",
+      "filename": "cloth-config-15.0.140-fabric.jar",
+      "source": "https://cdn.modrinth.com/data/9s6osm5g/versions/HpMb5wGb/cloth-config-15.0.140-fabric.jar",
+      "note": "Fabric Cloth Config through Sinytra Connector. Restored after the NeoForge jar left CameraOverhaul missing cloth-config2. The crash logs showed this Fabric jar is discovered by Connector and supplies the CameraOverhaul/Falling Leaves cloth-config dependencies while also appearing as cloth_config in the NeoForge mod list. sha256: 33894e95da3af59014b39d126586d5241e07ea39f8618763e30dab637405f95f"
     },
     {
       "name": "Camera Overhaul",
@@ -867,13 +867,6 @@
       "note": "Client-side dense flower rendering; Fabric build runs via Sinytra Connector. sha256: d91063710d69fb5597b632559a6adec7c6a2a8f9194615689aef4faf65e27885"
     },
     {
-      "name": "Cosy Critters & Creepy Crawlies [Neo]",
-      "version": "0.0.6",
-      "filename": "cosycritters-1.21.1-NeoForge-0.0.6.jar",
-      "source": "https://cdn.modrinth.com/data/lOKz1gkH/versions/HmcDuDsO/cosycritters-1.21.1-NeoForge-0.0.6.jar",
-      "note": "Client-side ambient birds, moths, tiny spiders, and spooky set dressing. sha256: 0f9c3f619a549c13c538e9daf61e550b5f66b2454e5eb17a4b215648804d0cf1"
-    },
-    {
       "name": "Continuity",
       "version": "3.0.0+1.21.neoforge",
       "filename": "continuity-3.0.0+1.21.neoforge.jar",
@@ -881,5 +874,5 @@
       "note": "Connected-texture support for the connected bricks/paths/rocks packs. sha256: 4cc0a4a09ae09c64bb567e42381652b700f9cade5067a75e83115662cc475f0a"
     }
   ],
-  "note": "Trimmed to requested mods plus required libraries. Experiment 2026-05-06: restored Camera Overhaul/Falling Leaves. Added Simple Voice Chat stack on 2026-05-07: Simple Voice Chat, Voice Chat Interaction via Connector, and Voiceless Survival. 2026-05-13: Cloth Config uses the NeoForge jar to satisfy NeoForge client mods such as Drip Sounds, with connector aliases for Fabric cloth-config/cloth-config2 dependencies."
+  "note": "Trimmed to requested mods plus required libraries. Experiment 2026-05-06: restored Camera Overhaul/Falling Leaves; CameraOverhaul uses the Fabric jar through Sinytra Connector with Fabric Cloth Config. Added Simple Voice Chat stack on 2026-05-07: Simple Voice Chat, Voice Chat Interaction via Connector, and Voiceless Survival. 2026-05-13: Cosy Critters was removed after a client crash in bird spawning on leaf animate ticks."
 }

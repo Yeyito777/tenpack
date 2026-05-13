@@ -8,9 +8,9 @@
     },
     {
       "path": "config/connector.json",
-      "sha256": "d72cc2f3a2f69c06f4b0ecd1db29846269ba59b6dc35fd888c7ab974e09605da",
-      "size": 213,
-      "url": "files/d7/d72cc2f3a2f69c06f4b0ecd1db29846269ba59b6dc35fd888c7ab974e09605da"
+      "sha256": "d36dea45a03ab40153a4be9fdce4a8d21229c081eeb666d724bcdbf4a9719769",
+      "size": 140,
+      "url": "files/d3/d36dea45a03ab40153a4be9fdce4a8d21229c081eeb666d724bcdbf4a9719769"
     },
     {
       "path": "config/corpse-server.toml",
@@ -439,10 +439,10 @@
       "url": "files/9e/9e12468c49e5a95b7adbf22b3b4d05bc55565989b89c40b985cd73bdfe63c3c2"
     },
     {
-      "path": "mods/cloth-config-15.0.140-neoforge.jar",
-      "sha256": "65e722e0d98431a07c45f8bdd8d529a217cc8c175fde1740248bd5c1b4f3c0d4",
-      "size": 1163890,
-      "url": "files/65/65e722e0d98431a07c45f8bdd8d529a217cc8c175fde1740248bd5c1b4f3c0d4"
+      "path": "mods/cloth-config-15.0.140-fabric.jar",
+      "sha256": "33894e95da3af59014b39d126586d5241e07ea39f8618763e30dab637405f95f",
+      "size": 1157166,
+      "url": "files/33/33894e95da3af59014b39d126586d5241e07ea39f8618763e30dab637405f95f"
     },
     {
       "path": "mods/connector-2.0.0-beta.14+1.21.1-full.jar",
@@ -467,12 +467,6 @@
       "sha256": "80d984f0a17d968220129cc58edd5c9f28a5f61a84ec67dcc41228a46dfa4bb1",
       "size": 253694,
       "url": "files/80/80d984f0a17d968220129cc58edd5c9f28a5f61a84ec67dcc41228a46dfa4bb1"
-    },
-    {
-      "path": "mods/cosycritters-1.21.1-NeoForge-0.0.6.jar",
-      "sha256": "0f9c3f619a549c13c538e9daf61e550b5f66b2454e5eb17a4b215648804d0cf1",
-      "size": 55503,
-      "url": "files/0f/0f9c3f619a549c13c538e9daf61e550b5f66b2454e5eb17a4b215648804d0cf1"
     },
     {
       "path": "mods/create-1.21.1-6.0.10.jar",
@@ -890,9 +884,9 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "518b31a63ac1b936154d2a0817c1eddfc6692816afbce83bf4c991651543eeb1",
-      "size": 50435,
-      "url": "files/51/518b31a63ac1b936154d2a0817c1eddfc6692816afbce83bf4c991651543eeb1"
+      "sha256": "dda1c1730db1617aa99cb39a8e969d1c03b07d47df2ca7787a7d2e5e3198a1bd",
+      "size": 50105,
+      "url": "files/dd/dda1c1730db1617aa99cb39a8e969d1c03b07d47df2ca7787a7d2e5e3198a1bd"
     },
     {
       "path": "mods/tenpack_travel-0.1.0.jar",

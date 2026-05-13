@@ -30,7 +30,6 @@ Requested pass: environmental danger / survival tension, exploration atmosphere,
 - Tightfire `tightfire-1.21.1-1.0-SNAPSHOT.jar` — Fabric build through Sinytra Connector
 - Swinging Lanterns `swinginglanterns-1.21.1-1.5.0.jar` — Fabric build through Sinytra Connector
 - Dense Flowers `dense-flowers-0.2.2+mc1.21.0.jar` — Fabric build through Sinytra Connector
-- Cosy Critters & Creepy Crawlies [Neo] `cosycritters-1.21.1-NeoForge-0.0.6.jar`
 - Continuity `continuity-3.0.0+1.21.neoforge.jar` — connected texture support for the new connected packs
 
 ## Added resource packs
@@ -67,6 +66,7 @@ There was no NeoForge 1.21.1 VeinMiner mod jar in the Modrinth version list. The
 - Live Texture Editor — no Minecraft 1.21.1 build found; also a developer/debug-oriented client tool, so not forced into the shipped client.
 - Big Water — available builds found were for newer Minecraft versions, not 1.21.1.
 - Seamless Sleep — removed after the initial deploy at user request.
+- Cosy Critters & Creepy Crawlies [Neo] — removed after client crash: NPE in `CosyCritters.trySpawnBird` during leaf animate ticks.
 
 ## Risk notes for playtest
 
