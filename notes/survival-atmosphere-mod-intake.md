@@ -2,20 +2,21 @@
 
 Requested pass: environmental danger / survival tension, exploration atmosphere, interaction/animation immersion, and utility/QoL. Epic Siege was intentionally excluded.
 
-## Server/gameplay additions quarantined after stability testing
+## Added to server and mirrored to client
 
-The first pass added the following server-side gameplay mods, but they were removed from the pack during the stability sanity check because the live server began refusing connections after the batch and no server crash log was locally available to isolate one safe culprit:
+Re-added by request after the stability sanity check:
 
 - Simple Block Physics `simpleblockphysics-1.21.1-neoforge-1.2.0.jar`
 - Nyf's Spiders `nyfsspiders-neoforge-1.21.1-3.0.1.jar`
 - Danger Close `danger_close-neoforge-1.21.1-3.1.3.jar`
 - MonoLib `monolib-neoforge-1.21.1-4.0.2.jar` — Danger Close dependency
+
+Still quarantined from the server-side atmosphere batch pending one-at-a-time soak tests:
+
 - Oh My, Meteors! `ohmymeteors-1.4.0+1.21+neo.jar`
 - Grim kingdoms: Lost structures & ruins `grim-kingdoms-lost-structures-ruins-v1.0.3.jar`
 - Wildex Bestiary `wildex-3.0.0.jar`
 - Immersive Enchanting `immersiveenchanting-5.0.1-neoforge-1.21.1.jar`
-
-Reintroduce these one at a time with a server-side soak test, not as a bundle.
 
 ## Added to client only
 
@@ -79,4 +80,4 @@ There was no NeoForge 1.21.1 VeinMiner mod jar in the Modrinth version list. The
 
 - Removed Leawind's Third Person after a client camera crash with Sable mixins.
 - Removed Swinging Lanterns after smoke-test logs showed a Sodium mixin injection failure; it was cosmetic and not worth keeping as a known broken mixin.
-- Quarantined the server-side survival-atmosphere gameplay bundle after the live server began refusing connections during smoke testing.
+- Quarantined the remaining server-side survival-atmosphere gameplay mods after the live server began refusing connections during smoke testing; Danger Close, MonoLib, Nyf's Spiders, and Simple Block Physics were later re-added by request.

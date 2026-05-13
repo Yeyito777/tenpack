@@ -706,6 +706,34 @@
       "note": "Server-authoritative script layer for the Tenpack food pressure pass: simple foods have weak saturation, prepared Farmer's Delight meals have the high ceiling, and no custom mod/Nutrition/thirst system is added."
     },
     {
+      "name": "Simple Block Physics",
+      "version": "1.21.1-neoforge-1.2.0",
+      "filename": "simpleblockphysics-1.21.1-neoforge-1.2.0.jar",
+      "source": "https://cdn.modrinth.com/data/dzHYNX4t/versions/CQCHUMin/simpleblockphysics-1.21.1-neoforge-1.2.0.jar",
+      "note": "Adds lightweight falling/support physics for loose blocks. sha256: 624d5120b5f998fe6f3c47c06dd569ac80268b68d7c3f06ed94825ddb187fc51"
+    },
+    {
+      "name": "Nyf's Spiders",
+      "version": "3.0.1",
+      "filename": "nyfsspiders-neoforge-1.21.1-3.0.1.jar",
+      "source": "https://cdn.modrinth.com/data/dOGM7ccu/versions/pjXVTyLu/nyfsspiders-neoforge-1.21.1-3.0.1.jar",
+      "note": "Makes spiders more mobile and threatening. sha256: f427d974073292434afe04963b127d6dd8f93f70b4390253d7275fb68cf2b58a"
+    },
+    {
+      "name": "MonoLib",
+      "version": "4.0.2",
+      "filename": "monolib-neoforge-1.21.1-4.0.2.jar",
+      "source": "https://cdn.modrinth.com/data/9leXt4A5/versions/Es84N2XL/monolib-neoforge-1.21.1-4.0.2.jar",
+      "note": "Required by Danger Close. sha256: 13b3806a99673cdfbc86d675a0c82b380e2f372e8cbacc88d5148885498a46e3"
+    },
+    {
+      "name": "Danger Close",
+      "version": "3.1.3",
+      "filename": "danger_close-neoforge-1.21.1-3.1.3.jar",
+      "source": "https://cdn.modrinth.com/data/VtVhdIEA/versions/cBkFa7p7/danger_close-neoforge-1.21.1-3.1.3.jar",
+      "note": "Explosion/close-call survival tension mod. Requires MonoLib. sha256: 8b1b89c733ed7a68b702655b7126b142f98dd79a4e05a9f3758d3b4fd488b643"
+    },
+    {
       "name": "Entity Texture Features",
       "version": "7.1",
       "filename": "entity_texture_features_1.21-neoforge-7.1.jar",

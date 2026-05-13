@@ -421,6 +421,12 @@
       "url": "files/a4/a45df2125c26219974aba7507ffc9afe7b83acc941a386af3faacb1cc0056fde"
     },
     {
+      "path": "mods/danger_close-neoforge-1.21.1-3.1.3.jar",
+      "sha256": "8b1b89c733ed7a68b702655b7126b142f98dd79a4e05a9f3758d3b4fd488b643",
+      "size": 34458,
+      "url": "files/8b/8b1b89c733ed7a68b702655b7126b142f98dd79a4e05a9f3758d3b4fd488b643"
+    },
+    {
       "path": "mods/do_a_barrel_roll-neoforge-3.7.3+1.21.jar",
       "sha256": "e56395ebb26318c11f3a9474bba14518f17f4f2028683eb0aa9cdc7dacf124e2",
       "size": 465787,
@@ -517,6 +523,12 @@
       "url": "files/4b/4b0bc2236aecc6dc9ab22b3723cceda3eb3e64fed7d6d689fc008e491943fc1c"
     },
     {
+      "path": "mods/monolib-neoforge-1.21.1-4.0.2.jar",
+      "sha256": "13b3806a99673cdfbc86d675a0c82b380e2f372e8cbacc88d5148885498a46e3",
+      "size": 167568,
+      "url": "files/13/13b3806a99673cdfbc86d675a0c82b380e2f372e8cbacc88d5148885498a46e3"
+    },
+    {
       "path": "mods/moonlight-neoforge-1.21.1-3.0.7.jar",
       "sha256": "1027c58f92a85b34c74cb0e10e0a2f9b4bbdfb4ce6b999bcb58012bbfc4209d3",
       "size": 1573221,
@@ -527,6 +539,12 @@
       "sha256": "ca097cd53fcdabecbcbf22e2515eb1956f313f094cd3a0506800ebf239e255f9",
       "size": 60512,
       "url": "files/ca/ca097cd53fcdabecbcbf22e2515eb1956f313f094cd3a0506800ebf239e255f9"
+    },
+    {
+      "path": "mods/nyfsspiders-neoforge-1.21.1-3.0.1.jar",
+      "sha256": "f427d974073292434afe04963b127d6dd8f93f70b4390253d7275fb68cf2b58a",
+      "size": 186620,
+      "url": "files/f4/f427d974073292434afe04963b127d6dd8f93f70b4390253d7275fb68cf2b58a"
     },
     {
       "path": "mods/railways-0.2.0-beta.2+neoforge-mc1.21.1.jar",
@@ -557,6 +575,12 @@
       "sha256": "15fb660a0d368204b37f3967bfcc48137397b7174ca2945c5635cc4539c755f8",
       "size": 12719293,
       "url": "files/15/15fb660a0d368204b37f3967bfcc48137397b7174ca2945c5635cc4539c755f8"
+    },
+    {
+      "path": "mods/simpleblockphysics-1.21.1-neoforge-1.2.0.jar",
+      "sha256": "624d5120b5f998fe6f3c47c06dd569ac80268b68d7c3f06ed94825ddb187fc51",
+      "size": 25829,
+      "url": "files/62/624d5120b5f998fe6f3c47c06dd569ac80268b68d7c3f06ed94825ddb187fc51"
     },
     {
       "path": "mods/simpleclouds-0.8.0f-b5-all.jar",

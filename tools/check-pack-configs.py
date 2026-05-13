@@ -590,7 +590,7 @@ def check_travel_and_world_configs(errors: list[str]) -> None:
     voxy = read_json(errors, ROOT / "server/config/voxyworldgenv2.json") or {}
     require_equal(errors, "Voxy WorldGen autoStartOnLoad", voxy.get("autoStartOnLoad"), True, "background LoD generation is expected")
     require_equal(errors, "Voxy WorldGen generationRadius", voxy.get("generationRadius"), 128, "known tested radius; changing affects server load")
-    require_equal(errors, "Voxy WorldGen maxActiveTasks", voxy.get("maxActiveTasks"), 20, "known tested concurrency; changing affects server load")
+    require_equal(errors, "Voxy WorldGen maxActiveTasks", voxy.get("maxActiveTasks"), 8, "smoothed client-pull concurrency; changing affects server load")
 
     windy = read_json(errors, ROOT / "server/config/windy-config.json") or {}
     require_equal(errors, "Windy minimumWindHeight", windy.get("minimumWindHeight"), 130, "wind should be ambience, not constant ground clutter")

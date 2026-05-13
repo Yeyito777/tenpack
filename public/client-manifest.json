@@ -535,6 +535,12 @@
       "url": "files/a4/a45df2125c26219974aba7507ffc9afe7b83acc941a386af3faacb1cc0056fde"
     },
     {
+      "path": "mods/danger_close-neoforge-1.21.1-3.1.3.jar",
+      "sha256": "8b1b89c733ed7a68b702655b7126b142f98dd79a4e05a9f3758d3b4fd488b643",
+      "size": 34458,
+      "url": "files/8b/8b1b89c733ed7a68b702655b7126b142f98dd79a4e05a9f3758d3b4fd488b643"
+    },
+    {
       "path": "mods/dense-flowers-0.2.2+mc1.21.0.jar",
       "sha256": "d91063710d69fb5597b632559a6adec7c6a2a8f9194615689aef4faf65e27885",
       "size": 368855,
@@ -697,6 +703,12 @@
       "url": "files/42/42daaf9bf8070827cf03deb492a312cac6a3f002f4a4736d9a4c956726a8ced1"
     },
     {
+      "path": "mods/monolib-neoforge-1.21.1-4.0.2.jar",
+      "sha256": "13b3806a99673cdfbc86d675a0c82b380e2f372e8cbacc88d5148885498a46e3",
+      "size": 167568,
+      "url": "files/13/13b3806a99673cdfbc86d675a0c82b380e2f372e8cbacc88d5148885498a46e3"
+    },
+    {
       "path": "mods/moonlight-neoforge-1.21.1-3.0.7.jar",
       "sha256": "1027c58f92a85b34c74cb0e10e0a2f9b4bbdfb4ce6b999bcb58012bbfc4209d3",
       "size": 1573221,
@@ -725,6 +737,12 @@
       "sha256": "ac48316842b478777cead0a39e7c8a51810ffa1d848d8ad8f3f56d03eedc5549",
       "size": 1938281,
       "url": "files/ac/ac48316842b478777cead0a39e7c8a51810ffa1d848d8ad8f3f56d03eedc5549"
+    },
+    {
+      "path": "mods/nyfsspiders-neoforge-1.21.1-3.0.1.jar",
+      "sha256": "f427d974073292434afe04963b127d6dd8f93f70b4390253d7275fb68cf2b58a",
+      "size": 186620,
+      "url": "files/f4/f427d974073292434afe04963b127d6dd8f93f70b4390253d7275fb68cf2b58a"
     },
     {
       "path": "mods/particlerain-4.0.0-beta.9+1.21.1-neoforge.jar",
@@ -761,6 +779,12 @@
       "sha256": "15fb660a0d368204b37f3967bfcc48137397b7174ca2945c5635cc4539c755f8",
       "size": 12719293,
       "url": "files/15/15fb660a0d368204b37f3967bfcc48137397b7174ca2945c5635cc4539c755f8"
+    },
+    {
+      "path": "mods/simpleblockphysics-1.21.1-neoforge-1.2.0.jar",
+      "sha256": "624d5120b5f998fe6f3c47c06dd569ac80268b68d7c3f06ed94825ddb187fc51",
+      "size": 25829,
+      "url": "files/62/624d5120b5f998fe6f3c47c06dd569ac80268b68d7c3f06ed94825ddb187fc51"
     },
     {
       "path": "mods/simpleclouds-0.8.0f-b5-all.jar",
@@ -830,9 +854,9 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "1ad4963ad1c3e9ca39bbbb18f7998e73a5355a30d529c1e4849010581a4213b2",
-      "size": 46203,
-      "url": "files/1a/1ad4963ad1c3e9ca39bbbb18f7998e73a5355a30d529c1e4849010581a4213b2"
+      "sha256": "1efd7a5a50ee99c2fa72f682ec5e23db885deaed05b53cf0e163be185303579e",
+      "size": 47744,
+      "url": "files/1e/1efd7a5a50ee99c2fa72f682ec5e23db885deaed05b53cf0e163be185303579e"
     },
     {
       "path": "mods/tenpack_travel-0.1.0.jar",
