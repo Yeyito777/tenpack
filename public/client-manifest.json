@@ -194,9 +194,9 @@
     },
     {
       "path": "config/voxyworldgenv2.json",
-      "sha256": "dd3212c735f95c0aa9fe1910a0536177e514e7f601a94765d094a97a88a343fb",
-      "size": 580,
-      "url": "files/dd/dd3212c735f95c0aa9fe1910a0536177e514e7f601a94765d094a97a88a343fb"
+      "sha256": "36bdbaabd112418a3400613e64ee037d7d515ef1e22e097fdf3feaa4494ce741",
+      "size": 579,
+      "url": "files/36/36bdbaabd112418a3400613e64ee037d7d515ef1e22e097fdf3feaa4494ce741"
     },
     {
       "path": "config/windy-config.json",
@@ -944,9 +944,9 @@
     },
     {
       "path": "mods/voxy-worldgen-v2-1.21.1-2.2.1.jar",
-      "sha256": "1ac34ea04e7baf51f496a08c6d62608b74b7b91c80835a5aa528c59d0c39e990",
-      "size": 286273,
-      "url": "files/1a/1ac34ea04e7baf51f496a08c6d62608b74b7b91c80835a5aa528c59d0c39e990"
+      "sha256": "eaa1d0831461d4ed590240dd8f712d20310cad1ce9ac5ebc58378880278b095f",
+      "size": 292171,
+      "url": "files/ea/eaa1d0831461d4ed590240dd8f712d20310cad1ce9ac5ebc58378880278b095f"
     },
     {
       "path": "mods/wakes-0.4.1+1.21.1.jar",
