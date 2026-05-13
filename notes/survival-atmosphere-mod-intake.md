@@ -31,7 +31,6 @@ Reintroduce these one at a time with a server-side soak test, not as a bundle.
 - Make Bubbles Pop `make_bubbles_pop-0.3.0-fabric-mc1.19.4-1.21.jar` — Fabric build through Sinytra Connector
 - Wakes `wakes-0.4.1+1.21.1.jar` — Fabric build through Sinytra Connector
 - Tightfire `tightfire-1.21.1-1.0-SNAPSHOT.jar` — Fabric build through Sinytra Connector
-- Swinging Lanterns `swinginglanterns-1.21.1-1.5.0.jar` — Fabric build through Sinytra Connector
 - Dense Flowers `dense-flowers-0.2.2+mc1.21.0.jar` — Fabric build through Sinytra Connector
 - Continuity `continuity-3.0.0+1.21.neoforge.jar` — connected texture support for the new connected packs
 
@@ -75,3 +74,9 @@ There was no NeoForge 1.21.1 VeinMiner mod jar in the Modrinth version list. The
 
 - Several visual client mods are Fabric builds running through Sinytra Connector because no NeoForge 1.21.1 build was available; if startup fails, start by temporarily removing `make_bubbles_pop`, `wakes`, `tightfire`, `swinginglanterns`, or `dense-flowers`.
 - Connected texture packs may need client-side tuning with Continuity/Sodium; Indium was not added because this pack uses NeoForge Sodium, not Fabric Sodium.
+
+## Stability quarantine notes
+
+- Removed Leawind's Third Person after a client camera crash with Sable mixins.
+- Removed Swinging Lanterns after smoke-test logs showed a Sodium mixin injection failure; it was cosmetic and not worth keeping as a known broken mixin.
+- Quarantined the server-side survival-atmosphere gameplay bundle after the live server began refusing connections during smoke testing.

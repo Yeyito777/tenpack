@@ -790,13 +790,6 @@
       "note": "Tighter fire overlay/visuals; Fabric build runs via Sinytra Connector. sha256: 75ba95cdac6a0a1ca227ceee8bdd4203463087d7d5400e74bae3e44d70422f99"
     },
     {
-      "name": "Swinging Lanterns",
-      "version": "1.5.0",
-      "filename": "swinginglanterns-1.21.1-1.5.0.jar",
-      "source": "https://cdn.modrinth.com/data/3IOcW74j/versions/WOSxzpdo/swinginglanterns-1.21.1-1.5.0.jar",
-      "note": "Client-side hanging lantern animation; Fabric build runs via Sinytra Connector. sha256: 81fc65caf9014b8d778c165d168ca827e3926e99516f9d69b338540d87438c89"
-    },
-    {
       "name": "Dense Flowers",
       "version": "0.2.2",
       "filename": "dense-flowers-0.2.2+mc1.21.0.jar",

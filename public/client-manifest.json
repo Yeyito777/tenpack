@@ -829,16 +829,10 @@
       "url": "files/e3/e3b73e3c5f9e5cc7bf8ac17c5261faf319cb471ee5a2bbb4e5dfbecff6d80f95"
     },
     {
-      "path": "mods/swinginglanterns-1.21.1-1.5.0.jar",
-      "sha256": "81fc65caf9014b8d778c165d168ca827e3926e99516f9d69b338540d87438c89",
-      "size": 438164,
-      "url": "files/81/81fc65caf9014b8d778c165d168ca827e3926e99516f9d69b338540d87438c89"
-    },
-    {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "940f4541d1b43fb3bbb7ebe242188afe81e5a2ad529edc3c38bb5b0311a2f926",
-      "size": 46611,
-      "url": "files/94/940f4541d1b43fb3bbb7ebe242188afe81e5a2ad529edc3c38bb5b0311a2f926"
+      "sha256": "1ad4963ad1c3e9ca39bbbb18f7998e73a5355a30d529c1e4849010581a4213b2",
+      "size": 46203,
+      "url": "files/1a/1ad4963ad1c3e9ca39bbbb18f7998e73a5355a30d529c1e4849010581a4213b2"
     },
     {
       "path": "mods/tenpack_travel-0.1.0.jar",
