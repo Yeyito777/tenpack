@@ -704,6 +704,188 @@
       "filename": "CraftTweaker-neoforge-1.21.1-21.0.38.jar",
       "source": "https://cdn.modrinth.com/data/Xg35A4rS/versions/BVOSHJwc/CraftTweaker-neoforge-1.21.1-21.0.38.jar",
       "note": "Server-authoritative script layer for the Tenpack food pressure pass: simple foods have weak saturation, prepared Farmer's Delight meals have the high ceiling, and no custom mod/Nutrition/thirst system is added."
+    },
+    {
+      "name": "Simple Block Physics",
+      "version": "1.21.1-neoforge-1.2.0",
+      "filename": "simpleblockphysics-1.21.1-neoforge-1.2.0.jar",
+      "source": "https://cdn.modrinth.com/data/dzHYNX4t/versions/CQCHUMin/simpleblockphysics-1.21.1-neoforge-1.2.0.jar",
+      "note": "Adds lightweight falling/support physics for loose blocks. sha256: 624d5120b5f998fe6f3c47c06dd569ac80268b68d7c3f06ed94825ddb187fc51"
+    },
+    {
+      "name": "Nyf's Spiders",
+      "version": "3.0.1",
+      "filename": "nyfsspiders-neoforge-1.21.1-3.0.1.jar",
+      "source": "https://cdn.modrinth.com/data/dOGM7ccu/versions/pjXVTyLu/nyfsspiders-neoforge-1.21.1-3.0.1.jar",
+      "note": "Makes spiders more mobile and threatening. sha256: f427d974073292434afe04963b127d6dd8f93f70b4390253d7275fb68cf2b58a"
+    },
+    {
+      "name": "MonoLib",
+      "version": "4.0.2",
+      "filename": "monolib-neoforge-1.21.1-4.0.2.jar",
+      "source": "https://cdn.modrinth.com/data/9leXt4A5/versions/Es84N2XL/monolib-neoforge-1.21.1-4.0.2.jar",
+      "note": "Required by Danger Close. sha256: 13b3806a99673cdfbc86d675a0c82b380e2f372e8cbacc88d5148885498a46e3"
+    },
+    {
+      "name": "Danger Close",
+      "version": "3.1.3",
+      "filename": "danger_close-neoforge-1.21.1-3.1.3.jar",
+      "source": "https://cdn.modrinth.com/data/VtVhdIEA/versions/cBkFa7p7/danger_close-neoforge-1.21.1-3.1.3.jar",
+      "note": "Explosion/close-call survival tension mod. Requires MonoLib. sha256: 8b1b89c733ed7a68b702655b7126b142f98dd79a4e05a9f3758d3b4fd488b643"
+    },
+    {
+      "name": "Oh My, Meteors!",
+      "version": "1.4.0+1.21+neo",
+      "filename": "ohmymeteors-1.4.0+1.21+neo.jar",
+      "source": "https://cdn.modrinth.com/data/O9ayDkK0/versions/IfVjwaNS/ohmymeteors-1.4.0%2B1.21%2Bneo.jar",
+      "note": "Meteorite world-event/content mod. sha256: 15237c90684af9d64ae8986e3269babdf5c9fdbe663b6e20000039327076bd0d"
+    },
+    {
+      "name": "Grim kingdoms: Lost structures & ruins",
+      "version": "v1.0.3+mod",
+      "filename": "grim-kingdoms-lost-structures-ruins-v1.0.3.jar",
+      "source": "https://cdn.modrinth.com/data/f4d4E9De/versions/SJSK4VBR/grim-kingdoms-lost-structures-ruins-v1.0.3.jar",
+      "note": "Structure/ruin exploration pack distributed as a mod jar. sha256: a5206ea376c95191d0ee9d4262421033d2d0a18ed8ab9815cf4932081d6f16fa"
+    },
+    {
+      "name": "Wildex Bestiary",
+      "version": "3.0.0",
+      "filename": "wildex-3.0.0.jar",
+      "source": "https://cdn.modrinth.com/data/NiLz1hiU/versions/bTs8kSoW/wildex-3.0.0.jar",
+      "note": "Adds wilderness creature variety. sha256: 34cc95efc68c407f3269fdf58888d1a7c49be7f3b09ab3346d4eb6518b6ddfda"
+    },
+    {
+      "name": "Immersive Enchanting",
+      "version": "5.0.1",
+      "filename": "immersiveenchanting-5.0.1-neoforge-1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/DfWQAvS4/versions/K1pctBBF/immersiveenchanting-5.0.1-neoforge-1.21.1.jar",
+      "note": "Physicalized enchanting station/interaction overhaul. sha256: b88abf67b7d49c7f9d60e1a47d2145acb3984f8f532c76f2988514dd08ab593e"
+    },
+    {
+      "name": "Seamless Sleep",
+      "version": "2.5.1",
+      "filename": "seamlesssleep-neoforge-1.21.1-2.5.1.jar",
+      "source": "https://cdn.modrinth.com/data/IyHq05yB/versions/ZW6KipjH/seamlesssleep-neoforge-1.21.1-2.5.1.jar",
+      "note": "Multiplayer-friendly sleep progression. Exact NeoForge 1.21.1 build selected after 2.5.3 declared an exclusive <1.21.1 Minecraft range in neoforge.mods.toml. sha256: 299c28aa7ce95bcb59b09e83706e0dd453d55b8b440c20c70ca3bd72e7720742"
+    },
+    {
+      "name": "Entity Texture Features",
+      "version": "7.1",
+      "filename": "entity_texture_features_1.21-neoforge-7.1.jar",
+      "source": "https://cdn.modrinth.com/data/BVzZfTc1/versions/YEMROAHv/entity_texture_features_1.21-neoforge-7.1.jar",
+      "note": "Required by Entity Model Features and Fresh Animations. sha256: b2e396543c678b8378a2d5557a0cd3d24790364bff7e96edaf17921112d6176b"
+    },
+    {
+      "name": "Entity Model Features",
+      "version": "3.2.4",
+      "filename": "entity_model_features-3.2.4-1.21-neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/4I1XuqiY/versions/PAYgk63v/entity_model_features-3.2.4-1.21-neoforge.jar",
+      "note": "OptiFine-style custom entity model support for Fresh Animations. sha256: 84c22f2be06ee6bfab265a443e075225878bba9f408843030dc6de3152e9dedb"
+    },
+    {
+      "name": "Not Enough Animations",
+      "version": "1.12.3",
+      "filename": "notenoughanimations-neoforge-1.12.3-mc1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/MPCX6s5C/versions/ZNs9eukY/notenoughanimations-neoforge-1.12.3-mc1.21.1.jar",
+      "note": "Third-person animation polish. sha256: ac48316842b478777cead0a39e7c8a51810ffa1d848d8ad8f3f56d03eedc5549"
+    },
+    {
+      "name": "3D Skin Layers",
+      "version": "1.11.1",
+      "filename": "skinlayers3d-neoforge-1.11.1-mc1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/zV5r3pPn/versions/lWa5oHuK/skinlayers3d-neoforge-1.11.1-mc1.21.1.jar",
+      "note": "Renders player skin overlays as 3D layers. sha256: c825d6acd41a983217f410c6d51c6557e3afc35131f6da0aa6dcd07e67cfa52c"
+    },
+    {
+      "name": "Tiny Item Animations",
+      "version": "1.2.1",
+      "filename": "tia-neoforge-1.21-1.2.1.jar",
+      "source": "https://cdn.modrinth.com/data/wMkevcSR/versions/mSJPeo1D/tia-neoforge-1.21-1.2.1.jar",
+      "note": "Small item hover/use animation polish. sha256: 6b157d1ff7d7973d9c53a41f06906b6c0a30cec5bd4a852e8c0f55f078a14382"
+    },
+    {
+      "name": "Mouse Tweaks",
+      "version": "2.26.1",
+      "filename": "MouseTweaks-neoforge-mc1.21-2.26.1.jar",
+      "source": "https://cdn.modrinth.com/data/aC3cM3Vq/versions/9I21YYxf/MouseTweaks-neoforge-mc1.21-2.26.1.jar",
+      "note": "Inventory mouse-drag QoL. sha256: 68e6f4201c5de97b77929a7215c9552495696ca6a3bf3ae4eacc34e135f6cc8b"
+    },
+    {
+      "name": "Keybind Search",
+      "version": "1.0.0",
+      "filename": "keybindsearch-1.0.0.jar",
+      "source": "https://cdn.modrinth.com/data/huLkt7lm/versions/aZLGKfBG/keybindsearch-1.0.0.jar",
+      "note": "Adds search to the keybinds menu. sha256: 140659a2216eaa5bd417eb1b1570040fcb87649d151e2b9790b641b2c345f6e9"
+    },
+    {
+      "name": "Pick Up Notifier",
+      "version": "21.1.1",
+      "filename": "PickUpNotifier-v21.1.1-1.21.1-NeoForge.jar",
+      "source": "https://cdn.modrinth.com/data/ZX66K16c/versions/5NZounJc/PickUpNotifier-v21.1.1-1.21.1-NeoForge.jar",
+      "note": "Pickup toast/notification UI. sha256: b49535698de9c7b5a879c8ec99175771d87d5261d5cc4c6152ba1fa51fc5676a"
+    },
+    {
+      "name": "Leawind's Third Person",
+      "version": "2.3.0",
+      "filename": "leawind_third_person-2.3.0-mc1.21-1.21.1-neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/S3D3QF0M/versions/IyzCjsmN/leawind_third_person-2.3.0-mc1.21-1.21.1-neoforge.jar",
+      "note": "Improved third-person camera controls. sha256: 9b931ba49a6fb9e89abd261494b4fd5521ac16369aa56fed72ca6eeda4409011"
+    },
+    {
+      "name": "Drip Sounds",
+      "version": "0.5.2",
+      "filename": "Drip Sounds-0.5.2+1.21.8-NeoForge.jar",
+      "source": "https://cdn.modrinth.com/data/T8MMXTpr/versions/lUfydr2z/Drip%20Sounds-0.5.2%2B1.21.8-NeoForge.jar",
+      "note": "Ambient drip sound effects; version tagged for 1.21.0-1.21.8. sha256: b5d831c16a54ffefa4022f2d56f174a8508e334cfb3b31f91b318deaa9f8c180"
+    },
+    {
+      "name": "Make Bubbles Pop",
+      "version": "0.3.0",
+      "filename": "make_bubbles_pop-0.3.0-fabric-mc1.19.4-1.21.jar",
+      "source": "https://cdn.modrinth.com/data/gPCdW0Wr/versions/WyRIJsP5/make_bubbles_pop-0.3.0-fabric-mc1.19.4-1.21.jar",
+      "note": "Client-side bubble particle pop effects; Fabric build runs via Sinytra Connector. sha256: 42daaf9bf8070827cf03deb492a312cac6a3f002f4a4736d9a4c956726a8ced1"
+    },
+    {
+      "name": "Wakes",
+      "version": "0.4.1+1.21.1",
+      "filename": "wakes-0.4.1+1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/dlNu0RQY/versions/WuY7eJX9/wakes-0.4.1%2B1.21.1.jar",
+      "note": "Client-side water wakes; Fabric build runs via Sinytra Connector. sha256: 2ba269063a5655eb8b32909c0ea6d486f61afcae202aa236fe3a6fefc57d43f9"
+    },
+    {
+      "name": "Tightfire",
+      "version": "1.0-SNAPSHOT",
+      "filename": "tightfire-1.21.1-1.0-SNAPSHOT.jar",
+      "source": "https://cdn.modrinth.com/data/jExZM2Rj/versions/NJCeyKqT/tightfire-1.21.1-1.0-SNAPSHOT.jar",
+      "note": "Tighter fire overlay/visuals; Fabric build runs via Sinytra Connector. sha256: 75ba95cdac6a0a1ca227ceee8bdd4203463087d7d5400e74bae3e44d70422f99"
+    },
+    {
+      "name": "Swinging Lanterns",
+      "version": "1.5.0",
+      "filename": "swinginglanterns-1.21.1-1.5.0.jar",
+      "source": "https://cdn.modrinth.com/data/3IOcW74j/versions/WOSxzpdo/swinginglanterns-1.21.1-1.5.0.jar",
+      "note": "Client-side hanging lantern animation; Fabric build runs via Sinytra Connector. sha256: 81fc65caf9014b8d778c165d168ca827e3926e99516f9d69b338540d87438c89"
+    },
+    {
+      "name": "Dense Flowers",
+      "version": "0.2.2",
+      "filename": "dense-flowers-0.2.2+mc1.21.0.jar",
+      "source": "https://cdn.modrinth.com/data/Ud3A1Fat/versions/X3hByxU6/dense-flowers-0.2.2%2Bmc1.21.0.jar",
+      "note": "Client-side dense flower rendering; Fabric build runs via Sinytra Connector. sha256: d91063710d69fb5597b632559a6adec7c6a2a8f9194615689aef4faf65e27885"
+    },
+    {
+      "name": "Cosy Critters & Creepy Crawlies [Neo]",
+      "version": "0.0.6",
+      "filename": "cosycritters-1.21.1-NeoForge-0.0.6.jar",
+      "source": "https://cdn.modrinth.com/data/lOKz1gkH/versions/HmcDuDsO/cosycritters-1.21.1-NeoForge-0.0.6.jar",
+      "note": "Client-side ambient birds, moths, tiny spiders, and spooky set dressing. sha256: 0f9c3f619a549c13c538e9daf61e550b5f66b2454e5eb17a4b215648804d0cf1"
+    },
+    {
+      "name": "Continuity",
+      "version": "3.0.0+1.21.neoforge",
+      "filename": "continuity-3.0.0+1.21.neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/1IjD5062/versions/eXGUs5sy/continuity-3.0.0%2B1.21.neoforge.jar",
+      "note": "Connected-texture support for the connected bricks/paths/rocks packs. sha256: 4cc0a4a09ae09c64bb567e42381652b700f9cade5067a75e83115662cc475f0a"
     }
   ],
   "note": "Trimmed to requested mods plus required libraries. Experiment 2026-05-06: restored Camera Overhaul/Falling Leaves; CameraOverhaul now uses the Fabric jar through Sinytra Connector so the existing Fabric Cloth Config v15 satisfies it without a duplicate NeoForge cloth_config library. Added Simple Voice Chat stack on 2026-05-07: Simple Voice Chat, Voice Chat Interaction via Connector, and Voiceless Survival."
