@@ -2,7 +2,9 @@
 
 Requested pass: environmental danger / survival tension, exploration atmosphere, interaction/animation immersion, and utility/QoL. Epic Siege was intentionally excluded.
 
-## Added to server and mirrored to client
+## Server/gameplay additions quarantined after stability testing
+
+The first pass added the following server-side gameplay mods, but they were removed from the pack during the stability sanity check because the live server began refusing connections after the batch and no server crash log was locally available to isolate one safe culprit:
 
 - Simple Block Physics `simpleblockphysics-1.21.1-neoforge-1.2.0.jar`
 - Nyf's Spiders `nyfsspiders-neoforge-1.21.1-3.0.1.jar`
@@ -12,6 +14,8 @@ Requested pass: environmental danger / survival tension, exploration atmosphere,
 - Grim kingdoms: Lost structures & ruins `grim-kingdoms-lost-structures-ruins-v1.0.3.jar`
 - Wildex Bestiary `wildex-3.0.0.jar`
 - Immersive Enchanting `immersiveenchanting-5.0.1-neoforge-1.21.1.jar`
+
+Reintroduce these one at a time with a server-side soak test, not as a bundle.
 
 ## Added to client only
 
@@ -69,7 +73,5 @@ There was no NeoForge 1.21.1 VeinMiner mod jar in the Modrinth version list. The
 
 ## Risk notes for playtest
 
-- Danger Close and Oh My, Meteors! should be watched for grief/destruction pressure. They are good Tenpack tension candidates only if threats are telegraphed and answerable with infrastructure.
-- Simple Block Physics should be tested around early mining, caves, Create builds, and common server farms.
 - Several visual client mods are Fabric builds running through Sinytra Connector because no NeoForge 1.21.1 build was available; if startup fails, start by temporarily removing `make_bubbles_pop`, `wakes`, `tightfire`, `swinginglanterns`, or `dense-flowers`.
 - Connected texture packs may need client-side tuning with Continuity/Sodium; Indium was not added because this pack uses NeoForge Sodium, not Fabric Sodium.

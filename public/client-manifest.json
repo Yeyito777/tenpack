@@ -535,12 +535,6 @@
       "url": "files/a4/a45df2125c26219974aba7507ffc9afe7b83acc941a386af3faacb1cc0056fde"
     },
     {
-      "path": "mods/danger_close-neoforge-1.21.1-3.1.3.jar",
-      "sha256": "8b1b89c733ed7a68b702655b7126b142f98dd79a4e05a9f3758d3b4fd488b643",
-      "size": 34458,
-      "url": "files/8b/8b1b89c733ed7a68b702655b7126b142f98dd79a4e05a9f3758d3b4fd488b643"
-    },
-    {
       "path": "mods/dense-flowers-0.2.2+mc1.21.0.jar",
       "sha256": "d91063710d69fb5597b632559a6adec7c6a2a8f9194615689aef4faf65e27885",
       "size": 368855,
@@ -625,18 +619,6 @@
       "url": "files/a1/a1b6ce25e8627aa7e748672eedb6b71af68e0993462313649c259f38e42bcac9"
     },
     {
-      "path": "mods/grim-kingdoms-lost-structures-ruins-v1.0.3.jar",
-      "sha256": "a5206ea376c95191d0ee9d4262421033d2d0a18ed8ab9815cf4932081d6f16fa",
-      "size": 7066736,
-      "url": "files/a5/a5206ea376c95191d0ee9d4262421033d2d0a18ed8ab9815cf4932081d6f16fa"
-    },
-    {
-      "path": "mods/immersiveenchanting-5.0.1-neoforge-1.21.1.jar",
-      "sha256": "b88abf67b7d49c7f9d60e1a47d2145acb3984f8f532c76f2988514dd08ab593e",
-      "size": 7224623,
-      "url": "files/b8/b88abf67b7d49c7f9d60e1a47d2145acb3984f8f532c76f2988514dd08ab593e"
-    },
-    {
       "path": "mods/iris-neoforge-1.8.12+mc1.21.1.jar",
       "sha256": "3e3f94d2d5cdcb8145c4385d521974aa2d8669b2cc212351f70cf06488182e83",
       "size": 2438548,
@@ -715,12 +697,6 @@
       "url": "files/42/42daaf9bf8070827cf03deb492a312cac6a3f002f4a4736d9a4c956726a8ced1"
     },
     {
-      "path": "mods/monolib-neoforge-1.21.1-4.0.2.jar",
-      "sha256": "13b3806a99673cdfbc86d675a0c82b380e2f372e8cbacc88d5148885498a46e3",
-      "size": 167568,
-      "url": "files/13/13b3806a99673cdfbc86d675a0c82b380e2f372e8cbacc88d5148885498a46e3"
-    },
-    {
       "path": "mods/moonlight-neoforge-1.21.1-3.0.7.jar",
       "sha256": "1027c58f92a85b34c74cb0e10e0a2f9b4bbdfb4ce6b999bcb58012bbfc4209d3",
       "size": 1573221,
@@ -749,18 +725,6 @@
       "sha256": "ac48316842b478777cead0a39e7c8a51810ffa1d848d8ad8f3f56d03eedc5549",
       "size": 1938281,
       "url": "files/ac/ac48316842b478777cead0a39e7c8a51810ffa1d848d8ad8f3f56d03eedc5549"
-    },
-    {
-      "path": "mods/nyfsspiders-neoforge-1.21.1-3.0.1.jar",
-      "sha256": "f427d974073292434afe04963b127d6dd8f93f70b4390253d7275fb68cf2b58a",
-      "size": 186620,
-      "url": "files/f4/f427d974073292434afe04963b127d6dd8f93f70b4390253d7275fb68cf2b58a"
-    },
-    {
-      "path": "mods/ohmymeteors-1.4.0+1.21+neo.jar",
-      "sha256": "15237c90684af9d64ae8986e3269babdf5c9fdbe663b6e20000039327076bd0d",
-      "size": 1279884,
-      "url": "files/15/15237c90684af9d64ae8986e3269babdf5c9fdbe663b6e20000039327076bd0d"
     },
     {
       "path": "mods/particlerain-4.0.0-beta.9+1.21.1-neoforge.jar",
@@ -797,12 +761,6 @@
       "sha256": "15fb660a0d368204b37f3967bfcc48137397b7174ca2945c5635cc4539c755f8",
       "size": 12719293,
       "url": "files/15/15fb660a0d368204b37f3967bfcc48137397b7174ca2945c5635cc4539c755f8"
-    },
-    {
-      "path": "mods/simpleblockphysics-1.21.1-neoforge-1.2.0.jar",
-      "sha256": "624d5120b5f998fe6f3c47c06dd569ac80268b68d7c3f06ed94825ddb187fc51",
-      "size": 25829,
-      "url": "files/62/624d5120b5f998fe6f3c47c06dd569ac80268b68d7c3f06ed94825ddb187fc51"
     },
     {
       "path": "mods/simpleclouds-0.8.0f-b5-all.jar",
@@ -878,9 +836,9 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "da61ebffd307fcc3ca675c156dbbb0fd222d6553b47912f2acf18396898c343f",
-      "size": 49693,
-      "url": "files/da/da61ebffd307fcc3ca675c156dbbb0fd222d6553b47912f2acf18396898c343f"
+      "sha256": "940f4541d1b43fb3bbb7ebe242188afe81e5a2ad529edc3c38bb5b0311a2f926",
+      "size": 46611,
+      "url": "files/94/940f4541d1b43fb3bbb7ebe242188afe81e5a2ad529edc3c38bb5b0311a2f926"
     },
     {
       "path": "mods/tenpack_travel-0.1.0.jar",
@@ -953,12 +911,6 @@
       "sha256": "af0de505aef99fa9feca6b969932b28b834f4663dcb95c12bf65dccbe304a605",
       "size": 344392,
       "url": "files/af/af0de505aef99fa9feca6b969932b28b834f4663dcb95c12bf65dccbe304a605"
-    },
-    {
-      "path": "mods/wildex-3.0.0.jar",
-      "sha256": "34cc95efc68c407f3269fdf58888d1a7c49be7f3b09ab3346d4eb6518b6ddfda",
-      "size": 980010,
-      "url": "files/34/34cc95efc68c407f3269fdf58888d1a7c49be7f3b09ab3346d4eb6518b6ddfda"
     },
     {
       "path": "mods/windy-1.1.1+1.21-neoforge.jar",
