@@ -331,10 +331,10 @@
       "url": "files/9e/9e12468c49e5a95b7adbf22b3b4d05bc55565989b89c40b985cd73bdfe63c3c2"
     },
     {
-      "path": "mods/cloth-config-15.0.140-fabric.jar",
-      "sha256": "33894e95da3af59014b39d126586d5241e07ea39f8618763e30dab637405f95f",
-      "size": 1157166,
-      "url": "files/33/33894e95da3af59014b39d126586d5241e07ea39f8618763e30dab637405f95f"
+      "path": "mods/cloth-config-15.0.140-neoforge.jar",
+      "sha256": "65e722e0d98431a07c45f8bdd8d529a217cc8c175fde1740248bd5c1b4f3c0d4",
+      "size": 1163890,
+      "url": "files/65/65e722e0d98431a07c45f8bdd8d529a217cc8c175fde1740248bd5c1b4f3c0d4"
     },
     {
       "path": "mods/connector-2.0.0-beta.14+1.21.1-full.jar",

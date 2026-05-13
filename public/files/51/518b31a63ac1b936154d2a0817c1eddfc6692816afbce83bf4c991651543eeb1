@@ -350,24 +350,24 @@
     },
     {
       "name": "Cloth Config API",
-      "version": "15.0.140+fabric via Sinytra Connector",
-      "filename": "cloth-config-15.0.140-fabric.jar",
-      "source": "https://cdn.modrinth.com/data/9s6osm5g/versions/HpMb5wGb/cloth-config-15.0.140-fabric.jar",
-      "note": "Fabric build installed through Sinytra Connector. NeoForge 1.21.1 has no Cloth Config v16; Fabric Cloth Config satisfies Falling Leaves directly and is tested as a possible provider for Camera Overhaul after Connector remapping."
+      "version": "15.0.140+neoforge",
+      "filename": "cloth-config-15.0.140-neoforge.jar",
+      "source": "https://cdn.modrinth.com/data/9s6osm5g/versions/izKINKFg/cloth-config-15.0.140-neoforge.jar",
+      "note": "NeoForge Cloth Config provider. Switched from the Fabric jar after Drip Sounds required the NeoForge mod id cloth_config; connector.json aliases Fabric cloth-config/cloth-config2 dependencies to cloth_config for Connector-loaded Fabric client mods. sha256: 65e722e0d98431a07c45f8bdd8d529a217cc8c175fde1740248bd5c1b4f3c0d4"
     },
     {
       "name": "Camera Overhaul",
       "version": "2.0.6-fabric+mc.1.21.0-1.21.2 via Sinytra Connector",
       "filename": "CameraOverhaul-v2.0.6-fabric+mc[1.21.0-1.21.2].jar",
       "source": "https://cdn.modrinth.com/data/m0oRwcZx/versions/9Lrvwa1B/CameraOverhaul-v2.0.6-fabric%2Bmc%5B1.21.0-1.21.2%5D.jar",
-      "note": "Client-side camera motion/tilt mod. Switched from the NeoForge jar to the Fabric jar during the mod-stack audit so it is satisfied by the existing Fabric Cloth Config/Connector stack instead of requiring a second cloth_config NeoForge library alongside cloth-config."
+      "note": "Client-side camera motion/tilt mod. Fabric jar through Sinytra Connector; connector.json aliases its cloth-config2 dependency to the installed NeoForge Cloth Config provider."
     },
     {
       "name": "Falling Leaves",
       "version": "1.17.1+1.21.1 (Fabric via Sinytra Connector)",
       "filename": "fallingleaves-1.17.1+1.21.1.jar",
       "source": "https://cdn.modrinth.com/data/WhbRG4iK/versions/Y0zS16Bk/fallingleaves-1.17.1%2B1.21.1.jar",
-      "note": "Client-side leaf particle mod. Uses Fabric build through Sinytra Connector; connector.json aliases cloth_config to cloth-config for its dependency."
+      "note": "Client-side leaf particle mod. Uses Fabric build through Sinytra Connector."
     },
     {
       "name": "Do a Barrel Roll",
@@ -881,5 +881,5 @@
       "note": "Connected-texture support for the connected bricks/paths/rocks packs. sha256: 4cc0a4a09ae09c64bb567e42381652b700f9cade5067a75e83115662cc475f0a"
     }
   ],
-  "note": "Trimmed to requested mods plus required libraries. Experiment 2026-05-06: restored Camera Overhaul/Falling Leaves; CameraOverhaul now uses the Fabric jar through Sinytra Connector so the existing Fabric Cloth Config v15 satisfies it without a duplicate NeoForge cloth_config library. Added Simple Voice Chat stack on 2026-05-07: Simple Voice Chat, Voice Chat Interaction via Connector, and Voiceless Survival."
+  "note": "Trimmed to requested mods plus required libraries. Experiment 2026-05-06: restored Camera Overhaul/Falling Leaves. Added Simple Voice Chat stack on 2026-05-07: Simple Voice Chat, Voice Chat Interaction via Connector, and Voiceless Survival. 2026-05-13: Cloth Config uses the NeoForge jar to satisfy NeoForge client mods such as Drip Sounds, with connector aliases for Fabric cloth-config/cloth-config2 dependencies."
 }

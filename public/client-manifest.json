@@ -8,9 +8,9 @@
     },
     {
       "path": "config/connector.json",
-      "sha256": "d36dea45a03ab40153a4be9fdce4a8d21229c081eeb666d724bcdbf4a9719769",
-      "size": 140,
-      "url": "files/d3/d36dea45a03ab40153a4be9fdce4a8d21229c081eeb666d724bcdbf4a9719769"
+      "sha256": "d72cc2f3a2f69c06f4b0ecd1db29846269ba59b6dc35fd888c7ab974e09605da",
+      "size": 213,
+      "url": "files/d7/d72cc2f3a2f69c06f4b0ecd1db29846269ba59b6dc35fd888c7ab974e09605da"
     },
     {
       "path": "config/corpse-server.toml",
@@ -439,10 +439,10 @@
       "url": "files/9e/9e12468c49e5a95b7adbf22b3b4d05bc55565989b89c40b985cd73bdfe63c3c2"
     },
     {
-      "path": "mods/cloth-config-15.0.140-fabric.jar",
-      "sha256": "33894e95da3af59014b39d126586d5241e07ea39f8618763e30dab637405f95f",
-      "size": 1157166,
-      "url": "files/33/33894e95da3af59014b39d126586d5241e07ea39f8618763e30dab637405f95f"
+      "path": "mods/cloth-config-15.0.140-neoforge.jar",
+      "sha256": "65e722e0d98431a07c45f8bdd8d529a217cc8c175fde1740248bd5c1b4f3c0d4",
+      "size": 1163890,
+      "url": "files/65/65e722e0d98431a07c45f8bdd8d529a217cc8c175fde1740248bd5c1b4f3c0d4"
     },
     {
       "path": "mods/connector-2.0.0-beta.14+1.21.1-full.jar",
@@ -890,9 +890,9 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "73dfa14dedc2a7fc900b09db39259d5652e5be2580d7a00cde4275effc6164b1",
-      "size": 50516,
-      "url": "files/73/73dfa14dedc2a7fc900b09db39259d5652e5be2580d7a00cde4275effc6164b1"
+      "sha256": "518b31a63ac1b936154d2a0817c1eddfc6692816afbce83bf4c991651543eeb1",
+      "size": 50435,
+      "url": "files/51/518b31a63ac1b936154d2a0817c1eddfc6692816afbce83bf4c991651543eeb1"
     },
     {
       "path": "mods/tenpack_travel-0.1.0.jar",
