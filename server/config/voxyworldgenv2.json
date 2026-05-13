@@ -7,7 +7,10 @@
   "maxQueueSize": 20000,
   "maxActiveTasks": 20,
   "historicalSyncEnabled": true,
-  "historicalSyncMaxInFlight": 32,
-  "historicalSyncChunksPerSecond": 64,
-  "historicalSyncMaxHeapPercent": 85
+  "historicalSyncMaxInFlight": 4,
+  "historicalSyncGlobalMaxInFlight": 8,
+  "historicalSyncChunksPerSecond": 8,
+  "historicalSyncMaxHeapPercent": 65,
+  "historicalSyncAckTimeoutSeconds": 20,
+  "historicalSyncMaxMspt": 75
 }
