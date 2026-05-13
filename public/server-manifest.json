@@ -247,6 +247,12 @@
       "url": "files/c2/c20691f699a7f425885b1a275525b0efaa3eff30ae34a5c142b1c8744a2caef2"
     },
     {
+      "path": "mods/ScalableLux-0.1.0.1+neoforge.1cb1e91-all.jar",
+      "sha256": "74340a37af858014ecf66068054bed3ab778b22d24956d348a2ec2bc3c585cb5",
+      "size": 176443,
+      "url": "files/74/74340a37af858014ecf66068054bed3ab778b22d24956d348a2ec2bc3c585cb5"
+    },
+    {
       "path": "mods/SereneSeasons-neoforge-1.21.1-10.1.0.3.jar",
       "sha256": "db5182afe9197044916d364b69cd70139457f92859b0bf4f4bb76c3f42360a65",
       "size": 159206,
@@ -311,6 +317,12 @@
       "sha256": "010bca44649c7d6783a62d97e30f800b6653201c3899aeb4dc09fd15addb2cd7",
       "size": 22063770,
       "url": "files/01/010bca44649c7d6783a62d97e30f800b6653201c3899aeb4dc09fd15addb2cd7"
+    },
+    {
+      "path": "mods/c2me-neoforge-mc1.21.1-0.3.0+alpha.0.91.jar",
+      "sha256": "107ec5b3cca05a038ee21aa35e5c68880297c370e4a47d14998ecfa7270af369",
+      "size": 4508649,
+      "url": "files/10/107ec5b3cca05a038ee21aa35e5c68880297c370e4a47d14998ecfa7270af369"
     },
     {
       "path": "mods/carryon-neoforge-1.21.1-2.2.4.4.jar",
@@ -493,6 +505,12 @@
       "url": "files/71/71d98d7d9fdfccf2737310d2368697f688fa25c60bb9ac11a71a34f367787c8b"
     },
     {
+      "path": "mods/lithium-neoforge-0.15.3+mc1.21.1.jar",
+      "sha256": "a6548862bd13ff8eea6747cf61df50c8374a16a22d067614e414ed600eee6d83",
+      "size": 774148,
+      "url": "files/a6/a6548862bd13ff8eea6747cf61df50c8374a16a22d067614e414ed600eee6d83"
+    },
+    {
       "path": "mods/lithosphere-1.7.jar",
       "sha256": "2c2cc9c3de98d79feac7ea9bd0bfe367fe1d59dfefe647ca1afdd3d547d682f9",
       "size": 527182,
@@ -509,6 +527,12 @@
       "sha256": "1027c58f92a85b34c74cb0e10e0a2f9b4bbdfb4ce6b999bcb58012bbfc4209d3",
       "size": 1573221,
       "url": "files/10/1027c58f92a85b34c74cb0e10e0a2f9b4bbdfb4ce6b999bcb58012bbfc4209d3"
+    },
+    {
+      "path": "mods/noisium-neoforge-2.7.0+mc1.21-1.21.1.jar",
+      "sha256": "ca097cd53fcdabecbcbf22e2515eb1956f313f094cd3a0506800ebf239e255f9",
+      "size": 60512,
+      "url": "files/ca/ca097cd53fcdabecbcbf22e2515eb1956f313f094cd3a0506800ebf239e255f9"
     },
     {
       "path": "mods/railways-0.2.0-beta.2+neoforge-mc1.21.1.jar",

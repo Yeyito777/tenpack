@@ -62,6 +62,34 @@
       "source": "https://cdn.modrinth.com/data/fALzjamp/versions/LuFhm4eU/Chunky-NeoForge-1.4.23.jar"
     },
     {
+      "name": "Lithium",
+      "version": "0.15.3+mc1.21.1 (NeoForge)",
+      "filename": "lithium-neoforge-0.15.3+mc1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/RXHf27Wv/lithium-neoforge-0.15.3%2Bmc1.21.1.jar",
+      "note": "High-risk/high-reward chunkgen performance stack: general game-logic/server optimization; recommended alongside C2ME and ScalableLux. Installed on both client and server."
+    },
+    {
+      "name": "NoisiumForked",
+      "version": "2.7.0+mc1.21-1.21.1 (NeoForge)",
+      "filename": "noisium-neoforge-2.7.0+mc1.21-1.21.1.jar",
+      "source": "https://cdn.modrinth.com/data/hasdd01q/versions/VviuomrA/noisium-neoforge-2.7.0%2Bmc1.21-1.21.1.jar",
+      "note": "High-risk/high-reward chunkgen performance stack: optimizes worldgen hot paths, especially noise population/block-state placement; complementary to C2ME. Server-side mod mirrored to client per pack rules."
+    },
+    {
+      "name": "ScalableLux",
+      "version": "0.1.0.1+neoforge.1cb1e91",
+      "filename": "ScalableLux-0.1.0.1+neoforge.1cb1e91-all.jar",
+      "source": "https://cdn.modrinth.com/data/Ps1zyz6x/versions/j10HNoNf/ScalableLux-0.1.0.1%2Bneoforge.1cb1e91-all.jar",
+      "note": "High-risk/high-reward chunkgen performance stack: Starlight-derived lighting optimization for heavy chunk generation and light updates; recommended alongside C2ME. Installed on both client and server."
+    },
+    {
+      "name": "Concurrent Chunk Management Engine (C2ME)",
+      "version": "0.3.0+alpha.0.91+1.21.1 (NeoForge)",
+      "filename": "c2me-neoforge-mc1.21.1-0.3.0+alpha.0.91.jar",
+      "source": "https://cdn.modrinth.com/data/COlSi5iR/versions/9iPiN34N/c2me-neoforge-mc1.21.1-0.3.0%2Balpha.0.91.jar",
+      "note": "High-risk/high-reward chunkgen performance stack: parallelizes chunk generation, I/O, and loading. Alpha/devbuild-style mod; test carefully with Tenpack worldgen mods and Voxy WorldGen. Installed on both client and server."
+    },
+    {
       "name": "FTB Library",
       "version": "2101.1.31 (NeoForge)",
       "filename": "ftb-library-neoforge-2101.1.31.jar",

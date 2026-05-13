@@ -325,6 +325,12 @@
       "url": "files/c2/c20691f699a7f425885b1a275525b0efaa3eff30ae34a5c142b1c8744a2caef2"
     },
     {
+      "path": "mods/ScalableLux-0.1.0.1+neoforge.1cb1e91-all.jar",
+      "sha256": "74340a37af858014ecf66068054bed3ab778b22d24956d348a2ec2bc3c585cb5",
+      "size": 176443,
+      "url": "files/74/74340a37af858014ecf66068054bed3ab778b22d24956d348a2ec2bc3c585cb5"
+    },
+    {
       "path": "mods/SereneSeasons-neoforge-1.21.1-10.1.0.3.jar",
       "sha256": "db5182afe9197044916d364b69cd70139457f92859b0bf4f4bb76c3f42360a65",
       "size": 159206,
@@ -401,6 +407,12 @@
       "sha256": "010bca44649c7d6783a62d97e30f800b6653201c3899aeb4dc09fd15addb2cd7",
       "size": 22063770,
       "url": "files/01/010bca44649c7d6783a62d97e30f800b6653201c3899aeb4dc09fd15addb2cd7"
+    },
+    {
+      "path": "mods/c2me-neoforge-mc1.21.1-0.3.0+alpha.0.91.jar",
+      "sha256": "107ec5b3cca05a038ee21aa35e5c68880297c370e4a47d14998ecfa7270af369",
+      "size": 4508649,
+      "url": "files/10/107ec5b3cca05a038ee21aa35e5c68880297c370e4a47d14998ecfa7270af369"
     },
     {
       "path": "mods/carryon-neoforge-1.21.1-2.2.4.4.jar",
@@ -619,6 +631,12 @@
       "url": "files/71/71d98d7d9fdfccf2737310d2368697f688fa25c60bb9ac11a71a34f367787c8b"
     },
     {
+      "path": "mods/lithium-neoforge-0.15.3+mc1.21.1.jar",
+      "sha256": "a6548862bd13ff8eea6747cf61df50c8374a16a22d067614e414ed600eee6d83",
+      "size": 774148,
+      "url": "files/a6/a6548862bd13ff8eea6747cf61df50c8374a16a22d067614e414ed600eee6d83"
+    },
+    {
       "path": "mods/lithosphere-1.7.jar",
       "sha256": "2c2cc9c3de98d79feac7ea9bd0bfe367fe1d59dfefe647ca1afdd3d547d682f9",
       "size": 527182,
@@ -647,6 +665,12 @@
       "sha256": "ed025100de31f5635d48a5a0cc4bc9c701d885bf3777e0c2ad8af5f2cad4601a",
       "size": 243953,
       "url": "files/ed/ed025100de31f5635d48a5a0cc4bc9c701d885bf3777e0c2ad8af5f2cad4601a"
+    },
+    {
+      "path": "mods/noisium-neoforge-2.7.0+mc1.21-1.21.1.jar",
+      "sha256": "ca097cd53fcdabecbcbf22e2515eb1956f313f094cd3a0506800ebf239e255f9",
+      "size": 60512,
+      "url": "files/ca/ca097cd53fcdabecbcbf22e2515eb1956f313f094cd3a0506800ebf239e255f9"
     },
     {
       "path": "mods/particlerain-4.0.0-beta.9+1.21.1-neoforge.jar",
@@ -746,9 +770,9 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "b01ecfae323e296a21572566152dfb8e0e7f7f9b99d73d3e5e7c4d554415c07b",
-      "size": 38740,
-      "url": "files/b0/b01ecfae323e296a21572566152dfb8e0e7f7f9b99d73d3e5e7c4d554415c07b"
+      "sha256": "43633cd04570e3b039b840d4ac00f6cc4d13215636872a1c9d54e2c0f52a76d0",
+      "size": 40728,
+      "url": "files/43/43633cd04570e3b039b840d4ac00f6cc4d13215636872a1c9d54e2c0f52a76d0"
     },
     {
       "path": "mods/tenpack_travel-0.1.0.jar",
