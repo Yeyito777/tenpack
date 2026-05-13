@@ -13,7 +13,7 @@
   "historicalSyncMaxHeapPercent": 65,
   "historicalSyncAckTimeoutSeconds": 20,
   "historicalSyncMaxMspt": 75,
-  "historicalPullBatchSize": 16,
-  "historicalPullMaxInFlight": 32,
-  "historicalPullTimeoutSeconds": 10
+  "historicalPullBatchSize": 64,
+  "historicalPullMaxInFlight": 128,
+  "historicalPullTimeoutSeconds": 45
 }
