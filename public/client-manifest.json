@@ -98,9 +98,9 @@
     },
     {
       "path": "config/voxyworldgenv2.json",
-      "sha256": "556e4ea8da03dc0d4ef596d1a12852a86d6c18a89a9c7eff95891a8f781409b9",
-      "size": 177,
-      "url": "files/55/556e4ea8da03dc0d4ef596d1a12852a86d6c18a89a9c7eff95891a8f781409b9"
+      "sha256": "dc07a6f64606d9c815fdf76232494c688449c2ee4fd30c7d51b7fed662680d6f",
+      "size": 320,
+      "url": "files/dc/dc07a6f64606d9c815fdf76232494c688449c2ee4fd30c7d51b7fed662680d6f"
     },
     {
       "path": "config/windy-config.json",
@@ -650,9 +650,9 @@
     },
     {
       "path": "mods/voxy-worldgen-v2-1.21.1-2.2.1.jar",
-      "sha256": "eaadc98b066ba9d7db444497b2d172003945b06e5246b7843125981295c2b25a",
-      "size": 216525,
-      "url": "files/ea/eaadc98b066ba9d7db444497b2d172003945b06e5246b7843125981295c2b25a"
+      "sha256": "577fb9b0a2d58778bcda98f3a275e4f26a4f8fdca8e4a50f511f26fe61de069d",
+      "size": 218835,
+      "url": "files/57/577fb9b0a2d58778bcda98f3a275e4f26a4f8fdca8e4a50f511f26fe61de069d"
     },
     {
       "path": "mods/weaponmaster_ydm-1.21.1-neoforge-4.2.7.jar",

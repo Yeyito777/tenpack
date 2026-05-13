@@ -5,5 +5,9 @@
   "generationRadius": 128,
   "update_interval": 20,
   "maxQueueSize": 20000,
-  "maxActiveTasks": 20
+  "maxActiveTasks": 20,
+  "historicalSyncEnabled": true,
+  "historicalSyncMaxInFlight": 4,
+  "historicalSyncChunksPerSecond": 8,
+  "historicalSyncMaxHeapPercent": 75
 }
