@@ -818,13 +818,6 @@
       "note": "Pickup toast/notification UI. sha256: b49535698de9c7b5a879c8ec99175771d87d5261d5cc4c6152ba1fa51fc5676a"
     },
     {
-      "name": "Leawind's Third Person",
-      "version": "2.3.0",
-      "filename": "leawind_third_person-2.3.0-mc1.21-1.21.1-neoforge.jar",
-      "source": "https://cdn.modrinth.com/data/S3D3QF0M/versions/IyzCjsmN/leawind_third_person-2.3.0-mc1.21-1.21.1-neoforge.jar",
-      "note": "Improved third-person camera controls. sha256: 9b931ba49a6fb9e89abd261494b4fd5521ac16369aa56fed72ca6eeda4409011"
-    },
-    {
       "name": "Drip Sounds",
       "version": "0.5.2",
       "filename": "Drip Sounds-0.5.2+1.21.8-NeoForge.jar",

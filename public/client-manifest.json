@@ -673,12 +673,6 @@
       "url": "files/66/6617f21323f88ccf586a4069b8783343565b356701260324aa45c5d25d20fe14"
     },
     {
-      "path": "mods/leawind_third_person-2.3.0-mc1.21-1.21.1-neoforge.jar",
-      "sha256": "9b931ba49a6fb9e89abd261494b4fd5521ac16369aa56fed72ca6eeda4409011",
-      "size": 444185,
-      "url": "files/9b/9b931ba49a6fb9e89abd261494b4fd5521ac16369aa56fed72ca6eeda4409011"
-    },
-    {
       "path": "mods/legendarysurvivaloverhaul-1.21.1-2.4.2.jar",
       "sha256": "da9c38f05df4dfe09e5226f17d43a0c1725c16ede3ea6dd2d945c111b1d413e4",
       "size": 3742368,
@@ -884,9 +878,9 @@
     },
     {
       "path": "mods/tenpack-client-mods.json",
-      "sha256": "dda1c1730db1617aa99cb39a8e969d1c03b07d47df2ca7787a7d2e5e3198a1bd",
-      "size": 50105,
-      "url": "files/dd/dda1c1730db1617aa99cb39a8e969d1c03b07d47df2ca7787a7d2e5e3198a1bd"
+      "sha256": "da61ebffd307fcc3ca675c156dbbb0fd222d6553b47912f2acf18396898c343f",
+      "size": 49693,
+      "url": "files/da/da61ebffd307fcc3ca675c156dbbb0fd222d6553b47912f2acf18396898c343f"
     },
     {
       "path": "mods/tenpack_travel-0.1.0.jar",

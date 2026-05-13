@@ -23,7 +23,6 @@ Requested pass: environmental danger / survival tension, exploration atmosphere,
 - Mouse Tweaks `MouseTweaks-neoforge-mc1.21-2.26.1.jar`
 - Keybind Search `keybindsearch-1.0.0.jar`
 - Pick Up Notifier `PickUpNotifier-v21.1.1-1.21.1-NeoForge.jar`
-- Leawind's Third Person `leawind_third_person-2.3.0-mc1.21-1.21.1-neoforge.jar`
 - Drip Sounds `Drip Sounds-0.5.2+1.21.8-NeoForge.jar`
 - Make Bubbles Pop `make_bubbles_pop-0.3.0-fabric-mc1.19.4-1.21.jar` — Fabric build through Sinytra Connector
 - Wakes `wakes-0.4.1+1.21.1.jar` — Fabric build through Sinytra Connector
