@@ -1,0 +1,14 @@
+["Create Railways Navigator Config".general]
+# In ticks. Keeps station displays readable without aggressive network churn.
+display_refresh_rate = 50
+
+["Create Railways Navigator Config".route_overlay]
+# Active journey overlay is allowed for train trips; it is station/schedule UI, not a minimap or coordinate HUD.
+scale = 0.75
+notifications = true
+position = "TOP_LEFT"
+
+["Create Railways Navigator Config"]
+language = "DEFAULT"
+speed_unit = "KMH"
+time_format = "HOURS_24"

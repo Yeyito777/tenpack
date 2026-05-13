@@ -1,0 +1,147 @@
+{
+  id: "5051581F30B5626F"
+  group: ""
+  order_index: 4
+  filename: "04_oil_vehicles_war"
+  icon: {id: "createdieselgenerators:diesel_engine", count: 1}
+  default_quest_shape: ""
+  default_hide_dependency_lines: false
+  quests: [
+  {
+    id: "5A096F8006E6DBAC"
+    x: 0.0d
+    y: 0.0d
+    icon: {id: "createdieselgenerators:oil_scanner", count: 1}
+    dependencies: ["4AA55750D1CB7A9E"]
+    tasks: [
+    {
+      id: "1338F4CAB7760061"
+      type: "advancement"
+      advancement: "tenpack_create:create_progression/oil_prospecting"
+      criterion: ""
+    }
+    ]
+  },
+  {
+    id: "450F467F6EF2E144"
+    x: 2.0d
+    y: 0.0d
+    icon: {id: "createdieselgenerators:pumpjack_bearing", count: 1}
+    dependencies: ["5A096F8006E6DBAC"]
+    tasks: [
+    {
+      id: "1CC9D7308B66D1B4"
+      type: "advancement"
+      advancement: "tenpack_create:create_progression/black_gold"
+      criterion: ""
+    }
+    ]
+  },
+  {
+    id: "4272C0F2CACA813E"
+    x: 4.0d
+    y: 0.0d
+    icon: {id: "createdieselgenerators:distillation_controller", count: 1}
+    dependencies: ["450F467F6EF2E144"]
+    tasks: [
+    {
+      id: "42E737A1B2543FAD"
+      type: "advancement"
+      advancement: "tenpack_create:create_progression/oil_refining"
+      criterion: ""
+    }
+    ]
+  },
+  {
+    id: "49AE4BA2663B2798"
+    x: 6.0d
+    y: 0.0d
+    icon: {id: "createdieselgenerators:diesel_engine", count: 1}
+    dependencies: ["4272C0F2CACA813E"]
+    tasks: [
+    {
+      id: "70534DD27BE18952"
+      type: "advancement"
+      advancement: "tenpack_create:create_progression/diesel_power"
+      criterion: ""
+    }
+    ]
+  },
+  {
+    id: "6EFB4BB7460E1B97"
+    x: 2.0d
+    y: 2.0d
+    icon: {id: "simulated:steering_wheel", count: 1}
+    dependencies: ["05994C53CF4A0738"]
+    tasks: [
+    {
+      id: "0382F02F64DD3055"
+      type: "advancement"
+      advancement: "tenpack_create:create_progression/ground_vehicles"
+      criterion: ""
+    }
+    ]
+  },
+  {
+    id: "10519509954D08E4"
+    x: 4.0d
+    y: 2.0d
+    icon: {id: "aeronautics:gyroscopic_propeller_bearing", count: 1}
+    dependencies: ["6EFB4BB7460E1B97"]
+    tasks: [
+    {
+      id: "11620213C42B7A50"
+      type: "advancement"
+      advancement: "tenpack_create:create_progression/controlled_flight"
+      criterion: ""
+    }
+    ]
+  },
+  {
+    id: "07F9703107D96C45"
+    x: 6.0d
+    y: 2.0d
+    icon: {id: "aeronautics:propeller_bearing", count: 1}
+    dependencies: ["10519509954D08E4"]
+    tasks: [
+    {
+      id: "2E3BF4099D6FF26A"
+      type: "advancement"
+      advancement: "tenpack_create:create_progression/first_plane"
+      criterion: ""
+    }
+    ]
+  },
+  {
+    id: "5A80D8282E405590"
+    x: 8.0d
+    y: 0.0d
+    icon: {id: "createbigcannons:cannon_builder", count: 1}
+    dependencies: ["49AE4BA2663B2798"]
+    tasks: [
+    {
+      id: "3E598230AF323D7E"
+      type: "advancement"
+      advancement: "tenpack_create:create_progression/heavy_industry"
+      criterion: ""
+    }
+    ]
+  },
+  {
+    id: "0A049A069952FE64"
+    x: 10.0d
+    y: 0.0d
+    icon: {id: "createbigcannons:solid_shot", count: 1}
+    disable_toast: true
+    dependencies: ["5A80D8282E405590"]
+    tasks: [
+    {
+      id: "0D98E0F84190657F"
+      type: "checkmark"
+    }
+    ]
+  }
+  ]
+  quest_links: []
+  images: []
+}

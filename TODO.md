@@ -13,8 +13,14 @@
 - [ ] Realistic spiders and tarantulas
 - [ ] MAKE MOBS GREAT AGAIN!!!!
 - [ ] FTB mining shapeless—make it taxing on tools and hunger
-- [ ] Center progression and shit around hunger
-- [ ] spear hits should take away hunger
+- [ ] Center progression and shit around hunger — no-custom-mod food-presence pass added; playtest before checking off
+  - [x] Check how ROTN handled food/hunger and why not to copy Nutrition/spreadsheet pressure
+  - [x] Add AppleSkin visibility and Supplementaries six-slot lunch basket for portable field food
+  - [x] Keep thirst/idle hunger off while adding meaningful LSO sprint/combat food pressure
+  - [x] Add CraftTweaker food-value tuning: weak bread/simple staples, stronger prepared meals
+  - [x] Expand Create heated-mixer meal recipes so Farmer's Delight kitchen automation is an actual solution layer
+  - [ ] Playtest tuning on the real server
+- [ ] spear hits should take away hunger — defer until there is an actual active spear/reach system to tune against
 - [ ] The AI will check all optimization mods
 - [ ] World events
 - [ ] Set weekly events (humans choose these)

@@ -14,8 +14,10 @@ things that matter for Tenpack's era ladder:
 from __future__ import annotations
 
 import json
+import io
 import sys
 import zipfile
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
@@ -23,6 +25,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SERVER_MODS = ROOT / "server" / "mods"
 
 ADDON_JARS = {
+    "create-aeronautics-bundled-1.21.1-1.2.1.jar",
     "CreateDragonsPlus-1.10.0b.jar",
     "create-central-kitchen-2.4.0.jar",
     "railways-0.2.0-beta.2+neoforge-mc1.21.1.jar",
@@ -36,6 +39,26 @@ ADDON_JARS = {
     "create_winery-2.0.2-neoforge-1.21.1.jar",
     "create_bic_bit-1.0.2C.jar",
 }
+
+# Current audited recipe footprints. If any of these change, the addon stack was
+# probably upgraded, rebuilt, or scanned differently; re-run the audit instead of
+# silently trusting the old progression conclusions.
+EXPECTED_RECIPE_COUNTS = {
+    "CreateDragonsPlus-1.10.0b.jar": 49,
+    "bellsandwhistles-0.4.7-1.21.1.jar": 53,
+    "copycats-3.0.4+mc.1.21.1-neoforge.jar": 68,
+    "create-aeronautics-bundled-1.21.1-1.2.1.jar": 125,
+    "create-central-kitchen-2.4.0.jar": 0,
+    "create-confectionery1.21.1_v1.1.2.jar": 115,
+    "create_bic_bit-1.0.2C.jar": 113,
+    "create_winery-2.0.2-neoforge-1.21.1.jar": 28,
+    "createdeco-2.1.3.jar": 1719,
+    "createrailwaysnavigator-neoforge-1.21.1-beta-0.9.0-C6.jar": 9,
+    "railways-0.2.0-beta.2+neoforge-mc1.21.1.jar": 825,
+    "rechiseledcreate-1.1.0-neoforge-mc1.21.jar": 1,
+    "sliceanddice-forge-4.2.4.jar": 8,
+}
+EXPECTED_TOTAL_RECIPE_COUNT = 3113
 
 # Core progression outputs controlled by Tenpack's datapack. Addons should not
 # introduce parallel recipes for these unless the recipe is explicitly audited
@@ -77,18 +100,30 @@ CONTROLLED_CREATE_OUTPUTS = {
     "create:blaze_burner",
 }
 
-# Compat/decor outputs in the create namespace that are safe for this pack.
+# Compat/decor/basic byproduct outputs in the create namespace that are safe for this pack.
 ALLOWED_CREATE_NAMESPACE_OUTPUTS = {
+    "create:andesite_alloy",
+    "create:brass_nugget",
     "create:copycat_panel",
     "create:copycat_step",
+    "create:crushed_raw_iron",
     "create:industrial_iron_block",
+    "create:iron_sheet",
     "create:placard",
+    "create:white_sail",
     "create:chocolate",
 }
 
 # Recipe path -> required references. These anchor addon utility to the intended
 # era without rewriting every decorative recipe in each addon.
 RECIPE_REF_INVARIANTS = {
+    "create-aeronautics-bundled-1.21.1-1.2.1.jar": {
+        "data/simulated/recipe/gimbal_sensor.json": {"simulated:gyroscopic_mechanism"},
+        "data/simulated/recipe/optical_sensor.json": {"create:electron_tube", "create:brass_casing"},
+        "data/simulated/recipe/red_portable_engine.json": {"simulated:engine_assembly"},
+        "data/offroad/recipe/rockcutting_wheel.json": {"create:crushing_wheel"},
+        "data/aeronautics/recipe/andesite_propeller.json": {"create:propeller"},
+    },
     "railways-0.2.0-beta.2+neoforge-mc1.21.1.jar": {
         "data/railways/recipe/crafting/handcar.json": {"create:contraption_controls"},
         "data/railways/recipe/crafting/fuel_tank.json": {"create:fluid_tank", "create:sturdy_sheet"},
@@ -115,6 +150,13 @@ RECIPE_REF_INVARIANTS = {
     },
 }
 
+
+@dataclass(frozen=True)
+class RecipeEntry:
+    source: str
+    path: str
+    obj: dict[str, Any] | None
+
 CONFIG_EXPECTATIONS = {
     ROOT / "tenpack-specs/overrides/config/create_dragons_plus-common.toml": {
         '"item/blaze_upgrade_smithing_template" = false': "Create: Dragons Plus blaze smithing template duplication should stay disabled",
@@ -126,8 +168,10 @@ def walk_refs(value: Any) -> set[str]:
     refs: set[str] = set()
     if isinstance(value, dict):
         for key, child in value.items():
-            if key in {"item", "id", "tag"} and isinstance(child, str):
+            if key in {"item", "id", "tag", "items", "fluid"} and isinstance(child, str):
                 refs.add(child)
+            elif key == "items" and isinstance(child, list):
+                refs.update(entry for entry in child if isinstance(entry, str))
             refs |= walk_refs(child)
     elif isinstance(value, list):
         for child in value:
@@ -161,47 +205,94 @@ def read_recipe(zf: zipfile.ZipFile, path: str) -> dict[str, Any] | None:
         return None
 
 
+def iter_recipe_entries_from_zip(zf: zipfile.ZipFile, source: str) -> list[RecipeEntry]:
+    entries: list[RecipeEntry] = []
+    for name in sorted(zf.namelist()):
+        if name.startswith("data/") and "/recipe/" in name and name.endswith(".json"):
+            entries.append(RecipeEntry(source=source, path=name, obj=read_recipe(zf, name)))
+        elif name.endswith(".jar"):
+            try:
+                with zipfile.ZipFile(io.BytesIO(zf.read(name))) as nested:
+                    entries.extend(iter_recipe_entries_from_zip(nested, f"{source}!{name}"))
+            except Exception:
+                # Other mod-integrity checks catch broken jars. This audit should
+                # keep scanning whatever recipe data remains readable.
+                continue
+    return entries
+
+
+def iter_recipe_entries(jar_path: Path) -> list[RecipeEntry]:
+    with zipfile.ZipFile(jar_path) as zf:
+        return iter_recipe_entries_from_zip(zf, jar_path.name)
+
+
 def main() -> int:
     errors: list[str] = []
     recipes_checked = 0
+
+    missing_count_guards = ADDON_JARS - set(EXPECTED_RECIPE_COUNTS)
+    stale_count_guards = set(EXPECTED_RECIPE_COUNTS) - ADDON_JARS
+    if missing_count_guards:
+        errors.append(
+            "Create addon recipe audit missing per-jar count guardrails for: "
+            + ", ".join(sorted(missing_count_guards))
+        )
+    if stale_count_guards:
+        errors.append(
+            "Create addon recipe audit has stale per-jar count guardrails for removed jars: "
+            + ", ".join(sorted(stale_count_guards))
+        )
 
     for jar_name in sorted(ADDON_JARS):
         jar_path = SERVER_MODS / jar_name
         if not jar_path.exists():
             errors.append(f"missing expected Create addon jar: {jar_name}")
             continue
-        with zipfile.ZipFile(jar_path) as zf:
-            names = set(zf.namelist())
-            invariants = RECIPE_REF_INVARIANTS.get(jar_name, {})
-            for recipe_path, required_refs in invariants.items():
-                if recipe_path not in names:
-                    errors.append(f"{jar_name}: missing audited recipe {recipe_path}")
-                    continue
-                obj = read_recipe(zf, recipe_path)
-                if obj is None:
-                    errors.append(f"{jar_name}: invalid JSON in audited recipe {recipe_path}")
-                    continue
-                refs = walk_refs(obj)
-                missing = required_refs - refs
-                if missing:
-                    errors.append(f"{jar_name}: {recipe_path} missing expected era anchor refs: {', '.join(sorted(missing))}")
+        entries = iter_recipe_entries(jar_path)
+        expected_count = EXPECTED_RECIPE_COUNTS.get(jar_name)
+        if expected_count is None:
+            errors.append(f"{jar_name}: missing expected recipe-count guardrail")
+        elif len(entries) != expected_count:
+            errors.append(
+                f"{jar_name}: recipe footprint changed from audited count {expected_count} to {len(entries)}; "
+                "re-run the Create addon era audit before trusting progression conclusions"
+            )
+        entries_by_path: dict[str, list[RecipeEntry]] = {}
+        for entry in entries:
+            entries_by_path.setdefault(entry.path, []).append(entry)
 
-            for name in names:
-                if not (name.startswith("data/") and "/recipe/" in name and name.endswith(".json")):
-                    continue
-                obj = read_recipe(zf, name)
-                if obj is None:
-                    errors.append(f"{jar_name}: invalid recipe JSON {name}")
-                    continue
-                recipes_checked += 1
-                for output in recipe_outputs(obj):
-                    if output in CONTROLLED_CREATE_OUTPUTS:
-                        errors.append(f"{jar_name}: {name} outputs controlled progression item {output}")
-                    if output.startswith("create:") and output not in ALLOWED_CREATE_NAMESPACE_OUTPUTS and output not in CONTROLLED_CREATE_OUTPUTS:
-                        errors.append(
-                            f"{jar_name}: {name} outputs unclassified create namespace item {output}; "
-                            "audit and add to ALLOWED_CREATE_NAMESPACE_OUTPUTS if harmless"
-                        )
+        invariants = RECIPE_REF_INVARIANTS.get(jar_name, {})
+        for recipe_path, required_refs in invariants.items():
+            candidates = entries_by_path.get(recipe_path, [])
+            if not candidates:
+                errors.append(f"{jar_name}: missing audited recipe {recipe_path}")
+                continue
+            valid_candidates = [entry for entry in candidates if entry.obj is not None]
+            if not valid_candidates:
+                sources = ", ".join(sorted(entry.source for entry in candidates))
+                errors.append(f"{jar_name}: invalid JSON in audited recipe {recipe_path} ({sources})")
+                continue
+            if not any(required_refs <= walk_refs(entry.obj or {}) for entry in valid_candidates):
+                sources = ", ".join(sorted(entry.source for entry in valid_candidates))
+                errors.append(
+                    f"{jar_name}: {recipe_path} missing expected era anchor refs in all candidates "
+                    f"({sources}): {', '.join(sorted(required_refs))}"
+                )
+
+        for entry in entries:
+            obj = entry.obj
+            if obj is None:
+                errors.append(f"{jar_name}: invalid recipe JSON {entry.path} ({entry.source})")
+                continue
+            recipes_checked += 1
+            for output in recipe_outputs(obj):
+                if output in CONTROLLED_CREATE_OUTPUTS:
+                    errors.append(f"{jar_name}: {entry.path} ({entry.source}) outputs controlled progression item {output}")
+                if output.startswith("create:") and output not in ALLOWED_CREATE_NAMESPACE_OUTPUTS and output not in CONTROLLED_CREATE_OUTPUTS:
+                    errors.append(
+                        f"{jar_name}: {entry.path} ({entry.source}) outputs unclassified create namespace item {output}; "
+                        "audit and add to ALLOWED_CREATE_NAMESPACE_OUTPUTS if harmless"
+                    )
 
     for config_path, expected_lines in CONFIG_EXPECTATIONS.items():
         if not config_path.exists():
@@ -213,6 +304,11 @@ def main() -> int:
                 errors.append(f"{config_path.relative_to(ROOT)} missing `{line}`: {reason}")
 
     print(f"Create addon recipes checked: {recipes_checked}")
+    if recipes_checked != EXPECTED_TOTAL_RECIPE_COUNT:
+        errors.append(
+            f"Create addon recipe total changed from audited count {EXPECTED_TOTAL_RECIPE_COUNT} to {recipes_checked}; "
+            "re-run the Create addon era audit before trusting progression conclusions"
+        )
     if errors:
         print("\nCreate addon recipe audit failed:", file=sys.stderr)
         for error in errors:

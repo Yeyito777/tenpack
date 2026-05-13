@@ -29,6 +29,11 @@ neoForge {
     }
 }
 
+dependencies {
+    compileOnly files('../../server/mods/createrailwaysnavigator-neoforge-1.21.1-beta-0.9.0-C6.jar')
+    compileOnly files('../../server/mods/dragonlib-neoforge-1.21.1-beta-3.0.26.jar')
+}
+
 def replaceProperties = [
         loader_version_range: loader_version_range,
         mod_id              : mod_id,

@@ -10,8 +10,9 @@ Installed in the local working tree:
 - File: `client/mods/jei-1.21.1-neoforge-19.27.0.340-tenpack-mcrangefix.jar`
 - Source: `https://cdn.modrinth.com/data/u6dRKJwZ/versions/YAcQ6elZ/jei-1.21.1-neoforge-19.27.0.340.jar`
 - Local patch: only `META-INF/neoforge.mods.toml` is changed. The upstream file is labeled `1.21.1` on Modrinth but declares Minecraft `versionRange="[1.21, 1.21.1)"`, which would exclude Tenpack's actual Minecraft `1.21.1`. Tenpack changes that range to `"[1.21.1, 1.21.2)"`.
+- Side policy: client-only. Do not put this jar in `server/mods`; a dedicated-server smoke run hit Create/Aeronautics registration failures through JEI/Create optional integration paths when JEI was server-side. The client still gets JEI as the recipe source of truth.
 
-Reason: Tenpack Create progression depends on players being able to inspect modified recipes. Advancements and a future questbook can explain the path, but JEI should be the recipe source of truth.
+Reason: Tenpack Create progression depends on players being able to inspect modified recipes. Advancements and the FTB questbook explain the path, but JEI should be the recipe source of truth.
 
 ## Current local Create stack
 

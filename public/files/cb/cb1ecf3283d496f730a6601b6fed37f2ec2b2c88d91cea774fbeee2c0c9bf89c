@@ -1,0 +1,6 @@
+{
+  "pack": {
+    "pack_format": 48,
+    "description": "Tenpack navigation policy: remove GPS/recall-style survival bypasses"
+  }
+}

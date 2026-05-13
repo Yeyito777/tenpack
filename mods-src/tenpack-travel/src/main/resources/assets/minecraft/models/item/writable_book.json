@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/writable_book"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1778601
+      },
+      "model": "tenpack_travel:item/route_journal"
+    }
+  ]
+}

@@ -15,7 +15,7 @@ public class GroomingBrushItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
-        tooltipComponents.add(Component.literal("Use on mounts and working animals to read coarse travel notes.").withStyle(ChatFormatting.GRAY));
-        tooltipComponents.add(Component.literal("No GPS. No Jade. Just stable sense.").withStyle(ChatFormatting.DARK_GRAY));
+        tooltipComponents.add(Component.translatable("item.tenpack_travel.grooming_brush.tooltip.groom").withStyle(ChatFormatting.GRAY));
+        tooltipComponents.add(Component.translatable("item.tenpack_travel.grooming_brush.tooltip.notes").withStyle(ChatFormatting.DARK_GRAY));
     }
 }

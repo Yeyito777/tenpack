@@ -1,0 +1,65 @@
+{
+  "criteria": {
+    "station": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:track_station"
+          }
+        ]
+      }
+    },
+    "signal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:track_signal"
+          }
+        ]
+      }
+    },
+    "observer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:track_observer"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Stations, signals, and observers turn belts and depots into faction routes worth defending."
+    },
+    "icon": {
+      "count": 1,
+      "id": "create:track_station"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Rail Logistics"
+    }
+  },
+  "requirements": [
+    [
+      "station"
+    ],
+    [
+      "signal",
+      "observer"
+    ]
+  ],
+  "sends_telemetry_event": false,
+  "parent": "tenpack_create:create_progression/precision_engineering",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

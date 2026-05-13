@@ -1,0 +1,6 @@
+{
+  "tenpack_food_ui.tooltip.title": "Food balance",
+  "tenpack_food_ui.tooltip.staple": "Staple: %s/80",
+  "tenpack_food_ui.tooltip.protein": "Protein: %s/80",
+  "tenpack_food_ui.tooltip.produce": "Produce: %s/80"
+}

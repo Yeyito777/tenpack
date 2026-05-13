@@ -14,9 +14,17 @@ Command:
 
 Current result:
 
-- 2,988 Create-addon recipe JSON files checked
+- 3,113 Create-addon recipe JSON files checked, including nested recipes inside the Aeronautics/Simulated/Offroad bundled jar
+- per-jar and total recipe counts are pinned in
+  `tools/check-create-addon-recipes.py`, so addon upgrades, removed addons, stale
+  count guardrails, or nested-scan regressions force a new audit instead of
+  silently inheriting old conclusions
 - no installed addon recipe outputs a controlled Create progression item
 - audited utility recipes still reference their intended era anchors
+- Tenpack's progression datapack checker separately validates hand-authored
+  shaped override basics, optional-mod conditions, advancement references, and
+  the new Create-kitchen bridge so malformed overrides do not silently fall back
+  to upstream addon recipes
 
 ## What counts as a controlled progression item
 
@@ -36,11 +44,28 @@ Allowed harmless Create-namespace compat outputs are explicitly listed:
 
 - `create:copycat_panel`
 - `create:copycat_step`
+- `create:brass_nugget`
+- `create:crushed_raw_iron`
 - `create:industrial_iron_block`
+- `create:iron_sheet`
 - `create:placard`
+- `create:white_sail`
 - `create:chocolate`
 
 If a future addon outputs another `create:*` item, the checker fails until that item is audited.
+
+The checker now descends into nested jars, which matters for
+`create-aeronautics-bundled-1.21.1-1.2.1.jar`. That makes the secondary
+Aeronautics/Simulated/Offroad recipe audit repeatable instead of relying on a
+one-off unzip pass.
+
+Current extra Aeronautics-bundle invariants:
+
+- `simulated:gimbal_sensor` stays behind `simulated:gyroscopic_mechanism`.
+- `simulated:optical_sensor` keeps `create:electron_tube` and `create:brass_casing`.
+- `simulated:red_portable_engine` keeps `simulated:engine_assembly`.
+- `offroad:rockcutting_wheel` keeps `create:crushing_wheel`.
+- `aeronautics:andesite_propeller` keeps `create:propeller`.
 
 ## Addon-by-addon findings
 
@@ -338,4 +363,11 @@ The curated Create addon stack is recipe-safe against the main era ladder right 
 ./tools/tenpack-build-public.py --out public
 ```
 
-If a future addon adds a new `create:*` recipe output, the checker fails until we decide whether it is harmless compat/decor or a progression bypass.
+If a future addon adds a new `create:*` recipe output, changes the scanned recipe
+footprint, or is removed from the curated Create stack, the checker fails until we
+decide whether it is harmless compat/decor, a progression bypass, or just a new
+audited baseline.
+
+The checker's recipe reference walker treats both string refs and list-style
+`items` refs as anchors, so future addon recipes using modern ingredient arrays
+do not silently evade the era checks.

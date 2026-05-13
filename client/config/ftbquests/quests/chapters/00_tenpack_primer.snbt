@@ -1,0 +1,54 @@
+{
+  id: "4BF316A2716E9C56"
+  group: ""
+  order_index: 0
+  filename: "00_tenpack_primer"
+  icon: {id: "ftbquests:book", count: 1}
+  default_quest_shape: ""
+  default_hide_dependency_lines: false
+  quests: [
+  {
+    id: "697EC8245F4F6BDB"
+    x: 0.0d
+    y: 0.0d
+    icon: {id: "ftbquests:book", count: 1}
+    disable_toast: true
+    tasks: [
+    {
+      id: "3B983A09F384234F"
+      type: "checkmark"
+    }
+    ]
+  },
+  {
+    id: "22A17265351AABB6"
+    x: 2.0d
+    y: 0.0d
+    icon: {id: "create:goggles", count: 1}
+    disable_toast: true
+    dependencies: ["697EC8245F4F6BDB"]
+    tasks: [
+    {
+      id: "203041CA35299A63"
+      type: "checkmark"
+    }
+    ]
+  },
+  {
+    id: "36EFF28FC94F4A22"
+    x: 4.0d
+    y: 0.0d
+    icon: {id: "minecraft:filled_map", count: 1}
+    disable_toast: true
+    dependencies: ["22A17265351AABB6"]
+    tasks: [
+    {
+      id: "2DBDBA0EE131D240"
+      type: "checkmark"
+    }
+    ]
+  }
+  ]
+  quest_links: []
+  images: []
+}

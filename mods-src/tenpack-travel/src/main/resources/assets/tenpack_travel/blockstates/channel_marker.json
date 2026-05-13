@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "waterlogged=false": {
+      "model": "tenpack_travel:block/channel_marker"
+    },
+    "waterlogged=true": {
+      "model": "tenpack_travel:block/channel_marker"
+    }
+  }
+}

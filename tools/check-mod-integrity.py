@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import io
 import json
+import hashlib
 import sys
 import tomllib
 import zipfile
@@ -40,6 +41,7 @@ FABRIC_API_MODULE_PREFIX = "fabric-"
 
 ALLOWED_CLIENT_ONLY_JARS = {
     "AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar",
+    "appleskin-neoforge-mc1.21-3.0.9.jar",
     "CameraOverhaul-v2.0.6-fabric+mc[1.21.0-1.21.2].jar",
     "CreativeCore_NEOFORGE_v2.13.38_mc1.21.1.jar",
     "Iceberg-1.21.1-neoforge-1.3.2.jar",
@@ -51,13 +53,13 @@ ALLOWED_CLIENT_ONLY_JARS = {
     "fallingleaves-1.17.1+1.21.1.jar",
     "fusion-1.2.12-neoforge-mc1.21.1.jar",
     "iris-neoforge-1.8.12+mc1.21.1.jar",
+    "jei-1.21.1-neoforge-19.27.0.340-tenpack-mcrangefix.jar",
     "lambdynamiclights-3.1.4-neo-0+1.21.1.jar",
     "more_darkness-neoforge-1.21.1-1.0.0.jar",
     "mru-1.0.19+LTS+1.21.1+neoforge.jar",
     "particlerain-4.0.0-beta.9+1.21.1-neoforge.jar",
     "sodium-neoforge-0.6.13+mc1.21.1.jar",
     "sounds-2.4.22+lts+1.21.1-neoforge.jar",
-    "voxy-0.2.14-alpha-mc_1211-f308c254.jar",
 }
 
 DISALLOWED_MOD_IDS = {
@@ -65,10 +67,81 @@ DISALLOWED_MOD_IDS = {
     "waystones": "teleportation bypasses roads, rails, animals, vehicles, Aeronautics, and fuel logistics",
     "waystones_sable": "Sable-compatible teleportation is still teleportation",
     "waystones_sable_compat": "Sable-compatible teleportation is still teleportation",
+    "clicksigns": "clickable/command signs are deferred; route signs should be physical player-authored text, not command surfaces",
+    "click_signs": "clickable/command signs are deferred; route signs should be physical player-authored text, not command surfaces",
+    "command_signs": "command signs are a teleport/command bypass risk for travel infrastructure",
+    "commandsigns": "command signs are a teleport/command bypass risk for travel infrastructure",
+    "waypoint_signs": "waypoint signs turn player route knowledge into GPS-like markers",
+    "waypointsigns": "waypoint signs turn player route knowledge into GPS-like markers",
+    "signpost": "extra signpost mods are deferred; Supplementaries way signs already cover physical player-authored route signs",
+    "signposts": "extra signpost mods are deferred; Supplementaries way signs already cover physical player-authored route signs",
+    "jumpyboats": "boat jumping bypasses docks, canals, crossings, and water-route infrastructure",
+    "jumpy_boats": "boat jumping bypasses docks, canals, crossings, and water-route infrastructure",
+    "moveboats": "boat relocation/itemization utilities are deferred pending audit for dock/canal value, chest-boat storage, and terrain-bypass effects",
+    "move_boats": "boat relocation/itemization utilities are deferred pending audit for dock/canal value, chest-boat storage, and terrain-bypass effects",
+    "boatitemview": "boat inventory/readability utilities are deferred until audited for remote inventory and cargo-information leaks",
+    "boat_item_view": "boat inventory/readability utilities are deferred until audited for remote inventory and cargo-information leaks",
+    "boatbreakfix": "boat recovery/break-fix utilities are deferred until audited for cargo preservation and easy pickup bypasses",
+    "boat_break_fix": "boat recovery/break-fix utilities are deferred until audited for cargo preservation and easy pickup bypasses",
+    # Water vehicles are deferred until a deliberate sailing/cargo-vessel audit.
+    # Current Tenpack water travel should stay vanilla boats + physical docks,
+    # Mooring Posts, and Channel Markers unless a ship mod is explicitly adopted.
+    "smallships": "Small Ships/itemized ships are deferred pending license, source, cargo, and gameplay audit",
+    "small_ships": "Small Ships/itemized ships are deferred pending license, source, cargo, and gameplay audit",
+    "eureka": "Eureka/Valkyrien-style ships are deferred pending physics, ownership, cargo, and no-teleport audit",
+    "vs_eureka": "Eureka/Valkyrien-style ships are deferred pending physics, ownership, cargo, and no-teleport audit",
+    "valkyrienskies": "Valkyrien Skies ship physics stack is deferred until a deliberate water/air vehicle adoption pass",
+    "valkyrien_skies": "Valkyrien Skies ship physics stack is deferred until a deliberate water/air vehicle adoption pass",
+    "clockwork": "Valkyrien/Create moving-ship stack is deferred until a deliberate vehicle adoption pass",
+    "vs_clockwork": "Valkyrien/Create moving-ship stack is deferred until a deliberate vehicle adoption pass",
+    # GPS/minimap/compass bypasses.
+    "journeymap": "live minimaps/waypoints are a hard no for Tenpack navigation",
+    "xaerominimap": "live minimaps/waypoints are a hard no for Tenpack navigation",
+    "xaeroworldmap": "live world maps/waypoints are a hard no for Tenpack navigation",
+    "voxelmap": "live minimaps/waypoints are a hard no for Tenpack navigation",
+    "mapatlases": "Map Atlases is deferred until a no-GPS audit/patch removes minimap, waypoint, coordinate, and live-location behavior",
+    "map_atlases": "Map Atlases is deferred until a no-GPS audit/patch removes minimap, waypoint, coordinate, and live-location behavior",
+    "antiqueatlas": "Antique Atlas-style mods are deferred until a physical-atlas/no-GPS audit",
+    "antique_atlas": "Antique Atlas-style mods are deferred until a physical-atlas/no-GPS audit",
+    "naturescompass": "biome GPS bypasses map, landmark, and route navigation",
+    "explorerscompass": "structure GPS bypasses map, landmark, and route navigation",
+    "structurecompass": "structure GPS bypasses map, landmark, and route navigation",
     # Backpack/storage-network bypasses.
     "sophisticatedbackpacks": "backpacks are a hard no for Tenpack",
     "sophisticated_backpacks": "backpacks are a hard no for Tenpack",
     "sophisticatedbackpacks_create_integration": "backpack Create integrations are a hard no",
+    "travelersbackpack": "backpacks are a hard no; cargo should stay on animals, carts, camps, and infrastructure",
+    "travelers_backpack": "backpacks are a hard no; cargo should stay on animals, carts, camps, and infrastructure",
+    "travellersbackpack": "backpacks are a hard no; cargo should stay on animals, carts, camps, and infrastructure",
+    "travellers_backpack": "backpacks are a hard no; cargo should stay on animals, carts, camps, and infrastructure",
+    "backpacked": "backpacks are a hard no; cargo should stay on animals, carts, camps, and infrastructure",
+    "usefulbackpacks": "backpacks are a hard no; cargo should stay on animals, carts, camps, and infrastructure",
+    "useful_backpacks": "backpacks are a hard no; cargo should stay on animals, carts, camps, and infrastructure",
+    "inmis": "backpack-style portable storage is deferred/no unless explicitly redesigned for Tenpack cargo rules",
+    "packedup": "backpack-style portable storage is deferred/no unless explicitly redesigned for Tenpack cargo rules",
+    "packed_up": "backpack-style portable storage is deferred/no unless explicitly redesigned for Tenpack cargo rules",
+    "scout": "Scout pouch-style storage is deferred; add only through a deliberate Tenpack-native/narrow-pouch pass, not as a backpack-tier dependency",
+    "scoutpouches": "Scout pouch-style storage is deferred; add only through a deliberate Tenpack-native/narrow-pouch pass, not as a backpack-tier dependency",
+    "scout_pouches": "Scout pouch-style storage is deferred; add only through a deliberate Tenpack-native/narrow-pouch pass, not as a backpack-tier dependency",
+    "infinitestoragebundle": "infinite/expanded bundle storage is a portable cargo bypass",
+    "infinite_storage_bundle": "infinite/expanded bundle storage is a portable cargo bypass",
+    "betterbundle": "bundle-expansion mods are deferred until a narrow no-backpack cargo audit",
+    "better_bundle": "bundle-expansion mods are deferred until a narrow no-backpack cargo audit",
+    "betterbundles": "bundle-expansion mods are deferred until a narrow no-backpack cargo audit",
+    "better_bundles": "bundle-expansion mods are deferred until a narrow no-backpack cargo audit",
+    "bundlebackport": "bundle backports/expansions are unnecessary on 1.21.1 and deferred until a narrow cargo audit",
+    "bundle_backport": "bundle backports/expansions are unnecessary on 1.21.1 and deferred until a narrow cargo audit",
+    "expandedbundles": "expanded bundle storage is a portable cargo bypass unless explicitly redesigned",
+    "expanded_bundles": "expanded bundle storage is a portable cargo bypass unless explicitly redesigned",
+    "morebundles": "extra bundle storage is deferred until a narrow cargo audit",
+    "more_bundles": "extra bundle storage is deferred until a narrow cargo audit",
+    "satchels": "satchel/pouch mods are deferred unless deliberately capped as narrow non-backpack travel gear",
+    "simple_satchels": "satchel/pouch mods are deferred unless deliberately capped as narrow non-backpack travel gear",
+    "enderbag": "ender/remote portable storage fights physical cargo and camp logistics",
+    "ender_bag": "ender/remote portable storage fights physical cargo and camp logistics",
+    "letsdocamping": "Let's Do Camping is deferred until backpacks/Enderbag/portable storage are hard-disabled or patched out",
+    "lets_do_camping": "Let's Do Camping is deferred until backpacks/Enderbag/portable storage are hard-disabled or patched out",
+    "camping": "camping mods are deferred until audited for backpack, Enderbag, portable-storage, and sleep-anywhere bypasses",
     "sophisticatedstorage": "full storage integrations are deferred/no until a storage pass",
     "simple_storage_network": "storage networks require an explicit storage/logistics pass",
     "toms_storage": "storage networks require an explicit storage/logistics pass",
@@ -97,7 +170,72 @@ DISALLOWED_MOD_IDS = {
 DISALLOWED_FILENAME_TOKENS = {
     "waystones-sable": "Sable-compatible teleportation is still teleportation",
     "waystones": "teleportation bypasses physical travel",
+    "clicksigns": "clickable/command signs are deferred; route signs should be physical player-authored text, not command surfaces",
+    "click-signs": "clickable/command signs are deferred; route signs should be physical player-authored text, not command surfaces",
+    "click_signs": "clickable/command signs are deferred; route signs should be physical player-authored text, not command surfaces",
+    "command-signs": "command signs are a teleport/command bypass risk for travel infrastructure",
+    "commandsigns": "command signs are a teleport/command bypass risk for travel infrastructure",
+    "waypoint-signs": "waypoint signs turn player route knowledge into GPS-like markers",
+    "waypointsigns": "waypoint signs turn player route knowledge into GPS-like markers",
+    "jumpy-boats": "boat jumping bypasses physical water-route infrastructure",
+    "moveboats": "boat relocation/itemization utilities are deferred pending water-utility audit",
+    "move-boats": "boat relocation/itemization utilities are deferred pending water-utility audit",
+    "move_boats": "boat relocation/itemization utilities are deferred pending water-utility audit",
+    "boatitemview": "boat inventory/readability utilities are deferred pending remote-inventory audit",
+    "boat-item-view": "boat inventory/readability utilities are deferred pending remote-inventory audit",
+    "boat_item_view": "boat inventory/readability utilities are deferred pending remote-inventory audit",
+    "boatbreakfix": "boat recovery/break-fix utilities are deferred pending cargo-preservation audit",
+    "boat-break-fix": "boat recovery/break-fix utilities are deferred pending cargo-preservation audit",
+    "boat_break_fix": "boat recovery/break-fix utilities are deferred pending cargo-preservation audit",
+    "smallships": "Small Ships/itemized ships are deferred pending license, source, cargo, and gameplay audit",
+    "small-ships": "Small Ships/itemized ships are deferred pending license, source, cargo, and gameplay audit",
+    "small_ships": "Small Ships/itemized ships are deferred pending license, source, cargo, and gameplay audit",
+    "vs-eureka": "Eureka/Valkyrien-style ships are deferred pending physics, ownership, cargo, and no-teleport audit",
+    "valkyrienskies": "Valkyrien Skies ship physics stack is deferred until a deliberate water/air vehicle adoption pass",
+    "valkyrien-skies": "Valkyrien Skies ship physics stack is deferred until a deliberate water/air vehicle adoption pass",
+    "clockwork": "Valkyrien/Create moving-ship stack is deferred until a deliberate vehicle adoption pass",
+    "journeymap": "live minimaps/waypoints are a hard no for Tenpack navigation",
+    "xaero": "live minimaps/waypoints are a hard no for Tenpack navigation",
+    "voxelmap": "live minimaps/waypoints are a hard no for Tenpack navigation",
+    "map-atlases": "Map Atlases is deferred until a no-GPS audit/patch removes minimap, waypoint, coordinate, and live-location behavior",
+    "mapatlases": "Map Atlases is deferred until a no-GPS audit/patch removes minimap, waypoint, coordinate, and live-location behavior",
+    "antique-atlas": "Antique Atlas-style mods are deferred until a physical-atlas/no-GPS audit",
+    "antiqueatlas": "Antique Atlas-style mods are deferred until a physical-atlas/no-GPS audit",
+    "natures-compass": "biome GPS bypasses map, landmark, and route navigation",
+    "nature-compass": "biome GPS bypasses map, landmark, and route navigation",
+    "explorers-compass": "structure GPS bypasses map, landmark, and route navigation",
+    "explorer-compass": "structure GPS bypasses map, landmark, and route navigation",
+    "structure-compass": "structure GPS bypasses map, landmark, and route navigation",
+    "backpack": "backpacks are a hard no; cargo should stay on animals, carts, camps, and infrastructure",
     "sophisticated-backpacks": "backpacks are a hard no for Tenpack",
+    "travelers-backpack": "backpacks are a hard no; cargo should stay on animals, carts, camps, and infrastructure",
+    "travelersbackpack": "backpacks are a hard no; cargo should stay on animals, carts, camps, and infrastructure",
+    "travellers-backpack": "backpacks are a hard no; cargo should stay on animals, carts, camps, and infrastructure",
+    "travellersbackpack": "backpacks are a hard no; cargo should stay on animals, carts, camps, and infrastructure",
+    "backpacked": "backpacks are a hard no; cargo should stay on animals, carts, camps, and infrastructure",
+    "useful-backpacks": "backpacks are a hard no; cargo should stay on animals, carts, camps, and infrastructure",
+    "usefulbackpacks": "backpacks are a hard no; cargo should stay on animals, carts, camps, and infrastructure",
+    "inmis": "backpack-style portable storage is deferred/no unless explicitly redesigned for Tenpack cargo rules",
+    "packed-up": "backpack-style portable storage is deferred/no unless explicitly redesigned for Tenpack cargo rules",
+    "packedup": "backpack-style portable storage is deferred/no unless explicitly redesigned for Tenpack cargo rules",
+    "scout-pouches": "Scout pouch-style storage is deferred; use a deliberate Tenpack-native/narrow-pouch pass instead",
+    "scout_pouches": "Scout pouch-style storage is deferred; use a deliberate Tenpack-native/narrow-pouch pass instead",
+    "infinitestoragebundle": "infinite/expanded bundle storage is a portable cargo bypass",
+    "infinite-storage-bundle": "infinite/expanded bundle storage is a portable cargo bypass",
+    "infinite_storage_bundle": "infinite/expanded bundle storage is a portable cargo bypass",
+    "betterbundle": "bundle-expansion mods are deferred until a narrow no-backpack cargo audit",
+    "better-bundle": "bundle-expansion mods are deferred until a narrow no-backpack cargo audit",
+    "betterbundles": "bundle-expansion mods are deferred until a narrow no-backpack cargo audit",
+    "better-bundles": "bundle-expansion mods are deferred until a narrow no-backpack cargo audit",
+    "bundle-backport": "bundle backports/expansions are unnecessary on 1.21.1 and deferred until a narrow cargo audit",
+    "expanded-bundles": "expanded bundle storage is a portable cargo bypass unless explicitly redesigned",
+    "more-bundles": "extra bundle storage is deferred until a narrow cargo audit",
+    "satchel": "satchel/pouch mods are deferred unless deliberately capped as narrow non-backpack travel gear",
+    "enderbag": "ender/remote portable storage fights physical cargo and camp logistics",
+    "ender-bag": "ender/remote portable storage fights physical cargo and camp logistics",
+    "lets-do-camping": "Let's Do Camping is deferred until backpacks/Enderbag/portable storage are hard-disabled or patched out",
+    "letsdocamping": "Let's Do Camping is deferred until backpacks/Enderbag/portable storage are hard-disabled or patched out",
+    "lets_do_camping": "Let's Do Camping is deferred until backpacks/Enderbag/portable storage are hard-disabled or patched out",
     "create-applied-kinetics": "deferred with AE2",
     "applied-kinetics": "deferred with AE2",
     "enchantment-industry": "deferred to XP/equipment economy pass",
@@ -225,6 +363,14 @@ def dep_satisfied(dep_id: str, present: set[str]) -> bool:
     return False
 
 
+def sha256_file(path: Path) -> str:
+    h = hashlib.sha256()
+    with path.open("rb") as f:
+        for chunk in iter(lambda: f.read(1024 * 1024), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
 def main() -> int:
     errors: list[str] = []
     jars_by_side: dict[str, list[ModJar]] = {}
@@ -247,6 +393,13 @@ def main() -> int:
     missing_from_client = filenames_by_side["server"] - filenames_by_side["client"]
     for filename in sorted(missing_from_client):
         errors.append(f"server mod is not mirrored to client/mods: {filename}")
+
+    mirrored = filenames_by_side["server"] & filenames_by_side["client"]
+    for filename in sorted(mirrored):
+        client_path = ROOT / "client" / "mods" / filename
+        server_path = ROOT / "server" / "mods" / filename
+        if sha256_file(client_path) != sha256_file(server_path):
+            errors.append(f"mirrored client/server mod jar differs by hash: {filename}")
 
     client_only = filenames_by_side["client"] - filenames_by_side["server"]
     unexpected_client_only = client_only - ALLOWED_CLIENT_ONLY_JARS

@@ -1,6 +1,12 @@
 {
   "files": [
     {
+      "path": "config/astikorcartsredux-common.toml",
+      "sha256": "7b4f5176a439ec9382509392af7b0201f5c725a967610a4ed3697d688ebee0da",
+      "size": 1685,
+      "url": "files/7b/7b4f5176a439ec9382509392af7b0201f5c725a967610a4ed3697d688ebee0da"
+    },
+    {
       "path": "config/corpse-server.toml",
       "sha256": "b2e0fc5e849084256310526838c6da62356f51ec98cc740afcd6b1d13ada9644",
       "size": 1646,
@@ -19,22 +25,88 @@
       "url": "files/2d/2d91803f38b4d4199d7d8469a8f2debf5a3365e23d27b3edb4482a946d38beb4"
     },
     {
+      "path": "config/createrailwaysnavigator-common.toml",
+      "sha256": "628e3b19005b9792175f093216d8c3c7f6a75a96e5640563808c26dd7d346945",
+      "size": 4424,
+      "url": "files/62/628e3b19005b9792175f093216d8c3c7f6a75a96e5640563808c26dd7d346945"
+    },
+    {
       "path": "config/do_a_barrel_roll-server.json",
       "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
       "size": 2,
       "url": "files/44/44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
     },
     {
+      "path": "config/farmersdelight-common.toml",
+      "sha256": "124a9d6b09323a41b472e3894c55eeacddee6eaa63e2a0492b9dfda03055261d",
+      "size": 3757,
+      "url": "files/12/124a9d6b09323a41b472e3894c55eeacddee6eaa63e2a0492b9dfda03055261d"
+    },
+    {
+      "path": "config/ftbquests/quests/chapter_groups.snbt",
+      "sha256": "0fe735f6927c9d905e14b238f2cf44d5c08d735b460a603ad26a764b90096dca",
+      "size": 25,
+      "url": "files/0f/0fe735f6927c9d905e14b238f2cf44d5c08d735b460a603ad26a764b90096dca"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/00_tenpack_primer.snbt",
+      "sha256": "4d2238c307e3e2e671c661645a2c5d54c6105a00927da405bfe20a6e6f9f14a8",
+      "size": 959,
+      "url": "files/4d/4d2238c307e3e2e671c661645a2c5d54c6105a00927da405bfe20a6e6f9f14a8"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/01_create_eras.snbt",
+      "sha256": "26f18ec17e6362a3d613b52a851805ae17d69368db58991cb1c0ca2d16811df0",
+      "size": 2843,
+      "url": "files/26/26f18ec17e6362a3d613b52a851805ae17d69368db58991cb1c0ca2d16811df0"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/02_food_supply.snbt",
+      "sha256": "7b7e74fd097f0add52f3d4d17c1630b5f3a4750e1857832a6bf1aee0197b4e58",
+      "size": 2111,
+      "url": "files/7b/7b7e74fd097f0add52f3d4d17c1630b5f3a4750e1857832a6bf1aee0197b4e58"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/03_rails_territory.snbt",
+      "sha256": "f1a4949f7dfab7eead4720049b04a13f6bf1f17ef7940a6b0f1558abf9564d85",
+      "size": 1099,
+      "url": "files/f1/f1a4949f7dfab7eead4720049b04a13f6bf1f17ef7940a6b0f1558abf9564d85"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/04_oil_vehicles_war.snbt",
+      "sha256": "0878e4d472660b9be14713f1bfdda4fa54a441fde0b9cb5e7ac349d62f5df32c",
+      "size": 3235,
+      "url": "files/08/0878e4d472660b9be14713f1bfdda4fa54a441fde0b9cb5e7ac349d62f5df32c"
+    },
+    {
+      "path": "config/ftbquests/quests/data.snbt",
+      "sha256": "e8157914c67c71a1ab294f29c10520f081b022847b78e5c4dbbcaff87a3f0ce4",
+      "size": 563,
+      "url": "files/e8/e8157914c67c71a1ab294f29c10520f081b022847b78e5c4dbbcaff87a3f0ce4"
+    },
+    {
+      "path": "config/ftbquests/quests/lang/en_us.snbt",
+      "sha256": "a1f5382dfc68f0a1dfad488ba3dd0397f85c5544e86d7ec0ecded84a03eb1202",
+      "size": 8607,
+      "url": "files/a1/a1f5382dfc68f0a1dfad488ba3dd0397f85c5544e86d7ec0ecded84a03eb1202"
+    },
+    {
       "path": "config/legendarysurvivaloverhaul-common.toml",
-      "sha256": "eb327bdf6a4b4d2ae5cb61054863ebf45d3c334785a356c151cc4d94125f5b85",
-      "size": 35823,
-      "url": "files/eb/eb327bdf6a4b4d2ae5cb61054863ebf45d3c334785a356c151cc4d94125f5b85"
+      "sha256": "5085aeaf1f7a61d9e14467166bce1d8f3cb7a59410266f0ea0410e2f77f16853",
+      "size": 35824,
+      "url": "files/50/5085aeaf1f7a61d9e14467166bce1d8f3cb7a59410266f0ea0410e2f77f16853"
     },
     {
       "path": "config/lifesteal-common.toml",
       "sha256": "8a4d381b1b4e3b8621c090a5782a8b830135439bcd857d77d11660802878357d",
       "size": 6511,
       "url": "files/8a/8a4d381b1b4e3b8621c090a5782a8b830135439bcd857d77d11660802878357d"
+    },
+    {
+      "path": "config/moonlight-common.toml",
+      "sha256": "ce17e22174f8d796e792c87dbe7c2cff8360686edfb59080adf905e26df144ea",
+      "size": 949,
+      "url": "files/ce/ce17e22174f8d796e792c87dbe7c2cff8360686edfb59080adf905e26df144ea"
     },
     {
       "path": "config/projectatmosphere/biome_temps.json",
@@ -65,6 +137,12 @@
       "sha256": "9573c64dd047712ef1c7ec7f8e2a2b442906f7272eb0c0c73986fc876a3e6235",
       "size": 5005,
       "url": "files/95/9573c64dd047712ef1c7ec7f8e2a2b442906f7272eb0c0c73986fc876a3e6235"
+    },
+    {
+      "path": "config/supplementaries-common.toml",
+      "sha256": "eb7898db9264952efd2b29e2e1420d662001679131c6b80be208e259d94d6817",
+      "size": 26967,
+      "url": "files/eb/eb7898db9264952efd2b29e2e1420d662001679131c6b80be208e259d94d6817"
     },
     {
       "path": "config/tenpackdeath.properties",
@@ -101,6 +179,12 @@
       "sha256": "d72f235cf1f56f2c374f52c00bdda5034524b28142305a84cfc123a3f92ad274",
       "size": 340572,
       "url": "files/d7/d72f235cf1f56f2c374f52c00bdda5034524b28142305a84cfc123a3f92ad274"
+    },
+    {
+      "path": "mods/CraftTweaker-neoforge-1.21.1-21.0.38.jar",
+      "sha256": "4c4a95ca706e1aec41145b2db32737f2aebf1fdedefda0b35b651cad3fa4abaf",
+      "size": 3465718,
+      "url": "files/4c/4c4a95ca706e1aec41145b2db32737f2aebf1fdedefda0b35b651cad3fa4abaf"
     },
     {
       "path": "mods/Create Encased-1.21.1-1.8-ht2.jar",
@@ -203,6 +287,12 @@
       "sha256": "5ec578f814e8cca87aeffa6e424032e78d9ea5ea6b603dd834c2dc13c31141ee",
       "size": 584004,
       "url": "files/5e/5ec578f814e8cca87aeffa6e424032e78d9ea5ea6b603dd834c2dc13c31141ee"
+    },
+    {
+      "path": "mods/astikorcartsredux-1.2.2.jar",
+      "sha256": "44b2db02a6699481d212f0fa0a766b52776650396fa67951a428ad32b2d7dc24",
+      "size": 531765,
+      "url": "files/44/44b2db02a6699481d212f0fa0a766b52776650396fa67951a428ad32b2d7dc24"
     },
     {
       "path": "mods/bellsandwhistles-0.4.7-1.21.1.jar",
@@ -343,6 +433,24 @@
       "url": "files/68/68abf2864e957df26ac0cc3bd5352ee67880e052b47a80f22f28556c1179f18d"
     },
     {
+      "path": "mods/ftb-library-neoforge-2101.1.31.jar",
+      "sha256": "3d44705187cf938842e06d484a93e0491b82b0689785e6da4f7cabe40bd88aeb",
+      "size": 1411181,
+      "url": "files/3d/3d44705187cf938842e06d484a93e0491b82b0689785e6da4f7cabe40bd88aeb"
+    },
+    {
+      "path": "mods/ftb-quests-neoforge-2101.1.24.jar",
+      "sha256": "7fb6e1c4f083d8fa760d82696ee36375c037170e05823b9c2ef89ae5b602384a",
+      "size": 1466155,
+      "url": "files/7f/7fb6e1c4f083d8fa760d82696ee36375c037170e05823b9c2ef89ae5b602384a"
+    },
+    {
+      "path": "mods/ftb-teams-neoforge-2101.1.10.jar",
+      "sha256": "a656f2aa0e11a933aab3ba697690aa0eb2041f65e6c5daa448897ee0a6d37a6c",
+      "size": 302712,
+      "url": "files/a6/a656f2aa0e11a933aab3ba697690aa0eb2041f65e6c5daa448897ee0a6d37a6c"
+    },
+    {
       "path": "mods/gaboulibs-neoforge-1.4.jar",
       "sha256": "26b9d52f72f4e2da41950409b18481b46282fce18a6238baf392b9a584cbebd4",
       "size": 23578,
@@ -353,12 +461,6 @@
       "sha256": "a1b6ce25e8627aa7e748672eedb6b71af68e0993462313649c259f38e42bcac9",
       "size": 622582,
       "url": "files/a1/a1b6ce25e8627aa7e748672eedb6b71af68e0993462313649c259f38e42bcac9"
-    },
-    {
-      "path": "mods/jei-1.21.1-neoforge-19.27.0.340-tenpack-mcrangefix.jar",
-      "sha256": "4a452ff660b3209631ac081a83acd34fd1f3086d4c2b1c3813d763f4aeb04b81",
-      "size": 1529391,
-      "url": "files/4a/4a452ff660b3209631ac081a83acd34fd1f3086d4c2b1c3813d763f4aeb04b81"
     },
     {
       "path": "mods/kotlinforforge-5.11.0-all.jar",
@@ -401,6 +503,12 @@
       "sha256": "4b0bc2236aecc6dc9ab22b3723cceda3eb3e64fed7d6d689fc008e491943fc1c",
       "size": 193579,
       "url": "files/4b/4b0bc2236aecc6dc9ab22b3723cceda3eb3e64fed7d6d689fc008e491943fc1c"
+    },
+    {
+      "path": "mods/moonlight-neoforge-1.21.1-3.0.7.jar",
+      "sha256": "1027c58f92a85b34c74cb0e10e0a2f9b4bbdfb4ce6b999bcb58012bbfc4209d3",
+      "size": 1573221,
+      "url": "files/10/1027c58f92a85b34c74cb0e10e0a2f9b4bbdfb4ce6b999bcb58012bbfc4209d3"
     },
     {
       "path": "mods/railways-0.2.0-beta.2+neoforge-mc1.21.1.jar",
@@ -475,10 +583,16 @@
       "url": "files/d2/d22b6dfea6922cb534adb9f8c5d43e4a3c27c864e512951df801cb1435a4d4d8"
     },
     {
+      "path": "mods/supplementaries-neoforge-1.21.1-3.6.4.jar",
+      "sha256": "e3b73e3c5f9e5cc7bf8ac17c5261faf319cb471ee5a2bbb4e5dfbecff6d80f95",
+      "size": 13282562,
+      "url": "files/e3/e3b73e3c5f9e5cc7bf8ac17c5261faf319cb471ee5a2bbb4e5dfbecff6d80f95"
+    },
+    {
       "path": "mods/tenpack_travel-0.1.0.jar",
-      "sha256": "6e498ed4ef56adcf436114d3cec1ae0640a8e549a0d51d4525d1834ea36865e5",
-      "size": 48497,
-      "url": "files/6e/6e498ed4ef56adcf436114d3cec1ae0640a8e549a0d51d4525d1834ea36865e5"
+      "sha256": "de52339ad8038c3d9a7b6e5ebe6affb43322cf03823ba127d0fe669884bb4969",
+      "size": 167979,
+      "url": "files/de/de52339ad8038c3d9a7b6e5ebe6affb43322cf03823ba127d0fe669884bb4969"
     },
     {
       "path": "mods/tenpackdeath-0.1.0.jar",
@@ -541,6 +655,12 @@
       "url": "files/b5/b5c30321b46cfaa521645a04aff89d2804d8167a25bb23ad4b1ae8da73093a2f"
     },
     {
+      "path": "scripts/tenpack_food_pressure.zs",
+      "sha256": "24bc15c3259713dfed24ba46c305d230d676110abf176aac036ae44fe8264dbd",
+      "size": 32631,
+      "url": "files/24/24bc15c3259713dfed24ba46c305d230d676110abf176aac036ae44fe8264dbd"
+    },
+    {
       "path": "server.properties",
       "sha256": "75eb229f77737bacaa06ccfa87c5068caea7d39b2edad0d93a3d473986c380df",
       "size": 1361,
@@ -553,10 +673,28 @@
       "url": "files/3f/3f605a8b45397eb90d22e286acdf76a7edfd5f5efab15d9f21450c9d57bf7ceb"
     },
     {
+      "path": "world/datapacks/tenpack-carryon-policy/data/carryon/tags/block/block_blacklist.json",
+      "sha256": "f00a78c4342553cde1789e2cb10044247c3864eec354c49c25429a3cd08dd76d",
+      "size": 577,
+      "url": "files/f0/f00a78c4342553cde1789e2cb10044247c3864eec354c49c25429a3cd08dd76d"
+    },
+    {
+      "path": "world/datapacks/tenpack-carryon-policy/data/carryon/tags/blocks/block_blacklist.json",
+      "sha256": "f00a78c4342553cde1789e2cb10044247c3864eec354c49c25429a3cd08dd76d",
+      "size": 577,
+      "url": "files/f0/f00a78c4342553cde1789e2cb10044247c3864eec354c49c25429a3cd08dd76d"
+    },
+    {
+      "path": "world/datapacks/tenpack-carryon-policy/pack.mcmeta",
+      "sha256": "20e1b114d3b12d800e7123b46c0edfd7675fa5c2a47813cf523acd8089be42a0",
+      "size": 149,
+      "url": "files/20/20e1b114d3b12d800e7123b46c0edfd7675fa5c2a47813cf523acd8089be42a0"
+    },
+    {
       "path": "world/datapacks/tenpack-create-progression/README.md",
-      "sha256": "1fb729aea9f4a302644cd3859fe8625c0ed05c456a28f4a81e966948d5481068",
-      "size": 9575,
-      "url": "files/1f/1fb729aea9f4a302644cd3859fe8625c0ed05c456a28f4a81e966948d5481068"
+      "sha256": "09be15b4223851dd428026c8241fc452b4625818eed146784876dd2b7e489bc7",
+      "size": 13329,
+      "url": "files/09/09be15b4223851dd428026c8241fc452b4625818eed146784876dd2b7e489bc7"
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/aeronautics/recipe/adjustable_burner.json",
@@ -569,6 +707,12 @@
       "sha256": "6012d13a9a34b9aacfa4c74be9317eef9999900b8c55503b0c290360b607488b",
       "size": 663,
       "url": "files/60/6012d13a9a34b9aacfa4c74be9317eef9999900b8c55503b0c290360b607488b"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/aeronautics/recipe/mechanical_crafting/mounted_potato_cannon.json",
+      "sha256": "e96df8b74b036895f4f822875f58777dd0da858825465005e0175c74e3d4f445",
+      "size": 896,
+      "url": "files/e9/e96df8b74b036895f4f822875f58777dd0da858825465005e0175c74e3d4f445"
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/aeronautics/recipe/propeller_bearing.json",
@@ -697,6 +841,12 @@
       "url": "files/e0/e0bb2498f7417f2231b0433ea1f5731b2c041fab49889068b875b04cff958db9"
     },
     {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/track_observer_from_other_plates.json",
+      "sha256": "dddab0e9aa0ac082afc7416e3fe2f633d5ad8dd3f987e84facbca76345f7d44c",
+      "size": 679,
+      "url": "files/dd/dddab0e9aa0ac082afc7416e3fe2f633d5ad8dd3f987e84facbca76345f7d44c"
+    },
+    {
       "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/kinetics/track_signal.json",
       "sha256": "002e45202273d8a94d64dde1fee04a79d1e5ad421d67ff14ef29af77c5ef3163",
       "size": 464,
@@ -709,6 +859,12 @@
       "url": "files/b7/b7663faeb6914899320223b4706d4d49c1492ffb37fe78c1166f42d2207a4962"
     },
     {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/logistics/factory_gauge.json",
+      "sha256": "ba1c91c58284d1b9030857ef5911c8f50d70a5601e855de2fd25baf50f900ef3",
+      "size": 366,
+      "url": "files/ba/ba1c91c58284d1b9030857ef5911c8f50d70a5601e855de2fd25baf50f900ef3"
+    },
+    {
       "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/logistics/package_frogport.json",
       "sha256": "dbdd77b561950dfec9dbf2c1428439fbf887b945dd4602fe8b0ee28314981a3d",
       "size": 522,
@@ -719,6 +875,12 @@
       "sha256": "1323d7e6a40443bf5a55000f2786734fdc426f77948ae9e9c7d582a23080f144",
       "size": 575,
       "url": "files/13/1323d7e6a40443bf5a55000f2786734fdc426f77948ae9e9c7d582a23080f144"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/logistics/redstone_requester.json",
+      "sha256": "7effa48abf672bb87222e1157b174da93176886fa746ca6b4f20a5611c357173",
+      "size": 452,
+      "url": "files/7e/7effa48abf672bb87222e1157b174da93176886fa746ca6b4f20a5611c357173"
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/create/recipe/crafting/logistics/stock_link.json",
@@ -734,39 +896,39 @@
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/createbigcannons/recipe/cannon_builder.json",
-      "sha256": "3935a0716c6d9421eb77e8790ea27670236070be5d52070e73f4a82faf1dc9a3",
-      "size": 675,
-      "url": "files/39/3935a0716c6d9421eb77e8790ea27670236070be5d52070e73f4a82faf1dc9a3"
+      "sha256": "c1005e8ed0e014f1125c86c08b3da4aa07d1c55e69ecc15b1749721216234213",
+      "size": 789,
+      "url": "files/c1/c1005e8ed0e014f1125c86c08b3da4aa07d1c55e69ecc15b1749721216234213"
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/createbigcannons/recipe/cannon_drill.json",
-      "sha256": "956a46350fdcac120b9aad274a9d5c459e0140c2df7db3f3f9b88096a9c9973e",
-      "size": 615,
-      "url": "files/95/956a46350fdcac120b9aad274a9d5c459e0140c2df7db3f3f9b88096a9c9973e"
+      "sha256": "b23c4b19f5310f271bb7700463ba8669a47bea33b095a6da4ba9087249f635c8",
+      "size": 776,
+      "url": "files/b2/b23c4b19f5310f271bb7700463ba8669a47bea33b095a6da4ba9087249f635c8"
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/createbigcannons/recipe/cannon_mount.json",
-      "sha256": "a35b9fe5305f5f81c22b735d1118ef5b3c563a1f083103f8cb585afe59b43061",
-      "size": 672,
-      "url": "files/a3/a35b9fe5305f5f81c22b735d1118ef5b3c563a1f083103f8cb585afe59b43061"
+      "sha256": "62393e5d4c720730c6c264b0247530e7b61be7fa872a3c9ed397af5613cb040c",
+      "size": 833,
+      "url": "files/62/62393e5d4c720730c6c264b0247530e7b61be7fa872a3c9ed397af5613cb040c"
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/createbigcannons/recipe/cannon_mount_extension.json",
-      "sha256": "03e534bea7d93b5e31c99a3e8af1adb927b770923560de8698dca4b39551f396",
-      "size": 632,
-      "url": "files/03/03e534bea7d93b5e31c99a3e8af1adb927b770923560de8698dca4b39551f396"
+      "sha256": "18eeca081092792b65dec09df0a086ddd0c501d56d3fd4a5434adc066c635441",
+      "size": 793,
+      "url": "files/18/18eeca081092792b65dec09df0a086ddd0c501d56d3fd4a5434adc066c635441"
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/createbigcannons/recipe/cannon_welder.json",
-      "sha256": "38d952b1d7876f3806e186d14d68a9cec4e76afcb828cba07c0c4df651b8deb2",
-      "size": 662,
-      "url": "files/38/38d952b1d7876f3806e186d14d68a9cec4e76afcb828cba07c0c4df651b8deb2"
+      "sha256": "4549fe20d6a004a6b8b0015b7ecdc46559df92e4ae63231dd78e07f7742fa2e1",
+      "size": 823,
+      "url": "files/45/4549fe20d6a004a6b8b0015b7ecdc46559df92e4ae63231dd78e07f7742fa2e1"
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/createbigcannons/recipe/fixed_cannon_mount.json",
-      "sha256": "18c78a1a04252ea83eaa37ba9574042a80ad304a3a8bc00969ac73beeafae252",
-      "size": 628,
-      "url": "files/18/18c78a1a04252ea83eaa37ba9574042a80ad304a3a8bc00969ac73beeafae252"
+      "sha256": "fe19714be4cc956179360d4713b9597ce4c5501eb84e846e06c572a94553d08f",
+      "size": 789,
+      "url": "files/fe/fe19714be4cc956179360d4713b9597ce4c5501eb84e846e06c572a94553d08f"
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/createcasing/recipe/crafting/deployer/brass.json",
@@ -1250,15 +1412,15 @@
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/createdieselgenerators/createdieselgenerators/fuel_type/diesel.json",
-      "sha256": "e0877bdba9703c8f0b7baa67f2a5bfaf2ac2b1c53aec42ca2d03dafe4eabd715",
-      "size": 331,
-      "url": "files/e0/e0877bdba9703c8f0b7baa67f2a5bfaf2ac2b1c53aec42ca2d03dafe4eabd715"
+      "sha256": "8a3cb2a3fe77b6a4aeeb67e94681d40ecf76311c694d403b1a89a0e5f9db9bad",
+      "size": 327,
+      "url": "files/8a/8a3cb2a3fe77b6a4aeeb67e94681d40ecf76311c694d403b1a89a0e5f9db9bad"
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/createdieselgenerators/createdieselgenerators/fuel_type/gasoline.json",
-      "sha256": "f8c01e48171f44138aef5d262f501b797a15718c462c525f95c4280f2fe05d08",
-      "size": 333,
-      "url": "files/f8/f8c01e48171f44138aef5d262f501b797a15718c462c525f95c4280f2fe05d08"
+      "sha256": "79513508e5b07b386902b93c2a020cde574f0a5e583fee8b44d06f8d5fdb8a7b",
+      "size": 329,
+      "url": "files/79/79513508e5b07b386902b93c2a020cde574f0a5e583fee8b44d06f8d5fdb8a7b"
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/createdieselgenerators/recipe/crafting/canister.json",
@@ -1309,16 +1471,154 @@
       "url": "files/4a/4a95f15bc9b3353f56fc177512bad2b3ca88389a9b8a42049c38591204eeb65d"
     },
     {
+      "path": "world/datapacks/tenpack-create-progression/data/farmersdelight/recipe/integration/create/mixing/baked_cod_stew_from_mixing.json",
+      "sha256": "dd2a02f3b5f9d6e9f12e06543fd811c8bdeca1e752da62c4560321fa43de0458",
+      "size": 675,
+      "url": "files/dd/dd2a02f3b5f9d6e9f12e06543fd811c8bdeca1e752da62c4560321fa43de0458"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/farmersdelight/recipe/integration/create/mixing/beef_stew_from_mixing.json",
+      "sha256": "c40c72870a66fba2dc8f028616696814315a61858b2a4350387f4fcfd65107f7",
+      "size": 636,
+      "url": "files/c4/c40c72870a66fba2dc8f028616696814315a61858b2a4350387f4fcfd65107f7"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/farmersdelight/recipe/integration/create/mixing/beetroot_soup_from_mixing.json",
+      "sha256": "91081e4cc8781f43d15f3b29d1ed9de794994043a18f30122f524d09c5c38a61",
+      "size": 639,
+      "url": "files/91/91081e4cc8781f43d15f3b29d1ed9de794994043a18f30122f524d09c5c38a61"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/farmersdelight/recipe/integration/create/mixing/bone_broth_from_mixing.json",
+      "sha256": "52623462a7143d486d0cdb47900f8c5b5d70c8efaae1d39b31b4de6738e108be",
+      "size": 861,
+      "url": "files/52/52623462a7143d486d0cdb47900f8c5b5d70c8efaae1d39b31b4de6738e108be"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/farmersdelight/recipe/integration/create/mixing/chicken_soup_from_mixing.json",
+      "sha256": "62dd2eb1c538bc9f02ac3f71485f086e70f17a7c42b18b7bb9fb8322b7ba7ffb",
+      "size": 827,
+      "url": "files/62/62dd2eb1c538bc9f02ac3f71485f086e70f17a7c42b18b7bb9fb8322b7ba7ffb"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/farmersdelight/recipe/integration/create/mixing/fish_stew_from_mixing.json",
+      "sha256": "6d5d87c92f87b37d8970d68fa7cfbdf92333f7c10c7949b5ea0bbfca7fc3f77f",
+      "size": 654,
+      "url": "files/6d/6d5d87c92f87b37d8970d68fa7cfbdf92333f7c10c7949b5ea0bbfca7fc3f77f"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/farmersdelight/recipe/integration/create/mixing/fried_rice_from_mixing.json",
+      "sha256": "d5773cc4d485b383c3cb0bf09ce8742c024de4952e24cbcc39a4e2974b2d6d91",
+      "size": 667,
+      "url": "files/d5/d5773cc4d485b383c3cb0bf09ce8742c024de4952e24cbcc39a4e2974b2d6d91"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/farmersdelight/recipe/integration/create/mixing/mushroom_rice_from_mixing.json",
+      "sha256": "74fc3b40c0c16e13c79bf6915a0a370219e64a1fc3fb05471243847fb27b098b",
+      "size": 847,
+      "url": "files/74/74fc3b40c0c16e13c79bf6915a0a370219e64a1fc3fb05471243847fb27b098b"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/farmersdelight/recipe/integration/create/mixing/mushroom_stew_from_mixing.json",
+      "sha256": "2023ef47b5c1b9c17124864aa252e43519fd6e040f11aaf5b76a8551ab0ea8fd",
+      "size": 610,
+      "url": "files/20/2023ef47b5c1b9c17124864aa252e43519fd6e040f11aaf5b76a8551ab0ea8fd"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/farmersdelight/recipe/integration/create/mixing/noodle_soup_from_mixing.json",
+      "sha256": "28b9b696e6a02ebdefbea33b0a116a0737e3f70ad1abb45232f56461926f433d",
+      "size": 679,
+      "url": "files/28/28b9b696e6a02ebdefbea33b0a116a0737e3f70ad1abb45232f56461926f433d"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/farmersdelight/recipe/integration/create/mixing/onion_soup_from_mixing.json",
+      "sha256": "28135c627c95d40359893051dc0949e8cc1d4bfc50069fd2157457fd53c33c5d",
+      "size": 674,
+      "url": "files/28/28135c627c95d40359893051dc0949e8cc1d4bfc50069fd2157457fd53c33c5d"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/farmersdelight/recipe/integration/create/mixing/pasta_with_meatballs_from_mixing.json",
+      "sha256": "ed7ae26626f8485618d9077b839373fa4815ddf95347aab014182f25fc4f2f8d",
+      "size": 671,
+      "url": "files/ed/ed7ae26626f8485618d9077b839373fa4815ddf95347aab014182f25fc4f2f8d"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/farmersdelight/recipe/integration/create/mixing/pasta_with_mutton_chop_from_mixing.json",
+      "sha256": "26f5efd0d62c5c7f8f5c507d8656017715f897645f5428bafc288996d1b2d1d2",
+      "size": 664,
+      "url": "files/26/26f5efd0d62c5c7f8f5c507d8656017715f897645f5428bafc288996d1b2d1d2"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/farmersdelight/recipe/integration/create/mixing/pumpkin_soup_from_mixing.json",
+      "sha256": "d42e613d1edad8f053a5327683f35aa3d65e5922266a9e84debb40959f1e82f5",
+      "size": 701,
+      "url": "files/d4/d42e613d1edad8f053a5327683f35aa3d65e5922266a9e84debb40959f1e82f5"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/farmersdelight/recipe/integration/create/mixing/rabbit_stew_from_mixing.json",
+      "sha256": "e2477bd59dfcd215c87e1a9095c118eba558c3c47e71f6f1629eeead766f9cbe",
+      "size": 839,
+      "url": "files/e2/e2477bd59dfcd215c87e1a9095c118eba558c3c47e71f6f1629eeead766f9cbe"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/farmersdelight/recipe/integration/create/mixing/ratatouille_from_mixing.json",
+      "sha256": "cd3669287b0d61ea11110ba52a0021ac102b7ea62ef0a3861943996fd4723851",
+      "size": 817,
+      "url": "files/cd/cd3669287b0d61ea11110ba52a0021ac102b7ea62ef0a3861943996fd4723851"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/farmersdelight/recipe/integration/create/mixing/squid_ink_pasta_from_mixing.json",
+      "sha256": "2ac6021c49e8a5b4e9455b8b6a01508243056c9afe60cc7f42fa60e2f4c500d2",
+      "size": 693,
+      "url": "files/2a/2ac6021c49e8a5b4e9455b8b6a01508243056c9afe60cc7f42fa60e2f4c500d2"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/farmersdelight/recipe/integration/create/mixing/steak_and_potatoes_from_mixing.json",
+      "sha256": "ef177a0101c6c2556b9df7f2ca586d8ea3890e31b3e4da660751d6ed07ec5f76",
+      "size": 615,
+      "url": "files/ef/ef177a0101c6c2556b9df7f2ca586d8ea3890e31b3e4da660751d6ed07ec5f76"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/farmersdelight/recipe/integration/create/mixing/vegetable_noodles_from_mixing.json",
+      "sha256": "6f5d148fe140d2fa889c19c720abf8905a80114f731c51db7e7d106ecd355910",
+      "size": 866,
+      "url": "files/6f/6f5d148fe140d2fa889c19c720abf8905a80114f731c51db7e7d106ecd355910"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/farmersdelight/recipe/integration/create/mixing/vegetable_soup_from_mixing.json",
+      "sha256": "d551cc5fbbdf6e24a3163f5d862f71776e1095c776c77d29c31a4ae2fe2e63a3",
+      "size": 689,
+      "url": "files/d5/d551cc5fbbdf6e24a3163f5d862f71776e1095c776c77d29c31a4ae2fe2e63a3"
+    },
+    {
       "path": "world/datapacks/tenpack-create-progression/data/minecraft/recipe/cannon_welder_mirrored.json",
-      "sha256": "ca7c4ea469fa8ec1c5f79f8683fac019a32947a1dacd7d47cff4df0bae4b8d25",
-      "size": 662,
-      "url": "files/ca/ca7c4ea469fa8ec1c5f79f8683fac019a32947a1dacd7d47cff4df0bae4b8d25"
+      "sha256": "9f348a7b5ef3870dae460cbe769655d5f5edb37007d944532f7ed18d5d1dcff3",
+      "size": 823,
+      "url": "files/9f/9f348a7b5ef3870dae460cbe769655d5f5edb37007d944532f7ed18d5d1dcff3"
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/offroad/recipe/borehead_bearing.json",
       "sha256": "c65eb028db94322af6a9a503853a0ded976f801323eb2d36ed7d21958c42ac6a",
       "size": 612,
       "url": "files/c6/c65eb028db94322af6a9a503853a0ded976f801323eb2d36ed7d21958c42ac6a"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/offroad/recipe/large_tire.json",
+      "sha256": "0b13e3d4092e97d8e7cbd9c3a468dc1093ebcf23732022a0fe8f84cf2aca2f45",
+      "size": 527,
+      "url": "files/0b/0b13e3d4092e97d8e7cbd9c3a468dc1093ebcf23732022a0fe8f84cf2aca2f45"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/offroad/recipe/monstrous_tire.json",
+      "sha256": "977b5aa9e72fc7d495c5dff1c31e3eeca9d46891da8dcc2316c7ec16a0d63bad",
+      "size": 481,
+      "url": "files/97/977b5aa9e72fc7d495c5dff1c31e3eeca9d46891da8dcc2316c7ec16a0d63bad"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/offroad/recipe/small_tire.json",
+      "sha256": "16264df428e03f933485f24c3ab8f36fdfd1c1848688ff3f27f59a45225ec2a3",
+      "size": 420,
+      "url": "files/16/16264df428e03f933485f24c3ab8f36fdfd1c1848688ff3f27f59a45225ec2a3"
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/offroad/recipe/tire.json",
@@ -1333,10 +1633,46 @@
       "url": "files/81/81ea5c8594efa12c6d019826a7d509d180b233d05951c98d5eb2581e6ee1a400"
     },
     {
-      "path": "world/datapacks/tenpack-create-progression/data/simulated/recipe/physics_assembler.json",
-      "sha256": "702e503c9d5567bf7d78c7751af2997129fd5357830dbaae6bf81718f59f42c6",
+      "path": "world/datapacks/tenpack-create-progression/data/simulated/recipe/altitude_sensor.json",
+      "sha256": "aa23dc1914343494a9b2d43bde83bee0c4149fd6dc463fe9c8d41018810a59b8",
+      "size": 539,
+      "url": "files/aa/aa23dc1914343494a9b2d43bde83bee0c4149fd6dc463fe9c8d41018810a59b8"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/simulated/recipe/laser_sensor.json",
+      "sha256": "ee52fa282e0c4385444cebd11d71dab4d52fb59346ec5b8d98f3831ed0f75228",
       "size": 606,
-      "url": "files/70/702e503c9d5567bf7d78c7751af2997129fd5357830dbaae6bf81718f59f42c6"
+      "url": "files/ee/ee52fa282e0c4385444cebd11d71dab4d52fb59346ec5b8d98f3831ed0f75228"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/simulated/recipe/physics_assembler.json",
+      "sha256": "1571e3718a79e78a3db56e4368d7de321c1a81fa170f25f84439e6958f848ae8",
+      "size": 667,
+      "url": "files/15/1571e3718a79e78a3db56e4368d7de321c1a81fa170f25f84439e6958f848ae8"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/simulated/recipe/redstone_magnet.json",
+      "sha256": "1beee59ccc2149501e6400962cf070b73f2e984e7c3573ab3d75acb7ac6166d5",
+      "size": 550,
+      "url": "files/1b/1beee59ccc2149501e6400962cf070b73f2e984e7c3573ab3d75acb7ac6166d5"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/simulated/recipe/rope_connector.json",
+      "sha256": "7fc38171597d56fa0902d37c4b88bdc3f0950a1752c4a9417869a9fcf3a3a9f3",
+      "size": 554,
+      "url": "files/7f/7fc38171597d56fa0902d37c4b88bdc3f0950a1752c4a9417869a9fcf3a3a9f3"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/simulated/recipe/rope_coupling.json",
+      "sha256": "329cd2207867692a42e294a43b72263da95e391894baa0016c071f4bfcf3ae44",
+      "size": 527,
+      "url": "files/32/329cd2207867692a42e294a43b72263da95e391894baa0016c071f4bfcf3ae44"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/simulated/recipe/rope_winch.json",
+      "sha256": "001d5fd20fe1d488c7dd2e50e1730ba33050e92e27f7226173fcd8f595e5f382",
+      "size": 549,
+      "url": "files/00/001d5fd20fe1d488c7dd2e50e1730ba33050e92e27f7226173fcd8f595e5f382"
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/simulated/recipe/sequenced_assembly/engine_assembly.json",
@@ -1351,22 +1687,64 @@
       "url": "files/00/00be576207660607fb0653855485cb5e57cfb36fcd7c59898c5674caff4d535d"
     },
     {
+      "path": "world/datapacks/tenpack-create-progression/data/simulated/recipe/steering_wheel.json",
+      "sha256": "e167175e24f26be5d58298bad44e76e5276fc9d18789b0a95399f1944163746c",
+      "size": 542,
+      "url": "files/e1/e167175e24f26be5d58298bad44e76e5276fc9d18789b0a95399f1944163746c"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/simulated/recipe/swivel_bearing.json",
+      "sha256": "280aad03a17dcd10db9a6d7e05f442a792148e79bc0995dda27589a4416aeec4",
+      "size": 551,
+      "url": "files/28/280aad03a17dcd10db9a6d7e05f442a792148e79bc0995dda27589a4416aeec4"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/simulated/recipe/throttle_lever.json",
+      "sha256": "0836729f1d4f3d155f6c5709ea36b6edd2af154c5e51ed9fef48ac9161cc6ee5",
+      "size": 544,
+      "url": "files/08/0836729f1d4f3d155f6c5709ea36b6edd2af154c5e51ed9fef48ac9161cc6ee5"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/simulated/recipe/velocity_sensor.json",
+      "sha256": "f04b7e8ceb459575df3928c3985bfceca45f1049beeac1fbb5beb0ae39fd0c56",
+      "size": 540,
+      "url": "files/f0/f04b7e8ceb459575df3928c3985bfceca45f1049beeac1fbb5beb0ae39fd0c56"
+    },
+    {
       "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/black_gold.json",
-      "sha256": "513fa4f65c212813f24a6cfe6589562f02c3066dda3e09ddad30070a4f76be93",
-      "size": 1200,
-      "url": "files/51/513fa4f65c212813f24a6cfe6589562f02c3066dda3e09ddad30070a4f76be93"
+      "sha256": "d00d3702538e0fe3d665c31c0c54cd8bd45ccba4e6dd07ee1880de5fde12a91c",
+      "size": 1225,
+      "url": "files/d0/d00d3702538e0fe3d665c31c0c54cd8bd45ccba4e6dd07ee1880de5fde12a91c"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/brass_electronics.json",
+      "sha256": "6b2e86c68a7dbb75000df82eaa8e56d385e18ad551d2d566493c37c0f7e3cdc3",
+      "size": 1307,
+      "url": "files/6b/6b2e86c68a7dbb75000df82eaa8e56d385e18ad551d2d566493c37c0f7e3cdc3"
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/controlled_flight.json",
-      "sha256": "674506d37166263d66ad2747ebd4703ad13f710f88f3d0a73b502e88bbe39114",
-      "size": 1218,
-      "url": "files/67/674506d37166263d66ad2747ebd4703ad13f710f88f3d0a73b502e88bbe39114"
+      "sha256": "f3f78ea4baedc3817eb7531fdc076e5499e760cbca238d66d068c771fe315ae5",
+      "size": 2071,
+      "url": "files/f3/f3f78ea4baedc3817eb7531fdc076e5499e760cbca238d66d068c771fe315ae5"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/diesel_power.json",
+      "sha256": "adc495d0b4a551f2c370ef071a26beedc9f041a11d618e0ca18b821fe13d6484",
+      "size": 971,
+      "url": "files/ad/adc495d0b4a551f2c370ef071a26beedc9f041a11d618e0ca18b821fe13d6484"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/farm_power.json",
+      "sha256": "419ff7795230c566d99b45af75b447af1b54abb58a44f31f0495121ca5cbb0c9",
+      "size": 1636,
+      "url": "files/41/419ff7795230c566d99b45af75b447af1b54abb58a44f31f0495121ca5cbb0c9"
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/first_plane.json",
-      "sha256": "953cf39cf44159c1baeba123c29f6645eada2c1010d2a9f74be98a47afacc179",
-      "size": 1243,
-      "url": "files/95/953cf39cf44159c1baeba123c29f6645eada2c1010d2a9f74be98a47afacc179"
+      "sha256": "e2410476f94d6664924b6f6ba3bc60aa45a203dcb84809f2da8095b674d481b3",
+      "size": 1318,
+      "url": "files/e2/e2410476f94d6664924b6f6ba3bc60aa45a203dcb84809f2da8095b674d481b3"
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/fluid_handling.json",
@@ -1375,10 +1753,22 @@
       "url": "files/92/923d505cf36910a1dab330276943f6bb920d42bce1ae203ac6babe4b01d71e1a"
     },
     {
+      "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/food_logistics.json",
+      "sha256": "1d61dd546f7d260b3f77af4ce7cf77cb28c8f3d092b3ef30a0d3ddbeae1d59d7",
+      "size": 2801,
+      "url": "files/1d/1d61dd546f7d260b3f77af4ce7cf77cb28c8f3d092b3ef30a0d3ddbeae1d59d7"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/ground_vehicles.json",
+      "sha256": "7a5b9072ecee0adb2bc65b6e9088519973041b37509c41b696f82c5e899b634b",
+      "size": 1956,
+      "url": "files/7a/7a5b9072ecee0adb2bc65b6e9088519973041b37509c41b696f82c5e899b634b"
+    },
+    {
       "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/heavy_industry.json",
-      "sha256": "446f5db3033553cdef8019a73d057de95203f6ea6ee0740ee439fb0f3dd46246",
-      "size": 1261,
-      "url": "files/44/446f5db3033553cdef8019a73d057de95203f6ea6ee0740ee439fb0f3dd46246"
+      "sha256": "7bd330d85835f48288c20b542ba09df25f79018d34d6fe2bd061e7fb160e3fb9",
+      "size": 1059,
+      "url": "files/7b/7bd330d85835f48288c20b542ba09df25f79018d34d6fe2bd061e7fb160e3fb9"
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/kinetic_workshop.json",
@@ -1387,16 +1777,46 @@
       "url": "files/7d/7de9aa92a35492332dc8e8eee05e5e20d98e540ec48c331b00be3f5f1c2b002b"
     },
     {
+      "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/kitchen_line.json",
+      "sha256": "7c1590f4f93a950819bbee4b6c1fd875761b2aed78ea3a5c4a7e94f47aab6527",
+      "size": 2328,
+      "url": "files/7c/7c1590f4f93a950819bbee4b6c1fd875761b2aed78ea3a5c4a7e94f47aab6527"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/oil_prospecting.json",
+      "sha256": "0c3b9763f309ca9d9e286173f891cbcd33bb85c4b011e49e868abb8c99a3b593",
+      "size": 995,
+      "url": "files/0c/0c3b9763f309ca9d9e286173f891cbcd33bb85c4b011e49e868abb8c99a3b593"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/oil_refining.json",
+      "sha256": "1bfd2c62113323e096c6033b1964ea46d63ca25be601e633c3703054c650b4c8",
+      "size": 1256,
+      "url": "files/1b/1bfd2c62113323e096c6033b1964ea46d63ca25be601e633c3703054c650b4c8"
+    },
+    {
       "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/physics_age.json",
-      "sha256": "0f8b26b99d92d69b9f0c6c0706554b5151617670c3ae5f3a3a57b18e6d8759b6",
-      "size": 906,
-      "url": "files/0f/0f8b26b99d92d69b9f0c6c0706554b5151617670c3ae5f3a3a57b18e6d8759b6"
+      "sha256": "44be86e9c7c057eba273e109a99870fe139b76d4c93b7a28249b4b219a0f56ee",
+      "size": 925,
+      "url": "files/44/44be86e9c7c057eba273e109a99870fe139b76d4c93b7a28249b4b219a0f56ee"
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/precision_engineering.json",
-      "sha256": "81d1e1cab7da1d4a5c5ee6fc14bc4a77b86c94d541c45ce244a813ece8cc63e8",
-      "size": 829,
-      "url": "files/81/81d1e1cab7da1d4a5c5ee6fc14bc4a77b86c94d541c45ce244a813ece8cc63e8"
+      "sha256": "3f7f5f976ca63399e6d7cbd05906114765cb8b242185f31d9955bf16c1a3b240",
+      "size": 833,
+      "url": "files/3f/3f7f5f976ca63399e6d7cbd05906114765cb8b242185f31d9955bf16c1a3b240"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/rail_logistics.json",
+      "sha256": "fc3e8d800cf6528af76d8b5573eb47d1acec134ea990faa50a6a669e076ae1b7",
+      "size": 1265,
+      "url": "files/fc/fc3e8d800cf6528af76d8b5573eb47d1acec134ea990faa50a6a669e076ae1b7"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/ration_routes.json",
+      "sha256": "ad9daa0c1dc711168e1c4ad76cdf8785bad55db6e49e92967a7d44ee3978ba81",
+      "size": 2970,
+      "url": "files/ad/ad9daa0c1dc711168e1c4ad76cdf8785bad55db6e49e92967a7d44ee3978ba81"
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/root.json",
@@ -1406,9 +1826,9 @@
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/smart_logistics.json",
-      "sha256": "af1556934db43ee1956db808690b87d679dee52af7c7c3e951bcd87163ee71a9",
-      "size": 1044,
-      "url": "files/af/af1556934db43ee1956db808690b87d679dee52af7c7c3e951bcd87163ee71a9"
+      "sha256": "e482c903549f83a5d14e5edea841f4a5bf89cc0c5fbe0ebd4ca42cef20da4fa2",
+      "size": 2001,
+      "url": "files/e4/e482c903549f83a5d14e5edea841f4a5bf89cc0c5fbe0ebd4ca42cef20da4fa2"
     },
     {
       "path": "world/datapacks/tenpack-create-progression/data/tenpack_create/advancement/create_progression/starter_logistics.json",
@@ -1421,6 +1841,12 @@
       "sha256": "6065c45a6a4fe6d475c69fabbb599a561e298eb7dc5041be92b4ae8cb9b129ae",
       "size": 131,
       "url": "files/60/6065c45a6a4fe6d475c69fabbb599a561e298eb7dc5041be92b4ae8cb9b129ae"
+    },
+    {
+      "path": "world/datapacks/tenpack-create-progression/pack.png",
+      "sha256": "bde1085d6662bb4511744dace27404de865a33039dbf197c71ae11e1d00f2171",
+      "size": 8263,
+      "url": "files/bd/bde1085d6662bb4511744dace27404de865a33039dbf197c71ae11e1d00f2171"
     },
     {
       "path": "world/datapacks/tenpack-lifesteal-balance/README.md",
@@ -1457,6 +1883,24 @@
       "sha256": "5d13a9043864b2fdf61ac394b89449313e567b5847c2791ec00fd1cc72015e7f",
       "size": 129,
       "url": "files/5d/5d13a9043864b2fdf61ac394b89449313e567b5847c2791ec00fd1cc72015e7f"
+    },
+    {
+      "path": "world/datapacks/tenpack-navigation-policy/data/minecraft/recipe/lodestone.json",
+      "sha256": "ae0158460f680898c439b9d00a292d4e43e777d9521fba995b87b08c92f14e84",
+      "size": 344,
+      "url": "files/ae/ae0158460f680898c439b9d00a292d4e43e777d9521fba995b87b08c92f14e84"
+    },
+    {
+      "path": "world/datapacks/tenpack-navigation-policy/data/minecraft/recipe/recovery_compass.json",
+      "sha256": "bbf296a9947c7089ee4061de009f13e669595ae1b0df919b8ee55d7ec44fb8b0",
+      "size": 339,
+      "url": "files/bb/bbf296a9947c7089ee4061de009f13e669595ae1b0df919b8ee55d7ec44fb8b0"
+    },
+    {
+      "path": "world/datapacks/tenpack-navigation-policy/pack.mcmeta",
+      "sha256": "cb1ecf3283d496f730a6601b6fed37f2ec2b2c88d91cea774fbeee2c0c9bf89c",
+      "size": 133,
+      "url": "files/cb/cb1ecf3283d496f730a6601b6fed37f2ec2b2c88d91cea774fbeee2c0c9bf89c"
     },
     {
       "path": "world/datapacks/tenpack-stronghold-startup/README.md",

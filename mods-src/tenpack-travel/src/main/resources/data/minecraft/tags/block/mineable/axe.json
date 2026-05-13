@@ -2,6 +2,10 @@
   "replace": false,
   "values": [
     "tenpack_travel:hitching_post",
-    "tenpack_travel:feed_trough"
+    "tenpack_travel:feed_trough",
+    "tenpack_travel:trail_marker",
+    "tenpack_travel:mooring_post",
+    "tenpack_travel:channel_marker",
+    "tenpack_travel:chart_table"
   ]
 }

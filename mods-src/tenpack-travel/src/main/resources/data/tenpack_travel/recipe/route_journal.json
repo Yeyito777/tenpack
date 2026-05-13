@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " P ",
+    "LBI",
+    " P "
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "B": {
+      "item": "minecraft:writable_book"
+    },
+    "I": {
+      "item": "minecraft:ink_sac"
+    }
+  },
+  "result": {
+    "id": "minecraft:writable_book",
+    "count": 1,
+    "components": {
+      "minecraft:custom_model_data": 1778601,
+      "minecraft:custom_name": "{\"translate\":\"item.tenpack_travel.route_journal\",\"italic\":false}",
+      "minecraft:lore": [
+        "{\"translate\":\"item.tenpack_travel.route_journal.tooltip.write\",\"color\":\"gray\",\"italic\":false}",
+        "{\"translate\":\"item.tenpack_travel.route_journal.tooltip.no_gps\",\"color\":\"dark_gray\",\"italic\":false}"
+      ]
+    }
+  }
+}

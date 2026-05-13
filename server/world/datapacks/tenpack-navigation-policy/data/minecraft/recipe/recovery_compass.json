@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "tenpack_disabled_no_gps",
+  "pattern": [
+    "EEE",
+    "EBE",
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:echo_shard"
+    },
+    "B": {
+      "item": "minecraft:barrier"
+    }
+  },
+  "result": {
+    "id": "minecraft:recovery_compass"
+  }
+}

@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:item/generated",
+  "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "minecraft:item/brush"
+    "layer0": "tenpack_travel:item/grooming_brush"
   }
 }

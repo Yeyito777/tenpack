@@ -184,7 +184,7 @@ Era/pressure role:
 Playability/accessibility:
 
 - Weapon Master is mostly presentation/readability for gear on players.
-- Carry On should be explicitly watched in multiplayer tests around containers, claims/locks, Create contraptions, and corpses.
+- Carry On should be explicitly watched in multiplayer tests around claims/locks, Create contraptions, corpses, and the container blacklist. Tenpack's `tenpack-carryon-policy` datapack now blocks the core vanilla storage/container blocks plus installed modded storage surfaces from Farmer's Delight, Supplementaries, and Create item vaults so the mod stays physical carrying instead of backpack cargo.
 
 Watch list:
 

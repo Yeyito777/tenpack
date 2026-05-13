@@ -60,13 +60,11 @@ public final class AnimalRoleActions {
             return 0;
         }
 
-        for (LivingEntity danger : visibleDangers) {
-            pingDanger(player, scout, danger);
-        }
+        pingDanger(player, scout);
         AnimalBond.roleUse(player, scout, "scout", SCOUT_ROLE_XP, SCOUT_ROLE_XP_COOLDOWN_TICKS);
-        player.displayClientMessage(Component.literal(visibleDangers.size() == 1
-                ? "Your scout cries a warning."
-                : "Your scout cries warnings."), true);
+        player.displayClientMessage(Component.translatable(visibleDangers.size() == 1
+                ? "message.tenpack_travel.scout.warning_one"
+                : "message.tenpack_travel.scout.warning_many"), true);
         return visibleDangers.size();
     }
 
@@ -81,14 +79,11 @@ public final class AnimalRoleActions {
         return 28.0D;
     }
 
-    private static void pingDanger(ServerPlayer player, Mob scout, LivingEntity danger) {
+    private static void pingDanger(ServerPlayer player, Mob scout) {
         ServerLevel level = player.serverLevel();
         player.playNotifySound(SoundEvents.NOTE_BLOCK_BELL.value(), SoundSource.NEUTRAL, 0.8F, 1.8F);
         level.sendParticles(player, ParticleTypes.NOTE, false,
                 scout.getX(), scout.getY() + scout.getBbHeight() + 0.15D, scout.getZ(),
                 3, 0.25D, 0.12D, 0.25D, 0.03D);
-        level.sendParticles(player, ParticleTypes.GLOW, false,
-                danger.getX(), danger.getY() + danger.getBbHeight() + 0.1D, danger.getZ(),
-                6, 0.35D, 0.25D, 0.35D, 0.02D);
     }
 }

@@ -35,6 +35,16 @@ Status: implemented/pushed. For the current player-facing design, see `notes/dea
   - Player death plays the custom `tenpackdeath:return_by_death` sound.
   - Simple Voice Chat speaking/name-tag icons are cancelled for Corpse entities, matching both corpse entity UUID and corpse owner UUID, so corpses do not look like talking players.
 
+## Navigation / no-GPS policy
+
+Death should create recovery stakes without becoming a waypoint system.
+
+- Corpse/TenpackDeath should keep recovery physical: the corpse exists in the world, can skeletonize, decay, and become public, but the pack should not hand out exact coordinates, teleport/recall, or a death-waypoint arrow.
+- Vanilla recovery-compass crafting is disabled by the `tenpack-navigation-policy` datapack. It overrides `minecraft:recovery_compass` to require a creative-only barrier ingredient, so death recovery remains map/sign/memory/route-work instead of a compass pointer.
+- Supplementaries death-map markers are disabled (`death_marker = "OFF"`) on both client and server so dying does not write an automatic recovery marker to maps.
+- Supplementaries pet-teleport flutes are disabled; Tenpack's travel whistle is the intended animal command tool and uses local pathing rather than teleporting pets back.
+- LSO F3 position/direction hiding is enabled as the current first pass at coordinate discipline. This still needs real client verification.
+
 ## Heart ore / crystal economy
 
 Added server datapack: `server/world/datapacks/tenpack-lifesteal-balance/`.
@@ -73,5 +83,8 @@ TenpackDeath suppresses vanilla's partial player-death XP drop, records the dead
 - Once the corpse is a skeleton, attacking or shift-right-clicking the corpse drops all remaining items and all stored XP.
 - Death plays the Return-by-Death-inspired sound cue.
 - Die in lava: corpse survives and items are recoverable.
+- Die with a map in inventory: no automatic map death marker appears.
+- Check recipe book/JEI: recovery compass should not be craftable in survival.
+- Check F3 after respawn: position/direction debug info should be hidden by LSO.
 - Check XP dropped/stored behavior and decide whether this fits the enchanting system.
 - Check what Lifesteal does at zero hearts: currently spectator, revive head enabled, ban disabled.

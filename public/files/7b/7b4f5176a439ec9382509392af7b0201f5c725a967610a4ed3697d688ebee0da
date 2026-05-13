@@ -1,0 +1,46 @@
+# Tenpack travel policy: AstikorCarts Redux is physical land logistics, not a universal mount/storage bypass.
+# Use explicit pull lists so empty upstream defaults do not silently allow every saddleable non-item-steered animal.
+
+[carts]
+
+  [carts.supply_cart]
+  # Transport/freight draft animals. Camel is included for playtest because it is a road/passenger mount in Tenpack.
+  pull_animals = ["minecraft:horse", "minecraft:donkey", "minecraft:mule", "minecraft:camel"]
+  slow_speed = -0.65
+  pull_speed = 0.0
+  destroy_damage = 4
+
+  [carts.animal_cart]
+  # Passenger/animal hauling should stay in the main mount family during WIP testing.
+  pull_animals = ["minecraft:horse", "minecraft:donkey", "minecraft:mule", "minecraft:camel"]
+  slow_speed = -0.65
+  pull_speed = 0.0
+  destroy_damage = 4
+
+  [carts.plow]
+  # Farm work can use horses/mules/donkeys plus cows as the first oxen-style labor candidate.
+  pull_animals = ["minecraft:horse", "minecraft:donkey", "minecraft:mule", "minecraft:cow"]
+  slow_speed = -0.65
+  pull_speed = 0.0
+  destroy_damage = 4
+
+  [carts.hand_cart]
+  # Keep hand carts player-pulled. Do not let this become a cheap universal animal cart.
+  pull_animals = ["minecraft:player"]
+  slow_speed = -0.65
+  pull_speed = 0.0
+  destroy_damage = 4
+
+  [carts.reaper]
+  # Same farm-labor policy as plow.
+  pull_animals = ["minecraft:horse", "minecraft:donkey", "minecraft:mule", "minecraft:cow"]
+  slow_speed = -0.65
+  pull_speed = 0.0
+  destroy_damage = 4
+
+  [carts.seed_drill]
+  # Same farm-labor policy as plow.
+  pull_animals = ["minecraft:horse", "minecraft:donkey", "minecraft:mule", "minecraft:cow"]
+  slow_speed = -0.65
+  pull_speed = 0.0
+  destroy_damage = 4

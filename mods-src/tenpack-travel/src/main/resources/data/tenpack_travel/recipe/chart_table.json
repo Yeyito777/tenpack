@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "PMP",
+    " C ",
+    " B "
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "M": {
+      "item": "minecraft:map"
+    },
+    "C": {
+      "item": "minecraft:cartography_table"
+    },
+    "B": {
+      "item": "minecraft:barrel"
+    }
+  },
+  "result": {
+    "id": "tenpack_travel:chart_table",
+    "count": 1
+  }
+}

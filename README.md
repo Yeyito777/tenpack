@@ -18,6 +18,31 @@ Build publishable sync manifests directly from `client/` and `server/` with:
 ./tools/tenpack-build-public.py --out public
 ```
 
+Food-system changes can be checked end-to-end with:
+
+```bash
+./tools/food-system-validation-harness.py
+```
+
+That harness verifies the AppleSkin/CraftTweaker/Supplementaries/LSO/Farmer's
+Delight/Create food loop: visibility, no-thirst/no-idle-tax pressure, soft
+variety bonuses without Nutrition-style categories, lunch basket config, pinned
+food values, heated mixer meal recipes, food advancements, and sync-manifest
+delivery against the current source files.
+
+The initial FTB Quests book is generated, not hand-edited in place:
+
+```bash
+./tools/generate-ftb-questbook.py
+./tools/check-ftb-questbook.py
+```
+
+It writes matching quest data under `client/config/ftbquests/quests/` and
+`server/config/ftbquests/quests/`, using Tenpack advancements for concrete
+milestones and checkmark quests for guidance/social build prompts. The check
+verifies regenerated output, client/server parity, FTB dependency jars, icon
+item models, and advancement-task targets.
+
 `public/` is tracked in git because kitsune deploys directly from GitHub. Clients can sync before launch with `tools/tenpack-sync.py` and the hosted `client-manifest.json`. The build script validates that every `server/mods/*.jar` exists identically in `client/mods/` before publishing.
 
 Canonical update flow:

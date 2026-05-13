@@ -99,7 +99,7 @@ Installed:
 Accessibility intent:
 
 - cannons should read as heavy industry, not early grief toys.
-- important cannon-production blocks are precision-gated.
+- important cannon-production blocks are precision- and diesel-gated: the recipes require `create:precision_mechanism` plus `createdieselgenerators:diesel_engine`, so the Heavy Industry advancement's diesel parent reflects real infrastructure.
 
 Pressure intent:
 
@@ -108,7 +108,7 @@ Pressure intent:
 
 Guardrail:
 
-- `tools/check-create-progression.py` checks cannon builder/drill/mount/welder precision references.
+- `tools/check-create-progression.py` checks cannon builder/drill/mount/welder precision and diesel-engine references.
 
 ### Rails and train identity
 

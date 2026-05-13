@@ -1,0 +1,56 @@
+{
+  id: "1A1BFBD925CCEE85"
+  group: ""
+  order_index: 3
+  filename: "03_rails_territory"
+  icon: {id: "create:track_station", count: 1}
+  default_quest_shape: ""
+  default_hide_dependency_lines: false
+  quests: [
+  {
+    id: "3CD8D03ED3A1A410"
+    x: 0.0d
+    y: 0.0d
+    icon: {id: "create:track_station", count: 1}
+    dependencies: ["4AA55750D1CB7A9E"]
+    tasks: [
+    {
+      id: "0FC659A68F5CD3A7"
+      type: "advancement"
+      advancement: "tenpack_create:create_progression/rail_logistics"
+      criterion: ""
+    }
+    ]
+  },
+  {
+    id: "2122AF4336221099"
+    x: 2.0d
+    y: 0.0d
+    icon: {id: "railways:conductor_whistle", count: 1}
+    disable_toast: true
+    dependencies: ["3CD8D03ED3A1A410"]
+    tasks: [
+    {
+      id: "0EABB2918F98D3A8"
+      type: "checkmark"
+    }
+    ]
+  },
+  {
+    id: "73B9F58ECAA6F789"
+    x: 4.0d
+    y: 0.0d
+    icon: {id: "supplementaries:way_sign_oak", count: 1}
+    disable_toast: true
+    dependencies: ["2122AF4336221099"]
+    tasks: [
+    {
+      id: "0BDCE193BC6093C7"
+      type: "checkmark"
+    }
+    ]
+  }
+  ]
+  quest_links: []
+  images: []
+}

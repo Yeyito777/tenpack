@@ -1,0 +1,134 @@
+{
+  "criteria": {
+    "portable_storage": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:portable_storage_interface"
+          }
+        ]
+      }
+    },
+    "stock_link": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:stock_link"
+          }
+        ]
+      }
+    },
+    "depot_storage": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "farmersdelight:bamboo_basket"
+          }
+        ]
+      }
+    },
+    "field_rations": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supplementaries:lunch_basket"
+          }
+        ]
+      }
+    },
+    "beef_stew": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "farmersdelight:beef_stew"
+          }
+        ]
+      }
+    },
+    "chicken_soup": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "farmersdelight:chicken_soup"
+          }
+        ]
+      }
+    },
+    "vegetable_soup": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "farmersdelight:vegetable_soup"
+          }
+        ]
+      }
+    },
+    "steak_and_potatoes": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "farmersdelight:steak_and_potatoes"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "After smart logistics, food stops being pocket clutter: stock a kitchen depot, pack field rations, and keep a core stocked meal ready for mines, oilfields, forts, stations, and airfields."
+    },
+    "icon": {
+      "count": 1,
+      "id": "supplementaries:lunch_basket"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Food Logistics"
+    }
+  },
+  "requirements": [
+    [
+      "portable_storage"
+    ],
+    [
+      "stock_link"
+    ],
+    [
+      "depot_storage"
+    ],
+    [
+      "field_rations"
+    ],
+    [
+      "beef_stew",
+      "chicken_soup",
+      "vegetable_soup",
+      "steak_and_potatoes"
+    ]
+  ],
+  "sends_telemetry_event": false,
+  "parent": "tenpack_create:create_progression/smart_logistics",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "supplementaries"
+    }
+  ]
+}

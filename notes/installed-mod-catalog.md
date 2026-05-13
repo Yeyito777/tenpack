@@ -1,16 +1,16 @@
 # Installed mod catalog and Create-era categorization
 
-Date: 2026-05-09
+Date: 2026-05-13
 
 Purpose: every active mod jar is assigned a role in the Tenpack Create-era/factions design. This is the maintainer-facing inventory for “what does this mod do for the pack, and what pressure/readability risk does it carry?”
 
 Guardrail: `./tools/check-mod-catalog.py` fails if a jar is added, removed, renamed, or made client-only without updating the catalog.
 
-Current clean-pack counts:
+Current working-pack counts:
 
-- client jars: 90
-- server jars: 71
-- total active jar filenames: 90
+- client jars: 100
+- server jars: 79
+- total active jar filenames: 100
 
 ## Category counts
 
@@ -18,12 +18,13 @@ Current clean-pack counts:
 - Create mobility / oil / heavy industry: 6
 - Create rails and logistics: 3
 - Create architecture and faction identity: 6
-- Food, farm, and culture: 6
+- Food, farm, and culture: 8
 - World, weather, routes, ecology: 18
 - Faction death, ownership, combat, social: 9
-- Client readability and vibes: 16
-- Learning and server tooling: 3
-- Libraries / loader dependencies: 20
+- Client readability and vibes: 17
+- Learning and server tooling: 4
+- Libraries / loader dependencies: 23
+- Optional uncommitted travel WIP: 3
 
 ## Catalog
 
@@ -75,6 +76,8 @@ Current clean-pack counts:
 | `create_bic_bit-1.0.2C.jar` | both | Bitterballen novelty/culture food addon |
 | `create_winery-2.0.2-neoforge-1.21.1.jar` | both | winery/tavern/faction culture flavor |
 | `sliceanddice-forge-4.2.4.jar` | both | Create-powered farm/kitchen automation |
+| `CraftTweaker-neoforge-1.21.1-21.0.38.jar` | both | server-authoritative food-value tuning: weak staples, stronger prepared meals, no custom mod |
+| `supplementaries-neoforge-1.21.1-3.6.4.jar` | both | portable lunch basket and physical food/logistics props; basket capped at six slots by config |
 
 ### World, weather, routes, ecology
 
@@ -118,6 +121,7 @@ Current clean-pack counts:
 | Jar | Side | Role |
 | --- | --- | --- |
 | `AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar` | client-only | ambient soundscape |
+| `appleskin-neoforge-mc1.21-3.0.9.jar` | client-only | hunger/saturation/exhaustion HUD and food tooltip visibility |
 | `CameraOverhaul-v2.0.6-fabric+mc[1.21.0-1.21.2].jar` | client-only | camera motion; watch nausea/accessibility |
 | `LegendaryTooltips-1.21.1-neoforge-1.5.5.jar` | client-only | item tooltip presentation |
 | `PresenceFootsteps-1.21.1-1.12.0-beta.1-1.21NeoForge.jar` | client-only | footstep ambience / spatial feedback |
@@ -132,24 +136,26 @@ Current clean-pack counts:
 | `sodium-neoforge-0.6.13+mc1.21.1.jar` | client-only | client renderer/performance |
 | `sound-physics-remastered-neoforge-1.21.1-1.5.1.jar` | both | sound occlusion/reflection; ambience and spatial awareness |
 | `sounds-2.4.22+lts+1.21.1-neoforge.jar` | client-only | soundscape additions |
-| `voxy-0.2.14-alpha-mc_1211-f308c254.jar` | client-only | client distant terrain/LoD |
+| `voxy-0.2.14-alpha-d85ce91c2f24603e75c9da4d15babaf3844922d0.jar` | both | distant terrain/LoD client plus server-side benchmark/runtime support |
 
 ### Learning and server tooling
 
 | Jar | Side | Role |
 | --- | --- | --- |
 | `Chunky-NeoForge-1.4.23.jar` | both | chunk pregeneration/tooling |
-| `jei-1.21.1-neoforge-19.27.0.340-tenpack-mcrangefix.jar` | both | recipe/accessibility browser; Tenpack metadata patched |
+| `ftb-quests-neoforge-2101.1.24.jar` | both | FTB questbook for Tenpack Create-era guidance; mirrors advancements but keeps design intent visible |
+| `jei-1.21.1-neoforge-19.27.0.340-tenpack-mcrangefix.jar` | client | client recipe/accessibility browser; Tenpack metadata patched; kept out of the dedicated server because its JEI registration path can trip Create/Aeronautics on boot |
 | `spark-1.10.124-neoforge.jar` | both | server/client profiling for performance audits |
 
 ### Libraries / loader dependencies
 
 | Jar | Side | Role |
 | --- | --- | --- |
-| `CreativeCore_NEOFORGE_v2.13.38_mc1.21.1.jar` | client-only | library required by AmbientSounds |
+| `CreativeCore_NEOFORGE_v2.13.38_mc1.21.1.jar` | client-only | client library required by AmbientSounds |
 | `GlitchCore-neoforge-1.21.1-2.1.0.0.jar` | both | library required by Serene Seasons |
 | `Iceberg-1.21.1-neoforge-1.3.2.jar` | client-only | library required by Legendary Tooltips |
 | `Kiwi-1.21.1-NeoForge-15.8.3.jar` | both | library dependency |
+| `moonlight-neoforge-1.21.1-3.0.7.jar` | both | library required by Supplementaries |
 | `PuzzlesLib-v21.1.39-1.21.1-NeoForge.jar` | both | library dependency |
 | `TerraBlender-neoforge-1.21.1-4.1.0.8.jar` | both | biome/worldgen library dependency |
 | `YungsApi-1.21.1-NeoForge-5.1.6.jar` | both | library required by YUNG's Cave Biomes |
@@ -159,6 +165,8 @@ Current clean-pack counts:
 | `connector-2.0.0-beta.14+1.21.1-full.jar` | both | Sinytra Connector for Fabric mods on NeoForge |
 | `curios-neoforge-9.5.1+1.21.1.jar` | both | required by Locksmith and accessory integrations |
 | `forgified-fabric-api-0.116.7+2.2.4+1.21.1.jar` | both | Fabric API compatibility for Connector |
+| `ftb-library-neoforge-2101.1.31.jar` | both | required library for FTB Quests and FTB Teams |
+| `ftb-teams-neoforge-2101.1.10.jar` | both | required team/progress data layer for FTB Quests |
 | `gaboulibs-neoforge-1.4.jar` | both | library required by Serene Seasons Plus |
 | `geckolib-neoforge-1.21.1-4.8.4.jar` | both | animation/library dependency |
 | `kotlinforforge-5.11.0-all.jar` | both | library required by Slice & Dice |
@@ -166,6 +174,14 @@ Current clean-pack counts:
 | `supermartijn642configlib-1.1.8-neoforge-mc1.21.jar` | both | config library for Rechiseled stack |
 | `supermartijn642corelib-1.1.21-neoforge-mc1.21.jar` | both | library for Rechiseled stack |
 | `yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar` | both | config UI library used by Windy/Sounds |
+
+### Optional uncommitted travel WIP
+
+| Jar | Side | Role |
+| --- | --- | --- |
+| `astikorcartsredux-1.2.2.jar` | both | AstikorCarts Redux land caravan layer; physical carts/wagons/draft travel candidate for Tenpack Travel, no teleport or progression gate |
+| `leashall-neoforge-1.21.1-1.3.1-1.21.1.jar` | both | local Tenpack Travel WIP dependency; group animal leading for caravan handling |
+| `tenpack_travel-0.1.0.jar` | both | local Tenpack Travel WIP; physical animal-travel tooling, not deployed yet |
 
 ## Audit interpretation
 
@@ -180,6 +196,7 @@ Most important accessibility risks to test in-game:
 5. Faction harshness: Lifesteal + Corpse + Tenpack Death must create stakes without discouraging scouting and oilfield expeditions.
 6. Carry On abuse: watch containers, locks, corpses, and Create contraptions.
 7. Dragons Plus: keep an eye on its bulk ending/freezing/coloring utility because it is more than a simple library.
+8. Hunger pressure: AppleSkin + CraftTweaker food-value pressure + Supplementaries lunch basket + LSO sprint/combat pressure should make prepared-meal logistics matter without Nutrition/thirst/custom hunger code.
 
 ## Explicitly not present
 
@@ -193,3 +210,5 @@ The catalog confirms the current active pack still avoids the major hard-no/defe
 - no Create Jetpack / Stuff & Additions personal flight/tool bypass
 - no casual infinite-resource Create addons like sifting/extruders/spawners
 - no storage-network Create integrations
+- no Nutrition nutrient-category system
+- no hard Spice-of-Life/Nutrition-style diet-rotation categories or six-food chores; portable food storage is handled by Supplementaries lunch basket, and food pressure is handled by explicit value tuning plus a soft active-drain variety bonus

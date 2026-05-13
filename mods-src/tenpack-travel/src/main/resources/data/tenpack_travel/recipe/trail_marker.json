@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " D ",
+    "SFS",
+    " F "
+  ],
+  "key": {
+    "D": {
+      "tag": "c:dyes/red"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "F": {
+      "item": "minecraft:oak_fence"
+    }
+  },
+  "result": {
+    "id": "tenpack_travel:trail_marker",
+    "count": 4
+  }
+}

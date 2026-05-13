@@ -1,0 +1,133 @@
+{
+  id: "7F2AC2A2AD89AAB8"
+  group: ""
+  order_index: 1
+  filename: "01_create_eras"
+  icon: {id: "create:cogwheel", count: 1}
+  default_quest_shape: ""
+  default_hide_dependency_lines: false
+  quests: [
+  {
+    id: "01BB286BAB3870AB"
+    x: 0.0d
+    y: 0.0d
+    icon: {id: "create:cogwheel", count: 1}
+    dependencies: ["36EFF28FC94F4A22"]
+    tasks: [
+    {
+      id: "49FBC22FF789A08B"
+      type: "advancement"
+      advancement: "tenpack_create:create_progression/root"
+      criterion: ""
+    }
+    ]
+  },
+  {
+    id: "390FA9EA48F0C9A5"
+    x: 2.0d
+    y: 0.0d
+    icon: {id: "create:belt_connector", count: 1}
+    dependencies: ["01BB286BAB3870AB"]
+    tasks: [
+    {
+      id: "17458A558382ED58"
+      type: "advancement"
+      advancement: "tenpack_create:create_progression/starter_logistics"
+      criterion: ""
+    }
+    ]
+  },
+  {
+    id: "7BECFB4B164B361A"
+    x: 4.0d
+    y: 0.0d
+    icon: {id: "create:andesite_casing", count: 1}
+    dependencies: ["390FA9EA48F0C9A5"]
+    tasks: [
+    {
+      id: "2EE59C43435C9C27"
+      type: "advancement"
+      advancement: "tenpack_create:create_progression/kinetic_workshop"
+      criterion: ""
+    }
+    ]
+  },
+  {
+    id: "31727AF24E4D8330"
+    x: 6.0d
+    y: 0.0d
+    icon: {id: "create:fluid_pipe", count: 1}
+    dependencies: ["7BECFB4B164B361A"]
+    tasks: [
+    {
+      id: "386F72155AB5F053"
+      type: "advancement"
+      advancement: "tenpack_create:create_progression/fluid_handling"
+      criterion: ""
+    }
+    ]
+  },
+  {
+    id: "7A92D9D81AC244C6"
+    x: 8.0d
+    y: 0.0d
+    icon: {id: "create:brass_casing", count: 1}
+    dependencies: ["31727AF24E4D8330"]
+    tasks: [
+    {
+      id: "5F53A346B4CCFE4C"
+      type: "advancement"
+      advancement: "tenpack_create:create_progression/brass_electronics"
+      criterion: ""
+    }
+    ]
+  },
+  {
+    id: "4AA55750D1CB7A9E"
+    x: 10.0d
+    y: 0.0d
+    icon: {id: "create:precision_mechanism", count: 1}
+    dependencies: ["7A92D9D81AC244C6"]
+    tasks: [
+    {
+      id: "6F0DF2E75592F462"
+      type: "advancement"
+      advancement: "tenpack_create:create_progression/precision_engineering"
+      criterion: ""
+    }
+    ]
+  },
+  {
+    id: "1B519BB604E2186D"
+    x: 12.0d
+    y: -1.0d
+    icon: {id: "create:stock_link", count: 1}
+    dependencies: ["4AA55750D1CB7A9E"]
+    tasks: [
+    {
+      id: "03D3F7D17A456E06"
+      type: "advancement"
+      advancement: "tenpack_create:create_progression/smart_logistics"
+      criterion: ""
+    }
+    ]
+  },
+  {
+    id: "05994C53CF4A0738"
+    x: 12.0d
+    y: 1.0d
+    icon: {id: "simulated:physics_assembler", count: 1}
+    dependencies: ["4AA55750D1CB7A9E"]
+    tasks: [
+    {
+      id: "4F472CEE71431BD1"
+      type: "advancement"
+      advancement: "tenpack_create:create_progression/physics_age"
+      criterion: ""
+    }
+    ]
+  }
+  ]
+  quest_links: []
+  images: []
+}

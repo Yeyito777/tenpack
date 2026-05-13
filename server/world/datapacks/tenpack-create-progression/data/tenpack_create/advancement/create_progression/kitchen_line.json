@@ -1,0 +1,119 @@
+{
+  "criteria": {
+    "cooking_pot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "farmersdelight:cooking_pot"
+          }
+        ]
+      }
+    },
+    "mechanical_mixer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:mechanical_mixer"
+          }
+        ]
+      }
+    },
+    "basin": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:basin"
+          }
+        ]
+      }
+    },
+    "blaze_burner": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:blaze_burner"
+          }
+        ]
+      }
+    },
+    "beef_stew": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "farmersdelight:beef_stew"
+          }
+        ]
+      }
+    },
+    "stuffed_potato": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "farmersdelight:stuffed_potato"
+          }
+        ]
+      }
+    },
+    "pasta": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "farmersdelight:pasta_with_meatballs"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Farmer's Delight gives farms a reason to become kitchens. Good meals should be worth making and shipping."
+    },
+    "icon": {
+      "count": 1,
+      "id": "farmersdelight:cooking_pot"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Kitchen Line"
+    }
+  },
+  "requirements": [
+    [
+      "cooking_pot"
+    ],
+    [
+      "mechanical_mixer"
+    ],
+    [
+      "basin"
+    ],
+    [
+      "blaze_burner"
+    ],
+    [
+      "beef_stew",
+      "stuffed_potato",
+      "pasta"
+    ]
+  ],
+  "sends_telemetry_event": false,
+  "parent": "tenpack_create:create_progression/farm_power",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

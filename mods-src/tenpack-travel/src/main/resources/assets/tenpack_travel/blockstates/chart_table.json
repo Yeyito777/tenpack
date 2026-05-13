@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "tenpack_travel:block/chart_table"
+    }
+  }
+}

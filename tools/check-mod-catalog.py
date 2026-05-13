@@ -66,6 +66,8 @@ CATALOG: dict[str, dict[str, str]] = {
     "create-confectionery1.21.1_v1.1.2.jar": {"category": "create_food_farm_culture", "side": "both", "role": "confectionery/tavern/trade-goods flavor"},
     "create_winery-2.0.2-neoforge-1.21.1.jar": {"category": "create_food_farm_culture", "side": "both", "role": "winery/tavern/faction culture flavor"},
     "create_bic_bit-1.0.2C.jar": {"category": "create_food_farm_culture", "side": "both", "role": "Bitterballen novelty/culture food addon"},
+    "supplementaries-neoforge-1.21.1-3.6.4.jar": {"category": "create_food_farm_culture", "side": "both", "role": "portable lunch basket for field rations plus physical food/logistics props; basket capped at 6 slots by config"},
+    "CraftTweaker-neoforge-1.21.1-21.0.38.jar": {"category": "create_food_farm_culture", "side": "both", "role": "server-authoritative food value tuning: weak staples, stronger prepared meals, no custom mod"},
     "kotlinforforge-5.11.0-all.jar": {"category": "library_loader_dependency", "side": "both", "role": "library required by Slice & Dice"},
 
     # World/weather/routes/ecology.
@@ -103,7 +105,7 @@ CATALOG: dict[str, dict[str, str]] = {
     # Client readability/vibes.
     "sodium-neoforge-0.6.13+mc1.21.1.jar": {"category": "client_readability_vibes", "side": "client", "role": "client renderer/performance"},
     "iris-neoforge-1.8.12+mc1.21.1.jar": {"category": "client_readability_vibes", "side": "client", "role": "shader support"},
-    "voxy-0.2.14-alpha-mc_1211-f308c254.jar": {"category": "client_readability_vibes", "side": "client", "role": "client distant terrain/LoD"},
+    "voxy-0.2.14-alpha-d85ce91c2f24603e75c9da4d15babaf3844922d0.jar": {"category": "client_readability_vibes", "side": "both", "role": "distant terrain/LoD client plus server-side benchmark/runtime support"},
     "autohud-8.11+1.21.1-neoforge.jar": {"category": "client_readability_vibes", "side": "client", "role": "HUD readability"},
     "CameraOverhaul-v2.0.6-fabric+mc[1.21.0-1.21.2].jar": {"category": "client_readability_vibes", "side": "client", "role": "camera motion; watch nausea/accessibility"},
     "lambdynamiclights-3.1.4-neo-0+1.21.1.jar": {"category": "client_readability_vibes", "side": "client", "role": "dynamic lights for darkness readability"},
@@ -115,14 +117,16 @@ CATALOG: dict[str, dict[str, str]] = {
     "sound-physics-remastered-neoforge-1.21.1-1.5.1.jar": {"category": "client_readability_vibes", "side": "both", "role": "sound occlusion/reflection; ambience and spatial awareness"},
     "PresenceFootsteps-1.21.1-1.12.0-beta.1-1.21NeoForge.jar": {"category": "client_readability_vibes", "side": "client", "role": "footstep ambience / spatial feedback"},
     "more_darkness-neoforge-1.21.1-1.0.0.jar": {"category": "client_readability_vibes", "side": "client", "role": "darkness pressure/readability risk"},
+    "appleskin-neoforge-mc1.21-3.0.9.jar": {"category": "client_readability_vibes", "side": "client", "role": "hunger/saturation/exhaustion HUD and food tooltip visibility"},
     "LegendaryTooltips-1.21.1-neoforge-1.5.5.jar": {"category": "client_readability_vibes", "side": "client", "role": "item tooltip presentation"},
     "Prism-1.21.1-neoforge-1.0.11.jar": {"category": "client_readability_vibes", "side": "client", "role": "tooltip/rendering library for Legendary Tooltips"},
-    "CreativeCore_NEOFORGE_v2.13.38_mc1.21.1.jar": {"category": "library_loader_dependency", "side": "client", "role": "library required by AmbientSounds"},
+    "CreativeCore_NEOFORGE_v2.13.38_mc1.21.1.jar": {"category": "library_loader_dependency", "side": "client", "role": "client library required by AmbientSounds"},
     "Iceberg-1.21.1-neoforge-1.3.2.jar": {"category": "library_loader_dependency", "side": "client", "role": "library required by Legendary Tooltips"},
     "mru-1.0.19+LTS+1.21.1+neoforge.jar": {"category": "library_loader_dependency", "side": "client", "role": "client library dependency"},
 
     # Learning/tooling.
-    "jei-1.21.1-neoforge-19.27.0.340-tenpack-mcrangefix.jar": {"category": "learning_tooling", "side": "both", "role": "recipe/accessibility browser; Tenpack metadata patched"},
+    "jei-1.21.1-neoforge-19.27.0.340-tenpack-mcrangefix.jar": {"category": "learning_tooling", "side": "client", "role": "client recipe/accessibility browser; Tenpack metadata patched; server-side JEI trips Create/Aeronautics JEI registration"},
+    "ftb-quests-neoforge-2101.1.24.jar": {"category": "learning_tooling", "side": "both", "role": "FTB questbook for Tenpack Create-era guidance; mirrors advancements but keeps design intent visible"},
     "spark-1.10.124-neoforge.jar": {"category": "learning_tooling", "side": "both", "role": "server/client profiling for performance audits"},
     "Chunky-NeoForge-1.4.23.jar": {"category": "learning_tooling", "side": "both", "role": "chunk pregeneration/tooling"},
 
@@ -131,6 +135,9 @@ CATALOG: dict[str, dict[str, str]] = {
     "forgified-fabric-api-0.116.7+2.2.4+1.21.1.jar": {"category": "library_loader_dependency", "side": "both", "role": "Fabric API compatibility for Connector"},
     "cloth-config-15.0.140-fabric.jar": {"category": "library_loader_dependency", "side": "both", "role": "Fabric config library used through Connector"},
     "architectury-13.0.8-neoforge.jar": {"category": "library_loader_dependency", "side": "both", "role": "cross-platform library dependency"},
+    "ftb-library-neoforge-2101.1.31.jar": {"category": "library_loader_dependency", "side": "both", "role": "required library for FTB Quests and FTB Teams"},
+    "ftb-teams-neoforge-2101.1.10.jar": {"category": "library_loader_dependency", "side": "both", "role": "required team/progress data layer for FTB Quests"},
+    "moonlight-neoforge-1.21.1-3.0.7.jar": {"category": "library_loader_dependency", "side": "both", "role": "library required by Supplementaries lunch basket"},
     "PuzzlesLib-v21.1.39-1.21.1-NeoForge.jar": {"category": "library_loader_dependency", "side": "both", "role": "library dependency"},
     "citadel-1.21.1-2.7.6.jar": {"category": "library_loader_dependency", "side": "both", "role": "library for Alex's Mobs"},
     "geckolib-neoforge-1.21.1-4.8.4.jar": {"category": "library_loader_dependency", "side": "both", "role": "animation/library dependency"},
@@ -142,6 +149,8 @@ CATALOG: dict[str, dict[str, str]] = {
     "yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar": {"category": "library_loader_dependency", "side": "both", "role": "config UI library used by Windy/Sounds"},
 
     # Known local WIP restored in the working tree sometimes; not part of pushed pack until committed.
+    "astikorcartsredux-1.2.2.jar": {"category": "optional_uncommitted_travel", "side": "optional-both", "role": "AstikorCarts Redux land caravan layer; physical carts/wagons/draft travel candidate for Tenpack Travel, no teleport or progression gate"},
+    "leashall-neoforge-1.21.1-1.3.1-1.21.1.jar": {"category": "optional_uncommitted_travel", "side": "optional-both", "role": "local Tenpack Travel WIP dependency; group animal leading for caravan handling"},
     "tenpack_travel-0.1.0.jar": {"category": "optional_uncommitted_travel", "side": "optional-both", "role": "local Tenpack Travel WIP; physical animal-travel tooling, not deployed yet"},
 }
 

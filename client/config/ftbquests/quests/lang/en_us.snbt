@@ -1,0 +1,144 @@
+{
+  "chapter.1A1BFBD925CCEE85.chapter_subtitle": [
+    "Trains are not just speed. They make territory, fuel, food, mines, and forts legible."
+  ]
+  "chapter.1A1BFBD925CCEE85.title": "Rails and Territory"
+  "chapter.356434FF1502FD79.chapter_subtitle": [
+    "Food should create useful infrastructure, not a Nutrition-style chore list or one official ration."
+  ]
+  "chapter.356434FF1502FD79.title": "Farms, Kitchens, and Supply"
+  "chapter.4BF316A2716E9C56.chapter_subtitle": [
+    "A map for the pack, not a replacement for JEI, Create Ponder, or player-built projects."
+  ]
+  "chapter.4BF316A2716E9C56.title": "Tenpack Primer"
+  "chapter.5051581F30B5626F.chapter_subtitle": [
+    "Heavy mobility and artillery belong to factions with fuel, routes, and industrial bases."
+  ]
+  "chapter.5051581F30B5626F.title": "Oil, Vehicles, Flight, and War"
+  "chapter.7F2AC2A2AD89AAB8.chapter_subtitle": [
+    "The CABIN-lite spine: simple kinetics stay approachable, precision and logistics become real milestones."
+  ]
+  "chapter.7F2AC2A2AD89AAB8.title": "Create Eras"
+  "quest.01BB286BAB3870AB.quest_desc": [
+    "Start here. The vanilla advancement tree mirrors this chapter, but FTB Quests lets the intent stay readable."
+  ]
+  "quest.01BB286BAB3870AB.title": "Create Progression"
+  "quest.05994C53CF4A0738.quest_desc": [
+    "For now this is a generic vehicle-platform milestone, not an early-game detour. It says: you have enough precision control to start building with moving physics systems."
+  ]
+  "quest.05994C53CF4A0738.title": "Physics Age"
+  "quest.07F9703107D96C45.quest_desc": [
+    "The first plane is a server moment. Use it to connect places, scout routes, and make airfields worth building."
+  ]
+  "quest.07F9703107D96C45.title": "First Plane"
+  "quest.0A049A069952FE64.quest_desc": [
+    "A cannon is power projection. Before using one casually, make the support visible: builder/drill, ammo flow, depot storage, and defended delivery routes."
+  ]
+  "quest.0A049A069952FE64.title": "Cannon Supply Line"
+  "quest.10519509954D08E4.quest_desc": [
+    "Lift alone is not mastery. Throttle, sensors, gyro control, and vehicle literacy are what make aircraft faction-scale technology."
+  ]
+  "quest.10519509954D08E4.title": "Controlled Flight"
+  "quest.1243310C951B6053.quest_desc": [
+    "Farmer's Delight makes food meaningful; Create makes it scalable. Belts, basins, fans, deployers, mixers, and Cooking Pots can become a real kitchen district."
+  ]
+  "quest.1243310C951B6053.title": "Kitchen Line"
+  "quest.16F11EAF6E5BDBD5.quest_desc": [
+    "Create harvesters turn fields into infrastructure. A farm is no longer only a starter chore; it becomes a visible supply district."
+  ]
+  "quest.16F11EAF6E5BDBD5.title": "Farm Power"
+  "quest.178625F49777F04E.quest_desc": [
+    "Tenpack should not tell players there is one blessed food. Automate the foods your base likes: soups, stews, rice, pasta, sandwiches, tavern foods, or plated meals."
+    "Central Kitchen, Slice & Dice, Farmer's Delight, belts, deployers, basins, and stock logistics are the toolset. Tenpack may add missing recipes, but not a narrow approved ration list."
+  ]
+  "quest.178625F49777F04E.title": "No Official Ration"
+  "quest.1B519BB604E2186D.quest_desc": [
+    "Packagers, stock links, requesters, and factory gauges coordinate whole bases. They are powerful because they are late enough to need a real factory behind them."
+  ]
+  "quest.1B519BB604E2186D.title": "Smart Logistics"
+  "quest.1FD1E132B9E7D1D3.quest_desc": [
+    "Rail and package logistics turn kitchens into route infrastructure. Send food to the places where work, combat, travel, and fuel extraction actually happen."
+  ]
+  "quest.1FD1E132B9E7D1D3.title": "Ration Routes"
+  "quest.2122AF4336221099.quest_desc": [
+    "A good first route solves a real problem: mine to foundry, oilfield to refinery, refinery to airfield, or food to a forward camp."
+  ]
+  "quest.2122AF4336221099.title": "First Freight Route"
+  "quest.22A17265351AABB6.quest_desc": [
+    "Tenpack changes a lot of Create recipes. If an ingredient looks unfamiliar, trust JEI for the exact recipe."
+    "Use Ponder for machine behavior; use this book for era order and design intent."
+  ]
+  "quest.22A17265351AABB6.title": "JEI Is the Recipe Source"
+  "quest.282B005C10463963.quest_desc": [
+    "A good kitchen line is not defined by a single item. Build what your faction eats and ships."
+    "If JEI shows a Central Kitchen/Slice & Dice route, use it. If Tenpack adds a missing recipe, treat it as another option, not the canonical answer."
+  ]
+  "quest.282B005C10463963.title": "Automate Food You Actually Want"
+  "quest.31727AF24E4D8330.quest_desc": [
+    "Copper plumbing is its own lesson. Spouts, item drains, and portable fluid interfaces mark the sealed/fluid era."
+  ]
+  "quest.31727AF24E4D8330.title": "Fluid Handling"
+  "quest.36EFF28FC94F4A22.quest_desc": [
+    "Tenpack intentionally avoids teleport/backpack/GPS shortcuts. Roads, rails, depots, baskets, carts, tanks, stations, and defended routes should matter."
+    "If a quest asks for a route, supply line, or field kitchen, it is pointing at a build players can see and contest."
+  ]
+  "quest.36EFF28FC94F4A22.title": "Physical Infrastructure Wins"
+  "quest.390FA9EA48F0C9A5.quest_desc": [
+    "Moving items between machines should be early and readable. Learn belts, funnels, chutes, depots, and simple loading before smart networks."
+  ]
+  "quest.390FA9EA48F0C9A5.title": "Starter Logistics"
+  "quest.3B437098E76AD7B0.quest_desc": [
+    "Once smart logistics exists, meals stop being pocket clutter. Stock a depot, pack field rations, and keep substantial prepared food ready for mines, oilfields, forts, stations, and airfields."
+  ]
+  "quest.3B437098E76AD7B0.title": "Food Logistics"
+  "quest.3CD8D03ED3A1A410.quest_desc": [
+    "Stations, signals, observers, and route literacy turn precision engineering into actual territory control."
+  ]
+  "quest.3CD8D03ED3A1A410.title": "Rail Logistics"
+  "quest.4272C0F2CACA813E.quest_desc": [
+    "Refineries and tank farms make fuel a logistics system instead of a one-bucket novelty."
+  ]
+  "quest.4272C0F2CACA813E.title": "Oil Refining"
+  "quest.450F467F6EF2E144.quest_desc": [
+    "Pumpjacks turn discovered oil into a place worth claiming, defending, and connecting to routes."
+  ]
+  "quest.450F467F6EF2E144.title": "Black Gold"
+  "quest.49AE4BA2663B2798.quest_desc": [
+    "Diesel engines are strong because they ask for supply lines. If a faction relies on diesel, fuel movement should matter."
+  ]
+  "quest.49AE4BA2663B2798.title": "Diesel Power"
+  "quest.4AA55750D1CB7A9E.quest_desc": [
+    "Precision mechanisms are the main tier marker for compact power, mechanical crafting, trains, and advanced control."
+  ]
+  "quest.4AA55750D1CB7A9E.title": "Precision Engineering"
+  "quest.5A096F8006E6DBAC.quest_desc": [
+    "Oil starts as geography. Scout dry terrain before you can fully exploit it, so deserts, badlands, and savannas become strategic land."
+  ]
+  "quest.5A096F8006E6DBAC.title": "Oil Prospecting"
+  "quest.5A80D8282E405590.quest_desc": [
+    "Cannon machinery now implies diesel-era industry. Artillery should have a foundry, ammo supply, fuel base, and logistics behind it."
+  ]
+  "quest.5A80D8282E405590.title": "Heavy Industry"
+  "quest.697EC8245F4F6BDB.quest_desc": [
+    "This questbook explains the shape of Tenpack: physical infrastructure, faction supply lines, and Create-era machines."
+    "Most quests are signposts. JEI still gives exact recipes; Create Ponder still teaches how machines work."
+  ]
+  "quest.697EC8245F4F6BDB.quest_subtitle": "Read me first"
+  "quest.697EC8245F4F6BDB.title": "Welcome to Tenpack"
+  "quest.6EFB4BB7460E1B97.quest_desc": [
+    "Ground vehicles sit behind the generic Physics Age for now: steering, tires, throttles, and engines should feel like a controlled platform, not day-zero magic."
+  ]
+  "quest.6EFB4BB7460E1B97.title": "Ground Vehicles"
+  "quest.73B9F58ECAA6F789.quest_desc": [
+    "Use stations, signs, depots, baskets, tanks, and visible storage so other players can understand what a place does and why it matters."
+  ]
+  "quest.73B9F58ECAA6F789.title": "Routes Have Identity"
+  "quest.7A92D9D81AC244C6.quest_desc": [
+    "Brass, electron tubes, and deployers are the programmable automation bridge before precision mechanisms."
+  ]
+  "quest.7A92D9D81AC244C6.title": "Brass & Electronics"
+  "quest.7BECFB4B164B361A.quest_desc": [
+    "Your first real factory layer: press, mixer, saw, drill, fan, bearings, harvesters, and contraption loading."
+  ]
+  "quest.7BECFB4B164B361A.title": "Kinetic Workshop"
+}

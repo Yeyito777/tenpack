@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:shulker_boxes",
+    "minecraft:barrel",
+    "minecraft:brewing_stand",
+    "minecraft:chest",
+    "minecraft:crafter",
+    "minecraft:dispenser",
+    "minecraft:dropper",
+    "minecraft:ender_chest",
+    "minecraft:furnace",
+    "minecraft:hopper",
+    "minecraft:smoker",
+    "minecraft:trapped_chest",
+    "minecraft:blast_furnace",
+    "#farmersdelight:cabinets",
+    "farmersdelight:bamboo_basket",
+    "farmersdelight:wooden_basket",
+    "supplementaries:safe",
+    "supplementaries:sack",
+    "create:item_vault"
+  ]
+}

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "tenpack_travel:hitching_post"
+    "tenpack_travel:hitching_post",
+    "tenpack_travel:mooring_post"
   ]
 }

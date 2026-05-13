@@ -5,6 +5,11 @@ Status: source text for a future guidebook/questbook. This assumes the current l
 - `tenpack_travel:grooming_brush`
 - `tenpack_travel:hitching_post`
 - `tenpack_travel:feed_trough`
+- `tenpack_travel:trail_marker`
+- `tenpack_travel:mooring_post`
+- `tenpack_travel:channel_marker`
+- `tenpack_travel:chart_table`
+- Route Journal recipe, which outputs a styled vanilla writable book
 
 Purpose: make the travel loop discoverable without GPS, backpacks, or Jade-style overlays.
 
@@ -24,7 +29,8 @@ Goal: teach that navigation is built from memory, maps, signs, and repeated trav
 Completion ideas:
 
 - Hold a filled map.
-- Hold a Map Atlas if the questbook can detect it.
+- Use a Chart Table to copy, scale, or lock a map if the questbook can detect it.
+- Optional companion task: craft or hold a Route Journal for handwritten route notes.
 
 Text:
 
@@ -38,19 +44,23 @@ Reward ideas:
 
 Design note:
 
-- Do not reward target-finder compasses.
+- Do not reward target-finder compasses, including lodestone compass anchors.
 - Do not mention coordinates.
 
 ### 2. Leave a sign
 
 Completion ideas:
 
-- Place or hold a sign.
-- If Click Signs detection is practical: interact with a Click Signs sign.
+- Place or hold a vanilla sign, hanging sign, or Supplementaries way sign.
+- Optional companion task: place a `Trail Marker` near the sign so the route is visible before the text is read; its tiny cap light is local night readability, not a waypoint.
 
 Text:
 
 > A waypoint only helps the player who owns it. A sign changes the world for everyone. Mark roads, rivers, camps, danger, bridges, and crossings.
+
+Design note:
+
+- Do not depend on command-button sign mods. Route signs should be physical player-authored text, not command buttons, teleporters, waypoint links, or server-side click actions.
 
 Suggested sign examples:
 
@@ -66,6 +76,22 @@ Reward ideas:
 - signs
 - dye/glow ink
 - torches/lanterns
+
+### 2b. Write the route down
+
+Completion ideas:
+
+- Craft or hold the Route Journal recipe output.
+- Write a book page with landmark directions if quest completion can inspect book use.
+
+Text:
+
+> A route is more than a line on a screen. Write what worked: the ford before the pine hill, the dock with two lanterns, the stable after the swamp. A good journal turns one person's mistake into the next person's road.
+
+Design note:
+
+- The Route Journal is a styled vanilla writable book so handwritten notes save/sign correctly.
+- Do not reward coordinates, waypoint items, or structure-finder compasses here.
 
 ### 3. First camp
 
@@ -112,6 +138,24 @@ Road advice:
 - Mule road: safe bridges and fewer sharp drops.
 - Elephant road: wider turns, higher clearance.
 - Wagon road later: width matters more than beauty.
+
+### 5. Mark the water road
+
+Completion ideas:
+
+- Craft or hold `tenpack_travel:mooring_post`.
+- Craft or hold `tenpack_travel:channel_marker`.
+- Place a sign at a dock, ferry crossing, canal, or harbor mouth.
+
+Text:
+
+> Rivers and coasts are roads too. A dock with a mooring post keeps boats physical. A channel marker turns a dangerous bend, shallow, canal mouth, or ferry lane into shared world knowledge without becoming a waypoint.
+
+Water-route advice:
+
+- Mooring posts tie boats at docks; they are not ship recall.
+- Channel markers are dumb buoys; they do not track players, point to targets, or hold cargo.
+- Good ports still need signs, charts, lanterns, roads, and animal/cart staging on shore.
 
 ## Chapter: Stablecraft
 
@@ -165,6 +209,11 @@ Text:
 
 > A mule is not better than a backpack would be. Tenpack does not have backpacks. That means cargo lives in the world: on animals, in carts, in camps, in stables, and on roads.
 
+Exception:
+
+- The Supplementaries lunch basket is allowed as a six-slot field-ration carrier. It is for prepared food on trips, not tools, ores, blocks, or general cargo.
+- Supplementaries sacks are disabled. If you need more cargo, use animals, carts, camp caches, roads, or freight infrastructure.
+
 Player lesson:
 
 - Mules/donkeys/llamas are early logistics.
@@ -211,12 +260,13 @@ Completion ideas:
 
 Text:
 
-> A camp should care for the animals that made the trip possible. Feed Troughs consume real food to heal nearby working animals. They do not breed for you, store infinite feed, or make animals immortal.
+> A camp should care for the animals that made the trip possible. Feed Troughs store a small amount of real feed, then nearby working animals walk over, wait, and eat when hurt or hungry. They do not breed for you, store infinite feed, or make animals immortal.
 
 Rules:
 
 - local radius
-- consumes feed
+- stores a small physical feed supply
+- animals must walk over and eat
 - heals only wounded eligible animals
 - no automation
 - no teleport safety
@@ -395,14 +445,14 @@ Completion ideas:
 
 Text:
 
-> Water routes are natural roads, but they are not empty. Caimans defend camps, crocodiles punish carelessness, seals trade, and seagulls can turn a treasure map into a physical clue.
+> Water routes are natural roads, but they are not empty. Caimans defend camps, crocodiles punish carelessness, seals trade, and seagulls add coastal clue/flavor without becoming a map arrow.
 
 Roles:
 
 - Caiman: water camp defense
 - Crocodile: water danger / swim gear resource
 - Seal: coastal trade support
-- Seagull: treasure clue behavior
+- Seagull: coastal clue/flavor behavior
 
 ## Chapter: Other Worlds
 

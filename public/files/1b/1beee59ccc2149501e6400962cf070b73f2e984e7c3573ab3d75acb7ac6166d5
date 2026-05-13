@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "create:copper_sheet"
+    },
+    {
+      "item": "create:industrial_iron_block"
+    },
+    {
+      "item": "create:electron_tube"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "simulated:redstone_magnet"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "simulated"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

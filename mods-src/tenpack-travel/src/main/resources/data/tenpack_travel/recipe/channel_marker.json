@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " D ",
+    "PSP",
+    " C "
+  ],
+  "key": {
+    "D": {
+      "tag": "c:dyes/red"
+    },
+    "P": {
+      "item": "minecraft:oak_planks"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "C": {
+      "item": "minecraft:chain"
+    }
+  },
+  "result": {
+    "id": "tenpack_travel:channel_marker",
+    "count": 2
+  }
+}

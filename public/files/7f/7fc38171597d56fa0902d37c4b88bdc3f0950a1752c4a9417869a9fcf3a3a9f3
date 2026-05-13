@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "create:mechanical_bearing"
+    },
+    "I": {
+      "item": "create:iron_sheet"
+    },
+    "S": {
+      "item": "create:industrial_iron_block"
+    }
+  },
+  "pattern": [
+    "I",
+    "B",
+    "S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "simulated:rope_connector"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "simulated"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

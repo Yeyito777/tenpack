@@ -60,10 +60,10 @@ Actions:
 
 Problem: cannon production is faction-war technology. It should not be available as soon as someone can make andesite casings and iron plates.
 
-Decision: move cannon-production machinery into precision-era faction warfare.
+Decision: move cannon-production machinery into diesel-era faction warfare. Precision mechanisms still mark the engineering threshold, but the production machines now also require diesel-engine infrastructure so artillery does not arrive before the oil/refinery/diesel chain it is meant to pressure.
 
 Actions:
-- cannon builder, cannon drill, cannon mount, fixed cannon mount, cannon mount extension, and cannon welder require precision-era parts
+- cannon builder, cannon drill, cannon mount, fixed cannon mount, cannon mount extension, and cannon welder require precision-era parts plus `createdieselgenerators:diesel_engine`
 - cannon drill also upgrades from the tuned mechanical drill
 - cannon mount uses mechanical bearing to tie artillery control into contraption knowledge
 

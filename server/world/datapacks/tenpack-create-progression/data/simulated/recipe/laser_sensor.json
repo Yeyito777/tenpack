@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "create:brass_casing"
+    },
+    "G": {
+      "item": "minecraft:tinted_glass"
+    },
+    "L": {
+      "tag": "simulated:laser_point_lens"
+    },
+    "T": {
+      "item": "create:electron_tube"
+    }
+  },
+  "pattern": [
+    "G ",
+    "LT",
+    "B "
+  ],
+  "result": {
+    "count": 1,
+    "id": "simulated:laser_sensor"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "simulated"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

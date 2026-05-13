@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/dark_oak_planks",
+    "up": "tenpack_travel:block/chart_table_top",
+    "north": "tenpack_travel:block/chart_table_side",
+    "south": "tenpack_travel:block/chart_table_side",
+    "east": "tenpack_travel:block/chart_table_side",
+    "west": "tenpack_travel:block/chart_table_side",
+    "particle": "tenpack_travel:block/chart_table_side"
+  }
+}

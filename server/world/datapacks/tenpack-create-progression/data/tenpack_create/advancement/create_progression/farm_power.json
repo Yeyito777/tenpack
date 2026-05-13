@@ -1,0 +1,80 @@
+{
+  "criteria": {
+    "harvester": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:mechanical_harvester"
+          }
+        ]
+      }
+    },
+    "cabbage_crate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "farmersdelight:cabbage_crate"
+          }
+        ]
+      }
+    },
+    "carrot_crate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "farmersdelight:carrot_crate"
+          }
+        ]
+      }
+    },
+    "potato_crate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "farmersdelight:potato_crate"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "A field can be infrastructure. Mechanical harvesters turn food from a hand chore into faction supply."
+    },
+    "icon": {
+      "count": 1,
+      "id": "create:mechanical_harvester"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Farm Power"
+    }
+  },
+  "requirements": [
+    [
+      "harvester"
+    ],
+    [
+      "cabbage_crate",
+      "carrot_crate",
+      "potato_crate"
+    ]
+  ],
+  "sends_telemetry_event": false,
+  "parent": "tenpack_create:create_progression/kinetic_workshop",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    }
+  ]
+}

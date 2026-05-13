@@ -1,0 +1,101 @@
+{
+  "criteria": {
+    "wheel_mount": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "offroad:wheel_mount"
+          }
+        ]
+      }
+    },
+    "tire": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "offroad:tire"
+          }
+        ]
+      }
+    },
+    "steering_wheel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "simulated:steering_wheel"
+          }
+        ]
+      }
+    },
+    "throttle_lever": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "simulated:throttle_lever"
+          }
+        ]
+      }
+    },
+    "engine_assembly": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "simulated:engine_assembly"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Wheels, steering, throttles, and engine assemblies turn physics experiments into real ground vehicles and cargo platforms."
+    },
+    "icon": {
+      "count": 1,
+      "id": "offroad:wheel_mount"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Ground Vehicles"
+    }
+  },
+  "requirements": [
+    [
+      "wheel_mount"
+    ],
+    [
+      "tire"
+    ],
+    [
+      "steering_wheel"
+    ],
+    [
+      "throttle_lever"
+    ],
+    [
+      "engine_assembly"
+    ]
+  ],
+  "sends_telemetry_event": false,
+  "parent": "tenpack_create:create_progression/physics_age",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "simulated"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "offroad"
+    }
+  ]
+}

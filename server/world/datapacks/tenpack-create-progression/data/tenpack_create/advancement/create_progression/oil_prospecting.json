@@ -1,0 +1,45 @@
+{
+  "criteria": {
+    "oil_scanner": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "createdieselgenerators:oil_scanner"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "text": "Rich oilfields live in deserts, badlands, and savannas. Scouting comes before extraction, so factions can claim land before refineries exist."
+    },
+    "icon": {
+      "count": 1,
+      "id": "createdieselgenerators:oil_scanner"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Oil Prospecting"
+    }
+  },
+  "requirements": [
+    [
+      "oil_scanner"
+    ]
+  ],
+  "sends_telemetry_event": false,
+  "parent": "tenpack_create:create_progression/starter_logistics",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createdieselgenerators"
+    }
+  ]
+}

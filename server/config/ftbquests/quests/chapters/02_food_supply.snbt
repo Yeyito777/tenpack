@@ -1,0 +1,100 @@
+{
+  id: "356434FF1502FD79"
+  group: ""
+  order_index: 2
+  filename: "02_food_supply"
+  icon: {id: "farmersdelight:cooking_pot", count: 1}
+  default_quest_shape: ""
+  default_hide_dependency_lines: false
+  quests: [
+  {
+    id: "178625F49777F04E"
+    x: 0.0d
+    y: 0.0d
+    icon: {id: "farmersdelight:bamboo_basket", count: 1}
+    disable_toast: true
+    tasks: [
+    {
+      id: "5BFC9CCEA342D298"
+      type: "checkmark"
+    }
+    ]
+  },
+  {
+    id: "16F11EAF6E5BDBD5"
+    x: 2.0d
+    y: 0.0d
+    icon: {id: "create:mechanical_harvester", count: 1}
+    dependencies: ["7BECFB4B164B361A", "178625F49777F04E"]
+    tasks: [
+    {
+      id: "4A53EA08FB85F536"
+      type: "advancement"
+      advancement: "tenpack_create:create_progression/farm_power"
+      criterion: ""
+    }
+    ]
+  },
+  {
+    id: "1243310C951B6053"
+    x: 4.0d
+    y: 0.0d
+    icon: {id: "farmersdelight:cooking_pot", count: 1}
+    dependencies: ["16F11EAF6E5BDBD5"]
+    tasks: [
+    {
+      id: "2F3539C32BBA94B3"
+      type: "advancement"
+      advancement: "tenpack_create:create_progression/kitchen_line"
+      criterion: ""
+    }
+    ]
+  },
+  {
+    id: "282B005C10463963"
+    x: 6.0d
+    y: 0.0d
+    icon: {id: "create:mechanical_mixer", count: 1}
+    disable_toast: true
+    dependencies: ["1243310C951B6053"]
+    tasks: [
+    {
+      id: "03F62DED1C95374C"
+      type: "checkmark"
+    }
+    ]
+  },
+  {
+    id: "3B437098E76AD7B0"
+    x: 8.0d
+    y: -1.0d
+    icon: {id: "supplementaries:lunch_basket", count: 1}
+    dependencies: ["1B519BB604E2186D", "282B005C10463963"]
+    tasks: [
+    {
+      id: "68A5E8B22E00ED54"
+      type: "advancement"
+      advancement: "tenpack_create:create_progression/food_logistics"
+      criterion: ""
+    }
+    ]
+  },
+  {
+    id: "1FD1E132B9E7D1D3"
+    x: 10.0d
+    y: -1.0d
+    icon: {id: "create:package_frogport", count: 1}
+    dependencies: ["3CD8D03ED3A1A410", "3B437098E76AD7B0"]
+    tasks: [
+    {
+      id: "6479C1FE0FABF23C"
+      type: "advancement"
+      advancement: "tenpack_create:create_progression/ration_routes"
+      criterion: ""
+    }
+    ]
+  }
+  ]
+  quest_links: []
+  images: []
+}

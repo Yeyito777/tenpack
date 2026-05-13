@@ -1,0 +1,58 @@
+{
+  "criteria": {
+    "distillation_controller": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "createdieselgenerators:distillation_controller"
+          }
+        ]
+      }
+    },
+    "oil_barrel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "createdieselgenerators:oil_barrel"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Crude oil becomes power through refineries, barrels, tanks, loaders, and routes. Fuel wealth should make architecture."
+    },
+    "icon": {
+      "count": 1,
+      "id": "createdieselgenerators:distillation_controller"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Oil Refining"
+    }
+  },
+  "requirements": [
+    [
+      "distillation_controller"
+    ],
+    [
+      "oil_barrel"
+    ]
+  ],
+  "sends_telemetry_event": false,
+  "parent": "tenpack_create:create_progression/black_gold",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createdieselgenerators"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "textures": {
+    "wood": "tenpack_travel:block/mooring_post_wood",
+    "metal": "tenpack_travel:block/mooring_post_metal",
+    "particle": "tenpack_travel:block/mooring_post_wood"
+  },
+  "elements": [
+    {
+      "from": [5, 0, 5],
+      "to": [11, 14, 11],
+      "faces": {
+        "down": { "texture": "#wood" },
+        "up": { "texture": "#wood" },
+        "north": { "texture": "#wood" },
+        "south": { "texture": "#wood" },
+        "east": { "texture": "#wood" },
+        "west": { "texture": "#wood" }
+      }
+    },
+    {
+      "from": [4, 14, 4],
+      "to": [12, 16, 12],
+      "faces": {
+        "down": { "texture": "#metal" },
+        "up": { "texture": "#metal" },
+        "north": { "texture": "#metal" },
+        "south": { "texture": "#metal" },
+        "east": { "texture": "#metal" },
+        "west": { "texture": "#metal" }
+      }
+    },
+    {
+      "from": [3, 8, 7],
+      "to": [13, 10, 9],
+      "faces": {
+        "down": { "texture": "#metal" },
+        "up": { "texture": "#metal" },
+        "north": { "texture": "#metal" },
+        "south": { "texture": "#metal" },
+        "east": { "texture": "#metal" },
+        "west": { "texture": "#metal" }
+      }
+    }
+  ]
+}

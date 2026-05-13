@@ -1,6 +1,7 @@
 package dev.yeyito.tenpacktravel;
 
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
@@ -16,11 +17,10 @@ import net.minecraft.world.entity.player.Player;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 record AnimalInspectionReport(String name, String species, double health, double maxHealth, Double speed, Double jump,
                               AnimalBond.Snapshot bond,
-                              String temperament, String role, String notes) {
+                              String temperament, String mood, String care, String role, String notes) {
     static AnimalInspectionReport from(Entity entity, Player viewer) {
         ResourceLocation id = BuiltInRegistries.ENTITY_TYPE.getKey(entity.getType());
         String species = id.toString();
@@ -33,20 +33,22 @@ record AnimalInspectionReport(String name, String species, double health, double
         if (entity instanceof Camel camel) {
             return new AnimalInspectionReport(name, species, camel.getHealth(), camel.getMaxHealth(),
                     camel.getAttributeValue(Attributes.MOVEMENT_SPEED), attributeValue(camel, Attributes.JUMP_STRENGTH),
-                    AnimalBond.snapshot(camel, viewer), "Steady", "Passenger mount", "two riders; poor cargo, good road travel comfort");
+                    AnimalBond.snapshot(camel, viewer), translated("message.tenpack_travel.animal_temperament.camel_steady"), AnimalCare.mood(camel), AnimalCare.careSummary(camel),
+                    translated("message.tenpack_travel.animal_role.passenger_mount"), translated("message.tenpack_travel.animal_notes.camel_two_riders"));
         }
 
-        if (entity instanceof LivingEntity living && id.getNamespace().equals("alexsmobs")) {
-            AlexAnimalRole role = AlexAnimalRole.forPath(id.getPath());
+        if (entity instanceof LivingEntity living) {
+            AlexAnimalRole role = AnimalEligibility.alexRole(entity);
             if (role == null) {
                 return null;
             }
             String temperament = living instanceof TamableAnimal tameable
-                    ? (tameable.isTame() ? "Loyal" : "Wild")
+                    ? (tameable.isTame() ? translated("message.tenpack_travel.animal_temperament.tame_loyal") : translated("message.tenpack_travel.animal_temperament.tame_wild"))
                     : role.temperament();
             return new AnimalInspectionReport(name, species, living.getHealth(), living.getMaxHealth(),
                     attributeValue(living, Attributes.MOVEMENT_SPEED), attributeValue(living, Attributes.JUMP_STRENGTH),
-                    AnimalBond.snapshot(living, viewer), temperament, role.role(), role.notes());
+                    AnimalBond.snapshot(living, viewer), temperament, AnimalCare.mood(living), AnimalCare.careSummary(living),
+                    role.role(), role.notes());
         }
 
         return null;
@@ -58,52 +60,64 @@ record AnimalInspectionReport(String name, String species, double health, double
         double speed = horse.getAttributeValue(Attributes.MOVEMENT_SPEED);
         Double jump = attributeValue(horse, Attributes.JUMP_STRENGTH);
         String role = vanillaHorseRole(horse);
-        String temperament = horse.isTamed() ? "Calm" : temperamentFromTemper(horse.getTemper());
-        String notes = horse.isTamed() ? "tamed" : "untamed; ride/training still matters";
+        String temperament = horse.isTamed() ? translated("message.tenpack_travel.animal_temperament.horse_calm") : temperamentFromTemper(horse.getTemper());
+        String notes = horse.isTamed() ? translated("message.tenpack_travel.animal_notes.tamed") : translated("message.tenpack_travel.animal_notes.horse_untamed_training");
         return new AnimalInspectionReport(name, species, health, maxHealth, speed, jump,
-                AnimalBond.snapshot(horse, viewer), temperament, role, notes);
+                AnimalBond.snapshot(horse, viewer), temperament, AnimalCare.mood(horse), AnimalCare.careSummary(horse), role, notes);
     }
 
     List<Component> lines(boolean exact) {
         List<Component> lines = new ArrayList<>();
-        lines.add(Component.literal("§6" + name + "§7 (" + species + ")"));
-        lines.add(Component.literal("§7Health: §f" + bandHealth(maxHealth) + "§8 (currently " + bandCurrentHealth(health, maxHealth) + ")"));
+        lines.add(Component.translatable("message.tenpack_travel.animal_inspection.header", name, species).withStyle(ChatFormatting.GOLD));
+        lines.add(Component.translatable("message.tenpack_travel.animal_inspection.health", AnimalStatBands.maxHealth(maxHealth), AnimalStatBands.currentHealth(health, maxHealth)).withStyle(ChatFormatting.GRAY));
         if (speed != null) {
-            lines.add(Component.literal("§7Speed: §f" + bandSpeed(speed)));
+            lines.add(Component.translatable("message.tenpack_travel.animal_inspection.speed", AnimalStatBands.speed(speed)).withStyle(ChatFormatting.GRAY));
         }
         if (jump != null && jump > 0.0) {
-            lines.add(Component.literal("§7Jump: §f" + bandJump(jump)));
+            lines.add(Component.translatable("message.tenpack_travel.animal_inspection.jump", AnimalStatBands.jump(jump)).withStyle(ChatFormatting.GRAY));
         }
-        lines.add(Component.literal("§7Bond: §f" + bond.label()));
-        lines.add(Component.literal("§7Temperament: §f" + temperament));
-        lines.add(Component.literal("§7Role: §f" + role));
+        lines.add(Component.translatable("message.tenpack_travel.animal_inspection.bond", bond.label()).withStyle(ChatFormatting.GRAY));
+        lines.add(Component.translatable("message.tenpack_travel.animal_inspection.temperament", temperament).withStyle(ChatFormatting.GRAY));
+        lines.add(Component.translatable("message.tenpack_travel.animal_inspection.mood", mood).withStyle(ChatFormatting.GRAY));
+        lines.add(Component.translatable("message.tenpack_travel.animal_inspection.care", care).withStyle(ChatFormatting.GRAY));
+        lines.add(Component.translatable("message.tenpack_travel.animal_inspection.role", role).withStyle(ChatFormatting.GRAY));
         if (notes != null && !notes.isBlank()) {
-            lines.add(Component.literal("§7Notes: §f" + notes));
+            lines.add(Component.translatable("message.tenpack_travel.animal_inspection.notes", notes).withStyle(ChatFormatting.GRAY));
         }
         if (exact) {
-            lines.add(Component.literal("§8Debug: health " + round(health) + "/" + round(maxHealth)
-                    + (speed == null ? "" : ", speed " + round(speed))
-                    + (jump == null ? "" : ", jump " + round(jump))
-                    + ", bond xp " + bond.xp()));
+            lines.add(Component.translatable("message.tenpack_travel.animal_inspection.debug",
+                    AnimalStatBands.rounded(health),
+                    AnimalStatBands.rounded(maxHealth),
+                    speed == null ? "" : Component.translatable("message.tenpack_travel.animal_inspection.debug_speed", AnimalStatBands.rounded(speed)),
+                    jump == null ? "" : Component.translatable("message.tenpack_travel.animal_inspection.debug_jump", AnimalStatBands.rounded(jump)),
+                    bond.xp()).withStyle(ChatFormatting.DARK_GRAY));
         }
         return lines;
     }
 
     private static String vanillaHorseRole(AbstractHorse horse) {
         if (horse instanceof Llama llama) {
-            return llama.hasChest() ? "Pack — " + llama.getInventoryColumns() * 3 + " slots" : "Potential pack — add chest";
+            return llama.hasChest()
+                    ? translated("message.tenpack_travel.animal_role.pack_slots", llama.getInventoryColumns() * 3)
+                    : translated("message.tenpack_travel.animal_role.pack_candidate");
         }
         if (horse instanceof AbstractChestedHorse chestedHorse) {
-            return chestedHorse.hasChest() ? "Pack — 15 slots" : "Potential pack — add chest";
+            return chestedHorse.hasChest()
+                    ? translated("message.tenpack_travel.animal_role.pack_slots", 15)
+                    : translated("message.tenpack_travel.animal_role.pack_candidate");
         }
-        return "None";
+        return AstikorIntegration.draftRole(horse);
     }
 
     private static String temperamentFromTemper(int temper) {
-        if (temper < 20) return "Skittish";
-        if (temper < 60) return "Learning";
-        if (temper < 90) return "Trusting";
-        return "Nearly tamed";
+        if (temper < 20) return translated("message.tenpack_travel.animal_temperament.horse_skittish");
+        if (temper < 60) return translated("message.tenpack_travel.animal_temperament.horse_learning");
+        if (temper < 90) return translated("message.tenpack_travel.animal_temperament.horse_trusting");
+        return translated("message.tenpack_travel.animal_temperament.horse_nearly_tamed");
+    }
+
+    private static String translated(String key, Object... args) {
+        return Component.translatable(key, args).getString();
     }
 
     private static Double attributeValue(LivingEntity entity, net.minecraft.core.Holder<net.minecraft.world.entity.ai.attributes.Attribute> attribute) {
@@ -111,37 +125,4 @@ record AnimalInspectionReport(String name, String species, double health, double
         return instance == null ? null : instance.getValue();
     }
 
-    private static String bandCurrentHealth(double health, double maxHealth) {
-        if (maxHealth <= 0.0) return "unknown";
-        double ratio = health / maxHealth;
-        if (ratio < 0.25) return "hurt";
-        if (ratio < 0.6) return "worn";
-        if (ratio < 0.9) return "healthy";
-        return "fresh";
-    }
-
-    private static String bandHealth(double maxHealth) {
-        if (maxHealth < 15.0) return "Frail";
-        if (maxHealth < 25.0) return "Healthy";
-        if (maxHealth < 40.0) return "Sturdy";
-        return "Massive";
-    }
-
-    private static String bandSpeed(double speed) {
-        if (speed < 0.18) return "Slow";
-        if (speed < 0.25) return "Steady";
-        if (speed < 0.32) return "Swift";
-        return "Exceptional";
-    }
-
-    private static String bandJump(double jump) {
-        if (jump < 0.45) return "Poor";
-        if (jump < 0.65) return "Fair";
-        if (jump < 0.85) return "Strong";
-        return "Remarkable";
-    }
-
-    private static String round(double value) {
-        return String.format(Locale.ROOT, "%.3f", value);
-    }
 }

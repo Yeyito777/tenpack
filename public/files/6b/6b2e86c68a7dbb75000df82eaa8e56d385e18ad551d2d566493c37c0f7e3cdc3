@@ -1,0 +1,67 @@
+{
+  "criteria": {
+    "brass_casing": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:brass_casing"
+          }
+        ]
+      }
+    },
+    "electron_tube": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:electron_tube"
+          }
+        ]
+      }
+    },
+    "deployer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:deployer"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "text": "Brass casings, electron tubes, and deployers mark the jump from moving parts to programmable automation."
+    },
+    "icon": {
+      "count": 1,
+      "id": "create:electron_tube"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Brass & Electronics"
+    }
+  },
+  "requirements": [
+    [
+      "brass_casing"
+    ],
+    [
+      "electron_tube"
+    ],
+    [
+      "deployer"
+    ]
+  ],
+  "sends_telemetry_event": false,
+  "parent": "tenpack_create:create_progression/fluid_handling",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

@@ -28,7 +28,7 @@
 
 	[core.misc]
 		# If enabled, information like position and direction will be hidden from the debug screen (F3).
-		"Hide Info From Debug" = false
+		"Hide Info From Debug" = true
 		# If enabled, the player can regenerate health naturally if their hunger is full enough (doesn't affect external healing, such as golden apples, the Regeneration effect, etc.)
 		"Natural Regeneration Enabled" = true
 		# If enabled, use on a filled map will show destination coordinates.
@@ -509,7 +509,7 @@
 	# Food exhausted on every attack in addition to the minecraft attack food exhaustion.
 	# Default: 0.1
 	# Range: 0.0 ~ 1000.0
-	"On Attack Food Exhaustion" = 0.0
+	"On Attack Food Exhaustion" = 0.05
 	# Food exhausted every 10 ticks. Increase the base minecraft food exhaustion.
 	# Default: 0.05
 	# Range: 0.0 ~ 1000.0
@@ -517,7 +517,7 @@
 	# Food exhausted every 10 ticks while sprinting in addition to the sprinting minecraft food exhaustion.
 	# Default: 0.1
 	# Range: 0.0 ~ 1000.0
-	"Sprinting Food Exhaustion" = 0.0
+	"Sprinting Food Exhaustion" = 0.01
 
 # Options related to health overhaul
 [health-overhaul]
