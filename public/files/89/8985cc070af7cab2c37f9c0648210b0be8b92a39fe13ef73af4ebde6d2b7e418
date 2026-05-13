@@ -15,9 +15,9 @@
       "version": "2.4",
       "filename": "AmethystShaders_2.4.zip",
       "source": "https://cdn.modrinth.com/data/LypdYQ63/versions/mULXIH2t/AmethystShaders_2.4.zip",
-      "recommendedDefault": false,
+      "recommendedDefault": true,
       "performanceWarning": true,
-      "loadOrderNote": "Optional shader; keep disabled by default until client performance is checked. sha256: 64eb37909b58a2266964a09ca3e65d07b197b27d25641449f6d80ebc537fbca0"
+      "loadOrderNote": "Default enabled shader via config/iris.properties. Lighter default than Rethinking Voxels; players can switch manually. sha256: 64eb37909b58a2266964a09ca3e65d07b197b27d25641449f6d80ebc537fbca0"
     },
     {
       "name": "Rethinking Voxels",
@@ -26,8 +26,10 @@
       "source": "https://cdn.modrinth.com/data/kmwfVOoi/versions/cpD4esk9/rethinking-voxels_r0.1-beta9.zip",
       "recommendedDefault": false,
       "performanceWarning": true,
-      "loadOrderNote": "Optional path-traced/voxel-inspired shader; high performance cost, disabled by default. sha256: a8cd9d4338c7d3d1fffecc4525348a31ea3d219ef31382c51d5ddc3b4b0114e1"
+      "loadOrderNote": "Optional path-traced/voxel-inspired shader; high performance cost, included but not default. sha256: a8cd9d4338c7d3d1fffecc4525348a31ea3d219ef31382c51d5ddc3b4b0114e1"
     }
   ],
-  "recommendedEnabledByDefault": []
+  "recommendedEnabledByDefault": [
+    "AmethystShaders_2.4.zip"
+  ]
 }

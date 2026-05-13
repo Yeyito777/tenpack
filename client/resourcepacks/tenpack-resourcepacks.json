@@ -67,7 +67,7 @@
       "filename": "FreshAnimations_v1.10.4.zip",
       "source": "https://cdn.modrinth.com/data/50dA9Sha/versions/xN57JJts/FreshAnimations_v1.10.4.zip",
       "project": "https://modrinth.com",
-      "loadOrderNote": "Requires EMF/ETF; load high for animated entity models. sha256: 8e44b29560d2e7d952c0a4f77f0451e6dcb048f827189bffc712b446be8de7f2"
+      "loadOrderNote": "Requires EMF/ETF; load above broad/base visual packs so entity models are not overridden. sha256: 8e44b29560d2e7d952c0a4f77f0451e6dcb048f827189bffc712b446be8de7f2"
     },
     {
       "name": "Fresh Animations: Extensions",
@@ -132,14 +132,14 @@
     "xali's Bushy Leaves v3.5.0.zip",
     "xali's enchanted books v0.13.0.zip",
     "VanillaEvolved Extra 3D (Optional).zip",
-    "§6Immersive§8_§6Interfaces§8.zip",
-    "FreshAnimations_v1.10.4.zip",
-    "FA+All_Extensions-v1.8.1.zip",
-    "§eExtended_Illumina_1.21x.zip",
-    "Fancy Crops v1.3.zip",
     "Connected-Bricks 1.14-1.21.3 v1.0.zip",
     "Connected-Paths 1.14-1.21.8 v2.1.1.zip",
     "Connected-Rocks 1.14-1.21.8 v1.1.1.zip",
-    "Os' Colorful Grasses (Mix).zip"
+    "Os' Colorful Grasses (Mix).zip",
+    "Fancy Crops v1.3.zip",
+    "§eExtended_Illumina_1.21x.zip",
+    "FreshAnimations_v1.10.4.zip",
+    "FA+All_Extensions-v1.8.1.zip",
+    "§6Immersive§8_§6Interfaces§8.zip"
   ]
 }

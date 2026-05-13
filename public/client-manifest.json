@@ -1034,9 +1034,9 @@
     },
     {
       "path": "resourcepacks/tenpack-resourcepacks.json",
-      "sha256": "e22a42314e4fe72a75909a29e6213fde445320195cf73b8808ec5ccab9ed119c",
-      "size": 7329,
-      "url": "files/e2/e22a42314e4fe72a75909a29e6213fde445320195cf73b8808ec5ccab9ed119c"
+      "sha256": "819666f2ba886826ff5913898efc87d2319a3cda26988a5a42b0f5a7e3462d43",
+      "size": 7363,
+      "url": "files/81/819666f2ba886826ff5913898efc87d2319a3cda26988a5a42b0f5a7e3462d43"
     },
     {
       "path": "resourcepacks/xali's Bushy Leaves v3.5.0.zip",
@@ -1088,9 +1088,9 @@
     },
     {
       "path": "shaderpacks/tenpack-shaderpacks.json",
-      "sha256": "17c899431b92d8d0ae58f28cc0ebcecebfc9311d25eba94205c9c716198fca56",
-      "size": 1537,
-      "url": "files/17/17c899431b92d8d0ae58f28cc0ebcecebfc9311d25eba94205c9c716198fca56"
+      "sha256": "8985cc070af7cab2c37f9c0648210b0be8b92a39fe13ef73af4ebde6d2b7e418",
+      "size": 1615,
+      "url": "files/89/8985cc070af7cab2c37f9c0648210b0be8b92a39fe13ef73af4ebde6d2b7e418"
     }
   ],
   "loader": "neoforge",

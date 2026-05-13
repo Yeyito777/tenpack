@@ -18,6 +18,15 @@ from urllib.request import urlopen
 
 USER_AGENT = "tenpack-sync/0.1"
 
+CLIENT_BASE_RESOURCE_PACKS = [
+    "vanilla",
+    "fabric",
+    "mod_resources",
+    "moonlight:merged_pack",
+    "continuity:default",
+    "continuity:glass_pane_culling_fix",
+]
+
 
 def safe_url(url: str) -> str:
     parts = urlsplit(url)
@@ -84,6 +93,123 @@ def write_state(state_path: Path, manifest_url: str, manifest: dict) -> None:
     tmp = state_path.with_suffix(".tmp")
     tmp.write_text(json.dumps(state, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     tmp.replace(state_path)
+
+
+def read_json_file(path: Path) -> dict | None:
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return None
+    except Exception as exc:  # noqa: BLE001
+        print(f"warning: could not read {path}: {exc}", file=sys.stderr)
+        return None
+
+
+def write_key_value_lines(path: Path, updates: dict[str, str], initial_lines: list[str] | None = None) -> None:
+    if path.exists():
+        lines = path.read_text(encoding="utf-8").splitlines()
+    else:
+        lines = list(initial_lines or [])
+
+    seen: set[str] = set()
+    next_lines: list[str] = []
+    for line in lines:
+        key = line.split(":", 1)[0] if ":" in line else line.split("=", 1)[0]
+        if key in updates:
+            separator = "=" if "=" in line and ":" not in line else ":"
+            next_lines.append(f"{key}{separator}{updates[key]}")
+            seen.add(key)
+        else:
+            next_lines.append(line)
+
+    for key, value in updates.items():
+        if key not in seen:
+            next_lines.append(f"{key}:{value}")
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("\n".join(next_lines) + "\n", encoding="utf-8")
+
+
+def write_properties(path: Path, updates: dict[str, str], header: list[str] | None = None) -> None:
+    if path.exists():
+        lines = path.read_text(encoding="utf-8").splitlines()
+    else:
+        lines = list(header or [])
+
+    seen: set[str] = set()
+    next_lines: list[str] = []
+    for line in lines:
+        stripped = line.strip()
+        if not stripped or stripped.startswith("#") or "=" not in line:
+            next_lines.append(line)
+            continue
+        key = line.split("=", 1)[0]
+        if key in updates:
+            next_lines.append(f"{key}={updates[key]}")
+            seen.add(key)
+        else:
+            next_lines.append(line)
+
+    for key, value in updates.items():
+        if key not in seen:
+            next_lines.append(f"{key}={value}")
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("\n".join(next_lines) + "\n", encoding="utf-8")
+
+
+def apply_client_visual_defaults(root: Path, dry_run: bool) -> None:
+    """Enable Tenpack's default resource-pack stack and shader after sync.
+
+    Minecraft keeps enabled resource packs in options.txt, which is normally
+    a local/user file and intentionally ignored by git. Tenpack still needs a
+    pack-level visual baseline (Fresh Animations/EMF, connected textures, crop
+    models, lantern models, etc.), so patch only the resource-pack keys instead
+    of replacing the whole options file.
+    """
+    resourcepacks = read_json_file(root / "resourcepacks" / "tenpack-resourcepacks.json") or {}
+    order = resourcepacks.get("recommendedEnabledOrderLowToHighPriority") or []
+    if isinstance(order, list) and order:
+        accepted_incompatible = {
+            entry.get("filename")
+            for entry in resourcepacks.get("resourcepacks", [])
+            if isinstance(entry, dict) and entry.get("acceptedIncompatible")
+        }
+        enabled = CLIENT_BASE_RESOURCE_PACKS + [f"file/{filename}" for filename in order]
+        incompatible = [f"file/{filename}" for filename in order if filename in accepted_incompatible]
+        print("apply client visual defaults: enable Tenpack resource-pack stack")
+        if not dry_run:
+            write_key_value_lines(
+                root / "options.txt",
+                {
+                    "resourcePacks": json.dumps(enabled, ensure_ascii=False, separators=(",", ":")),
+                    "incompatibleResourcePacks": json.dumps(incompatible, ensure_ascii=False, separators=(",", ":")),
+                },
+                initial_lines=["version:3955"],
+            )
+
+    shaderpacks = read_json_file(root / "shaderpacks" / "tenpack-shaderpacks.json") or {}
+    default_shaders = shaderpacks.get("recommendedEnabledByDefault") or []
+    shader = default_shaders[0] if isinstance(default_shaders, list) and default_shaders else ""
+    if shader:
+        print(f"apply client visual defaults: enable shader {shader}")
+        if not dry_run:
+            write_properties(
+                root / "config" / "iris.properties",
+                {
+                    "allowUnknownShaders": "false",
+                    "colorSpace": "SRGB",
+                    "disableUpdateMessage": "false",
+                    "enableDebugOptions": "false",
+                    "enableShaders": "true",
+                    "maxShadowRenderDistance": "32",
+                    "shaderPack": shader,
+                },
+                header=[
+                    "# Tenpack default Iris shader configuration",
+                    "# Players can change this locally, but the sync step reapplies Tenpack defaults before launch.",
+                ],
+            )
 
 
 def prune_empty_dirs(root: Path, start: Path) -> None:
@@ -220,6 +346,9 @@ def main() -> int:
 
     deleted, skipped = delete_stale_managed(root, previous, desired_paths, args.dry_run)
     mirrored = mirror_dirs(root, args.mirror_dir, desired_paths, args.dry_run)
+
+    if side == "client":
+        apply_client_visual_defaults(root, args.dry_run)
 
     if not args.dry_run:
         write_state(state_path, args.manifest_url, manifest)
