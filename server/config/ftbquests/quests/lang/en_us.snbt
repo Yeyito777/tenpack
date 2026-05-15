@@ -19,6 +19,11 @@
     "The CABIN-lite spine: simple kinetics stay approachable, precision and logistics become real milestones."
   ]
   "chapter.7F2AC2A2AD89AAB8.title": "Create Eras"
+  "quest.005DCF9EBB6CB14E.quest_desc": [
+    "The Supplementaries lunch basket is for carrying field food without spending half your inventory on meals. It is not a backpack warehouse and it is not the diet tracker."
+    "The food system cares about what you actually eat. The basket is the physical tool that makes varied meals convenient on roads, boats, mines, fronts, and rescue runs."
+  ]
+  "quest.005DCF9EBB6CB14E.title": "Pack a Real Lunch"
   "quest.01BB286BAB3870AB.quest_desc": [
     "Start here. The vanilla advancement tree mirrors this chapter, but FTB Quests lets the intent stay readable."
   ]
@@ -41,15 +46,17 @@
   "quest.10519509954D08E4.title": "Controlled Flight"
   "quest.1243310C951B6053.quest_desc": [
     "Farmer's Delight makes food meaningful; Create makes it scalable. Belts, basins, fans, deployers, mixers, and Cooking Pots can become a real kitchen district."
+    "Central Kitchen and Slice & Dice are bridges, not shortcuts. They let visible machines do kitchen work so a faction can feed more than one player's inventory."
   ]
   "quest.1243310C951B6053.title": "Kitchen Line"
   "quest.16F11EAF6E5BDBD5.quest_desc": [
     "Create harvesters turn fields into infrastructure. A farm is no longer only a starter chore; it becomes a visible supply district."
+    "Think in groups: grain/rice/potatoes for staples, animals/fish/eggs/ham for protein, and cabbage/tomato/onion/fruit for produce. Mixed farms are stronger than one hidden wheat box."
   ]
   "quest.16F11EAF6E5BDBD5.title": "Farm Power"
   "quest.178625F49777F04E.quest_desc": [
-    "Tenpack should not tell players there is one blessed food. Automate the foods your base likes: soups, stews, rice, pasta, sandwiches, tavern foods, or plated meals."
-    "Central Kitchen, Slice & Dice, Farmer's Delight, belts, deployers, basins, and stock logistics are the toolset. Tenpack may add missing recipes, but not a narrow approved ration list."
+    "Tenpack does not have one blessed food. It has a food economy: staples, proteins, produce, snacks, tavern foods, soups, stews, rice, pasta, sandwiches, and plated meals all have a place."
+    "The goal is not to memorize a ration. The goal is to build a base that can feed its work crews, travelers, guards, miners, and train crews without turning hunger into spreadsheet homework."
   ]
   "quest.178625F49777F04E.title": "No Official Ration"
   "quest.1B519BB604E2186D.quest_desc": [
@@ -58,6 +65,7 @@
   "quest.1B519BB604E2186D.title": "Smart Logistics"
   "quest.1FD1E132B9E7D1D3.quest_desc": [
     "Rail and package logistics turn kitchens into route infrastructure. Send food to the places where work, combat, travel, and fuel extraction actually happen."
+    "If a road, rail line, or port carries meals, it is no longer decoration. It is the physical answer to hunger pressure, distance, and faction work."
   ]
   "quest.1FD1E132B9E7D1D3.title": "Ration Routes"
   "quest.2122AF4336221099.quest_desc": [
@@ -71,9 +79,16 @@
   "quest.22A17265351AABB6.title": "JEI Is the Recipe Source"
   "quest.282B005C10463963.quest_desc": [
     "A good kitchen line is not defined by a single item. Build what your faction eats and ships."
-    "If JEI shows a Central Kitchen/Slice & Dice route, use it. If Tenpack adds a missing recipe, treat it as another option, not the canonical answer."
+    "If JEI shows a Central Kitchen/Slice & Dice route, use it. If Tenpack adds a heated mixer recipe for a meal, treat it as another industrial kitchen option, not the canonical answer."
+    "The design target is simple: one wheat farm should help, but a balanced automated kitchen should feel obviously better for travel, combat, mining, and logistics."
   ]
   "quest.282B005C10463963.title": "Automate Food You Actually Want"
+  "quest.2982BF23D4581DC1.quest_desc": [
+    "Tenpack food pressure is active-play pressure. Standing still or chatting should not quietly starve you, but walking, sprinting, swimming, fighting, building, mining, and traveling burn supplies."
+    "Bread and potatoes keep you alive, but they are weak long-term field food. Balanced meals make real trips, work sessions, and dangerous recoveries feel prepared instead of desperate."
+    "This copies the good ROTN feeling - food is present and planning matters - while avoiding thirst, Nutrition categories, random nausea, and hidden idle punishment."
+  ]
+  "quest.2982BF23D4581DC1.title": "Why Food Feels Different"
   "quest.31727AF24E4D8330.quest_desc": [
     "Copper plumbing is its own lesson. Spouts, item drains, and portable fluid interfaces mark the sealed/fluid era."
   ]
@@ -87,8 +102,15 @@
     "Moving items between machines should be early and readable. Learn belts, funnels, chutes, depots, and simple loading before smart networks."
   ]
   "quest.390FA9EA48F0C9A5.title": "Starter Logistics"
+  "quest.398AF1EDE029B863.quest_desc": [
+    "Open your inventory and look for the small food-balance gauge. Yellow is staple, red is protein, and green is produce."
+    "It is deliberately low-key: a hint, not a giant diet screen. You do not need perfect numbers. If one color is empty, your recent meals are lopsided; if all three are healthy, travel and work feel smoother."
+    "Comfort is not a tracked meter. Higher-quality meals simply give a short satisfied burst when eaten, especially if your recent diet is balanced."
+  ]
+  "quest.398AF1EDE029B863.title": "The Three Small Bars"
   "quest.3B437098E76AD7B0.quest_desc": [
     "Once smart logistics exists, meals stop being pocket clutter. Stock a depot, pack field rations, and keep substantial prepared food ready for mines, oilfields, forts, stations, and airfields."
+    "Farmer's Delight baskets and cabinets are kitchen/depot storage. Lunch baskets are personal field kits. Create packages, vaults, belts, and trains move food at faction scale."
   ]
   "quest.3B437098E76AD7B0.title": "Food Logistics"
   "quest.3CD8D03ED3A1A410.quest_desc": [
@@ -129,6 +151,11 @@
     "Ground vehicles sit behind the generic Physics Age for now: steering, tires, throttles, and engines should feel like a controlled platform, not day-zero magic."
   ]
   "quest.6EFB4BB7460E1B97.title": "Ground Vehicles"
+  "quest.735CC75FE20FA3CB.quest_desc": [
+    "Cheap staples are survival food. Cooked meat and fish are practical field rations. Proper Farmer's Delight meals are the comfort tier: stews, soups, rice dishes, pasta, sandwiches, and plated meals."
+    "A steak in your pocket is useful. A stocked kitchen sending prepared meals to a mine, oilfield, fort, or rail crew is civilization."
+  ]
+  "quest.735CC75FE20FA3CB.title": "Staples, Rations, Meals"
   "quest.73B9F58ECAA6F789.quest_desc": [
     "Use stations, signs, depots, baskets, tanks, and visible storage so other players can understand what a place does and why it matters."
   ]

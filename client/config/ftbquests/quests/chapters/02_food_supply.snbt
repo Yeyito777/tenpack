@@ -21,11 +21,39 @@
     ]
   },
   {
+    id: "2982BF23D4581DC1"
+    x: 2.0d
+    y: -1.0d
+    icon: {id: "farmersdelight:wheat_dough", count: 1}
+    disable_toast: true
+    dependencies: ["178625F49777F04E"]
+    tasks: [
+    {
+      id: "72711877A8306421"
+      type: "checkmark"
+    }
+    ]
+  },
+  {
+    id: "398AF1EDE029B863"
+    x: 4.0d
+    y: -1.0d
+    icon: {id: "farmersdelight:tomato", count: 1}
+    disable_toast: true
+    dependencies: ["2982BF23D4581DC1"]
+    tasks: [
+    {
+      id: "4935C6778CA0B1FF"
+      type: "checkmark"
+    }
+    ]
+  },
+  {
     id: "16F11EAF6E5BDBD5"
     x: 2.0d
-    y: 0.0d
+    y: 1.0d
     icon: {id: "create:mechanical_harvester", count: 1}
-    dependencies: ["7BECFB4B164B361A", "178625F49777F04E"]
+    dependencies: ["7BECFB4B164B361A", "398AF1EDE029B863"]
     tasks: [
     {
       id: "4A53EA08FB85F536"
@@ -36,11 +64,25 @@
     ]
   },
   {
-    id: "1243310C951B6053"
+    id: "735CC75FE20FA3CB"
     x: 4.0d
-    y: 0.0d
+    y: 1.0d
+    icon: {id: "farmersdelight:beef_stew", count: 1}
+    disable_toast: true
+    dependencies: ["398AF1EDE029B863"]
+    tasks: [
+    {
+      id: "3081C19FDD7D60FE"
+      type: "checkmark"
+    }
+    ]
+  },
+  {
+    id: "1243310C951B6053"
+    x: 6.0d
+    y: 1.0d
     icon: {id: "farmersdelight:cooking_pot", count: 1}
-    dependencies: ["16F11EAF6E5BDBD5"]
+    dependencies: ["16F11EAF6E5BDBD5", "735CC75FE20FA3CB"]
     tasks: [
     {
       id: "2F3539C32BBA94B3"
@@ -52,8 +94,8 @@
   },
   {
     id: "282B005C10463963"
-    x: 6.0d
-    y: 0.0d
+    x: 8.0d
+    y: 1.0d
     icon: {id: "create:mechanical_mixer", count: 1}
     disable_toast: true
     dependencies: ["1243310C951B6053"]
@@ -65,11 +107,25 @@
     ]
   },
   {
-    id: "3B437098E76AD7B0"
-    x: 8.0d
+    id: "005DCF9EBB6CB14E"
+    x: 6.0d
     y: -1.0d
     icon: {id: "supplementaries:lunch_basket", count: 1}
-    dependencies: ["1B519BB604E2186D", "282B005C10463963"]
+    disable_toast: true
+    dependencies: ["735CC75FE20FA3CB"]
+    tasks: [
+    {
+      id: "4111939F364BDE5D"
+      type: "checkmark"
+    }
+    ]
+  },
+  {
+    id: "3B437098E76AD7B0"
+    x: 10.0d
+    y: 0.0d
+    icon: {id: "supplementaries:lunch_basket", count: 1}
+    dependencies: ["1B519BB604E2186D", "282B005C10463963", "005DCF9EBB6CB14E"]
     tasks: [
     {
       id: "68A5E8B22E00ED54"
@@ -81,8 +137,8 @@
   },
   {
     id: "1FD1E132B9E7D1D3"
-    x: 10.0d
-    y: -1.0d
+    x: 12.0d
+    y: 0.0d
     icon: {id: "create:package_frogport", count: 1}
     dependencies: ["3CD8D03ED3A1A410", "3B437098E76AD7B0"]
     tasks: [

@@ -43,11 +43,25 @@ ALLOWED_CLIENT_ONLY_JARS = {
     "AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar",
     "appleskin-neoforge-mc1.21-3.0.9.jar",
     "CameraOverhaul-v2.0.6-fabric+mc[1.21.0-1.21.2].jar",
+    "continuity-3.0.0+1.21.neoforge.jar",
     "CreativeCore_NEOFORGE_v2.13.38_mc1.21.1.jar",
+    "dense-flowers-0.2.2+mc1.21.0.jar",
+    "Drip Sounds-0.5.2+1.21.8-NeoForge.jar",
+    "entity_model_features-3.2.4-1.21-neoforge.jar",
+    "entity_texture_features_1.21-neoforge-7.1.jar",
     "Iceberg-1.21.1-neoforge-1.3.2.jar",
+    "keybindsearch-1.0.0.jar",
     "LegendaryTooltips-1.21.1-neoforge-1.5.5.jar",
+    "make_bubbles_pop-0.3.0-fabric-mc1.19.4-1.21.jar",
     "PresenceFootsteps-1.21.1-1.12.0-beta.1-1.21NeoForge.jar",
+    "MouseTweaks-neoforge-mc1.21-2.26.1.jar",
+    "notenoughanimations-neoforge-1.12.3-mc1.21.1.jar",
+    "PickUpNotifier-v21.1.1-1.21.1-NeoForge.jar",
     "Prism-1.21.1-neoforge-1.0.11.jar",
+    "skinlayers3d-neoforge-1.11.1-mc1.21.1.jar",
+    "tia-neoforge-1.21-1.2.1.jar",
+    "tightfire-1.21.1-1.0-SNAPSHOT.jar",
+    "wakes-0.4.1+1.21.1.jar",
     "autohud-8.11+1.21.1-neoforge.jar",
     "eg_particle_interactions-0.4.1-neoforge-mc1.21.1.jar",
     "fallingleaves-1.17.1+1.21.1.jar",
@@ -356,9 +370,15 @@ def dep_satisfied(dep_id: str, present: set[str]) -> bool:
     if dep_id in present:
         return True
     # Common naming differences between Fabric metadata and Forgified API.
+    if dep_id == "fabric" and "fabric_api" in present:
+        return True
     if dep_id == "fabric-api" and "fabric_api" in present:
         return True
     if dep_id.startswith(FABRIC_API_MODULE_PREFIX) and "fabric_api" in present:
+        return True
+    # Cloth Config's Fabric jar uses cloth-config/cloth-config2 ids, while some
+    # NeoForge ports require the conventional NeoForge mod id cloth_config.
+    if dep_id == "cloth_config" and ({"cloth-config", "cloth-config2"} & present):
         return True
     return False
 

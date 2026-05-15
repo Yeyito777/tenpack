@@ -68,9 +68,9 @@
     },
     {
       "path": "config/ftbquests/quests/chapters/02_food_supply.snbt",
-      "sha256": "7b7e74fd097f0add52f3d4d17c1630b5f3a4750e1857832a6bf1aee0197b4e58",
-      "size": 2111,
-      "url": "files/7b/7b7e74fd097f0add52f3d4d17c1630b5f3a4750e1857832a6bf1aee0197b4e58"
+      "sha256": "4cf87e74420cf041770c56eb7aa44f063dc4d3e50bfafc0e0cdfad720fbb765e",
+      "size": 3196,
+      "url": "files/4c/4cf87e74420cf041770c56eb7aa44f063dc4d3e50bfafc0e0cdfad720fbb765e"
     },
     {
       "path": "config/ftbquests/quests/chapters/03_rails_territory.snbt",
@@ -92,9 +92,9 @@
     },
     {
       "path": "config/ftbquests/quests/lang/en_us.snbt",
-      "sha256": "a1f5382dfc68f0a1dfad488ba3dd0397f85c5544e86d7ec0ecded84a03eb1202",
-      "size": 8607,
-      "url": "files/a1/a1f5382dfc68f0a1dfad488ba3dd0397f85c5544e86d7ec0ecded84a03eb1202"
+      "sha256": "d0459a61344fcaf20a29eaeacf1cbc6fbffc8fc617ac3a948e037f06ad6cdc5c",
+      "size": 11675,
+      "url": "files/d0/d0459a61344fcaf20a29eaeacf1cbc6fbffc8fc617ac3a948e037f06ad6cdc5c"
     },
     {
       "path": "config/legendarysurvivaloverhaul-client.toml",
@@ -998,9 +998,9 @@
     },
     {
       "path": "resourcepacks/tenpack-resourcepacks.json",
-      "sha256": "819666f2ba886826ff5913898efc87d2319a3cda26988a5a42b0f5a7e3462d43",
-      "size": 7363,
-      "url": "files/81/819666f2ba886826ff5913898efc87d2319a3cda26988a5a42b0f5a7e3462d43"
+      "sha256": "6423cb932d90a6671b2d660171d331bef6cced068f342bee5ecafd9ba34d2898",
+      "size": 8093,
+      "url": "files/64/6423cb932d90a6671b2d660171d331bef6cced068f342bee5ecafd9ba34d2898"
     },
     {
       "path": "resourcepacks/xali's Bushy Leaves v3.5.0.zip",
@@ -1052,9 +1052,9 @@
     },
     {
       "path": "shaderpacks/tenpack-shaderpacks.json",
-      "sha256": "8985cc070af7cab2c37f9c0648210b0be8b92a39fe13ef73af4ebde6d2b7e418",
-      "size": 1615,
-      "url": "files/89/8985cc070af7cab2c37f9c0648210b0be8b92a39fe13ef73af4ebde6d2b7e418"
+      "sha256": "5c71a9c4c38acb1921b6c29d957971733e0315990dbd489c49497ae4a1eec7c7",
+      "size": 1616,
+      "url": "files/5c/5c71a9c4c38acb1921b6c29d957971733e0315990dbd489c49497ae4a1eec7c7"
     }
   ],
   "loader": "neoforge",

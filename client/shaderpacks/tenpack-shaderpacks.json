@@ -16,7 +16,7 @@
       "filename": "AmethystShaders_2.4.zip",
       "source": "https://cdn.modrinth.com/data/LypdYQ63/versions/mULXIH2t/AmethystShaders_2.4.zip",
       "recommendedDefault": true,
-      "performanceWarning": true,
+      "performanceWarning": false,
       "loadOrderNote": "Default enabled shader via config/iris.properties. Lighter default than Rethinking Voxels; players can switch manually. sha256: 64eb37909b58a2266964a09ca3e65d07b197b27d25641449f6d80ebc537fbca0"
     },
     {
